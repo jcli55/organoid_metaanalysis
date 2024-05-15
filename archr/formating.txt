@@ -1,0 +1,10 @@
+How to reformat cellnames from adata to archr:
+
+# Read in the intersect cells
+names <- read.csv('/storage/singlecell/jeanl/organoid/csv/ATAC_RNA_QC_intersect.csv')
+
+# Remove the '-0' tag
+names$x <- substr(names$x, 1, nchar(names$x)-2)
+
+# Addes a '#' between the sample name and the barcode
+names <- paste(substr(names$x, 1, nchar(names$x)-19), substr(names$x, nchar(names$x)-17, nchar(names$x)), sep="#")

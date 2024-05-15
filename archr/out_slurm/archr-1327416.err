@@ -1,0 +1,411 @@
+Loading required package: ggplot2
+Loading required package: SummarizedExperiment
+Loading required package: MatrixGenerics
+Loading required package: matrixStats
+
+Attaching package: ‚ÄòMatrixGenerics‚Äô
+
+The following objects are masked from ‚Äòpackage:matrixStats‚Äô:
+
+    colAlls, colAnyNAs, colAnys, colAvgsPerRowSet, colCollapse,
+    colCounts, colCummaxs, colCummins, colCumprods, colCumsums,
+    colDiffs, colIQRDiffs, colIQRs, colLogSumExps, colMadDiffs,
+    colMads, colMaxs, colMeans2, colMedians, colMins, colOrderStats,
+    colProds, colQuantiles, colRanges, colRanks, colSdDiffs, colSds,
+    colSums2, colTabulates, colVarDiffs, colVars, colWeightedMads,
+    colWeightedMeans, colWeightedMedians, colWeightedSds,
+    colWeightedVars, rowAlls, rowAnyNAs, rowAnys, rowAvgsPerColSet,
+    rowCollapse, rowCounts, rowCummaxs, rowCummins, rowCumprods,
+    rowCumsums, rowDiffs, rowIQRDiffs, rowIQRs, rowLogSumExps,
+    rowMadDiffs, rowMads, rowMaxs, rowMeans2, rowMedians, rowMins,
+    rowOrderStats, rowProds, rowQuantiles, rowRanges, rowRanks,
+    rowSdDiffs, rowSds, rowSums2, rowTabulates, rowVarDiffs, rowVars,
+    rowWeightedMads, rowWeightedMeans, rowWeightedMedians,
+    rowWeightedSds, rowWeightedVars
+
+Loading required package: GenomicRanges
+Loading required package: stats4
+Loading required package: BiocGenerics
+
+Attaching package: ‚ÄòBiocGenerics‚Äô
+
+The following objects are masked from ‚Äòpackage:stats‚Äô:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‚Äòpackage:base‚Äô:
+
+    Filter, Find, Map, Position, Reduce, anyDuplicated, append,
+    as.data.frame, basename, cbind, colnames, dirname, do.call,
+    duplicated, eval, evalq, get, grep, grepl, intersect, is.unsorted,
+    lapply, mapply, match, mget, order, paste, pmax, pmax.int, pmin,
+    pmin.int, rank, rbind, rownames, sapply, setdiff, sort, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Loading required package: S4Vectors
+
+Attaching package: ‚ÄòS4Vectors‚Äô
+
+The following objects are masked from ‚Äòpackage:base‚Äô:
+
+    I, expand.grid, unname
+
+Loading required package: IRanges
+Loading required package: GenomeInfoDb
+Loading required package: Biobase
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: ‚ÄòBiobase‚Äô
+
+The following object is masked from ‚Äòpackage:MatrixGenerics‚Äô:
+
+    rowMedians
+
+The following objects are masked from ‚Äòpackage:matrixStats‚Äô:
+
+    anyMissing, rowMedians
+
+Loading required package: data.table
+
+Attaching package: ‚Äòdata.table‚Äô
+
+The following object is masked from ‚Äòpackage:SummarizedExperiment‚Äô:
+
+    shift
+
+The following object is masked from ‚Äòpackage:GenomicRanges‚Äô:
+
+    shift
+
+The following object is masked from ‚Äòpackage:IRanges‚Äô:
+
+    shift
+
+The following objects are masked from ‚Äòpackage:S4Vectors‚Äô:
+
+    first, second
+
+Loading required package: Matrix
+
+Attaching package: ‚ÄòMatrix‚Äô
+
+The following object is masked from ‚Äòpackage:S4Vectors‚Äô:
+
+    expand
+
+Loading required package: rhdf5
+Loading required package: magrittr
+Setting default number of Parallel threads to 8.
+Setting default genome to Hg38.
+filterFrags is no longer a valid input. Please use minFrags! Setting filterFrags value to minFrags!
+filterTSS is no longer a valid input. Please use minTSS! Setting filterTSS value to minTSS!
+Using GeneAnnotation set by addArchRGenome(Hg38)!
+Using GeneAnnotation set by addArchRGenome(Hg38)!
+ArchR logging to : ArchRLogs/ArchR-createArrows-b89455e7bca7-Date-2024-03-20_Time-12-09-21.log
+If there is an issue, please report to github with logFile!
+2024-03-20 12:09:22 : Batch Execution w/ safelapply!, 0 mins elapsed.
+Attempting to index /storage/chentemp/u250758/mrrdir/organoid_metaanalysis/Cherry/atac/wt5-1/GSM5567537_wt5-1_fragments.tsv.gz as tabix..
+[E::get_intv] Failed to parse TBX_GENERIC, was wrong -p [type] used?
+The offending line was: "ã"
+[E::get_intv] Failed to parse TBX_GENERIC, was wrong -p [type] used?
+The offending line was: "-Ñ©≥®®ß°‹•s,ñy¶4≈wjÀÒo2?zÊ∂®”yÙääø∑–:Pg‘(∑e: 	™–®Fˇ◊ûÁ∂<˝∆:zÍß–J‘Nkª3*0 ˇ^ùül“UGO´YhΩ>ﬁ«˜Ñ¢ ò£Ï˜∏è@—™÷˝°A⁄uZ∂Ω-k¸è∑ôi"”¯ ¥ÎÂy%x\º$ÀJx´˚XVQ√9Ô£◊›~i\‘í‡∆ç}h\ıó&¯ñ˙)ºèä⁄zûáz¨ ﬁ!&Èq\}”>f——OEπÜJL´)˝hx•ònf˙Í1ÓGÎNÎZß@$=˜ò¬ˇ¢-˚EªzFhWÍ®ÎËâpÊ—€áËÎπhUyıÛãMò÷˛±Ñrw™ª]˜•ír·›~ÀéÚ—=Ì_ñ’ˇF ÒÊrÙ[œ»Àõ~òv∆—WT†_Ê&ÃjhËÙﬂ∏€ûˆπ˛>Ò˜	è‡	ŒÁQQï2¯,Ú&Rß_ûQ¸Íz—±i—*±ÊÈ§)™Ó9ÒØè7<BÖ}é∑ŒQN>œÅ˛≈@_ÂeÙÃqàlÍö∆‘£·—W>¿áïv)ÔE„"z&-ZYQ:Gf54G˚∑ÃQPÊGG¢64Ó„Ü™ß„Â5g"
+[E::get_intv] Failed to parse TBX_GENERIC, was wrong -p [type] used?
+The offending line was: "¨ü⁄™úÈ#RÂgrù◊À◊«‹åï8˛åz§GúDÙJ4ıh/=QÛù˜’—w ±¸Î}ü#Û∫wû#P¡˝¯2 ûSà1≠(WÂbzY9”öM£∑ëW‚b Øâ±,m%=˙c∆ÛŒ≥“åï›≥/ºh¥∂C[·æÎ∏ÇªÌÔ„”»˜#o¯Ñ¢"
+[E::hts_idx_push] Unsorted positions on sequence #1: 1 followed by 0
+Attempting to index /storage/chentemp/u250758/mrrdir/organoid_metaanalysis/Cherry/atac/wt5-2/GSM5567538_wt5-2_fragments.tsv.gz as tabix..
+[E::get_intv] Failed to parse TBX_GENERIC, was wrong -p [type] used?
+The offending line was: "ã"
+[E::get_intv] Failed to parse TBX_GENERIC, was wrong -p [type] used?
+The offending line was: "°fÍ†∏ÔyÙœC„∫û_≈‘6æØ©>À‹„Û ∏R¡∞jØâﬁaBΩ¸Æ:_Ö¶°––ÍËÀ	ı˛27ï©ôLÕùPÓGE#Ø¿ä)Û;æØåæ–ã—ËÎjmnÀs[ı©ØÔ£q’Ö¸ñ∂Ô-L}j±Æ˙e~uHıÔ"
+[E::get_intv] Failed to parse TBX_GENERIC, was wrong -p [type] used?
+The offending line was: "/d¬¨n®P€™I=÷Iÿ9 –:÷é"
+[E::hts_idx_push] Unsorted positions on sequence #1: 1 followed by 0
+Attempting to index /storage/chentemp/u250758/mrrdir/organoid_metaanalysis/Cherry/atac/wt20-1/GSM5567539_wt20-1_fragments.tsv.gz as tabix..
+Attempting to index /storage/chentemp/u250758/mrrdir/organoid_metaanalysis/Cherry/atac/wt28-1/GSM5567541_wt28-1_fragments.tsv.gz as tabix..
+[E::get_intv] Failed to parse TBX_GENERIC, was wrong -p [type] used?
+The offending line was: "ã"
+[E::get_intv] Failed to parse TBX_GENERIC, was wrong -p [type] used?
+The offending line was: "–W›ÀYK˚h+ñWû)á∫zø*ˇ—7S?œwËÀŸ§+Ò1•~ﬂ“WíAÑ¥Tı?j∑3ä)⁄_ïVi≈Aàuã¶9Zò¢Îw›LY!‹w@˘∫è‹Ì9/ÿ3ÆΩıº€>–I{AÑ¥ìK_>Úà•Æ≠ÿ«õ5¢ËﬂÕÂÈt¡–ü«yéŒx˙≠'âNˆKkœ#OTËl©_Ôúª∫ﬂ8@(¶¢"ÕÅVäHüÑˆ}@≈+÷µèï6*}°~å®8Rtº"
+[E::hts_idx_push] Unsorted positions on sequence #1: 1 followed by 0
+2024-03-20 12:09:22 : (Multi_organoid_D183 : 2 of 18) Arrow Exists! Marking as completed since force = FALSE!, 0.004 mins elapsed.
+2024-03-20 12:09:22 : (Multi_organoid_NRL_D243 : 3 of 18) Arrow Exists! Marking as completed since force = FALSE!, 0.004 mins elapsed.
+[E::get_intv] Failed to parse TBX_GENERIC, was wrong -p [type] used?
+The offending line was: "ã"
+[E::get_intv] Failed to parse TBX_GENERIC, was wrong -p [type] used?
+The offending line was: "”Q^)‚çãêa\åb y∏£<Ö◊ﬁO®∫^Qé†rü/fºIÎ∏b	t+,,¯Ü)d∑Ê˜4GbË”n«vjô5c5dá‚àäëËã¬Pc”Ë£Ï–F6	ïîæn¶@Z[Ÿ3éãOGïÓ<êÂòÔGü¯˜™˜–sÀ}å≠∆ïNÌÒa^ÜèJÖ›ˆ?°|⁄æô3>QÚè´L®w«9áñb§/†¸°r!ã°œxo™TŸóDfo|∑Õ(Ê"
+[E::get_intv] Failed to parse TBX_GENERIC, was wrong -p [type] used?
+The offending line was: "@˙¨[?#Œ„SN+ìÍ}‘q◊u∞ô®ûèèïä›Œ∏¬8WvÎ¢˚[$Ó˚Ë\ÇÃ˘≤X˝N|√«3‡C˙"
+[E::hts_idx_push] Unsorted positions on sequence #1: 1 followed by 0
+2024-03-20 12:09:22 : (Multi_organoid_NRL_D206 : 5 of 18) Arrow Exists! Marking as completed since force = FALSE!, 0.004 mins elapsed.
+2024-03-20 12:09:22 : (Multi_H9_D35 : 8 of 18) Arrow Exists! Marking as completed since force = FALSE!, 0.004 mins elapsed.
+2024-03-20 12:09:22 : (Multi_organoid_NRL_D075 : 9 of 18) Arrow Exists! Marking as completed since force = FALSE!, 0.005 mins elapsed.
+Attempting to index /storage/chentemp/u250758/mrrdir/organoid_metaanalysis/Cherry/atac/wt28-2/GSM5567542_wt28-2_fragments.tsv.gz as tabix..
+[E::get_intv] Failed to parse TBX_GENERIC, was wrong -p [type] used?
+The offending line was: "ã"
+[E::get_intv] Failed to parse TBX_GENERIC, was wrong -p [type] used?
+The offending line was: "*˝—ˇ_⁄ï˙{x\v†"˝¶Îè:$ µ÷Ü∑ŒQPæµıP3≠€˜°ˇa=P·˜J"
+[E::get_intv] Failed to parse TBX_GENERIC, was wrong -p [type] used?
+The offending line was: "Ë´RÁuE—™∫F9˜ˆÄ€<	u≠0Sc4≈ó˙¨4—ÛÇÚ&∂•∂>»ÎÂu•ûà"\±mwpwnƒ⁄ñú⁄zx√ÁIs]ÙÎ€Röﬂ⁄yJYQû~É˚£πÒNZ∫w>DääŸ÷≥ÚgŸ»@∂˝IcYìwÔ—∏¢˘#zxh¡«€mwT˛£ﬁ¯Å6∂∂¯óéGÂ3Õ›>+Èco◊˚ÚôÂ„FD=≠}C%^â∂ëÌˇôv∞ôÛJƒD„Jç∞âê+oQU¶£=∆vå⁄Ø7ûVµÕøT¸Y∆Ôîu•?¶¢,˛YQt`©-˚◊öyÑxj]w(⁄ˆ˜E,≥ﬂÚ˙ÌLl.Z´=2s#jÆ<∫ôÅEÎ¢å˛-Ãu0∂Rf¬èN∆Âï2s¢ŒWîgTc¯<l:›8pÛ∏úπt%à;–/o¡ºˆä∫1V±π6ƒ∑¨® Î’&OAÎ‘∫úéËº·âIÀπ&[XG%¶ÊoLhÔ:zØk?1¸BD±åãQ—8EÒVÀÂ1ıÿÿoL∂±_fº¥|?l®§´⁄˜ëÔ°uÌ˝õılÉ—Ω€J+ms~â%Ωt‚ûuUuÎÂ!L¯©_mì¶”√õM¨iÊräjMeÇ‡≠V‘‘Õ—eO\éO≈4Æ≈˚»W,X&çm=£⁄z<¸˘y@é3›’ÿÿ©>rÇò"
+[E::get_intv] Failed to parse TBX_GENERIC, was wrong -p [type] used?
+The offending line was: "ß—gY/úÊ_LäÀ∏bZÌtœòmé@5Z•µ‰€Ò·Àâ"
+[E::hts_idx_push] Unsorted positions on sequence #1: 1 followed by 0
+Attempting to index /storage/chentemp/u250758/mrrdir/organoid_metaanalysis/Cherry/atac/wt20-2/GSM5567540_wt20-2_fragments.tsv.gz as tabix..
+Attempting to index /storage/chentemp/u250758/mrrdir/organoid_metaanalysis/Cherry/atac/wt12-2/GSM5712941_wk12-2_fragments.tsv.gz as tabix..
+2024-03-20 12:09:22 : (Multi_H9_D47 : 11 of 18) Arrow Exists! Marking as completed since force = FALSE!, 0.007 mins elapsed.
+[E::get_intv] Failed to parse TBX_GENERIC, was wrong -p [type] used?
+The offending line was: "ã"
+[E::get_intv] Failed to parse TBX_GENERIC, was wrong -p [type] used?
+The offending line was: "5.Ò?ˇ˚˜Ôæ.ˇ÷øÊ˝~)ÊíK,©îSâˇ}ˇÃ˝P∑•øˆ˙~9GÇƒúÈø©T‘Ω†ÃÛ+ı_ej∞6UÍüπ-C®€S[µµ"
+[E::hts_idx_push] Unsorted positions on sequence #1: 1 followed by 0
+2024-03-20 12:09:22 : (Multi_NRL_GFP_D123 : 14 of 18) Arrow Exists! Marking as completed since force = FALSE!, 0.007 mins elapsed.
+2024-03-20 12:09:22 : (Multi_organoid_D133 : 13 of 18) Arrow Exists! Marking as completed since force = FALSE!, 0.007 mins elapsed.
+2024-03-20 12:09:22 : (Multi_H9_D100 : 15 of 18) Arrow Exists! Marking as completed since force = FALSE!, 0.007 mins elapsed.
+Attempting to index /storage/chentemp/u250758/mrrdir/organoid_metaanalysis/Cherry/atac/wt12-3/GSM5712942_wk12-3_fragments.tsv.gz as tabix..
+Attempting to index /storage/chentemp/u250758/mrrdir/organoid_metaanalysis/Cherry/atac/wt12-1/GSM5712940_wk12-1_fragments.tsv.gz as tabix..
+2024-03-20 12:09:59 : (wt12-3 : 17 of 18) Reading In Fragments from inputFiles (readMethod = tabix), 0.629 mins elapsed.
+2024-03-20 12:10:00 : (wt12-3 : 17 of 18) Tabix Bed To Temporary File, 0.63 mins elapsed.
+2024-03-20 12:10:00 : (wt12-2 : 16 of 18) Reading In Fragments from inputFiles (readMethod = tabix), 0.641 mins elapsed.
+2024-03-20 12:10:00 : (wt12-2 : 16 of 18) Tabix Bed To Temporary File, 0.641 mins elapsed.
+2024-03-20 12:10:00 : (wt12-1 : 18 of 18) Reading In Fragments from inputFiles (readMethod = tabix), 0.642 mins elapsed.
+2024-03-20 12:10:00 : (wt12-1 : 18 of 18) Tabix Bed To Temporary File, 0.642 mins elapsed.
+2024-03-20 12:11:17 : (wt12-1 : 18 of 18) Reading TabixFile 8 Percent, 1.916 mins elapsed.
+2024-03-20 12:11:31 : (wt12-3 : 17 of 18) Reading TabixFile 8 Percent, 2.152 mins elapsed.
+2024-03-20 12:11:33 : (wt12-2 : 16 of 18) Reading TabixFile 8 Percent, 2.188 mins elapsed.
+2024-03-20 12:12:14 : (wt12-1 : 18 of 18) Reading TabixFile 17 Percent, 2.879 mins elapsed.
+2024-03-20 12:12:38 : (wt12-2 : 16 of 18) Reading TabixFile 17 Percent, 3.276 mins elapsed.
+2024-03-20 12:12:39 : (wt12-3 : 17 of 18) Reading TabixFile 17 Percent, 3.294 mins elapsed.
+2024-03-20 12:13:04 : (wt12-1 : 18 of 18) Reading TabixFile 25 Percent, 3.698 mins elapsed.
+2024-03-20 12:13:36 : (wt12-2 : 16 of 18) Reading TabixFile 25 Percent, 4.245 mins elapsed.
+2024-03-20 12:13:38 : (wt12-3 : 17 of 18) Reading TabixFile 25 Percent, 4.266 mins elapsed.
+2024-03-20 12:13:46 : (wt12-1 : 18 of 18) Reading TabixFile 33 Percent, 4.41 mins elapsed.
+2024-03-20 12:14:24 : (wt12-2 : 16 of 18) Reading TabixFile 33 Percent, 5.034 mins elapsed.
+2024-03-20 12:14:26 : (wt12-1 : 18 of 18) Reading TabixFile 42 Percent, 5.067 mins elapsed.
+2024-03-20 12:14:30 : (wt12-3 : 17 of 18) Reading TabixFile 33 Percent, 5.142 mins elapsed.
+2024-03-20 12:15:07 : (wt12-2 : 16 of 18) Reading TabixFile 42 Percent, 5.757 mins elapsed.
+2024-03-20 12:15:09 : (wt12-1 : 18 of 18) Reading TabixFile 50 Percent, 5.786 mins elapsed.
+2024-03-20 12:15:17 : (wt12-3 : 17 of 18) Reading TabixFile 42 Percent, 5.914 mins elapsed.
+2024-03-20 12:15:38 : (wt12-1 : 18 of 18) Reading TabixFile 58 Percent, 6.267 mins elapsed.
+2024-03-20 12:15:57 : (wt12-2 : 16 of 18) Reading TabixFile 50 Percent, 6.58 mins elapsed.
+2024-03-20 12:16:05 : (wt12-1 : 18 of 18) Reading TabixFile 67 Percent, 6.728 mins elapsed.
+2024-03-20 12:16:09 : (wt12-3 : 17 of 18) Reading TabixFile 50 Percent, 6.78 mins elapsed.
+2024-03-20 12:16:28 : (wt12-2 : 16 of 18) Reading TabixFile 58 Percent, 7.106 mins elapsed.
+2024-03-20 12:16:34 : (wt12-1 : 18 of 18) Reading TabixFile 75 Percent, 7.212 mins elapsed.
+2024-03-20 12:16:42 : (wt12-3 : 17 of 18) Reading TabixFile 58 Percent, 7.343 mins elapsed.
+2024-03-20 12:16:59 : (wt12-1 : 18 of 18) Reading TabixFile 83 Percent, 7.628 mins elapsed.
+2024-03-20 12:17:01 : (wt12-2 : 16 of 18) Reading TabixFile 67 Percent, 7.649 mins elapsed.
+2024-03-20 12:17:15 : (wt12-1 : 18 of 18) Reading TabixFile 92 Percent, 7.888 mins elapsed.
+2024-03-20 12:17:15 : (wt12-3 : 17 of 18) Reading TabixFile 67 Percent, 7.894 mins elapsed.
+2024-03-20 12:17:33 : (wt12-2 : 16 of 18) Reading TabixFile 75 Percent, 8.181 mins elapsed.
+2024-03-20 12:17:34 : (wt12-1 : 18 of 18) Reading TabixFile 100 Percent, 8.204 mins elapsed.
+2024-03-20 12:17:35 : (wt12-1 : 18 of 18) Successful creation of Temporary File, 8.218 mins elapsed.
+2024-03-20 12:17:35 : (wt12-1 : 18 of 18) Creating ArrowFile From Temporary File, 8.218 mins elapsed.
+2024-03-20 12:17:51 : (wt12-3 : 17 of 18) Reading TabixFile 75 Percent, 8.48 mins elapsed.
+2024-03-20 12:18:01 : (wt12-2 : 16 of 18) Reading TabixFile 83 Percent, 8.651 mins elapsed.
+2024-03-20 12:18:20 : (wt12-3 : 17 of 18) Reading TabixFile 83 Percent, 8.965 mins elapsed.
+2024-03-20 12:18:23 : (wt12-2 : 16 of 18) Reading TabixFile 92 Percent, 9.022 mins elapsed.
+2024-03-20 12:18:39 : (wt12-3 : 17 of 18) Reading TabixFile 92 Percent, 9.282 mins elapsed.
+2024-03-20 12:18:45 : (wt12-2 : 16 of 18) Reading TabixFile 100 Percent, 9.394 mins elapsed.
+2024-03-20 12:18:46 : (wt12-2 : 16 of 18) Successful creation of Temporary File, 9.408 mins elapsed.
+2024-03-20 12:18:46 : (wt12-2 : 16 of 18) Creating ArrowFile From Temporary File, 9.408 mins elapsed.
+2024-03-20 12:19:03 : (wt12-3 : 17 of 18) Reading TabixFile 100 Percent, 9.69 mins elapsed.
+2024-03-20 12:19:04 : (wt12-3 : 17 of 18) Successful creation of Temporary File, 9.704 mins elapsed.
+2024-03-20 12:19:04 : (wt12-3 : 17 of 18) Creating ArrowFile From Temporary File, 9.705 mins elapsed.
+2024-03-20 12:19:32 : (wt12-1 : 18 of 18) Successful creation of Arrow File, 10.175 mins elapsed.
+2024-03-20 12:20:49 : (wt12-2 : 16 of 18) Successful creation of Arrow File, 11.461 mins elapsed.
+2024-03-20 12:21:15 : (wt12-3 : 17 of 18) Successful creation of Arrow File, 11.892 mins elapsed.
+2024-03-20 12:21:37 : (wt12-1 : 18 of 18) CellStats : Number of Cells Pass Filter = 8550 , 12.251 mins elapsed.
+2024-03-20 12:21:37 : (wt12-1 : 18 of 18) CellStats : Median Frags = 9395 , 12.251 mins elapsed.
+2024-03-20 12:21:37 : (wt12-1 : 18 of 18) CellStats : Median TSS Enrichment = 9.652 , 12.252 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-03-20 12:21:39 : (wt12-1 : 18 of 18) Adding Additional Feature Counts!, 12.286 mins elapsed.
+2024-03-20 12:22:56 : (wt12-2 : 16 of 18) CellStats : Number of Cells Pass Filter = 6541 , 13.57 mins elapsed.
+2024-03-20 12:22:56 : (wt12-2 : 16 of 18) CellStats : Median Frags = 13476 , 13.57 mins elapsed.
+2024-03-20 12:22:56 : (wt12-2 : 16 of 18) CellStats : Median TSS Enrichment = 9.867 , 13.57 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-03-20 12:22:58 : (wt12-2 : 16 of 18) Adding Additional Feature Counts!, 13.599 mins elapsed.
+2024-03-20 12:23:06 : (wt12-1 : 18 of 18) Removing Fragments from Filtered Cells, 13.746 mins elapsed.
+2024-03-20 12:23:06 : (wt12-1 : 18 of 18) Creating Filtered Arrow File, 13.746 mins elapsed.
+2024-03-20 12:23:34 : (wt12-3 : 17 of 18) CellStats : Number of Cells Pass Filter = 5160 , 14.197 mins elapsed.
+2024-03-20 12:23:34 : (wt12-3 : 17 of 18) CellStats : Median Frags = 16337.5 , 14.197 mins elapsed.
+2024-03-20 12:23:34 : (wt12-3 : 17 of 18) CellStats : Median TSS Enrichment = 9.775 , 14.197 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-03-20 12:23:36 : (wt12-3 : 17 of 18) Adding Additional Feature Counts!, 14.231 mins elapsed.
+2024-03-20 12:23:48 : (wt12-1 : 18 of 18) Finished Constructing Filtered Arrow File!, 14.432 mins elapsed.
+2024-03-20 12:23:48 : (wt12-1 : 18 of 18) Adding TileMatrix!, 14.435 mins elapsed.
+2024-03-20 12:24:23 : (wt12-2 : 16 of 18) Removing Fragments from Filtered Cells, 15.027 mins elapsed.
+2024-03-20 12:24:23 : (wt12-2 : 16 of 18) Creating Filtered Arrow File, 15.027 mins elapsed.
+2024-03-20 12:25:06 : (wt12-2 : 16 of 18) Finished Constructing Filtered Arrow File!, 15.744 mins elapsed.
+2024-03-20 12:25:07 : (wt12-2 : 16 of 18) Adding TileMatrix!, 15.747 mins elapsed.
+2024-03-20 12:25:16 : (wt12-3 : 17 of 18) Removing Fragments from Filtered Cells, 15.908 mins elapsed.
+2024-03-20 12:25:16 : (wt12-3 : 17 of 18) Creating Filtered Arrow File, 15.908 mins elapsed.
+2024-03-20 12:25:53 : (wt12-1 : 18 of 18) Adding GeneScoreMatrix!, 16.527 mins elapsed.
+2024-03-20 12:26:00 : (wt12-3 : 17 of 18) Finished Constructing Filtered Arrow File!, 16.645 mins elapsed.
+2024-03-20 12:26:01 : (wt12-3 : 17 of 18) Adding TileMatrix!, 16.648 mins elapsed.
+2024-03-20 12:27:35 : (wt12-2 : 16 of 18) Adding GeneScoreMatrix!, 18.222 mins elapsed.
+2024-03-20 12:28:25 : (wt12-3 : 17 of 18) Adding GeneScoreMatrix!, 19.052 mins elapsed.
+2024-03-20 12:28:51 : (wt12-1 : 18 of 18) Finished Creating Arrow File, 19.484 mins elapsed.
+2024-03-20 12:30:42 : (wt12-2 : 16 of 18) Finished Creating Arrow File, 21.338 mins elapsed.
+2024-03-20 12:31:34 : (wt12-3 : 17 of 18) Finished Creating Arrow File, 22.199 mins elapsed.
+2024-03-20 12:31:34 : createArrowFiles has encountered an error, checking if any ArrowFiles completed..
+ArchR logging successful to : ArchRLogs/ArchR-createArrows-b89455e7bca7-Date-2024-03-20_Time-12-09-21.log
+Warning message:
+In mclapply(..., mc.cores = threads, mc.preschedule = preschedule) :
+  6 function calls resulted in an error
+ArchR logging to : ArchRLogs/ArchR-addDoubletScores-b894724ca85-Date-2024-03-20_Time-12-31-34.log
+If there is an issue, please report to github with logFile!
+2024-03-20 12:31:34 : Batch Execution w/ safelapply!, 0 mins elapsed.
+2024-03-20 12:31:34 : Multi_organoid_D183 (1 of 12) :  Computing Doublet Statistics, 0 mins elapsed.
+Multi_organoid_D183 (1 of 12) : UMAP Projection R^2 = 0.98086
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-03-20 12:35:48 : Multi_organoid_NRL_D243 (2 of 12) :  Computing Doublet Statistics, 4.241 mins elapsed.
+Multi_organoid_NRL_D243 (2 of 12) : UMAP Projection R^2 = 0.98046
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-03-20 12:45:48 : Multi_organoid_NRL_D206 (3 of 12) :  Computing Doublet Statistics, 14.24 mins elapsed.
+Multi_organoid_NRL_D206 (3 of 12) : UMAP Projection R^2 = 0.98689
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-03-20 12:51:48 : Multi_H9_D35 (4 of 12) :  Computing Doublet Statistics, 20.228 mins elapsed.
+Multi_H9_D35 (4 of 12) : UMAP Projection R^2 = 0.95626
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-03-20 12:57:33 : Multi_organoid_NRL_D075 (5 of 12) :  Computing Doublet Statistics, 25.98 mins elapsed.
+Multi_organoid_NRL_D075 (5 of 12) : UMAP Projection R^2 = 0.92143
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-03-20 13:02:33 : Multi_H9_D47 (6 of 12) :  Computing Doublet Statistics, 30.989 mins elapsed.
+Multi_H9_D47 (6 of 12) : UMAP Projection R^2 = 0.82359
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-03-20 13:08:41 : Multi_organoid_D133 (7 of 12) :  Computing Doublet Statistics, 37.12 mins elapsed.
+Multi_organoid_D133 (7 of 12) : UMAP Projection R^2 = 0.97854
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-03-20 13:13:43 : Multi_NRL_GFP_D123 (8 of 12) :  Computing Doublet Statistics, 42.158 mins elapsed.
+Multi_NRL_GFP_D123 (8 of 12) : UMAP Projection R^2 = 0.96626
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-03-20 13:17:43 : Multi_H9_D100 (9 of 12) :  Computing Doublet Statistics, 46.15 mins elapsed.
+Multi_H9_D100 (9 of 12) : UMAP Projection R^2 = 0.8372
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-03-20 13:22:41 : wt12-2 (10 of 12) :  Computing Doublet Statistics, 51.119 mins elapsed.
+wt12-2 (10 of 12) : UMAP Projection R^2 = 0.99552
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-03-20 13:25:49 : wt12-3 (11 of 12) :  Computing Doublet Statistics, 54.256 mins elapsed.
+wt12-3 (11 of 12) : UMAP Projection R^2 = 0.98829
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-03-20 13:28:39 : wt12-1 (12 of 12) :  Computing Doublet Statistics, 57.081 mins elapsed.
+Biased Clusters : Cluster11 
+wt12-1 (12 of 12) : UMAP Projection R^2 = 0.99287
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+ArchR logging successful to : ArchRLogs/ArchR-addDoubletScores-b894724ca85-Date-2024-03-20_Time-12-31-34.log
+Warning message:
+The `<scale>` argument of `guides()` cannot be `FALSE`. Use "none" instead as
+of ggplot2 3.3.4.
+‚Ñπ The deprecated feature was likely used in the ArchR package.
+  Please report the issue to the authors. 
+Using GeneAnnotation set by addArchRGenome(Hg38)!
+Using GeneAnnotation set by addArchRGenome(Hg38)!
+Validating Arrows...
+Getting SampleNames...
+1 2 3 4 5 6 7 8 9 10 11 12 
+Copying ArrowFiles to Ouptut Directory! If you want to save disk space set copyArrows = FALSE
+1 2 3 4 5 6 7 8 9 10 11 12 
+Getting Cell Metadata...
+1 2 3 4 5 6 7 8 9 10 11 12 
+Merging Cell Metadata...
+Initializing ArchRProject...
+
+                                                   / |
+                                                 /    \
+            .                                  /      |.
+            \\\                              /        |.
+              \\\                          /           `|.
+                \\\                      /              |.
+                  \                    /                |\
+                  \\#####\           /                  ||
+                ==###########>      /                   ||
+                 \\##==......\    /                     ||
+            ______ =       =|__ /__                     ||      \\\
+        ,--' ,----`-,__ ___/'  --,-`-===================##========>
+       \               '        ##_______ _____ ,--,__,=##,__   ///
+        ,    __==    ___,-,__,--'#'  ==='      `-'    | ##,-/
+        -,____,---'       \\####\\________________,--\\_##,/
+           ___      .______        ______  __    __  .______      
+          /   \     |   _  \      /      ||  |  |  | |   _  \     
+         /  ^  \    |  |_)  |    |  ,----'|  |__|  | |  |_)  |    
+        /  /_\  \   |      /     |  |     |   __   | |      /     
+       /  _____  \  |  |\  \\___ |  `----.|  |  |  | |  |\  \\___.
+      /__/     \__\ | _| `._____| \______||__|  |__| | _| `._____|
+    
+Saving ArchRProject...
+Loading ArchRProject...
+Successfully loaded ArchRProject!
+
+                                                   / |
+                                                 /    \
+            .                                  /      |.
+            \\\                              /        |.
+              \\\                          /           `|.
+                \\\                      /              |.
+                  \                    /                |\
+                  \\#####\           /                  ||
+                ==###########>      /                   ||
+                 \\##==......\    /                     ||
+            ______ =       =|__ /__                     ||      \\\
+        ,--' ,----`-,__ ___/'  --,-`-===================##========>
+       \               '        ##_______ _____ ,--,__,=##,__   ///
+        ,    __==    ___,-,__,--'#'  ==='      `-'    | ##,-/
+        -,____,---'       \\####\\________________,--\\_##,/
+           ___      .______        ______  __    __  .______      
+          /   \     |   _  \      /      ||  |  |  | |   _  \     
+         /  ^  \    |  |_)  |    |  ,----'|  |__|  | |  |_)  |    
+        /  /_\  \   |      /     |  |     |   __   | |      /     
+       /  _____  \  |  |\  \\___ |  `----.|  |  |  | |  |\  \\___.
+      /__/     \__\ | _| `._____| \______||__|  |__| | _| `._____|
+    
+
+           ___      .______        ______  __    __  .______      
+          /   \     |   _  \      /      ||  |  |  | |   _  \     
+         /  ^  \    |  |_)  |    |  ,----'|  |__|  | |  |_)  |    
+        /  /_\  \   |      /     |  |     |   __   | |      /     
+       /  _____  \  |  |\  \\___ |  `----.|  |  |  | |  |\  \\___.
+      /__/     \__\ | _| `._____| \______||__|  |__| | _| `._____|
+    
+rm: cannot remove ‚Äò/storage/chen/home/u250758/../../tmp/RtmpALs4JL/.nfs000000003278300e00018f53‚Äô: Device or resource busy
+rm: cannot remove ‚Äò/storage/chen/home/u250758/../../tmp/RtmpALs4JL/.nfs000000003278301000018f97‚Äô: Device or resource busy
+rm: cannot remove ‚Äò/storage/chen/home/u250758/../../tmp/RtmpALs4JL/.nfs000000003278300f00018f99‚Äô: Device or resource busy

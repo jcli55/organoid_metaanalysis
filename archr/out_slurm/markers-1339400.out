@@ -1,0 +1,15 @@
+starting at Fri Apr  5 14:52:26 CDT 2024 on mhgcp-d01.grid.bcm.edu
+SLURM_JOBID=1339400
+ [1] "RHO"     "RCVRN"   "CRX"     "PROM1"   "ARR3"    "OTX2"    "VSX1"   
+ [8] "VSX2"    "GAD1"    "GAD2"    "TFAP2A"  "TFAP2B"  "ONECUT1" "ONECUT2"
+[15] "NEFM"    "RBPMS"   "POU4F2"  "RLBP1"   "SLC1A3"  "SFRP2"  
+class: ArchRProject 
+outputDirectory: /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter 
+samples(9): Multi_H9_D35 Multi_organoid_NRL_D243 ... Multi_H9_D100
+  Multi_organoid_D183
+sampleColData names(1): ArrowFiles
+cellColData names(18): Sample nMultiFrags ... Clusters0.5 Clusters0.1
+numberOfCells(1): 74958
+medianTSS(1): 17.7825
+medianFrags(1): 6303
+ended at Fri Apr  5 15:05:35 CDT 2024 on mhgcp-d01.grid.bcm.edu. Time elapsed: 00:13:09

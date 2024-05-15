@@ -1,0 +1,21 @@
+starting at Tue Apr  2 14:42:22 CDT 2024 on mhgcp-d03.grid.bcm.edu
+SLURM_JOBID=1336613
+Modularity Optimizer version 1.3.0 by Ludo Waltman and Nees Jan van Eck
+
+Number of nodes: 209091
+Number of edges: 5133111
+
+Running Louvain algorithm...
+Maximum modularity in 10 random starts: 0.9306
+Number of communities: 1058
+Elapsed time: 88 seconds
+Modularity Optimizer version 1.3.0 by Ludo Waltman and Nees Jan van Eck
+
+Number of nodes: 209091
+Number of edges: 5133111
+
+Running Louvain algorithm...
+Maximum modularity in 10 random starts: 0.9540
+Number of communities: 1046
+Elapsed time: 127 seconds
+ended at Tue Apr  2 16:49:26 CDT 2024 on mhgcp-d03.grid.bcm.edu. Time elapsed: 02:07:04

@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "compute_vk_zhen.py", line 7, in <module>
+    adata = sc.read_h5ad('/storage/singlecell/jeanl/organoid/data/Chen/h5ad/scvelo/scvelo_result.h5ad')
+NameError: name 'sc' is not defined

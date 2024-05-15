@@ -1,0 +1,21 @@
+starting at Wed Apr  3 16:34:33 CDT 2024 on mhgcp-r02.grid.bcm.edu
+SLURM_JOBID=1337441
+Modularity Optimizer version 1.3.0 by Ludo Waltman and Nees Jan van Eck
+
+Number of nodes: 209091
+Number of edges: 5135998
+
+Running Louvain algorithm...
+Maximum modularity in 10 random starts: 0.9161
+Number of communities: 1107
+Elapsed time: 69 seconds
+class: ArchRProject 
+outputDirectory: /storage/singlecell/jeanl/organoid/data/archr/proj_all 
+samples(18): Multi_H9_D35 Multi_H9_D47 ... wt28-1 wt28-2
+sampleColData names(1): ArrowFiles
+cellColData names(21): Sample nMultiFrags ... ClustersHarm0.2
+  ClustersHarm0.8
+numberOfCells(1): 209091
+medianTSS(1): 12.797
+medianFrags(1): 7239
+ended at Wed Apr  3 17:16:35 CDT 2024 on mhgcp-r02.grid.bcm.edu. Time elapsed: 00:42:02

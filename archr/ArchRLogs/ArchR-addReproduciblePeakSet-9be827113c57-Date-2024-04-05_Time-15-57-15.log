@@ -1,0 +1,1506 @@
+
+           ___      .______        ______  __    __  .______      
+          /   \     |   _  \      /      ||  |  |  | |   _  \     
+         /  ^  \    |  |_)  |    |  ,----'|  |__|  | |  |_)  |    
+        /  /_\  \   |      /     |  |     |   __   | |      /     
+       /  _____  \  |  |\  \\___ |  `----.|  |  |  | |  |\  \\___.
+      /__/     \__\ | _| `._____| \______||__|  |__| | _| `._____|
+    
+Logging With ArchR!
+
+Start Time : 2024-04-05 15:57:15
+
+------- ArchR Info
+
+ArchRThreads = 1
+
+------- System Info
+
+Computer OS = unix
+Total Cores = 48
+
+------- Session Info
+
+R version 4.1.3 (2022-03-10)
+Platform: x86_64-conda-linux-gnu (64-bit)
+Running under: Red Hat Enterprise Linux
+
+Matrix products: default
+BLAS/LAPACK: /storage/chen/home/u250758/miniconda3/envs/archr/lib/libopenblasp-r0.3.23.so
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8 LC_NUMERIC=C         LC_TIME=C           
+ [4] LC_COLLATE=C         LC_MONETARY=C        LC_MESSAGES=C       
+ [7] LC_PAPER=C           LC_NAME=C            LC_ADDRESS=C        
+[10] LC_TELEPHONE=C       LC_MEASUREMENT=C     LC_IDENTIFICATION=C 
+
+attached base packages:
+[1] parallel  stats4    stats     graphics  grDevices utils     datasets 
+[8] methods   base     
+
+other attached packages:
+ [1] BSgenome.Hsapiens.UCSC.hg38_1.4.4 BSgenome_1.62.0                  
+ [3] rtracklayer_1.54.0                Biostrings_2.62.0                
+ [5] XVector_0.34.0                    ArchR_1.0.1                      
+ [7] magrittr_2.0.3                    rhdf5_2.38.1                     
+ [9] Matrix_1.6-1                      data.table_1.14.8                
+[11] SummarizedExperiment_1.24.0       Biobase_2.54.0                   
+[13] GenomicRanges_1.46.1              GenomeInfoDb_1.30.1              
+[15] IRanges_2.28.0                    S4Vectors_0.32.4                 
+[17] BiocGenerics_0.40.0               MatrixGenerics_1.6.0             
+[19] matrixStats_1.0.0                 ggplot2_3.4.3                    
+
+loaded via a namespace (and not attached):
+ [1] gtools_3.9.4             tidyselect_1.2.0         lattice_0.21-8          
+ [4] colorspace_2.1-0         vctrs_0.6.3              generics_0.1.3          
+ [7] yaml_2.3.7               utf8_1.2.3               XML_3.99-0.14           
+[10] rlang_1.1.1              pillar_1.9.0             glue_1.6.2              
+[13] withr_2.5.0              BiocParallel_1.28.3      GenomeInfoDbData_1.2.7  
+[16] lifecycle_1.0.3          stringr_1.5.0            zlibbioc_1.40.0         
+[19] munsell_0.5.0            gtable_0.3.4             restfulr_0.0.15         
+[22] fansi_1.0.4              Rcpp_1.0.11              scales_1.2.1            
+[25] DelayedArray_0.20.0      Rsamtools_2.10.0         rjson_0.2.21            
+[28] stringi_1.7.12           dplyr_1.1.3              BiocIO_1.4.0            
+[31] grid_4.1.3               cli_3.6.1                tools_4.1.3             
+[34] bitops_1.0-7             rhdf5filters_1.6.0       RCurl_1.98-1.12         
+[37] tibble_3.2.1             crayon_1.5.2             pkgconfig_2.0.3         
+[40] Rhdf5lib_1.16.0          R6_2.5.1                 GenomicAlignments_1.30.0
+[43] compiler_4.1.3          
+
+
+------- Log Info
+
+
+2024-04-05 15:57:16 : ReproduciblePeakSet Args, Class = list
+
+ReproduciblePeakSet Args$ArchRProj: length = 1
+
+ReproduciblePeakSet Args$groupBy: length = 1
+[1] "majorclass"
+
+
+ReproduciblePeakSet Args$peakMethod: length = 1
+[1] "Macs2"
+
+
+ReproduciblePeakSet Args$reproducibility: length = 1
+[1] "2"
+
+
+ReproduciblePeakSet Args$peaksPerCell: length = 1
+[1] 500
+
+
+ReproduciblePeakSet Args$maxPeaks: length = 1
+[1] 150000
+
+
+ReproduciblePeakSet Args$minCells: length = 1
+[1] 25
+
+
+ReproduciblePeakSet Args$excludeChr: length = 2
+[1] "chrM" "chrY"
+
+
+ReproduciblePeakSet Args$pathToMacs2: length = 1
+[1] "macs2"
+
+
+ReproduciblePeakSet Args$genomeSize: length = 0
+NULL
+
+
+ReproduciblePeakSet Args$shift: length = 1
+[1] -75
+
+
+ReproduciblePeakSet Args$extsize: length = 1
+[1] 150
+
+
+ReproduciblePeakSet Args$method: length = 1
+[1] "q"
+
+
+ReproduciblePeakSet Args$cutOff: length = 1
+[1] 0.1
+
+
+ReproduciblePeakSet Args$additionalParams: length = 1
+[1] "--nomodel --nolambda"
+
+
+ReproduciblePeakSet Args$extendSummits: length = 1
+[1] 250
+
+
+ReproduciblePeakSet Args$promoterRegion: length = 2
+[1] 2000  100
+
+
+ReproduciblePeakSet Args$plot: length = 1
+[1] TRUE
+
+
+ReproduciblePeakSet Args$threads: length = 1
+[1] 1
+
+
+ReproduciblePeakSet Args$parallelParam: length = 0
+NULL
+
+
+ReproduciblePeakSet Args$force: length = 1
+[1] FALSE
+
+
+ReproduciblePeakSet Args$verbose: length = 1
+[1] TRUE
+
+
+ReproduciblePeakSet Args$logFile: length = 1
+[1] "ArchRLogs/ArchR-addReproduciblePeakSet-9be827113c57-Date-2024-04-05_Time-15-57-15.log"
+
+
+
+2024-04-05 15:57:16 : Calling Peaks with Macs2
+2024-04-05 15:57:16 : Peak Calling Parameters!, 0.007 mins elapsed.
+
+2024-04-05 15:57:16 : PeakCallSummary, Class = data.frame
+PeakCallSummary: nRows = 9, nCols = 7
+     Group nCells nCellsUsed nReplicates nMin nMax maxPeaks
+AC      AC   1879       1406           5  127  500   150000
+BC      BC   4437       2470           5  470  500   150000
+Cone  Cone  18673       2500           5  500  500   150000
+HC      HC    974        748           5   84  280   150000
+MG      MG   3664       2080           5  224  500   150000
+NRPC  NRPC   7342       2500           5  500  500   150000
+
+
+2024-04-05 15:57:16 : Batching Peak Calls!, 0.008 mins elapsed.
+
+2024-04-05 15:57:16 : PeakArgs, Class = list
+
+PeakArgs$X: length = 45
+[1] 1 2 3 4 5 6
+
+
+PeakArgs$FUN: length = 1
+                                                                                
+1 function (i = NULL, coverageFiles = NULL, outFiles = NULL, peakParams = NULL, 
+2     bedDir = NULL, excludeChr = NULL, subThreads = 1, tstart = NULL,          
+3     logFile = NULL)                                                           
+4 {                                                                             
+5     .logDiffTime(sprintf("Group %s of %s, Calling Peaks with MACS2!",         
+6         i, length(coverageFiles)), tstart, verbose = TRUE, logFile = logFile) 
+
+
+PeakArgs$coverageFiles: length = 45
+                                                                                                                              AC._.Multi_H9_D100 
+          "/storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/GroupCoverages/majorclass/AC._.Multi_H9_D100.insertions.coverage.h5" 
+                                                                                                                         AC._.Multi_NRL_GFP_D123 
+     "/storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/GroupCoverages/majorclass/AC._.Multi_NRL_GFP_D123.insertions.coverage.h5" 
+                                                                                                                    AC._.Multi_organoid_NRL_D075 
+"/storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/GroupCoverages/majorclass/AC._.Multi_organoid_NRL_D075.insertions.coverage.h5" 
+                                                                                                                        AC._.Multi_organoid_D133 
+    "/storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/GroupCoverages/majorclass/AC._.Multi_organoid_D133.insertions.coverage.h5" 
+                                                                                                                    AC._.Multi_organoid_NRL_D243 
+"/storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/GroupCoverages/majorclass/AC._.Multi_organoid_NRL_D243.insertions.coverage.h5" 
+                                                                                                                        BC._.Multi_organoid_D183 
+    "/storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/GroupCoverages/majorclass/BC._.Multi_organoid_D183.insertions.coverage.h5" 
+
+
+PeakArgs$outFiles: length = 45
+[1] "/storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/ReplicateCalls/AC._.Multi_H9_D100-summits.rds"          
+[2] "/storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/ReplicateCalls/AC._.Multi_NRL_GFP_D123-summits.rds"     
+[3] "/storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/ReplicateCalls/AC._.Multi_organoid_NRL_D075-summits.rds"
+[4] "/storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/ReplicateCalls/AC._.Multi_organoid_D133-summits.rds"    
+[5] "/storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/ReplicateCalls/AC._.Multi_organoid_NRL_D243-summits.rds"
+[6] "/storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/ReplicateCalls/BC._.Multi_organoid_D183-summits.rds"    
+
+
+PeakArgs$bedDir: length = 1
+[1] "/storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds"
+
+
+PeakArgs$excludeChr: length = 2
+[1] "chrM" "chrY"
+
+
+PeakArgs$threads: length = 1
+[1] 1
+
+
+PeakArgs$logFile: length = 1
+[1] "ArchRLogs/ArchR-addReproduciblePeakSet-9be827113c57-Date-2024-04-05_Time-15-57-15.log"
+
+
+PeakArgs$registryDir: length = 1
+[1] "/storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/batchRegistry"
+
+
+2024-04-05 15:57:16 : Batch Execution w/ safelapply!, 0 mins elapsed.
+2024-04-05 15:57:16 : Group 1 of 45, Calling Peaks with MACS2!, 0 mins elapsed.
+
+2024-04-05 15:57:16 : InsertionSites, Class = integer
+
+InsertionSites: length = 409002
+[1]  16223  16286 109139 109166 109198 109212
+
+
+
+2024-04-05 15:57:16 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 15:57:16 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 409002, nCols = 3
+   seqnames  start    end
+1:     chr1  16222  16223
+2:     chr1  16285  16286
+3:     chr1 109138 109139
+4:     chr1 109165 109166
+5:     chr1 109197 109198
+6:     chr1 109211 109212
+
+
+
+2024-04-05 15:57:19 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name AC._.Multi_H9_D100-1 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/AC._.Multi_H9_D100-1.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 15:58:17 : Group 2 of 45, Calling Peaks with MACS2!, 1.012 mins elapsed.
+
+2024-04-05 15:58:17 : InsertionSites, Class = integer
+
+InsertionSites: length = 341846
+[1] 109101 109210 181120 181163 181361 181389
+
+
+
+2024-04-05 15:58:17 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 15:58:17 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 341846, nCols = 3
+   seqnames  start    end
+1:     chr1 109100 109101
+2:     chr1 109209 109210
+3:     chr1 181119 181120
+4:     chr1 181162 181163
+5:     chr1 181360 181361
+6:     chr1 181388 181389
+
+
+
+2024-04-05 15:58:20 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name AC._.Multi_NRL_GFP_D123-2 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/AC._.Multi_NRL_GFP_D123-2.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 15:59:02 : Group 3 of 45, Calling Peaks with MACS2!, 1.768 mins elapsed.
+
+2024-04-05 15:59:02 : InsertionSites, Class = integer
+
+InsertionSites: length = 263256
+[1]  10158  10196 191319 191319 191423 191444
+
+
+
+2024-04-05 15:59:02 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 15:59:02 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 263256, nCols = 3
+   seqnames  start    end
+1:     chr1  10157  10158
+2:     chr1  10195  10196
+3:     chr1 191318 191319
+4:     chr1 191318 191319
+5:     chr1 191422 191423
+6:     chr1 191443 191444
+
+
+
+2024-04-05 15:59:05 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name AC._.Multi_organoid_NRL_D075-3 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/AC._.Multi_organoid_NRL_D075-3.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:00:08 : Group 4 of 45, Calling Peaks with MACS2!, 2.864 mins elapsed.
+
+2024-04-05 16:00:08 : InsertionSites, Class = integer
+
+InsertionSites: length = 296950
+[1] 10164 10170 10260 10483 16212 16237
+
+
+
+2024-04-05 16:00:08 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:00:08 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 296950, nCols = 3
+   seqnames start   end
+1:     chr1 10163 10164
+2:     chr1 10169 10170
+3:     chr1 10259 10260
+4:     chr1 10482 10483
+5:     chr1 16211 16212
+6:     chr1 16236 16237
+
+
+
+2024-04-05 16:00:11 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name AC._.Multi_organoid_D133-4 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/AC._.Multi_organoid_D133-4.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:01:27 : Group 5 of 45, Calling Peaks with MACS2!, 4.184 mins elapsed.
+
+2024-04-05 16:01:27 : InsertionSites, Class = integer
+
+InsertionSites: length = 168798
+[1]  13284  13513 109139 109210 134632 134691
+
+
+
+2024-04-05 16:01:27 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:01:27 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 168798, nCols = 3
+   seqnames  start    end
+1:     chr1  13283  13284
+2:     chr1  13512  13513
+3:     chr1 109138 109139
+4:     chr1 109209 109210
+5:     chr1 134631 134632
+6:     chr1 134690 134691
+
+
+
+2024-04-05 16:01:29 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name AC._.Multi_organoid_NRL_D243-5 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/AC._.Multi_organoid_NRL_D243-5.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:02:11 : Group 6 of 45, Calling Peaks with MACS2!, 4.922 mins elapsed.
+
+2024-04-05 16:02:12 : InsertionSites, Class = integer
+
+InsertionSites: length = 454698
+[1]  10152  10197  17464  17497 139278 139311
+
+
+
+2024-04-05 16:02:12 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:02:12 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 454698, nCols = 3
+   seqnames  start    end
+1:     chr1  10151  10152
+2:     chr1  10196  10197
+3:     chr1  17463  17464
+4:     chr1  17496  17497
+5:     chr1 139277 139278
+6:     chr1 139310 139311
+
+
+
+2024-04-05 16:02:15 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name BC._.Multi_organoid_D183-6 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/BC._.Multi_organoid_D183-6.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:03:07 : Group 7 of 45, Calling Peaks with MACS2!, 5.846 mins elapsed.
+
+2024-04-05 16:03:07 : InsertionSites, Class = integer
+
+InsertionSites: length = 925826
+[1] 10133 10152 10210 10339 10803 10834
+
+
+
+2024-04-05 16:03:07 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:03:07 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 925826, nCols = 3
+   seqnames start   end
+1:     chr1 10132 10133
+2:     chr1 10151 10152
+3:     chr1 10209 10210
+4:     chr1 10338 10339
+5:     chr1 10802 10803
+6:     chr1 10833 10834
+
+
+
+2024-04-05 16:03:14 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name BC._.Multi_organoid_D133-7 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/BC._.Multi_organoid_D133-7.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:04:37 : Group 8 of 45, Calling Peaks with MACS2!, 7.342 mins elapsed.
+
+2024-04-05 16:04:37 : InsertionSites, Class = integer
+
+InsertionSites: length = 413870
+[1]  10158  10192 180895 180897 181325 181464
+
+
+
+2024-04-05 16:04:37 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:04:37 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 413870, nCols = 3
+   seqnames  start    end
+1:     chr1  10157  10158
+2:     chr1  10191  10192
+3:     chr1 180894 180895
+4:     chr1 180896 180897
+5:     chr1 181324 181325
+6:     chr1 181463 181464
+
+
+
+2024-04-05 16:04:40 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name BC._.Multi_organoid_NRL_D243-8 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/BC._.Multi_organoid_NRL_D243-8.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:05:26 : Group 9 of 45, Calling Peaks with MACS2!, 8.174 mins elapsed.
+
+2024-04-05 16:05:27 : InsertionSites, Class = integer
+
+InsertionSites: length = 336688
+[1]  10158  10164  10180  10584 181130 181161
+
+
+
+2024-04-05 16:05:27 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:05:27 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 336688, nCols = 3
+   seqnames  start    end
+1:     chr1  10157  10158
+2:     chr1  10163  10164
+3:     chr1  10179  10180
+4:     chr1  10583  10584
+5:     chr1 181129 181130
+6:     chr1 181160 181161
+
+
+
+2024-04-05 16:05:29 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name BC._.Multi_organoid_NRL_D206-9 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/BC._.Multi_organoid_NRL_D206-9.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:06:04 : Group 10 of 45, Calling Peaks with MACS2!, 8.799 mins elapsed.
+
+2024-04-05 16:06:04 : InsertionSites, Class = integer
+
+InsertionSites: length = 529604
+[1] 135088 135226 139279 139635 181395 181471
+
+
+
+2024-04-05 16:06:04 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:06:04 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 529604, nCols = 3
+   seqnames  start    end
+1:     chr1 135087 135088
+2:     chr1 135225 135226
+3:     chr1 139278 139279
+4:     chr1 139634 139635
+5:     chr1 181394 181395
+6:     chr1 181470 181471
+
+
+
+2024-04-05 16:06:07 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name BC._.Multi_NRL_GFP_D123-10 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/BC._.Multi_NRL_GFP_D123-10.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:07:01 : Group 11 of 45, Calling Peaks with MACS2!, 9.752 mins elapsed.
+
+2024-04-05 16:07:01 : InsertionSites, Class = integer
+
+InsertionSites: length = 515000
+[1]  17168  17508 139418 139849 180987 181132
+
+
+
+2024-04-05 16:07:01 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:07:01 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 515000, nCols = 3
+   seqnames  start    end
+1:     chr1  17167  17168
+2:     chr1  17507  17508
+3:     chr1 139417 139418
+4:     chr1 139848 139849
+5:     chr1 180986 180987
+6:     chr1 181131 181132
+
+
+
+2024-04-05 16:07:04 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name Cone._.Multi_organoid_NRL_D075-11 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/Cone._.Multi_organoid_NRL_D075-11.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:08:01 : Group 12 of 45, Calling Peaks with MACS2!, 10.744 mins elapsed.
+
+2024-04-05 16:08:01 : InsertionSites, Class = integer
+
+InsertionSites: length = 820930
+[1] 10157 10170 10170 10180 10215 10507
+
+
+
+2024-04-05 16:08:01 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:08:01 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 820930, nCols = 3
+   seqnames start   end
+1:     chr1 10156 10157
+2:     chr1 10169 10170
+3:     chr1 10169 10170
+4:     chr1 10179 10180
+5:     chr1 10214 10215
+6:     chr1 10506 10507
+
+
+
+2024-04-05 16:08:05 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name Cone._.Multi_organoid_NRL_D243-12 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/Cone._.Multi_organoid_NRL_D243-12.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:09:09 : Group 13 of 45, Calling Peaks with MACS2!, 11.891 mins elapsed.
+
+2024-04-05 16:09:10 : InsertionSites, Class = integer
+
+InsertionSites: length = 990404
+[1] 10092 10163 10175 10334 10345 10425
+
+
+
+2024-04-05 16:09:10 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:09:10 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 990404, nCols = 3
+   seqnames start   end
+1:     chr1 10091 10092
+2:     chr1 10162 10163
+3:     chr1 10174 10175
+4:     chr1 10333 10334
+5:     chr1 10344 10345
+6:     chr1 10424 10425
+
+
+
+2024-04-05 16:09:15 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name Cone._.Multi_organoid_D183-13 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/Cone._.Multi_organoid_D183-13.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:10:35 : Group 14 of 45, Calling Peaks with MACS2!, 13.313 mins elapsed.
+
+2024-04-05 16:10:35 : InsertionSites, Class = integer
+
+InsertionSites: length = 1459436
+[1] 10157 10158 10210 10248 10340 10349
+
+
+
+2024-04-05 16:10:35 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:10:35 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 1459436, nCols = 3
+   seqnames start   end
+1:     chr1 10156 10157
+2:     chr1 10157 10158
+3:     chr1 10209 10210
+4:     chr1 10247 10248
+5:     chr1 10339 10340
+6:     chr1 10348 10349
+
+
+
+2024-04-05 16:10:43 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name Cone._.Multi_organoid_D133-14 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/Cone._.Multi_organoid_D133-14.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:12:49 : Group 15 of 45, Calling Peaks with MACS2!, 15.555 mins elapsed.
+
+2024-04-05 16:12:50 : InsertionSites, Class = integer
+
+InsertionSites: length = 609404
+[1]  17172  17525  28949  29338 138506 138532
+
+
+
+2024-04-05 16:12:50 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:12:50 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 609404, nCols = 3
+   seqnames  start    end
+1:     chr1  17171  17172
+2:     chr1  17524  17525
+3:     chr1  28948  28949
+4:     chr1  29337  29338
+5:     chr1 138505 138506
+6:     chr1 138531 138532
+
+
+
+2024-04-05 16:12:53 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name Cone._.Multi_organoid_NRL_D206-15 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/Cone._.Multi_organoid_NRL_D206-15.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:13:55 : Group 16 of 45, Calling Peaks with MACS2!, 16.655 mins elapsed.
+
+2024-04-05 16:13:55 : InsertionSites, Class = integer
+
+InsertionSites: length = 250932
+[1] 181459 181480 181480 181520 181640 181787
+
+
+
+2024-04-05 16:13:55 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:13:55 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 250932, nCols = 3
+   seqnames  start    end
+1:     chr1 181458 181459
+2:     chr1 181479 181480
+3:     chr1 181479 181480
+4:     chr1 181519 181520
+5:     chr1 181639 181640
+6:     chr1 181786 181787
+
+
+
+2024-04-05 16:13:57 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name HC._.Multi_H9_D100-16 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/HC._.Multi_H9_D100-16.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:14:52 : Group 17 of 45, Calling Peaks with MACS2!, 17.597 mins elapsed.
+
+2024-04-05 16:14:52 : InsertionSites, Class = integer
+
+InsertionSites: length = 269434
+[1] 10152 10197 16206 16272 17384 17454
+
+
+
+2024-04-05 16:14:52 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:14:52 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 269434, nCols = 3
+   seqnames start   end
+1:     chr1 10151 10152
+2:     chr1 10196 10197
+3:     chr1 16205 16206
+4:     chr1 16271 16272
+5:     chr1 17383 17384
+6:     chr1 17453 17454
+
+
+
+2024-04-05 16:14:54 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name HC._.Multi_H9_D47-17 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/HC._.Multi_H9_D47-17.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:15:52 : Group 18 of 45, Calling Peaks with MACS2!, 18.599 mins elapsed.
+
+2024-04-05 16:15:52 : InsertionSites, Class = integer
+
+InsertionSites: length = 97000
+[1] 181413 181797 267962 268043 586168 586221
+
+
+
+2024-04-05 16:15:52 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:15:52 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 97000, nCols = 3
+   seqnames  start    end
+1:     chr1 181412 181413
+2:     chr1 181796 181797
+3:     chr1 267961 267962
+4:     chr1 268042 268043
+5:     chr1 586167 586168
+6:     chr1 586220 586221
+
+
+
+2024-04-05 16:15:53 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name HC._.Multi_H9_D35-18 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/HC._.Multi_H9_D35-18.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:16:16 : Group 19 of 45, Calling Peaks with MACS2!, 19.003 mins elapsed.
+
+2024-04-05 16:16:16 : InsertionSites, Class = integer
+
+InsertionSites: length = 101828
+[1] 181414 181481 181620 181675 184162 184334
+
+
+
+2024-04-05 16:16:16 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:16:16 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 101828, nCols = 3
+   seqnames  start    end
+1:     chr1 181413 181414
+2:     chr1 181480 181481
+3:     chr1 181619 181620
+4:     chr1 181674 181675
+5:     chr1 184161 184162
+6:     chr1 184333 184334
+
+
+
+2024-04-05 16:16:18 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name HC._.Multi_organoid_NRL_D075-19 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/HC._.Multi_organoid_NRL_D075-19.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:16:42 : Group 20 of 45, Calling Peaks with MACS2!, 19.435 mins elapsed.
+
+2024-04-05 16:16:42 : InsertionSites, Class = integer
+
+InsertionSites: length = 145038
+[1]  16235  16285 180893 180936 191406 191439
+
+
+
+2024-04-05 16:16:42 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:16:42 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 145038, nCols = 3
+   seqnames  start    end
+1:     chr1  16234  16235
+2:     chr1  16284  16285
+3:     chr1 180892 180893
+4:     chr1 180935 180936
+5:     chr1 191405 191406
+6:     chr1 191438 191439
+
+
+
+2024-04-05 16:16:44 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name HC._.Multi_organoid_NRL_D243-20 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/HC._.Multi_organoid_NRL_D243-20.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:17:18 : Group 21 of 45, Calling Peaks with MACS2!, 20.037 mins elapsed.
+
+2024-04-05 16:17:19 : InsertionSites, Class = integer
+
+InsertionSites: length = 624310
+[1] 10127 10158 10170 10180 10210 10321
+
+
+
+2024-04-05 16:17:19 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:17:19 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 624310, nCols = 3
+   seqnames start   end
+1:     chr1 10126 10127
+2:     chr1 10157 10158
+3:     chr1 10169 10170
+4:     chr1 10179 10180
+5:     chr1 10209 10210
+6:     chr1 10320 10321
+
+
+
+2024-04-05 16:17:22 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name MG._.Multi_organoid_NRL_D206-21 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/MG._.Multi_organoid_NRL_D206-21.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:18:29 : Group 22 of 45, Calling Peaks with MACS2!, 21.21 mins elapsed.
+
+2024-04-05 16:18:29 : InsertionSites, Class = integer
+
+InsertionSites: length = 638344
+[1] 10156 10169 10216 10334 10432 10502
+
+
+
+2024-04-05 16:18:29 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:18:29 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 638344, nCols = 3
+   seqnames start   end
+1:     chr1 10155 10156
+2:     chr1 10168 10169
+3:     chr1 10215 10216
+4:     chr1 10333 10334
+5:     chr1 10431 10432
+6:     chr1 10501 10502
+
+
+
+2024-04-05 16:18:33 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name MG._.Multi_organoid_D183-22 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/MG._.Multi_organoid_D183-22.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:19:39 : Group 23 of 45, Calling Peaks with MACS2!, 22.389 mins elapsed.
+
+2024-04-05 16:19:40 : InsertionSites, Class = integer
+
+InsertionSites: length = 727082
+[1] 10073 10086 10152 10157 10162 10186
+
+
+
+2024-04-05 16:19:40 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:19:40 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 727082, nCols = 3
+   seqnames start   end
+1:     chr1 10072 10073
+2:     chr1 10085 10086
+3:     chr1 10151 10152
+4:     chr1 10156 10157
+5:     chr1 10161 10162
+6:     chr1 10185 10186
+
+
+
+2024-04-05 16:19:43 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name MG._.Multi_organoid_NRL_D243-23 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/MG._.Multi_organoid_NRL_D243-23.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:20:57 : Group 24 of 45, Calling Peaks with MACS2!, 23.678 mins elapsed.
+
+2024-04-05 16:20:57 : InsertionSites, Class = integer
+
+InsertionSites: length = 1019050
+[1] 10157 10192 16206 16261 17469 17629
+
+
+
+2024-04-05 16:20:57 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:20:57 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 1019050, nCols = 3
+   seqnames start   end
+1:     chr1 10156 10157
+2:     chr1 10191 10192
+3:     chr1 16205 16206
+4:     chr1 16260 16261
+5:     chr1 17468 17469
+6:     chr1 17628 17629
+
+
+
+2024-04-05 16:21:04 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name MG._.Multi_organoid_D133-24 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/MG._.Multi_organoid_D133-24.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:22:33 : Group 25 of 45, Calling Peaks with MACS2!, 25.275 mins elapsed.
+
+2024-04-05 16:22:33 : InsertionSites, Class = integer
+
+InsertionSites: length = 223140
+[1]  10152  10180 181057 181155 181480 181507
+
+
+
+2024-04-05 16:22:33 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:22:33 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 223140, nCols = 3
+   seqnames  start    end
+1:     chr1  10151  10152
+2:     chr1  10179  10180
+3:     chr1 181056 181057
+4:     chr1 181154 181155
+5:     chr1 181479 181480
+6:     chr1 181506 181507
+
+
+
+2024-04-05 16:22:35 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name MG._.Multi_NRL_GFP_D123-25 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/MG._.Multi_NRL_GFP_D123-25.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:23:31 : Group 26 of 45, Calling Peaks with MACS2!, 26.253 mins elapsed.
+
+2024-04-05 16:23:32 : InsertionSites, Class = integer
+
+InsertionSites: length = 974328
+[1] 10169 10198 16211 16285 28951 29323
+
+
+
+2024-04-05 16:23:32 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:23:32 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 974328, nCols = 3
+   seqnames start   end
+1:     chr1 10168 10169
+2:     chr1 10197 10198
+3:     chr1 16210 16211
+4:     chr1 16284 16285
+5:     chr1 28950 28951
+6:     chr1 29322 29323
+
+
+
+2024-04-05 16:23:36 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name NRPC._.Multi_H9_D47-26 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/NRPC._.Multi_H9_D47-26.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:24:58 : Group 27 of 45, Calling Peaks with MACS2!, 27.707 mins elapsed.
+
+2024-04-05 16:24:59 : InsertionSites, Class = integer
+
+InsertionSites: length = 642168
+[1] 10152 10619 40590 40669 61152 61370
+
+
+
+2024-04-05 16:24:59 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:24:59 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 642168, nCols = 3
+   seqnames start   end
+1:     chr1 10151 10152
+2:     chr1 10618 10619
+3:     chr1 40589 40590
+4:     chr1 40668 40669
+5:     chr1 61151 61152
+6:     chr1 61369 61370
+
+
+
+2024-04-05 16:25:02 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name NRPC._.Multi_H9_D100-27 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/NRPC._.Multi_H9_D100-27.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:26:15 : Group 28 of 45, Calling Peaks with MACS2!, 28.977 mins elapsed.
+
+2024-04-05 16:26:15 : InsertionSites, Class = integer
+
+InsertionSites: length = 381486
+[1]  10310  10430 180893 180935 181326 181432
+
+
+
+2024-04-05 16:26:15 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:26:15 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 381486, nCols = 3
+   seqnames  start    end
+1:     chr1  10309  10310
+2:     chr1  10429  10430
+3:     chr1 180892 180893
+4:     chr1 180934 180935
+5:     chr1 181325 181326
+6:     chr1 181431 181432
+
+
+
+2024-04-05 16:26:18 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name NRPC._.Multi_organoid_NRL_D206-28 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/NRPC._.Multi_organoid_NRL_D206-28.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:27:00 : Group 29 of 45, Calling Peaks with MACS2!, 29.737 mins elapsed.
+
+2024-04-05 16:27:01 : InsertionSites, Class = integer
+
+InsertionSites: length = 1012818
+[1] 10152 10186 10242 10333 10362 10456
+
+
+
+2024-04-05 16:27:01 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:27:01 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 1012818, nCols = 3
+   seqnames start   end
+1:     chr1 10151 10152
+2:     chr1 10185 10186
+3:     chr1 10241 10242
+4:     chr1 10332 10333
+5:     chr1 10361 10362
+6:     chr1 10455 10456
+
+
+
+2024-04-05 16:27:06 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name NRPC._.Multi_organoid_NRL_D075-29 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/NRPC._.Multi_organoid_NRL_D075-29.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:28:43 : Group 30 of 45, Calling Peaks with MACS2!, 31.445 mins elapsed.
+
+2024-04-05 16:28:43 : InsertionSites, Class = integer
+
+InsertionSites: length = 904816
+[1] 10158 10210 52171 52513 61211 61367
+
+
+
+2024-04-05 16:28:43 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:28:43 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 904816, nCols = 3
+   seqnames start   end
+1:     chr1 10157 10158
+2:     chr1 10209 10210
+3:     chr1 52170 52171
+4:     chr1 52512 52513
+5:     chr1 61210 61211
+6:     chr1 61366 61367
+
+
+
+2024-04-05 16:28:49 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name NRPC._.Multi_H9_D35-30 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/NRPC._.Multi_H9_D35-30.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:30:19 : Group 31 of 45, Calling Peaks with MACS2!, 33.052 mins elapsed.
+
+2024-04-05 16:30:20 : InsertionSites, Class = integer
+
+InsertionSites: length = 998758
+[1] 10152 10152 10157 10170 10192 10216
+
+
+
+2024-04-05 16:30:20 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:30:20 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 998758, nCols = 3
+   seqnames start   end
+1:     chr1 10151 10152
+2:     chr1 10151 10152
+3:     chr1 10156 10157
+4:     chr1 10169 10170
+5:     chr1 10191 10192
+6:     chr1 10215 10216
+
+
+
+2024-04-05 16:30:25 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name PRPC._.Multi_organoid_NRL_D075-31 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/PRPC._.Multi_organoid_NRL_D075-31.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:31:54 : Group 32 of 45, Calling Peaks with MACS2!, 34.63 mins elapsed.
+
+2024-04-05 16:31:54 : InsertionSites, Class = integer
+
+InsertionSites: length = 962018
+[1] 10152 10169 10192 10216 10242 10321
+
+
+
+2024-04-05 16:31:54 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:31:54 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 962018, nCols = 3
+   seqnames start   end
+1:     chr1 10151 10152
+2:     chr1 10168 10169
+3:     chr1 10191 10192
+4:     chr1 10215 10216
+5:     chr1 10241 10242
+6:     chr1 10320 10321
+
+
+
+2024-04-05 16:32:01 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name PRPC._.Multi_H9_D47-32 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/PRPC._.Multi_H9_D47-32.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:33:33 : Group 33 of 45, Calling Peaks with MACS2!, 36.281 mins elapsed.
+
+2024-04-05 16:33:33 : InsertionSites, Class = integer
+
+InsertionSites: length = 856814
+[1] 10132 10339 10439 10507 17469 17500
+
+
+
+2024-04-05 16:33:33 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:33:33 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 856814, nCols = 3
+   seqnames start   end
+1:     chr1 10131 10132
+2:     chr1 10338 10339
+3:     chr1 10438 10439
+4:     chr1 10506 10507
+5:     chr1 17468 17469
+6:     chr1 17499 17500
+
+
+
+2024-04-05 16:33:38 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name PRPC._.Multi_H9_D35-33 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/PRPC._.Multi_H9_D35-33.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:35:02 : Group 34 of 45, Calling Peaks with MACS2!, 37.771 mins elapsed.
+
+2024-04-05 16:35:03 : InsertionSites, Class = integer
+
+InsertionSites: length = 809922
+[1] 10152 10152 10164 10170 10186 10192
+
+
+
+2024-04-05 16:35:03 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:35:03 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 809922, nCols = 3
+   seqnames start   end
+1:     chr1 10151 10152
+2:     chr1 10151 10152
+3:     chr1 10163 10164
+4:     chr1 10169 10170
+5:     chr1 10185 10186
+6:     chr1 10191 10192
+
+
+
+2024-04-05 16:35:07 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name PRPC._.Multi_organoid_NRL_D206-34 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/PRPC._.Multi_organoid_NRL_D206-34.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:36:47 : Group 35 of 45, Calling Peaks with MACS2!, 39.51 mins elapsed.
+
+2024-04-05 16:36:47 : InsertionSites, Class = integer
+
+InsertionSites: length = 740450
+[1] 10242 10335 10338 10543 16221 16285
+
+
+
+2024-04-05 16:36:47 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:36:47 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 740450, nCols = 3
+   seqnames start   end
+1:     chr1 10241 10242
+2:     chr1 10334 10335
+3:     chr1 10337 10338
+4:     chr1 10542 10543
+5:     chr1 16220 16221
+6:     chr1 16284 16285
+
+
+
+2024-04-05 16:36:51 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name PRPC._.Multi_NRL_GFP_D123-35 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/PRPC._.Multi_NRL_GFP_D123-35.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:38:25 : Group 36 of 45, Calling Peaks with MACS2!, 41.147 mins elapsed.
+
+2024-04-05 16:38:25 : InsertionSites, Class = integer
+
+InsertionSites: length = 711674
+[1] 10074 10236 10303 10310 10326 10346
+
+
+
+2024-04-05 16:38:25 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:38:25 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 711674, nCols = 3
+   seqnames start   end
+1:     chr1 10073 10074
+2:     chr1 10235 10236
+3:     chr1 10302 10303
+4:     chr1 10309 10310
+5:     chr1 10325 10326
+6:     chr1 10345 10346
+
+
+
+2024-04-05 16:38:29 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name RGC._.Multi_H9_D35-36 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/RGC._.Multi_H9_D35-36.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:40:09 : Group 37 of 45, Calling Peaks with MACS2!, 42.889 mins elapsed.
+
+2024-04-05 16:40:10 : InsertionSites, Class = integer
+
+InsertionSites: length = 811650
+[1]  10158  10186 108517 108579 109139 109198
+
+
+
+2024-04-05 16:40:11 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:40:11 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 811650, nCols = 3
+   seqnames  start    end
+1:     chr1  10157  10158
+2:     chr1  10185  10186
+3:     chr1 108516 108517
+4:     chr1 108578 108579
+5:     chr1 109138 109139
+6:     chr1 109197 109198
+
+
+
+2024-04-05 16:40:15 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name RGC._.Multi_organoid_NRL_D075-37 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/RGC._.Multi_organoid_NRL_D075-37.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:42:04 : Group 38 of 45, Calling Peaks with MACS2!, 44.798 mins elapsed.
+
+2024-04-05 16:42:04 : InsertionSites, Class = integer
+
+InsertionSites: length = 855326
+[1] 10156 10170 10388 10461 10497 10512
+
+
+
+2024-04-05 16:42:04 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:42:04 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 855326, nCols = 3
+   seqnames start   end
+1:     chr1 10155 10156
+2:     chr1 10169 10170
+3:     chr1 10387 10388
+4:     chr1 10460 10461
+5:     chr1 10496 10497
+6:     chr1 10511 10512
+
+
+
+2024-04-05 16:42:09 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name RGC._.Multi_H9_D47-38 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/RGC._.Multi_H9_D47-38.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:44:01 : Group 39 of 45, Calling Peaks with MACS2!, 46.748 mins elapsed.
+
+2024-04-05 16:44:01 : InsertionSites, Class = integer
+
+InsertionSites: length = 206012
+[1] 123755 124059 135073 135226 180882 180947
+
+
+
+2024-04-05 16:44:01 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:44:01 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 206012, nCols = 3
+   seqnames  start    end
+1:     chr1 123754 123755
+2:     chr1 124058 124059
+3:     chr1 135072 135073
+4:     chr1 135225 135226
+5:     chr1 180881 180882
+6:     chr1 180946 180947
+
+
+
+2024-04-05 16:44:03 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name RGC._.Multi_H9_D100-39 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/RGC._.Multi_H9_D100-39.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:44:58 : Group 40 of 45, Calling Peaks with MACS2!, 47.701 mins elapsed.
+
+2024-04-05 16:44:58 : InsertionSites, Class = integer
+
+InsertionSites: length = 62150
+[1]  77137  77208 181481 181521 190820 190862
+
+
+
+2024-04-05 16:44:58 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:44:58 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 62150, nCols = 3
+   seqnames  start    end
+1:     chr1  77136  77137
+2:     chr1  77207  77208
+3:     chr1 181480 181481
+4:     chr1 181520 181521
+5:     chr1 190819 190820
+6:     chr1 190861 190862
+
+
+
+2024-04-05 16:44:59 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name RGC._.Multi_organoid_NRL_D206-40 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/RGC._.Multi_organoid_NRL_D206-40.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:45:13 : Group 41 of 45, Calling Peaks with MACS2!, 47.955 mins elapsed.
+
+2024-04-05 16:45:14 : InsertionSites, Class = integer
+
+InsertionSites: length = 484620
+[1] 116378 116403 138871 139055 181471 181471
+
+
+
+2024-04-05 16:45:14 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:45:14 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 484620, nCols = 3
+   seqnames  start    end
+1:     chr1 116377 116378
+2:     chr1 116402 116403
+3:     chr1 138870 138871
+4:     chr1 139054 139055
+5:     chr1 181470 181471
+6:     chr1 181470 181471
+
+
+
+2024-04-05 16:45:17 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name Rod._.Multi_organoid_NRL_D243-41 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/Rod._.Multi_organoid_NRL_D243-41.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:46:09 : Group 42 of 45, Calling Peaks with MACS2!, 48.886 mins elapsed.
+
+2024-04-05 16:46:10 : InsertionSites, Class = integer
+
+InsertionSites: length = 653266
+[1]  10438  10512  16240  16285 133822 133875
+
+
+
+2024-04-05 16:46:10 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:46:10 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 653266, nCols = 3
+   seqnames  start    end
+1:     chr1  10437  10438
+2:     chr1  10511  10512
+3:     chr1  16239  16240
+4:     chr1  16284  16285
+5:     chr1 133821 133822
+6:     chr1 133874 133875
+
+
+
+2024-04-05 16:46:13 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name Rod._.Multi_organoid_D133-42 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/Rod._.Multi_organoid_D133-42.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:47:31 : Group 43 of 45, Calling Peaks with MACS2!, 50.258 mins elapsed.
+
+2024-04-05 16:47:32 : InsertionSites, Class = integer
+
+InsertionSites: length = 491120
+[1]  10144  10327 101816 101971 133188 133221
+
+
+
+2024-04-05 16:47:32 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:47:32 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 491120, nCols = 3
+   seqnames  start    end
+1:     chr1  10143  10144
+2:     chr1  10326  10327
+3:     chr1 101815 101816
+4:     chr1 101970 101971
+5:     chr1 133187 133188
+6:     chr1 133220 133221
+
+
+
+2024-04-05 16:47:35 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name Rod._.Multi_organoid_D183-43 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/Rod._.Multi_organoid_D183-43.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:48:31 : Group 44 of 45, Calling Peaks with MACS2!, 51.25 mins elapsed.
+
+2024-04-05 16:48:31 : InsertionSites, Class = integer
+
+InsertionSites: length = 603898
+[1] 10158 10204 10310 10351 28946 29337
+
+
+
+2024-04-05 16:48:31 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:48:31 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 603898, nCols = 3
+   seqnames start   end
+1:     chr1 10157 10158
+2:     chr1 10203 10204
+3:     chr1 10309 10310
+4:     chr1 10350 10351
+5:     chr1 28945 28946
+6:     chr1 29336 29337
+
+
+
+2024-04-05 16:48:35 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name Rod._.Multi_NRL_GFP_D123-44 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/Rod._.Multi_NRL_GFP_D123-44.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:49:42 : Group 45 of 45, Calling Peaks with MACS2!, 52.427 mins elapsed.
+
+2024-04-05 16:49:42 : InsertionSites, Class = integer
+
+InsertionSites: length = 374426
+[1] 10158 10164 10186 10215 17493 17520
+
+
+
+2024-04-05 16:49:42 : InsertionSites-DT, Class = data.table
+ 
+2024-04-05 16:49:42 : InsertionSites-DT, Class = data.frame
+InsertionSites-DT: nRows = 374426, nCols = 3
+   seqnames start   end
+1:     chr1 10157 10158
+2:     chr1 10163 10164
+3:     chr1 10185 10186
+4:     chr1 10214 10215
+5:     chr1 17492 17493
+6:     chr1 17519 17520
+
+
+
+2024-04-05 16:49:45 : Running Macs2 with Params : macs2 callpeak -g 2.7e+09 --name Rod._.Multi_organoid_NRL_D206-45 --treatment /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds/Rod._.Multi_organoid_NRL_D206-45.insertions.bed --outdir /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/InsertionBeds --format BED --call-summits --keep-dup all --nomodel --nolambda --shift -75 --extsize 150 -q 0.1
+2024-04-05 16:50:27 : Identifying Reproducible Peaks!, 53.185 mins elapsed.
+2024-04-05 16:50:27 : Rep. Peaks Group (1 of 9) : Creating Reproducible Peaks, 53.185 mins elapsed.
+
+2024-04-05 16:50:27 : 
+
+2024-04-05 16:50:28 : 
+
+2024-04-05 16:50:34 : 
+
+2024-04-05 16:50:35 : 
+
+2024-04-05 16:50:35 : 
+2024-04-05 16:50:35 : Rep. Peaks Group (1 of 9) : Annotating and Filtering Peaks, 53.332 mins elapsed.
+
+2024-04-05 16:50:36 : Annotating Peaks : Nearest Gene
+
+2024-04-05 16:50:36 : Annotating Peaks : Gene
+
+2024-04-05 16:50:36 : Annotating Peaks : TSS
+
+2024-04-05 16:50:37 : Annotating Peaks : GC
+2024-04-05 16:50:40 : Rep. Peaks Group (2 of 9) : Creating Reproducible Peaks, 53.409 mins elapsed.
+
+2024-04-05 16:50:40 : 
+
+2024-04-05 16:50:41 : 
+
+2024-04-05 16:50:45 : 
+
+2024-04-05 16:50:46 : 
+
+2024-04-05 16:50:46 : 
+2024-04-05 16:50:46 : Rep. Peaks Group (2 of 9) : Annotating and Filtering Peaks, 53.511 mins elapsed.
+
+2024-04-05 16:50:46 : Annotating Peaks : Nearest Gene
+
+2024-04-05 16:50:47 : Annotating Peaks : Gene
+
+2024-04-05 16:50:47 : Annotating Peaks : TSS
+
+2024-04-05 16:50:48 : Annotating Peaks : GC
+2024-04-05 16:50:50 : Rep. Peaks Group (3 of 9) : Creating Reproducible Peaks, 53.581 mins elapsed.
+
+2024-04-05 16:50:50 : 
+
+2024-04-05 16:50:51 : 
+
+2024-04-05 16:50:56 : 
+
+2024-04-05 16:50:57 : 
+
+2024-04-05 16:50:57 : 
+2024-04-05 16:50:58 : Rep. Peaks Group (3 of 9) : Annotating and Filtering Peaks, 53.701 mins elapsed.
+
+2024-04-05 16:50:58 : Annotating Peaks : Nearest Gene
+
+2024-04-05 16:50:58 : Annotating Peaks : Gene
+
+2024-04-05 16:50:58 : Annotating Peaks : TSS
+
+2024-04-05 16:50:59 : Annotating Peaks : GC
+2024-04-05 16:51:02 : Rep. Peaks Group (4 of 9) : Creating Reproducible Peaks, 53.78 mins elapsed.
+
+2024-04-05 16:51:02 : 
+
+2024-04-05 16:51:03 : 
+
+2024-04-05 16:51:06 : 
+
+2024-04-05 16:51:08 : 
+
+2024-04-05 16:51:08 : 
+2024-04-05 16:51:08 : Rep. Peaks Group (4 of 9) : Annotating and Filtering Peaks, 53.874 mins elapsed.
+
+2024-04-05 16:51:08 : Annotating Peaks : Nearest Gene
+
+2024-04-05 16:51:08 : Annotating Peaks : Gene
+
+2024-04-05 16:51:09 : Annotating Peaks : TSS
+
+2024-04-05 16:51:09 : Annotating Peaks : GC
+2024-04-05 16:51:11 : Rep. Peaks Group (5 of 9) : Creating Reproducible Peaks, 53.932 mins elapsed.
+
+2024-04-05 16:51:11 : 
+
+2024-04-05 16:51:12 : 
+
+2024-04-05 16:51:18 : 
+
+2024-04-05 16:51:20 : 
+
+2024-04-05 16:51:20 : 
+2024-04-05 16:51:20 : Rep. Peaks Group (5 of 9) : Annotating and Filtering Peaks, 54.076 mins elapsed.
+
+2024-04-05 16:51:20 : Annotating Peaks : Nearest Gene
+
+2024-04-05 16:51:21 : Annotating Peaks : Gene
+
+2024-04-05 16:51:21 : Annotating Peaks : TSS
+
+2024-04-05 16:51:21 : Annotating Peaks : GC
+2024-04-05 16:51:25 : Rep. Peaks Group (6 of 9) : Creating Reproducible Peaks, 54.156 mins elapsed.
+
+2024-04-05 16:51:25 : 
+
+2024-04-05 16:51:25 : 
+
+2024-04-05 16:51:30 : 
+
+2024-04-05 16:51:31 : 
+
+2024-04-05 16:51:32 : 
+2024-04-05 16:51:32 : Rep. Peaks Group (6 of 9) : Annotating and Filtering Peaks, 54.274 mins elapsed.
+
+2024-04-05 16:51:32 : Annotating Peaks : Nearest Gene
+
+2024-04-05 16:51:32 : Annotating Peaks : Gene
+
+2024-04-05 16:51:33 : Annotating Peaks : TSS
+
+2024-04-05 16:51:33 : Annotating Peaks : GC
+2024-04-05 16:51:36 : Rep. Peaks Group (7 of 9) : Creating Reproducible Peaks, 54.347 mins elapsed.
+
+2024-04-05 16:51:36 : 
+
+2024-04-05 16:51:37 : 
+
+2024-04-05 16:51:43 : 
+
+2024-04-05 16:51:45 : 
+
+2024-04-05 16:51:45 : 
+2024-04-05 16:51:46 : Rep. Peaks Group (7 of 9) : Annotating and Filtering Peaks, 54.501 mins elapsed.
+
+2024-04-05 16:51:46 : Annotating Peaks : Nearest Gene
+
+2024-04-05 16:51:46 : Annotating Peaks : Gene
+
+2024-04-05 16:51:46 : Annotating Peaks : TSS
+
+2024-04-05 16:51:47 : Annotating Peaks : GC
+2024-04-05 16:51:50 : Rep. Peaks Group (8 of 9) : Creating Reproducible Peaks, 54.577 mins elapsed.
+
+2024-04-05 16:51:50 : 
+
+2024-04-05 16:51:51 : 
+
+2024-04-05 16:51:56 : 
+
+2024-04-05 16:51:57 : 
+
+2024-04-05 16:51:57 : 
+2024-04-05 16:51:57 : Rep. Peaks Group (8 of 9) : Annotating and Filtering Peaks, 54.7 mins elapsed.
+
+2024-04-05 16:51:58 : Annotating Peaks : Nearest Gene
+
+2024-04-05 16:51:58 : Annotating Peaks : Gene
+
+2024-04-05 16:51:58 : Annotating Peaks : TSS
+
+2024-04-05 16:51:59 : Annotating Peaks : GC
+2024-04-05 16:52:03 : Rep. Peaks Group (9 of 9) : Creating Reproducible Peaks, 54.798 mins elapsed.
+
+2024-04-05 16:52:03 : 
+
+2024-04-05 16:52:04 : 
+
+2024-04-05 16:52:08 : 
+
+2024-04-05 16:52:10 : 
+
+2024-04-05 16:52:10 : 
+2024-04-05 16:52:10 : Rep. Peaks Group (9 of 9) : Annotating and Filtering Peaks, 54.908 mins elapsed.
+
+2024-04-05 16:52:10 : Annotating Peaks : Nearest Gene
+
+2024-04-05 16:52:10 : Annotating Peaks : Gene
+
+2024-04-05 16:52:11 : Annotating Peaks : TSS
+
+2024-04-05 16:52:11 : Annotating Peaks : GC
+2024-04-05 16:52:14 : Creating Union Peak Set!, 54.973 mins elapsed.
+2024-04-05 16:52:28 : Finished Creating Union Peak Set (339165)!, 55.209 mins elapsed.

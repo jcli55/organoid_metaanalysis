@@ -1,0 +1,25 @@
+  0%|          | 0/10000 [00:00<?, ?cell/s]  0%|          | 1/10000 [00:13<36:25:38, 13.12s/cell]  2%|▏         | 177/10000 [00:13<08:37, 18.99cell/s] Traceback (most recent call last):
+  File "/storage/singlecell/jeanl/organoid/scripts/cell_fate/cellrank/compute_vk.py", line 11, in <module>
+    vk.compute_transition_matrix()
+  File "/storage/chen/home/u250758/miniconda3/envs/cellrank/lib/python3.9/site-packages/cellrank/kernels/_velocity_kernel.py", line 160, in compute_transition_matrix
+    softmax_scale = self._estimate_softmax_scale(backward_mode=backward_mode, similarity=similarity)
+  File "/storage/chen/home/u250758/miniconda3/envs/cellrank/lib/python3.9/site-packages/cellrank/kernels/_velocity_kernel.py", line 254, in _estimate_softmax_scale
+    _, logits = model(n_jobs, backend)
+  File "/storage/chen/home/u250758/miniconda3/envs/cellrank/lib/python3.9/site-packages/cellrank/kernels/utils/_velocity_model.py", line 64, in __call__
+    return parallelize(
+  File "/storage/chen/home/u250758/miniconda3/envs/cellrank/lib/python3.9/site-packages/cellrank/_utils/_parallelize.py", line 96, in wrapper
+    res = jl.Parallel(n_jobs=n_jobs, backend=backend)(
+  File "/storage/chen/home/u250758/miniconda3/envs/cellrank/lib/python3.9/site-packages/joblib/parallel.py", line 1918, in __call__
+    return output if self.return_generator else list(output)
+  File "/storage/chen/home/u250758/miniconda3/envs/cellrank/lib/python3.9/site-packages/joblib/parallel.py", line 1847, in _get_sequential_output
+    res = func(*args, **kwargs)
+  File "/storage/chen/home/u250758/miniconda3/envs/cellrank/lib/python3.9/site-packages/cellrank/kernels/utils/_velocity_model.py", line 85, in _compute_helper
+    ps, ls = self._compute(ix, neigh_ixs, **kwargs)
+  File "/storage/chen/home/u250758/miniconda3/envs/cellrank/lib/python3.9/site-packages/cellrank/kernels/utils/_velocity_model.py", line 181, in _compute
+    return self._similarity(v[None, :], W, self._softmax_scale)
+  File "/storage/chen/home/u250758/miniconda3/envs/cellrank/lib/python3.9/site-packages/cellrank/kernels/utils/_similarity.py", line 238, in __call__
+    return _predict_transition_probabilities_numpy(v, D, softmax_scale, self._center_mean, self._scale_by_norm)
+  File "/storage/chen/home/u250758/miniconda3/envs/cellrank/lib/python3.9/site-packages/numba/np/arraymath.py", line 1062, in check_array
+    raise ValueError('zero-size array to reduction operation not possible')
+ValueError: zero-size array to reduction operation not possible
+  2%|▏         | 184/10000 [00:29<08:36, 18.99cell/s]slurmstepd: error: *** JOB 1364094 ON mhgcp-d00 CANCELLED AT 2024-04-29T11:06:24 DUE TO TIME LIMIT ***

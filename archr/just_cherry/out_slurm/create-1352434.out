@@ -1,0 +1,12 @@
+starting at Tue Apr 16 12:39:23 CDT 2024 on mhgcp-d02.grid.bcm.edu
+SLURM_JOBID=1352434
+class: ArchRProject 
+outputDirectory: /storage/singlecell/jeanl/organoid/data/archr/cherry_project 
+samples(9): wt5-1 wt5-2 ... wt28-1 wt28-2
+sampleColData names(1): ArrowFiles
+cellColData names(13): Sample nMultiFrags ... NucleosomeRatio
+  BlacklistRatio
+numberOfCells(1): 81983
+medianTSS(1): 10.419
+medianFrags(1): 13054
+ended at Tue Apr 16 12:40:55 CDT 2024 on mhgcp-d02.grid.bcm.edu. Time elapsed: 00:01:32

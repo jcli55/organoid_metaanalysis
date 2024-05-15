@@ -1,0 +1,24 @@
+/storage/chen/home/u250758/miniconda3/envs/cellfate/lib/python3.8/site-packages/anndata/_core/anndata.py:1840: UserWarning: Variable names are not unique. To make them unique, call `.var_names_make_unique`.
+  utils.warn_names_duplicates("var")
+WARNING: Using `26` components would split a block of complex conjugate eigenvalues. Using `n_components=27`
+WARNING: Unable to compute macrostates with `n_states=26` because it will split complex conjugate eigenvalues. Using `n_states=27`
+/storage/chen/home/u250758/miniconda3/envs/cellfate/lib/python3.8/site-packages/scvelo/plotting/scatter.py:656: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
+  smp = ax.scatter(
+/storage/chen/home/u250758/miniconda3/envs/cellfate/lib/python3.8/site-packages/scvelo/plotting/scatter.py:694: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
+  ax.scatter(
+/storage/chen/home/u250758/miniconda3/envs/cellfate/lib/python3.8/site-packages/scvelo/plotting/utils.py:1391: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
+  ax.scatter(x, y, s=bg_size, marker=".", c=bg_color, zorder=zord - 2, **kwargs)
+/storage/chen/home/u250758/miniconda3/envs/cellfate/lib/python3.8/site-packages/scvelo/plotting/utils.py:1392: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
+  ax.scatter(x, y, s=gp_size, marker=".", c=gp_color, zorder=zord - 1, **kwargs)
+Traceback (most recent call last):
+  File "infer_fate_subclass.py", line 29, in <module>
+    g.set_terminal_states(states=['OFF-BC','ON-BC','RBC','MG','S_Cone','ML_Cone','Rod','GABAergic','Glycinergic','SACs','dual ACs','HC0','HC1'])
+  File "/storage/chen/home/u250758/miniconda3/envs/cellfate/lib/python3.8/site-packages/cellrank/estimators/terminal_states/_gpcca.py", line 435, in set_terminal_states
+    memberships = memberships[list(states)].copy()
+  File "/storage/chen/home/u250758/miniconda3/envs/cellfate/lib/python3.8/site-packages/cellrank/_utils/_lineage.py", line 310, in __getitem__
+    obj = self.__getitem(item)
+  File "/storage/chen/home/u250758/miniconda3/envs/cellfate/lib/python3.8/site-packages/cellrank/_utils/_lineage.py", line 391, in __getitem
+    item = (slice(None, None, None), self._maybe_convert_names(item))
+  File "/storage/chen/home/u250758/miniconda3/envs/cellfate/lib/python3.8/site-packages/cellrank/_utils/_lineage.py", line 1034, in _maybe_convert_names
+    raise KeyError(f"Invalid lineage name `{name!r}`. Valid names are: `{list(self.names)}`.")
+KeyError: "Invalid lineage name `'ON-BC'`. Valid names are: `['RGC Precursor_1', 'RBC', 'PRPC_1', 'PRPC_2', 'Cone Precursor_1', 'AC Precursor_1', 'RGC Precursor_2', 'Cone Precursor_2', 'S_Cone', 'PRPC_3', 'Rod_1', 'AC Precursor_2', 'RGC Precursor_3', 'Cone Precursor_3', 'PRPC_4', 'Cone Precursor_4', 'PRPC_5', 'MG_1', 'PRPC_6', 'OFF-BC', 'PRPC_7', 'Rod Precursor_1', 'PRPC_8', 'Rod Precursor_2', 'ML_Cone', 'Rod_2', 'MG_2']`."

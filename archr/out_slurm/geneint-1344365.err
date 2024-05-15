@@ -1,0 +1,472 @@
+Loading required package: ggplot2
+Loading required package: SummarizedExperiment
+Loading required package: MatrixGenerics
+Loading required package: matrixStats
+
+Attaching package: ‘MatrixGenerics’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colAlls, colAnyNAs, colAnys, colAvgsPerRowSet, colCollapse,
+    colCounts, colCummaxs, colCummins, colCumprods, colCumsums,
+    colDiffs, colIQRDiffs, colIQRs, colLogSumExps, colMadDiffs,
+    colMads, colMaxs, colMeans2, colMedians, colMins, colOrderStats,
+    colProds, colQuantiles, colRanges, colRanks, colSdDiffs, colSds,
+    colSums2, colTabulates, colVarDiffs, colVars, colWeightedMads,
+    colWeightedMeans, colWeightedMedians, colWeightedSds,
+    colWeightedVars, rowAlls, rowAnyNAs, rowAnys, rowAvgsPerColSet,
+    rowCollapse, rowCounts, rowCummaxs, rowCummins, rowCumprods,
+    rowCumsums, rowDiffs, rowIQRDiffs, rowIQRs, rowLogSumExps,
+    rowMadDiffs, rowMads, rowMaxs, rowMeans2, rowMedians, rowMins,
+    rowOrderStats, rowProds, rowQuantiles, rowRanges, rowRanks,
+    rowSdDiffs, rowSds, rowSums2, rowTabulates, rowVarDiffs, rowVars,
+    rowWeightedMads, rowWeightedMeans, rowWeightedMedians,
+    rowWeightedSds, rowWeightedVars
+
+Loading required package: GenomicRanges
+Loading required package: stats4
+Loading required package: BiocGenerics
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    Filter, Find, Map, Position, Reduce, anyDuplicated, append,
+    as.data.frame, basename, cbind, colnames, dirname, do.call,
+    duplicated, eval, evalq, get, grep, grepl, intersect, is.unsorted,
+    lapply, mapply, match, mget, order, paste, pmax, pmax.int, pmin,
+    pmin.int, rank, rbind, rownames, sapply, setdiff, sort, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Loading required package: S4Vectors
+
+Attaching package: ‘S4Vectors’
+
+The following objects are masked from ‘package:base’:
+
+    I, expand.grid, unname
+
+Loading required package: IRanges
+Loading required package: GenomeInfoDb
+Loading required package: Biobase
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: ‘Biobase’
+
+The following object is masked from ‘package:MatrixGenerics’:
+
+    rowMedians
+
+The following objects are masked from ‘package:matrixStats’:
+
+    anyMissing, rowMedians
+
+Loading required package: data.table
+
+Attaching package: ‘data.table’
+
+The following object is masked from ‘package:SummarizedExperiment’:
+
+    shift
+
+The following object is masked from ‘package:GenomicRanges’:
+
+    shift
+
+The following object is masked from ‘package:IRanges’:
+
+    shift
+
+The following objects are masked from ‘package:S4Vectors’:
+
+    first, second
+
+Loading required package: Matrix
+
+Attaching package: ‘Matrix’
+
+The following object is masked from ‘package:S4Vectors’:
+
+    expand
+
+Loading required package: rhdf5
+Loading required package: magrittr
+Successfully loaded ArchRProject!
+
+                                                   / |
+                                                 /    \
+            .                                  /      |.
+            \\\                              /        |.
+              \\\                          /           `|.
+                \\\                      /              |.
+                  \                    /                |\
+                  \\#####\           /                  ||
+                ==###########>      /                   ||
+                 \\##==......\    /                     ||
+            ______ =       =|__ /__                     ||      \\\
+        ,--' ,----`-,__ ___/'  --,-`-===================##========>
+       \               '        ##_______ _____ ,--,__,=##,__   ///
+        ,    __==    ___,-,__,--'#'  ==='      `-'    | ##,-/
+        -,____,---'       \\####\\________________,--\\_##,/
+           ___      .______        ______  __    __  .______      
+          /   \     |   _  \      /      ||  |  |  | |   _  \     
+         /  ^  \    |  |_)  |    |  ,----'|  |__|  | |  |_)  |    
+        /  /_\  \   |      /     |  |     |   __   | |      /     
+       /  _____  \  |  |\  \\___ |  `----.|  |  |  | |  |\  \\___.
+      /__/     \__\ | _| `._____| \______||__|  |__| | _| `._____|
+    
+Loading required package: SeuratObject
+Loading required package: sp
+The legacy packages maptools, rgdal, and rgeos, underpinning this package
+will retire shortly. Please refer to R-spatial evolution reports on
+https://r-spatial.org/r/2023/05/15/evolution4.html for details.
+This package is now running under evolution status 0 
+
+Attaching package: ‘sp’
+
+The following object is masked from ‘package:IRanges’:
+
+    %over%
+
+
+Attaching package: ‘SeuratObject’
+
+The following object is masked from ‘package:SummarizedExperiment’:
+
+    Assays
+
+ArchR logging to : ArchRLogs/ArchR-addGeneIntegrationMatrix-4bef19a9bc9a-Date-2024-04-10_Time-14-19-16.log
+If there is an issue, please report to github with logFile!
+2024-04-10 14:19:16 : Running Seurat's Integration Stuart* et al 2019, 0.009 mins elapsed.
+2024-04-10 14:19:31 : Checking ATAC Input, 0.245 mins elapsed.
+2024-04-10 14:19:31 : Checking RNA Input, 0.246 mins elapsed.
+2024-04-10 14:19:57 : Found 21369 overlapping gene names from gene scores and rna matrix!, 0.679 mins elapsed.
+2024-04-10 14:19:57 : Creating Integration Blocks, 0.679 mins elapsed.
+2024-04-10 14:20:29 : Prepping Interation Data, 1.22 mins elapsed.
+2024-04-10 14:20:31 : Computing Integration in 21 Integration Blocks!, 0 mins elapsed.
+2024-04-10 14:20:31 : Block (1 of 21) : Computing Integration, 0 mins elapsed.
+2024-04-10 14:20:34 : Block (1 of 21) : Identifying Variable Genes, 0.051 mins elapsed.
+2024-04-10 14:20:38 : Block (1 of 21) : Getting GeneScoreMatrix, 0.111 mins elapsed.
+2024-04-10 14:23:46 : Block (1 of 21) : Imputing GeneScoreMatrix, 3.242 mins elapsed.
+Getting ImputeWeights
+2024-04-10 14:24:57 : Block (1 of 21) : Seurat FindTransferAnchors, 4.423 mins elapsed.
+2024-04-10 14:27:18 : Block (1 of 21) : Seurat TransferData Cell Group Labels, 6.773 mins elapsed.
+2024-04-10 14:27:20 : Block (1 of 21) : Seurat TransferData Cell Names Labels, 6.81 mins elapsed.
+2024-04-10 14:27:47 : Block (1 of 21) : Saving TransferAnchors Joint CCA, 7.255 mins elapsed.
+2024-04-10 14:27:49 : Block (1 of 21) : Completed Integration, 7.287 mins elapsed.
+2024-04-10 14:27:49 : Block (2 of 21) : Computing Integration, 7.302 mins elapsed.
+2024-04-10 14:27:52 : Block (2 of 21) : Identifying Variable Genes, 7.348 mins elapsed.
+2024-04-10 14:27:56 : Block (2 of 21) : Getting GeneScoreMatrix, 7.407 mins elapsed.
+2024-04-10 14:29:35 : Block (2 of 21) : Imputing GeneScoreMatrix, 9.06 mins elapsed.
+Getting ImputeWeights
+2024-04-10 14:30:47 : Block (2 of 21) : Seurat FindTransferAnchors, 10.258 mins elapsed.
+2024-04-10 14:33:08 : Block (2 of 21) : Seurat TransferData Cell Group Labels, 12.615 mins elapsed.
+2024-04-10 14:33:11 : Block (2 of 21) : Seurat TransferData Cell Names Labels, 12.654 mins elapsed.
+2024-04-10 14:33:38 : Block (2 of 21) : Saving TransferAnchors Joint CCA, 13.112 mins elapsed.
+2024-04-10 14:33:39 : Block (2 of 21) : Completed Integration, 13.134 mins elapsed.
+2024-04-10 14:33:40 : Block (3 of 21) : Computing Integration, 13.146 mins elapsed.
+2024-04-10 14:33:44 : Block (3 of 21) : Identifying Variable Genes, 13.213 mins elapsed.
+2024-04-10 14:33:48 : Block (3 of 21) : Getting GeneScoreMatrix, 13.283 mins elapsed.
+2024-04-10 14:35:20 : Block (3 of 21) : Imputing GeneScoreMatrix, 14.817 mins elapsed.
+Getting ImputeWeights
+2024-04-10 14:36:33 : Block (3 of 21) : Seurat FindTransferAnchors, 16.024 mins elapsed.
+2024-04-10 14:38:58 : Block (3 of 21) : Seurat TransferData Cell Group Labels, 18.446 mins elapsed.
+2024-04-10 14:39:00 : Block (3 of 21) : Seurat TransferData Cell Names Labels, 18.483 mins elapsed.
+2024-04-10 14:39:26 : Block (3 of 21) : Saving TransferAnchors Joint CCA, 18.907 mins elapsed.
+2024-04-10 14:39:27 : Block (3 of 21) : Completed Integration, 18.934 mins elapsed.
+2024-04-10 14:39:28 : Block (4 of 21) : Computing Integration, 18.944 mins elapsed.
+2024-04-10 14:39:31 : Block (4 of 21) : Identifying Variable Genes, 18.99 mins elapsed.
+2024-04-10 14:39:34 : Block (4 of 21) : Getting GeneScoreMatrix, 19.05 mins elapsed.
+2024-04-10 14:41:23 : Block (4 of 21) : Imputing GeneScoreMatrix, 20.859 mins elapsed.
+Getting ImputeWeights
+2024-04-10 14:42:32 : Block (4 of 21) : Seurat FindTransferAnchors, 22.017 mins elapsed.
+2024-04-10 14:44:58 : Block (4 of 21) : Seurat TransferData Cell Group Labels, 24.446 mins elapsed.
+2024-04-10 14:45:01 : Block (4 of 21) : Seurat TransferData Cell Names Labels, 24.492 mins elapsed.
+2024-04-10 14:45:26 : Block (4 of 21) : Saving TransferAnchors Joint CCA, 24.913 mins elapsed.
+2024-04-10 14:45:28 : Block (4 of 21) : Completed Integration, 24.938 mins elapsed.
+2024-04-10 14:45:28 : Block (5 of 21) : Computing Integration, 24.948 mins elapsed.
+2024-04-10 14:45:31 : Block (5 of 21) : Identifying Variable Genes, 24.995 mins elapsed.
+2024-04-10 14:45:35 : Block (5 of 21) : Getting GeneScoreMatrix, 25.055 mins elapsed.
+2024-04-10 14:47:04 : Block (5 of 21) : Imputing GeneScoreMatrix, 26.543 mins elapsed.
+Getting ImputeWeights
+2024-04-10 14:48:11 : Block (5 of 21) : Seurat FindTransferAnchors, 27.667 mins elapsed.
+2024-04-10 14:50:37 : Block (5 of 21) : Seurat TransferData Cell Group Labels, 30.087 mins elapsed.
+2024-04-10 14:50:39 : Block (5 of 21) : Seurat TransferData Cell Names Labels, 30.133 mins elapsed.
+2024-04-10 14:51:05 : Block (5 of 21) : Saving TransferAnchors Joint CCA, 30.554 mins elapsed.
+2024-04-10 14:51:06 : Block (5 of 21) : Completed Integration, 30.578 mins elapsed.
+2024-04-10 14:51:07 : Block (6 of 21) : Computing Integration, 30.588 mins elapsed.
+2024-04-10 14:51:09 : Block (6 of 21) : Identifying Variable Genes, 30.635 mins elapsed.
+2024-04-10 14:51:13 : Block (6 of 21) : Getting GeneScoreMatrix, 30.693 mins elapsed.
+2024-04-10 14:52:42 : Block (6 of 21) : Imputing GeneScoreMatrix, 32.176 mins elapsed.
+Getting ImputeWeights
+2024-04-10 14:53:51 : Block (6 of 21) : Seurat FindTransferAnchors, 33.336 mins elapsed.
+2024-04-10 14:56:18 : Block (6 of 21) : Seurat TransferData Cell Group Labels, 35.784 mins elapsed.
+2024-04-10 14:56:21 : Block (6 of 21) : Seurat TransferData Cell Names Labels, 35.822 mins elapsed.
+2024-04-10 14:56:46 : Block (6 of 21) : Saving TransferAnchors Joint CCA, 36.246 mins elapsed.
+2024-04-10 14:56:48 : Block (6 of 21) : Completed Integration, 36.27 mins elapsed.
+2024-04-10 14:56:48 : Block (7 of 21) : Computing Integration, 36.28 mins elapsed.
+2024-04-10 14:56:51 : Block (7 of 21) : Identifying Variable Genes, 36.326 mins elapsed.
+2024-04-10 14:56:54 : Block (7 of 21) : Getting GeneScoreMatrix, 36.385 mins elapsed.
+2024-04-10 14:58:30 : Block (7 of 21) : Imputing GeneScoreMatrix, 37.971 mins elapsed.
+Getting ImputeWeights
+2024-04-10 14:59:37 : Block (7 of 21) : Seurat FindTransferAnchors, 39.102 mins elapsed.
+2024-04-10 15:01:58 : Block (7 of 21) : Seurat TransferData Cell Group Labels, 41.445 mins elapsed.
+2024-04-10 15:02:00 : Block (7 of 21) : Seurat TransferData Cell Names Labels, 41.484 mins elapsed.
+2024-04-10 15:02:26 : Block (7 of 21) : Saving TransferAnchors Joint CCA, 41.908 mins elapsed.
+2024-04-10 15:02:27 : Block (7 of 21) : Completed Integration, 41.932 mins elapsed.
+2024-04-10 15:02:28 : Block (8 of 21) : Computing Integration, 41.942 mins elapsed.
+2024-04-10 15:02:31 : Block (8 of 21) : Identifying Variable Genes, 41.987 mins elapsed.
+2024-04-10 15:02:34 : Block (8 of 21) : Getting GeneScoreMatrix, 42.045 mins elapsed.
+2024-04-10 15:03:59 : Block (8 of 21) : Imputing GeneScoreMatrix, 43.469 mins elapsed.
+Getting ImputeWeights
+2024-04-10 15:05:09 : Block (8 of 21) : Seurat FindTransferAnchors, 44.621 mins elapsed.
+2024-04-10 15:07:33 : Block (8 of 21) : Seurat TransferData Cell Group Labels, 47.028 mins elapsed.
+2024-04-10 15:07:36 : Block (8 of 21) : Seurat TransferData Cell Names Labels, 47.072 mins elapsed.
+2024-04-10 15:08:01 : Block (8 of 21) : Saving TransferAnchors Joint CCA, 47.5 mins elapsed.
+2024-04-10 15:08:03 : Block (8 of 21) : Completed Integration, 47.525 mins elapsed.
+2024-04-10 15:08:03 : Block (9 of 21) : Computing Integration, 47.534 mins elapsed.
+2024-04-10 15:08:06 : Block (9 of 21) : Identifying Variable Genes, 47.582 mins elapsed.
+2024-04-10 15:08:10 : Block (9 of 21) : Getting GeneScoreMatrix, 47.642 mins elapsed.
+2024-04-10 15:09:34 : Block (9 of 21) : Imputing GeneScoreMatrix, 49.052 mins elapsed.
+Getting ImputeWeights
+2024-04-10 15:10:42 : Block (9 of 21) : Seurat FindTransferAnchors, 50.185 mins elapsed.
+2024-04-10 15:13:13 : Block (9 of 21) : Seurat TransferData Cell Group Labels, 52.689 mins elapsed.
+2024-04-10 15:13:16 : Block (9 of 21) : Seurat TransferData Cell Names Labels, 52.747 mins elapsed.
+2024-04-10 15:13:46 : Block (9 of 21) : Saving TransferAnchors Joint CCA, 53.237 mins elapsed.
+2024-04-10 15:13:48 : Block (9 of 21) : Completed Integration, 53.28 mins elapsed.
+2024-04-10 15:13:49 : Block (10 of 21) : Computing Integration, 53.294 mins elapsed.
+2024-04-10 15:13:52 : Block (10 of 21) : Identifying Variable Genes, 53.347 mins elapsed.
+2024-04-10 15:13:57 : Block (10 of 21) : Getting GeneScoreMatrix, 53.42 mins elapsed.
+2024-04-10 15:17:53 : Block (10 of 21) : Imputing GeneScoreMatrix, 57.358 mins elapsed.
+Getting ImputeWeights
+2024-04-10 15:19:12 : Block (10 of 21) : Seurat FindTransferAnchors, 58.671 mins elapsed.
+2024-04-10 15:21:47 : Block (10 of 21) : Seurat TransferData Cell Group Labels, 61.26 mins elapsed.
+2024-04-10 15:21:50 : Block (10 of 21) : Seurat TransferData Cell Names Labels, 61.307 mins elapsed.
+2024-04-10 15:22:15 : Block (10 of 21) : Saving TransferAnchors Joint CCA, 61.733 mins elapsed.
+2024-04-10 15:22:17 : Block (10 of 21) : Completed Integration, 61.76 mins elapsed.
+2024-04-10 15:22:18 : Block (11 of 21) : Computing Integration, 61.77 mins elapsed.
+2024-04-10 15:22:20 : Block (11 of 21) : Identifying Variable Genes, 61.818 mins elapsed.
+2024-04-10 15:22:24 : Block (11 of 21) : Getting GeneScoreMatrix, 61.877 mins elapsed.
+2024-04-10 15:25:07 : Block (11 of 21) : Imputing GeneScoreMatrix, 64.6 mins elapsed.
+Getting ImputeWeights
+2024-04-10 15:26:15 : Block (11 of 21) : Seurat FindTransferAnchors, 65.724 mins elapsed.
+2024-04-10 15:28:28 : Block (11 of 21) : Seurat TransferData Cell Group Labels, 67.946 mins elapsed.
+2024-04-10 15:28:30 : Block (11 of 21) : Seurat TransferData Cell Names Labels, 67.983 mins elapsed.
+2024-04-10 15:28:56 : Block (11 of 21) : Saving TransferAnchors Joint CCA, 68.409 mins elapsed.
+2024-04-10 15:28:57 : Block (11 of 21) : Completed Integration, 68.436 mins elapsed.
+2024-04-10 15:28:58 : Block (12 of 21) : Computing Integration, 68.447 mins elapsed.
+2024-04-10 15:29:01 : Block (12 of 21) : Identifying Variable Genes, 68.492 mins elapsed.
+2024-04-10 15:29:04 : Block (12 of 21) : Getting GeneScoreMatrix, 68.551 mins elapsed.
+2024-04-10 15:31:06 : Block (12 of 21) : Imputing GeneScoreMatrix, 70.579 mins elapsed.
+Getting ImputeWeights
+2024-04-10 15:32:15 : Block (12 of 21) : Seurat FindTransferAnchors, 71.723 mins elapsed.
+2024-04-10 15:34:34 : Block (12 of 21) : Seurat TransferData Cell Group Labels, 74.053 mins elapsed.
+2024-04-10 15:34:37 : Block (12 of 21) : Seurat TransferData Cell Names Labels, 74.096 mins elapsed.
+2024-04-10 15:35:03 : Block (12 of 21) : Saving TransferAnchors Joint CCA, 74.52 mins elapsed.
+2024-04-10 15:35:04 : Block (12 of 21) : Completed Integration, 74.545 mins elapsed.
+2024-04-10 15:35:05 : Block (13 of 21) : Computing Integration, 74.555 mins elapsed.
+2024-04-10 15:35:07 : Block (13 of 21) : Identifying Variable Genes, 74.603 mins elapsed.
+2024-04-10 15:35:11 : Block (13 of 21) : Getting GeneScoreMatrix, 74.662 mins elapsed.
+2024-04-10 15:36:46 : Block (13 of 21) : Imputing GeneScoreMatrix, 76.24 mins elapsed.
+Getting ImputeWeights
+2024-04-10 15:37:53 : Block (13 of 21) : Seurat FindTransferAnchors, 77.356 mins elapsed.
+2024-04-10 15:40:13 : Block (13 of 21) : Seurat TransferData Cell Group Labels, 79.688 mins elapsed.
+2024-04-10 15:40:15 : Block (13 of 21) : Seurat TransferData Cell Names Labels, 79.725 mins elapsed.
+2024-04-10 15:40:40 : Block (13 of 21) : Saving TransferAnchors Joint CCA, 80.147 mins elapsed.
+2024-04-10 15:40:42 : Block (13 of 21) : Completed Integration, 80.174 mins elapsed.
+2024-04-10 15:40:42 : Block (14 of 21) : Computing Integration, 80.183 mins elapsed.
+2024-04-10 15:40:45 : Block (14 of 21) : Identifying Variable Genes, 80.23 mins elapsed.
+2024-04-10 15:40:49 : Block (14 of 21) : Getting GeneScoreMatrix, 80.289 mins elapsed.
+2024-04-10 15:42:24 : Block (14 of 21) : Imputing GeneScoreMatrix, 81.872 mins elapsed.
+Getting ImputeWeights
+2024-04-10 15:43:31 : Block (14 of 21) : Seurat FindTransferAnchors, 83 mins elapsed.
+2024-04-10 15:45:50 : Block (14 of 21) : Seurat TransferData Cell Group Labels, 85.31 mins elapsed.
+2024-04-10 15:45:52 : Block (14 of 21) : Seurat TransferData Cell Names Labels, 85.345 mins elapsed.
+2024-04-10 15:46:17 : Block (14 of 21) : Saving TransferAnchors Joint CCA, 85.767 mins elapsed.
+2024-04-10 15:46:19 : Block (14 of 21) : Completed Integration, 85.793 mins elapsed.
+2024-04-10 15:46:19 : Block (15 of 21) : Computing Integration, 85.802 mins elapsed.
+2024-04-10 15:46:22 : Block (15 of 21) : Identifying Variable Genes, 85.849 mins elapsed.
+2024-04-10 15:46:26 : Block (15 of 21) : Getting GeneScoreMatrix, 85.907 mins elapsed.
+2024-04-10 15:47:59 : Block (15 of 21) : Imputing GeneScoreMatrix, 87.454 mins elapsed.
+Getting ImputeWeights
+2024-04-10 15:49:05 : Block (15 of 21) : Seurat FindTransferAnchors, 88.567 mins elapsed.
+2024-04-10 15:51:31 : Block (15 of 21) : Seurat TransferData Cell Group Labels, 90.987 mins elapsed.
+2024-04-10 15:51:33 : Block (15 of 21) : Seurat TransferData Cell Names Labels, 91.024 mins elapsed.
+2024-04-10 15:51:58 : Block (15 of 21) : Saving TransferAnchors Joint CCA, 91.45 mins elapsed.
+2024-04-10 15:52:00 : Block (15 of 21) : Completed Integration, 91.474 mins elapsed.
+2024-04-10 15:52:00 : Block (16 of 21) : Computing Integration, 91.484 mins elapsed.
+2024-04-10 15:52:03 : Block (16 of 21) : Identifying Variable Genes, 91.531 mins elapsed.
+2024-04-10 15:52:07 : Block (16 of 21) : Getting GeneScoreMatrix, 91.589 mins elapsed.
+2024-04-10 15:53:44 : Block (16 of 21) : Imputing GeneScoreMatrix, 93.217 mins elapsed.
+Getting ImputeWeights
+2024-04-10 15:54:54 : Block (16 of 21) : Seurat FindTransferAnchors, 94.376 mins elapsed.
+2024-04-10 15:57:14 : Block (16 of 21) : Seurat TransferData Cell Group Labels, 96.718 mins elapsed.
+2024-04-10 15:57:17 : Block (16 of 21) : Seurat TransferData Cell Names Labels, 96.758 mins elapsed.
+2024-04-10 15:57:41 : Block (16 of 21) : Saving TransferAnchors Joint CCA, 97.167 mins elapsed.
+2024-04-10 15:57:43 : Block (16 of 21) : Completed Integration, 97.192 mins elapsed.
+2024-04-10 15:57:43 : Block (17 of 21) : Computing Integration, 97.202 mins elapsed.
+2024-04-10 15:57:46 : Block (17 of 21) : Identifying Variable Genes, 97.249 mins elapsed.
+2024-04-10 15:57:50 : Block (17 of 21) : Getting GeneScoreMatrix, 97.307 mins elapsed.
+2024-04-10 15:59:27 : Block (17 of 21) : Imputing GeneScoreMatrix, 98.921 mins elapsed.
+Getting ImputeWeights
+2024-04-10 16:00:36 : Block (17 of 21) : Seurat FindTransferAnchors, 100.086 mins elapsed.
+2024-04-10 16:03:03 : Block (17 of 21) : Seurat TransferData Cell Group Labels, 102.521 mins elapsed.
+2024-04-10 16:03:05 : Block (17 of 21) : Seurat TransferData Cell Names Labels, 102.56 mins elapsed.
+2024-04-10 16:03:29 : Block (17 of 21) : Saving TransferAnchors Joint CCA, 102.969 mins elapsed.
+2024-04-10 16:03:31 : Block (17 of 21) : Completed Integration, 102.994 mins elapsed.
+2024-04-10 16:03:32 : Block (18 of 21) : Computing Integration, 103.004 mins elapsed.
+2024-04-10 16:03:34 : Block (18 of 21) : Identifying Variable Genes, 103.05 mins elapsed.
+2024-04-10 16:03:38 : Block (18 of 21) : Getting GeneScoreMatrix, 103.108 mins elapsed.
+2024-04-10 16:05:13 : Block (18 of 21) : Imputing GeneScoreMatrix, 104.687 mins elapsed.
+Getting ImputeWeights
+2024-04-10 16:06:19 : Block (18 of 21) : Seurat FindTransferAnchors, 105.796 mins elapsed.
+2024-04-10 16:08:42 : Block (18 of 21) : Seurat TransferData Cell Group Labels, 108.177 mins elapsed.
+2024-04-10 16:08:45 : Block (18 of 21) : Seurat TransferData Cell Names Labels, 108.22 mins elapsed.
+2024-04-10 16:09:09 : Block (18 of 21) : Saving TransferAnchors Joint CCA, 108.629 mins elapsed.
+2024-04-10 16:09:11 : Block (18 of 21) : Completed Integration, 108.655 mins elapsed.
+2024-04-10 16:09:11 : Block (19 of 21) : Computing Integration, 108.664 mins elapsed.
+2024-04-10 16:09:14 : Block (19 of 21) : Identifying Variable Genes, 108.712 mins elapsed.
+2024-04-10 16:09:18 : Block (19 of 21) : Getting GeneScoreMatrix, 108.77 mins elapsed.
+2024-04-10 16:10:53 : Block (19 of 21) : Imputing GeneScoreMatrix, 110.36 mins elapsed.
+Getting ImputeWeights
+2024-04-10 16:12:04 : Block (19 of 21) : Seurat FindTransferAnchors, 111.551 mins elapsed.
+2024-04-10 16:14:24 : Block (19 of 21) : Seurat TransferData Cell Group Labels, 113.88 mins elapsed.
+2024-04-10 16:14:26 : Block (19 of 21) : Seurat TransferData Cell Names Labels, 113.918 mins elapsed.
+2024-04-10 16:14:51 : Block (19 of 21) : Saving TransferAnchors Joint CCA, 114.325 mins elapsed.
+2024-04-10 16:14:52 : Block (19 of 21) : Completed Integration, 114.351 mins elapsed.
+2024-04-10 16:14:53 : Block (20 of 21) : Computing Integration, 114.361 mins elapsed.
+2024-04-10 16:14:56 : Block (20 of 21) : Identifying Variable Genes, 114.407 mins elapsed.
+2024-04-10 16:14:59 : Block (20 of 21) : Getting GeneScoreMatrix, 114.465 mins elapsed.
+2024-04-10 16:16:59 : Block (20 of 21) : Imputing GeneScoreMatrix, 116.454 mins elapsed.
+Getting ImputeWeights
+2024-04-10 16:18:06 : Block (20 of 21) : Seurat FindTransferAnchors, 117.583 mins elapsed.
+2024-04-10 16:20:30 : Block (20 of 21) : Seurat TransferData Cell Group Labels, 119.972 mins elapsed.
+2024-04-10 16:20:32 : Block (20 of 21) : Seurat TransferData Cell Names Labels, 120.014 mins elapsed.
+2024-04-10 16:20:57 : Block (20 of 21) : Saving TransferAnchors Joint CCA, 120.423 mins elapsed.
+2024-04-10 16:20:58 : Block (20 of 21) : Completed Integration, 120.45 mins elapsed.
+2024-04-10 16:20:59 : Block (21 of 21) : Computing Integration, 120.461 mins elapsed.
+2024-04-10 16:21:02 : Block (21 of 21) : Identifying Variable Genes, 120.509 mins elapsed.
+2024-04-10 16:21:05 : Block (21 of 21) : Getting GeneScoreMatrix, 120.569 mins elapsed.
+2024-04-10 16:22:42 : Block (21 of 21) : Imputing GeneScoreMatrix, 122.178 mins elapsed.
+Getting ImputeWeights
+2024-04-10 16:23:57 : Block (21 of 21) : Seurat FindTransferAnchors, 123.429 mins elapsed.
+2024-04-10 16:26:20 : Block (21 of 21) : Seurat TransferData Cell Group Labels, 125.805 mins elapsed.
+2024-04-10 16:26:22 : Block (21 of 21) : Seurat TransferData Cell Names Labels, 125.843 mins elapsed.
+2024-04-10 16:26:46 : Block (21 of 21) : Saving TransferAnchors Joint CCA, 126.251 mins elapsed.
+2024-04-10 16:26:48 : Block (21 of 21) : Completed Integration, 126.274 mins elapsed.
+2024-04-10 16:26:49 : Block (1 of 21) : Plotting Joint UMAP, 126.289 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-10 16:27:31 : Block (2 of 21) : Plotting Joint UMAP, 126.987 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-10 16:28:09 : Block (3 of 21) : Plotting Joint UMAP, 127.633 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-10 16:28:48 : Block (4 of 21) : Plotting Joint UMAP, 128.283 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-10 16:29:27 : Block (5 of 21) : Plotting Joint UMAP, 128.926 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-10 16:30:06 : Block (6 of 21) : Plotting Joint UMAP, 129.572 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-10 16:30:44 : Block (7 of 21) : Plotting Joint UMAP, 130.215 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-10 16:31:24 : Block (8 of 21) : Plotting Joint UMAP, 130.885 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-10 16:32:03 : Block (9 of 21) : Plotting Joint UMAP, 131.525 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-10 16:32:42 : Block (10 of 21) : Plotting Joint UMAP, 132.174 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-10 16:33:21 : Block (11 of 21) : Plotting Joint UMAP, 132.82 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-10 16:33:59 : Block (12 of 21) : Plotting Joint UMAP, 133.467 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-10 16:34:38 : Block (13 of 21) : Plotting Joint UMAP, 134.117 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-10 16:35:17 : Block (14 of 21) : Plotting Joint UMAP, 134.766 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-10 16:35:56 : Block (15 of 21) : Plotting Joint UMAP, 135.413 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-10 16:36:35 : Block (16 of 21) : Plotting Joint UMAP, 136.061 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-10 16:37:14 : Block (17 of 21) : Plotting Joint UMAP, 136.709 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-10 16:37:53 : Block (18 of 21) : Plotting Joint UMAP, 137.367 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-10 16:38:32 : Block (19 of 21) : Plotting Joint UMAP, 138.014 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-10 16:39:12 : Block (20 of 21) : Plotting Joint UMAP, 138.683 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-10 16:39:51 : Block (21 of 21) : Plotting Joint UMAP, 139.328 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-10 16:40:30 : Completed Integration with RNA Matrix, 139.975 mins elapsed.
+ArchR logging successful to : ArchRLogs/ArchR-addGeneIntegrationMatrix-4bef19a9bc9a-Date-2024-04-10_Time-14-19-16.log
+There were 21 warnings (use warnings() to see them)
+ArchR logging to : ArchRLogs/ArchR-plotEmbedding-4bef5449a302-Date-2024-04-10_Time-16-40-30.log
+If there is an issue, please report to github with logFile!
+Plotting Embedding
+1 WARNING: Error found with Cairo installation. Continuing without rasterization.
+
+ArchR logging successful to : ArchRLogs/ArchR-plotEmbedding-4bef5449a302-Date-2024-04-10_Time-16-40-30.log
+Plotting Ggplot!
+Saving ArchRProject...
+Loading ArchRProject...
+Successfully loaded ArchRProject!
+
+                                                   / |
+                                                 /    \
+            .                                  /      |.
+            \\\                              /        |.
+              \\\                          /           `|.
+                \\\                      /              |.
+                  \                    /                |\
+                  \\#####\           /                  ||
+                ==###########>      /                   ||
+                 \\##==......\    /                     ||
+            ______ =       =|__ /__                     ||      \\\
+        ,--' ,----`-,__ ___/'  --,-`-===================##========>
+       \               '        ##_______ _____ ,--,__,=##,__   ///
+        ,    __==    ___,-,__,--'#'  ==='      `-'    | ##,-/
+        -,____,---'       \\####\\________________,--\\_##,/
+           ___      .______        ______  __    __  .______      
+          /   \     |   _  \      /      ||  |  |  | |   _  \     
+         /  ^  \    |  |_)  |    |  ,----'|  |__|  | |  |_)  |    
+        /  /_\  \   |      /     |  |     |   __   | |      /     
+       /  _____  \  |  |\  \\___ |  `----.|  |  |  | |  |\  \\___.
+      /__/     \__\ | _| `._____| \______||__|  |__| | _| `._____|
+    
+
+           ___      .______        ______  __    __  .______      
+          /   \     |   _  \      /      ||  |  |  | |   _  \     
+         /  ^  \    |  |_)  |    |  ,----'|  |__|  | |  |_)  |    
+        /  /_\  \   |      /     |  |     |   __   | |      /     
+       /  _____  \  |  |\  \\___ |  `----.|  |  |  | |  |\  \\___.
+      /__/     \__\ | _| `._____| \______||__|  |__| | _| `._____|
+    

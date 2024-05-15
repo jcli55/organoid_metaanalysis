@@ -1,0 +1,458 @@
+
+           ___      .______        ______  __    __  .______      
+          /   \     |   _  \      /      ||  |  |  | |   _  \     
+         /  ^  \    |  |_)  |    |  ,----'|  |__|  | |  |_)  |    
+        /  /_\  \   |      /     |  |     |   __   | |      /     
+       /  _____  \  |  |\  \\___ |  `----.|  |  |  | |  |\  \\___.
+      /__/     \__\ | _| `._____| \______||__|  |__| | _| `._____|
+    
+Logging With ArchR!
+
+Start Time : 2024-04-05 16:52:28
+
+------- ArchR Info
+
+ArchRThreads = 1
+
+------- System Info
+
+Computer OS = unix
+Total Cores = 48
+
+------- Session Info
+
+R version 4.1.3 (2022-03-10)
+Platform: x86_64-conda-linux-gnu (64-bit)
+Running under: Red Hat Enterprise Linux
+
+Matrix products: default
+BLAS/LAPACK: /storage/chen/home/u250758/miniconda3/envs/archr/lib/libopenblasp-r0.3.23.so
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8 LC_NUMERIC=C         LC_TIME=C           
+ [4] LC_COLLATE=C         LC_MONETARY=C        LC_MESSAGES=C       
+ [7] LC_PAPER=C           LC_NAME=C            LC_ADDRESS=C        
+[10] LC_TELEPHONE=C       LC_MEASUREMENT=C     LC_IDENTIFICATION=C 
+
+attached base packages:
+ [1] grid      parallel  stats4    stats     graphics  grDevices utils    
+ [8] datasets  methods   base     
+
+other attached packages:
+ [1] gridExtra_2.3                     BSgenome.Hsapiens.UCSC.hg38_1.4.4
+ [3] BSgenome_1.62.0                   rtracklayer_1.54.0               
+ [5] Biostrings_2.62.0                 XVector_0.34.0                   
+ [7] ArchR_1.0.1                       magrittr_2.0.3                   
+ [9] rhdf5_2.38.1                      Matrix_1.6-1                     
+[11] data.table_1.14.8                 SummarizedExperiment_1.24.0      
+[13] Biobase_2.54.0                    GenomicRanges_1.46.1             
+[15] GenomeInfoDb_1.30.1               IRanges_2.28.0                   
+[17] S4Vectors_0.32.4                  BiocGenerics_0.40.0              
+[19] MatrixGenerics_1.6.0              matrixStats_1.0.0                
+[21] ggplot2_3.4.3                    
+
+loaded via a namespace (and not attached):
+ [1] gtools_3.9.4             tidyselect_1.2.0         lattice_0.21-8          
+ [4] colorspace_2.1-0         vctrs_0.6.3              generics_0.1.3          
+ [7] yaml_2.3.7               utf8_1.2.3               XML_3.99-0.14           
+[10] rlang_1.1.1              pillar_1.9.0             glue_1.6.2              
+[13] withr_2.5.0              BiocParallel_1.28.3      GenomeInfoDbData_1.2.7  
+[16] lifecycle_1.0.3          stringr_1.5.0            zlibbioc_1.40.0         
+[19] munsell_0.5.0            gtable_0.3.4             restfulr_0.0.15         
+[22] fansi_1.0.4              Rcpp_1.0.11              scales_1.2.1            
+[25] DelayedArray_0.20.0      farver_2.1.1             Rsamtools_2.10.0        
+[28] rjson_0.2.21             stringi_1.7.12           dplyr_1.1.3             
+[31] BiocIO_1.4.0             cli_3.6.1                tools_4.1.3             
+[34] bitops_1.0-7             rhdf5filters_1.6.0       RCurl_1.98-1.12         
+[37] tibble_3.2.1             crayon_1.5.2             pkgconfig_2.0.3         
+[40] Rhdf5lib_1.16.0          R6_2.5.1                 GenomicAlignments_1.30.0
+[43] compiler_4.1.3          
+
+
+------- Log Info
+
+
+2024-04-05 16:52:28 : peakSet, Class = GRanges
+GRanges object with 339165 ranges and 13 metadata columns:
+       seqnames              ranges strand |     score replicateScoreQuantile
+          <Rle>           <IRanges>  <Rle> | <numeric>              <numeric>
+    HC     chr1       794783-795283      * |   6.45986                  0.666
+    BC     chr1       804499-804999      * |   3.74077                  0.122
+   Rod     chr1       820163-820663      * |   3.56245                  0.214
+    AC     chr1       826456-826956      * |   5.04555                  0.657
+   RGC     chr1       827290-827790      * |  94.45350                  0.952
+   ...      ...                 ...    ... .       ...                    ...
+  PRPC     chrX 155871867-155872367      * |   3.17343                  0.242
+   RGC     chrX 155881054-155881554      * |  93.46540                  0.948
+    MG     chrX 155888171-155888671      * |   5.52005                  0.439
+  Cone     chrX 155966832-155967332      * |  30.57820                  0.793
+  Cone     chrX 155975595-155976095      * |  23.23210                  0.746
+       groupScoreQuantile Reproducibility         GroupReplicate
+                <numeric>       <numeric>            <character>
+    HC              0.411               2 HC._.Multi_organoid_..
+    BC              0.030               2 BC._.Multi_organoid_..
+   Rod              0.045               2 Rod._.Multi_NRL_GFP_..
+    AC              0.431               2 AC._.Multi_organoid_..
+   RGC              0.937               4     RGC._.Multi_H9_D35
+   ...                ...             ...                    ...
+  PRPC              0.086               2 PRPC._.Multi_NRL_GFP..
+   RGC              0.933               4 RGC._.Multi_organoid..
+    MG              0.225               2 MG._.Multi_organoid_..
+  Cone              0.694               4 Cone._.Multi_organoi..
+  Cone              0.622               5 Cone._.Multi_organoi..
+       distToGeneStart nearestGene    peakType distToTSS  nearestTSS        GC
+             <integer> <character> <character> <integer> <character> <numeric>
+    HC           22337      FAM87B      Distal      9232  uc057aum.1    0.3772
+    BC           12621      FAM87B      Distal        49  uc057aum.1    0.4671
+   Rod            3041      FAM87B      Distal      3041  uc057aum.1    0.5629
+    AC             815   LINC00115      Exonic       125  uc031tlo.2    0.4711
+   RGC              17   LINC00115    Promoter        17  uc031tlo.2    0.6866
+   ...             ...         ...         ...       ...         ...       ...
+  PRPC          202172       TMLHE      Distal      9175  uc061qgd.1    0.3094
+   RGC          211359       TMLHE      Distal        10  uc061qgd.1    0.6267
+    MG          218476       TMLHE      Distal      7042  uc061qgd.1    0.3852
+  Cone          297137       TMLHE      Distal     30498  uc061qgd.1    0.4251
+  Cone          305900       TMLHE      Distal     21735  uc061qgd.1    0.4591
+             idx         N
+       <integer> <numeric>
+    HC         1         0
+    BC         2         0
+   Rod         3         0
+    AC         4         0
+   RGC         5         0
+   ...       ...       ...
+  PRPC      9504         0
+   RGC      9505         0
+    MG      9506         0
+  Cone      9507         0
+  Cone      9508         0
+  -------
+  seqinfo: 23 sequences from an unspecified genome; no seqlengths
+
+2024-04-05 16:52:28 : Batch Execution w/ safelapply!, 0 mins elapsed.
+
+2024-04-05 16:52:29 : featureDF, Class = data.frame
+featureDF: nRows = 339165, nCols = 4
+  seqnames idx  start    end
+1     chr1   1 794783 795283
+2     chr1   2 804499 804999
+3     chr1   3 820163 820663
+4     chr1   4 826456 826956
+5     chr1   5 827290 827790
+6     chr1   6 830699 831199
+
+
+2024-04-05 16:52:30 : Adding Multi_H9_D35 to PeakMatrix for Chr (1 of 23)!, 0.023 mins elapsed.
+2024-04-05 16:52:40 : Adding Multi_H9_D35 to PeakMatrix for Chr (2 of 23)!, 0.184 mins elapsed.
+2024-04-05 16:52:47 : Adding Multi_H9_D35 to PeakMatrix for Chr (3 of 23)!, 0.304 mins elapsed.
+2024-04-05 16:52:52 : Adding Multi_H9_D35 to PeakMatrix for Chr (4 of 23)!, 0.398 mins elapsed.
+2024-04-05 16:52:57 : Adding Multi_H9_D35 to PeakMatrix for Chr (5 of 23)!, 0.474 mins elapsed.
+2024-04-05 16:53:02 : Adding Multi_H9_D35 to PeakMatrix for Chr (6 of 23)!, 0.559 mins elapsed.
+2024-04-05 16:53:07 : Adding Multi_H9_D35 to PeakMatrix for Chr (7 of 23)!, 0.638 mins elapsed.
+2024-04-05 16:53:12 : Adding Multi_H9_D35 to PeakMatrix for Chr (8 of 23)!, 0.723 mins elapsed.
+2024-04-05 16:53:16 : Adding Multi_H9_D35 to PeakMatrix for Chr (9 of 23)!, 0.798 mins elapsed.
+2024-04-05 16:53:21 : Adding Multi_H9_D35 to PeakMatrix for Chr (10 of 23)!, 0.869 mins elapsed.
+2024-04-05 16:53:25 : Adding Multi_H9_D35 to PeakMatrix for Chr (11 of 23)!, 0.947 mins elapsed.
+2024-04-05 16:53:31 : Adding Multi_H9_D35 to PeakMatrix for Chr (12 of 23)!, 1.04 mins elapsed.
+2024-04-05 16:53:36 : Adding Multi_H9_D35 to PeakMatrix for Chr (13 of 23)!, 1.13 mins elapsed.
+2024-04-05 16:53:40 : Adding Multi_H9_D35 to PeakMatrix for Chr (14 of 23)!, 1.195 mins elapsed.
+2024-04-05 16:53:44 : Adding Multi_H9_D35 to PeakMatrix for Chr (15 of 23)!, 1.261 mins elapsed.
+2024-04-05 16:53:48 : Adding Multi_H9_D35 to PeakMatrix for Chr (16 of 23)!, 1.322 mins elapsed.
+2024-04-05 16:53:52 : Adding Multi_H9_D35 to PeakMatrix for Chr (17 of 23)!, 1.398 mins elapsed.
+2024-04-05 16:53:57 : Adding Multi_H9_D35 to PeakMatrix for Chr (18 of 23)!, 1.481 mins elapsed.
+2024-04-05 16:54:00 : Adding Multi_H9_D35 to PeakMatrix for Chr (19 of 23)!, 1.532 mins elapsed.
+2024-04-05 16:54:06 : Adding Multi_H9_D35 to PeakMatrix for Chr (20 of 23)!, 1.618 mins elapsed.
+2024-04-05 16:54:09 : Adding Multi_H9_D35 to PeakMatrix for Chr (21 of 23)!, 1.678 mins elapsed.
+2024-04-05 16:54:12 : Adding Multi_H9_D35 to PeakMatrix for Chr (22 of 23)!, 1.717 mins elapsed.
+2024-04-05 16:54:15 : Adding Multi_H9_D35 to PeakMatrix for Chr (23 of 23)!, 1.769 mins elapsed.
+
+2024-04-05 16:54:19 : featureDF, Class = data.frame
+featureDF: nRows = 339165, nCols = 4
+  seqnames idx  start    end
+1     chr1   1 794783 795283
+2     chr1   2 804499 804999
+3     chr1   3 820163 820663
+4     chr1   4 826456 826956
+5     chr1   5 827290 827790
+6     chr1   6 830699 831199
+
+
+2024-04-05 16:54:20 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (1 of 23)!, 0.023 mins elapsed.
+2024-04-05 16:54:30 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (2 of 23)!, 0.187 mins elapsed.
+2024-04-05 16:54:37 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (3 of 23)!, 0.312 mins elapsed.
+2024-04-05 16:54:43 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (4 of 23)!, 0.415 mins elapsed.
+2024-04-05 16:54:48 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (5 of 23)!, 0.499 mins elapsed.
+2024-04-05 16:54:54 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (6 of 23)!, 0.586 mins elapsed.
+2024-04-05 16:54:59 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (7 of 23)!, 0.676 mins elapsed.
+2024-04-05 16:55:04 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (8 of 23)!, 0.764 mins elapsed.
+2024-04-05 16:55:09 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (9 of 23)!, 0.84 mins elapsed.
+2024-04-05 16:55:14 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (10 of 23)!, 0.921 mins elapsed.
+2024-04-05 16:55:19 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (11 of 23)!, 1.005 mins elapsed.
+2024-04-05 16:55:25 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (12 of 23)!, 1.112 mins elapsed.
+2024-04-05 16:55:31 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (13 of 23)!, 1.209 mins elapsed.
+2024-04-05 16:55:34 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (14 of 23)!, 1.264 mins elapsed.
+2024-04-05 16:55:39 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (15 of 23)!, 1.336 mins elapsed.
+2024-04-05 16:55:43 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (16 of 23)!, 1.406 mins elapsed.
+2024-04-05 16:55:47 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (17 of 23)!, 1.479 mins elapsed.
+2024-04-05 16:55:53 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (18 of 23)!, 1.572 mins elapsed.
+2024-04-05 16:55:56 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (19 of 23)!, 1.629 mins elapsed.
+2024-04-05 16:56:02 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (20 of 23)!, 1.722 mins elapsed.
+2024-04-05 16:56:06 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (21 of 23)!, 1.785 mins elapsed.
+2024-04-05 16:56:08 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (22 of 23)!, 1.831 mins elapsed.
+2024-04-05 16:56:12 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (23 of 23)!, 1.89 mins elapsed.
+
+2024-04-05 16:56:16 : featureDF, Class = data.frame
+featureDF: nRows = 339165, nCols = 4
+  seqnames idx  start    end
+1     chr1   1 794783 795283
+2     chr1   2 804499 804999
+3     chr1   3 820163 820663
+4     chr1   4 826456 826956
+5     chr1   5 827290 827790
+6     chr1   6 830699 831199
+
+
+2024-04-05 16:56:18 : Adding Multi_H9_D47 to PeakMatrix for Chr (1 of 23)!, 0.024 mins elapsed.
+2024-04-05 16:56:27 : Adding Multi_H9_D47 to PeakMatrix for Chr (2 of 23)!, 0.184 mins elapsed.
+2024-04-05 16:56:34 : Adding Multi_H9_D47 to PeakMatrix for Chr (3 of 23)!, 0.305 mins elapsed.
+2024-04-05 16:56:40 : Adding Multi_H9_D47 to PeakMatrix for Chr (4 of 23)!, 0.402 mins elapsed.
+2024-04-05 16:56:45 : Adding Multi_H9_D47 to PeakMatrix for Chr (5 of 23)!, 0.487 mins elapsed.
+2024-04-05 16:56:51 : Adding Multi_H9_D47 to PeakMatrix for Chr (6 of 23)!, 0.583 mins elapsed.
+2024-04-05 16:56:56 : Adding Multi_H9_D47 to PeakMatrix for Chr (7 of 23)!, 0.67 mins elapsed.
+2024-04-05 16:57:01 : Adding Multi_H9_D47 to PeakMatrix for Chr (8 of 23)!, 0.757 mins elapsed.
+2024-04-05 16:57:06 : Adding Multi_H9_D47 to PeakMatrix for Chr (9 of 23)!, 0.833 mins elapsed.
+2024-04-05 16:57:11 : Adding Multi_H9_D47 to PeakMatrix for Chr (10 of 23)!, 0.914 mins elapsed.
+2024-04-05 16:57:16 : Adding Multi_H9_D47 to PeakMatrix for Chr (11 of 23)!, 1.005 mins elapsed.
+2024-04-05 16:57:22 : Adding Multi_H9_D47 to PeakMatrix for Chr (12 of 23)!, 1.1 mins elapsed.
+2024-04-05 16:57:27 : Adding Multi_H9_D47 to PeakMatrix for Chr (13 of 23)!, 1.183 mins elapsed.
+2024-04-05 16:57:30 : Adding Multi_H9_D47 to PeakMatrix for Chr (14 of 23)!, 1.24 mins elapsed.
+2024-04-05 16:57:34 : Adding Multi_H9_D47 to PeakMatrix for Chr (15 of 23)!, 1.304 mins elapsed.
+2024-04-05 16:57:38 : Adding Multi_H9_D47 to PeakMatrix for Chr (16 of 23)!, 1.369 mins elapsed.
+2024-04-05 16:57:43 : Adding Multi_H9_D47 to PeakMatrix for Chr (17 of 23)!, 1.443 mins elapsed.
+2024-04-05 16:57:48 : Adding Multi_H9_D47 to PeakMatrix for Chr (18 of 23)!, 1.529 mins elapsed.
+2024-04-05 16:57:51 : Adding Multi_H9_D47 to PeakMatrix for Chr (19 of 23)!, 1.583 mins elapsed.
+2024-04-05 16:57:56 : Adding Multi_H9_D47 to PeakMatrix for Chr (20 of 23)!, 1.669 mins elapsed.
+2024-04-05 16:58:00 : Adding Multi_H9_D47 to PeakMatrix for Chr (21 of 23)!, 1.728 mins elapsed.
+2024-04-05 16:58:02 : Adding Multi_H9_D47 to PeakMatrix for Chr (22 of 23)!, 1.769 mins elapsed.
+2024-04-05 16:58:06 : Adding Multi_H9_D47 to PeakMatrix for Chr (23 of 23)!, 1.826 mins elapsed.
+
+2024-04-05 16:58:10 : featureDF, Class = data.frame
+featureDF: nRows = 339165, nCols = 4
+  seqnames idx  start    end
+1     chr1   1 794783 795283
+2     chr1   2 804499 804999
+3     chr1   3 820163 820663
+4     chr1   4 826456 826956
+5     chr1   5 827290 827790
+6     chr1   6 830699 831199
+
+
+2024-04-05 16:58:11 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (1 of 23)!, 0.022 mins elapsed.
+2024-04-05 16:58:22 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (2 of 23)!, 0.193 mins elapsed.
+2024-04-05 16:58:31 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (3 of 23)!, 0.348 mins elapsed.
+2024-04-05 16:58:38 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (4 of 23)!, 0.462 mins elapsed.
+2024-04-05 16:58:43 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (5 of 23)!, 0.556 mins elapsed.
+2024-04-05 16:58:50 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (6 of 23)!, 0.663 mins elapsed.
+2024-04-05 16:58:56 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (7 of 23)!, 0.76 mins elapsed.
+2024-04-05 16:59:02 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (8 of 23)!, 0.86 mins elapsed.
+2024-04-05 16:59:07 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (9 of 23)!, 0.951 mins elapsed.
+2024-04-05 16:59:13 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (10 of 23)!, 1.048 mins elapsed.
+2024-04-05 16:59:18 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (11 of 23)!, 1.14 mins elapsed.
+2024-04-05 16:59:25 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (12 of 23)!, 1.248 mins elapsed.
+2024-04-05 16:59:30 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (13 of 23)!, 1.34 mins elapsed.
+2024-04-05 16:59:34 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (14 of 23)!, 1.396 mins elapsed.
+2024-04-05 16:59:38 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (15 of 23)!, 1.466 mins elapsed.
+2024-04-05 16:59:42 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (16 of 23)!, 1.535 mins elapsed.
+2024-04-05 16:59:46 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (17 of 23)!, 1.608 mins elapsed.
+2024-04-05 16:59:53 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (18 of 23)!, 1.716 mins elapsed.
+2024-04-05 16:59:57 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (19 of 23)!, 1.781 mins elapsed.
+2024-04-05 17:00:02 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (20 of 23)!, 1.869 mins elapsed.
+2024-04-05 17:00:06 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (21 of 23)!, 1.936 mins elapsed.
+2024-04-05 17:00:09 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (22 of 23)!, 1.982 mins elapsed.
+2024-04-05 17:00:12 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (23 of 23)!, 2.041 mins elapsed.
+
+2024-04-05 17:00:16 : featureDF, Class = data.frame
+featureDF: nRows = 339165, nCols = 4
+  seqnames idx  start    end
+1     chr1   1 794783 795283
+2     chr1   2 804499 804999
+3     chr1   3 820163 820663
+4     chr1   4 826456 826956
+5     chr1   5 827290 827790
+6     chr1   6 830699 831199
+
+
+2024-04-05 17:00:18 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (1 of 23)!, 0.022 mins elapsed.
+2024-04-05 17:00:25 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (2 of 23)!, 0.145 mins elapsed.
+2024-04-05 17:00:31 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (3 of 23)!, 0.244 mins elapsed.
+2024-04-05 17:00:36 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (4 of 23)!, 0.327 mins elapsed.
+2024-04-05 17:00:40 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (5 of 23)!, 0.394 mins elapsed.
+2024-04-05 17:00:44 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (6 of 23)!, 0.464 mins elapsed.
+2024-04-05 17:00:49 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (7 of 23)!, 0.536 mins elapsed.
+2024-04-05 17:00:53 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (8 of 23)!, 0.609 mins elapsed.
+2024-04-05 17:00:57 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (9 of 23)!, 0.675 mins elapsed.
+2024-04-05 17:01:01 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (10 of 23)!, 0.743 mins elapsed.
+2024-04-05 17:01:05 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (11 of 23)!, 0.81 mins elapsed.
+2024-04-05 17:01:09 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (12 of 23)!, 0.882 mins elapsed.
+2024-04-05 17:01:13 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (13 of 23)!, 0.951 mins elapsed.
+2024-04-05 17:01:16 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (14 of 23)!, 1.001 mins elapsed.
+2024-04-05 17:01:20 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (15 of 23)!, 1.058 mins elapsed.
+2024-04-05 17:01:23 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (16 of 23)!, 1.117 mins elapsed.
+2024-04-05 17:01:27 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (17 of 23)!, 1.181 mins elapsed.
+2024-04-05 17:01:31 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (18 of 23)!, 1.253 mins elapsed.
+2024-04-05 17:01:34 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (19 of 23)!, 1.299 mins elapsed.
+2024-04-05 17:01:38 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (20 of 23)!, 1.368 mins elapsed.
+2024-04-05 17:01:42 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (21 of 23)!, 1.424 mins elapsed.
+2024-04-05 17:01:44 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (22 of 23)!, 1.46 mins elapsed.
+2024-04-05 17:01:47 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (23 of 23)!, 1.509 mins elapsed.
+
+2024-04-05 17:01:50 : featureDF, Class = data.frame
+featureDF: nRows = 339165, nCols = 4
+  seqnames idx  start    end
+1     chr1   1 794783 795283
+2     chr1   2 804499 804999
+3     chr1   3 820163 820663
+4     chr1   4 826456 826956
+5     chr1   5 827290 827790
+6     chr1   6 830699 831199
+
+
+2024-04-05 17:01:52 : Adding Multi_organoid_D133 to PeakMatrix for Chr (1 of 23)!, 0.021 mins elapsed.
+2024-04-05 17:02:02 : Adding Multi_organoid_D133 to PeakMatrix for Chr (2 of 23)!, 0.196 mins elapsed.
+2024-04-05 17:02:10 : Adding Multi_organoid_D133 to PeakMatrix for Chr (3 of 23)!, 0.336 mins elapsed.
+2024-04-05 17:02:17 : Adding Multi_organoid_D133 to PeakMatrix for Chr (4 of 23)!, 0.454 mins elapsed.
+2024-04-05 17:02:23 : Adding Multi_organoid_D133 to PeakMatrix for Chr (5 of 23)!, 0.538 mins elapsed.
+2024-04-05 17:02:28 : Adding Multi_organoid_D133 to PeakMatrix for Chr (6 of 23)!, 0.631 mins elapsed.
+2024-04-05 17:02:34 : Adding Multi_organoid_D133 to PeakMatrix for Chr (7 of 23)!, 0.723 mins elapsed.
+2024-04-05 17:02:39 : Adding Multi_organoid_D133 to PeakMatrix for Chr (8 of 23)!, 0.818 mins elapsed.
+2024-04-05 17:02:44 : Adding Multi_organoid_D133 to PeakMatrix for Chr (9 of 23)!, 0.898 mins elapsed.
+2024-04-05 17:02:49 : Adding Multi_organoid_D133 to PeakMatrix for Chr (10 of 23)!, 0.978 mins elapsed.
+2024-04-05 17:02:54 : Adding Multi_organoid_D133 to PeakMatrix for Chr (11 of 23)!, 1.067 mins elapsed.
+2024-04-05 17:03:00 : Adding Multi_organoid_D133 to PeakMatrix for Chr (12 of 23)!, 1.165 mins elapsed.
+2024-04-05 17:03:05 : Adding Multi_organoid_D133 to PeakMatrix for Chr (13 of 23)!, 1.252 mins elapsed.
+2024-04-05 17:03:08 : Adding Multi_organoid_D133 to PeakMatrix for Chr (14 of 23)!, 1.304 mins elapsed.
+2024-04-05 17:03:12 : Adding Multi_organoid_D133 to PeakMatrix for Chr (15 of 23)!, 1.366 mins elapsed.
+2024-04-05 17:03:16 : Adding Multi_organoid_D133 to PeakMatrix for Chr (16 of 23)!, 1.427 mins elapsed.
+2024-04-05 17:03:20 : Adding Multi_organoid_D133 to PeakMatrix for Chr (17 of 23)!, 1.498 mins elapsed.
+2024-04-05 17:03:26 : Adding Multi_organoid_D133 to PeakMatrix for Chr (18 of 23)!, 1.588 mins elapsed.
+2024-04-05 17:03:29 : Adding Multi_organoid_D133 to PeakMatrix for Chr (19 of 23)!, 1.639 mins elapsed.
+2024-04-05 17:03:34 : Adding Multi_organoid_D133 to PeakMatrix for Chr (20 of 23)!, 1.728 mins elapsed.
+2024-04-05 17:03:37 : Adding Multi_organoid_D133 to PeakMatrix for Chr (21 of 23)!, 1.787 mins elapsed.
+2024-04-05 17:03:40 : Adding Multi_organoid_D133 to PeakMatrix for Chr (22 of 23)!, 1.825 mins elapsed.
+2024-04-05 17:03:43 : Adding Multi_organoid_D133 to PeakMatrix for Chr (23 of 23)!, 1.877 mins elapsed.
+
+2024-04-05 17:03:47 : featureDF, Class = data.frame
+featureDF: nRows = 339165, nCols = 4
+  seqnames idx  start    end
+1     chr1   1 794783 795283
+2     chr1   2 804499 804999
+3     chr1   3 820163 820663
+4     chr1   4 826456 826956
+5     chr1   5 827290 827790
+6     chr1   6 830699 831199
+
+
+2024-04-05 17:03:48 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (1 of 23)!, 0.021 mins elapsed.
+2024-04-05 17:03:56 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (2 of 23)!, 0.143 mins elapsed.
+2024-04-05 17:04:01 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (3 of 23)!, 0.229 mins elapsed.
+2024-04-05 17:04:05 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (4 of 23)!, 0.304 mins elapsed.
+2024-04-05 17:04:09 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (5 of 23)!, 0.363 mins elapsed.
+2024-04-05 17:04:13 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (6 of 23)!, 0.431 mins elapsed.
+2024-04-05 17:04:17 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (7 of 23)!, 0.497 mins elapsed.
+2024-04-05 17:04:21 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (8 of 23)!, 0.563 mins elapsed.
+2024-04-05 17:04:24 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (9 of 23)!, 0.622 mins elapsed.
+2024-04-05 17:04:28 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (10 of 23)!, 0.682 mins elapsed.
+2024-04-05 17:04:32 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (11 of 23)!, 0.745 mins elapsed.
+2024-04-05 17:04:36 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (12 of 23)!, 0.814 mins elapsed.
+2024-04-05 17:04:40 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (13 of 23)!, 0.879 mins elapsed.
+2024-04-05 17:04:43 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (14 of 23)!, 0.925 mins elapsed.
+2024-04-05 17:04:46 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (15 of 23)!, 0.978 mins elapsed.
+2024-04-05 17:04:49 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (16 of 23)!, 1.028 mins elapsed.
+2024-04-05 17:04:52 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (17 of 23)!, 1.087 mins elapsed.
+2024-04-05 17:04:56 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (18 of 23)!, 1.155 mins elapsed.
+2024-04-05 17:04:59 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (19 of 23)!, 1.199 mins elapsed.
+2024-04-05 17:05:03 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (20 of 23)!, 1.27 mins elapsed.
+2024-04-05 17:05:06 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (21 of 23)!, 1.319 mins elapsed.
+2024-04-05 17:05:08 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (22 of 23)!, 1.354 mins elapsed.
+2024-04-05 17:05:11 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (23 of 23)!, 1.399 mins elapsed.
+
+2024-04-05 17:05:14 : featureDF, Class = data.frame
+featureDF: nRows = 339165, nCols = 4
+  seqnames idx  start    end
+1     chr1   1 794783 795283
+2     chr1   2 804499 804999
+3     chr1   3 820163 820663
+4     chr1   4 826456 826956
+5     chr1   5 827290 827790
+6     chr1   6 830699 831199
+
+
+2024-04-05 17:05:15 : Adding Multi_H9_D100 to PeakMatrix for Chr (1 of 23)!, 0.021 mins elapsed.
+2024-04-05 17:05:22 : Adding Multi_H9_D100 to PeakMatrix for Chr (2 of 23)!, 0.13 mins elapsed.
+2024-04-05 17:05:27 : Adding Multi_H9_D100 to PeakMatrix for Chr (3 of 23)!, 0.218 mins elapsed.
+2024-04-05 17:05:32 : Adding Multi_H9_D100 to PeakMatrix for Chr (4 of 23)!, 0.295 mins elapsed.
+2024-04-05 17:05:35 : Adding Multi_H9_D100 to PeakMatrix for Chr (5 of 23)!, 0.355 mins elapsed.
+2024-04-05 17:05:39 : Adding Multi_H9_D100 to PeakMatrix for Chr (6 of 23)!, 0.422 mins elapsed.
+2024-04-05 17:05:44 : Adding Multi_H9_D100 to PeakMatrix for Chr (7 of 23)!, 0.491 mins elapsed.
+2024-04-05 17:05:48 : Adding Multi_H9_D100 to PeakMatrix for Chr (8 of 23)!, 0.558 mins elapsed.
+2024-04-05 17:05:51 : Adding Multi_H9_D100 to PeakMatrix for Chr (9 of 23)!, 0.618 mins elapsed.
+2024-04-05 17:05:55 : Adding Multi_H9_D100 to PeakMatrix for Chr (10 of 23)!, 0.678 mins elapsed.
+2024-04-05 17:05:59 : Adding Multi_H9_D100 to PeakMatrix for Chr (11 of 23)!, 0.749 mins elapsed.
+2024-04-05 17:06:04 : Adding Multi_H9_D100 to PeakMatrix for Chr (12 of 23)!, 0.827 mins elapsed.
+2024-04-05 17:06:08 : Adding Multi_H9_D100 to PeakMatrix for Chr (13 of 23)!, 0.894 mins elapsed.
+2024-04-05 17:06:11 : Adding Multi_H9_D100 to PeakMatrix for Chr (14 of 23)!, 0.943 mins elapsed.
+2024-04-05 17:06:14 : Adding Multi_H9_D100 to PeakMatrix for Chr (15 of 23)!, 0.999 mins elapsed.
+2024-04-05 17:06:17 : Adding Multi_H9_D100 to PeakMatrix for Chr (16 of 23)!, 1.053 mins elapsed.
+2024-04-05 17:06:21 : Adding Multi_H9_D100 to PeakMatrix for Chr (17 of 23)!, 1.113 mins elapsed.
+2024-04-05 17:06:25 : Adding Multi_H9_D100 to PeakMatrix for Chr (18 of 23)!, 1.184 mins elapsed.
+2024-04-05 17:06:28 : Adding Multi_H9_D100 to PeakMatrix for Chr (19 of 23)!, 1.228 mins elapsed.
+2024-04-05 17:06:32 : Adding Multi_H9_D100 to PeakMatrix for Chr (20 of 23)!, 1.299 mins elapsed.
+2024-04-05 17:06:35 : Adding Multi_H9_D100 to PeakMatrix for Chr (21 of 23)!, 1.348 mins elapsed.
+2024-04-05 17:06:37 : Adding Multi_H9_D100 to PeakMatrix for Chr (22 of 23)!, 1.385 mins elapsed.
+2024-04-05 17:06:40 : Adding Multi_H9_D100 to PeakMatrix for Chr (23 of 23)!, 1.432 mins elapsed.
+
+2024-04-05 17:06:44 : featureDF, Class = data.frame
+featureDF: nRows = 339165, nCols = 4
+  seqnames idx  start    end
+1     chr1   1 794783 795283
+2     chr1   2 804499 804999
+3     chr1   3 820163 820663
+4     chr1   4 826456 826956
+5     chr1   5 827290 827790
+6     chr1   6 830699 831199
+
+
+2024-04-05 17:06:45 : Adding Multi_organoid_D183 to PeakMatrix for Chr (1 of 23)!, 0.02 mins elapsed.
+2024-04-05 17:06:49 : Adding Multi_organoid_D183 to PeakMatrix for Chr (2 of 23)!, 0.095 mins elapsed.
+2024-04-05 17:06:53 : Adding Multi_organoid_D183 to PeakMatrix for Chr (3 of 23)!, 0.159 mins elapsed.
+2024-04-05 17:06:57 : Adding Multi_organoid_D183 to PeakMatrix for Chr (4 of 23)!, 0.229 mins elapsed.
+2024-04-05 17:07:00 : Adding Multi_organoid_D183 to PeakMatrix for Chr (5 of 23)!, 0.28 mins elapsed.
+2024-04-05 17:07:04 : Adding Multi_organoid_D183 to PeakMatrix for Chr (6 of 23)!, 0.333 mins elapsed.
+2024-04-05 17:07:07 : Adding Multi_organoid_D183 to PeakMatrix for Chr (7 of 23)!, 0.386 mins elapsed.
+2024-04-05 17:07:10 : Adding Multi_organoid_D183 to PeakMatrix for Chr (8 of 23)!, 0.439 mins elapsed.
+2024-04-05 17:07:13 : Adding Multi_organoid_D183 to PeakMatrix for Chr (9 of 23)!, 0.485 mins elapsed.
+2024-04-05 17:07:15 : Adding Multi_organoid_D183 to PeakMatrix for Chr (10 of 23)!, 0.532 mins elapsed.
+2024-04-05 17:07:18 : Adding Multi_organoid_D183 to PeakMatrix for Chr (11 of 23)!, 0.582 mins elapsed.
+2024-04-05 17:07:22 : Adding Multi_organoid_D183 to PeakMatrix for Chr (12 of 23)!, 0.635 mins elapsed.
+2024-04-05 17:07:25 : Adding Multi_organoid_D183 to PeakMatrix for Chr (13 of 23)!, 0.684 mins elapsed.
+2024-04-05 17:07:27 : Adding Multi_organoid_D183 to PeakMatrix for Chr (14 of 23)!, 0.723 mins elapsed.
+2024-04-05 17:07:29 : Adding Multi_organoid_D183 to PeakMatrix for Chr (15 of 23)!, 0.766 mins elapsed.
+2024-04-05 17:07:32 : Adding Multi_organoid_D183 to PeakMatrix for Chr (16 of 23)!, 0.81 mins elapsed.
+2024-04-05 17:07:35 : Adding Multi_organoid_D183 to PeakMatrix for Chr (17 of 23)!, 0.855 mins elapsed.
+2024-04-05 17:07:38 : Adding Multi_organoid_D183 to PeakMatrix for Chr (18 of 23)!, 0.905 mins elapsed.
+2024-04-05 17:07:40 : Adding Multi_organoid_D183 to PeakMatrix for Chr (19 of 23)!, 0.943 mins elapsed.
+2024-04-05 17:07:43 : Adding Multi_organoid_D183 to PeakMatrix for Chr (20 of 23)!, 0.992 mins elapsed.
+2024-04-05 17:07:45 : Adding Multi_organoid_D183 to PeakMatrix for Chr (21 of 23)!, 1.032 mins elapsed.
+2024-04-05 17:07:47 : Adding Multi_organoid_D183 to PeakMatrix for Chr (22 of 23)!, 1.064 mins elapsed.
+2024-04-05 17:07:50 : Adding Multi_organoid_D183 to PeakMatrix for Chr (23 of 23)!, 1.105 mins elapsed.
+
+------- Completed
+
+End Time : 2024-04-05 17:07:53
+Elapsed Time Minutes = 15.4317963401477
+Elapsed Time Hours = 0.257196683155166
+
+-------
+
+
+

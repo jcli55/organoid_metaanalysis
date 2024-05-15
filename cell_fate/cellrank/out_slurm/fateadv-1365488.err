@@ -1,0 +1,18 @@
+/storage/chen/home/u250758/miniconda3/envs/cellfate/lib/python3.8/site-packages/anndata/_core/anndata.py:1840: UserWarning: Variable names are not unique. To make them unique, call `.var_names_make_unique`.
+  utils.warn_names_duplicates("var")
+WARNING: Using `9` components would split a block of complex conjugate eigenvalues. Using `n_components=10`
+WARNING: Unable to compute macrostates with `n_states=9` because it will split complex conjugate eigenvalues. Using `n_states=10`
+/storage/chen/home/u250758/miniconda3/envs/cellfate/lib/python3.8/site-packages/scvelo/plotting/scatter.py:656: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
+  smp = ax.scatter(
+/storage/chen/home/u250758/miniconda3/envs/cellfate/lib/python3.8/site-packages/scvelo/plotting/scatter.py:694: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
+  ax.scatter(
+/storage/chen/home/u250758/miniconda3/envs/cellfate/lib/python3.8/site-packages/scvelo/plotting/utils.py:1391: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
+  ax.scatter(x, y, s=bg_size, marker=".", c=bg_color, zorder=zord - 2, **kwargs)
+/storage/chen/home/u250758/miniconda3/envs/cellfate/lib/python3.8/site-packages/scvelo/plotting/utils.py:1392: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
+  ax.scatter(x, y, s=gp_size, marker=".", c=gp_color, zorder=zord - 1, **kwargs)
+Traceback (most recent call last):
+  File "infer_fate_advanced.py", line 19, in <module>
+    g.plot_macrostate_composition(key="age", figsize=(7, 4), save='macrostate_composition_age.png')
+  File "/storage/chen/home/u250758/miniconda3/envs/cellfate/lib/python3.8/site-packages/cellrank/estimators/terminal_states/_gpcca.py", line 1044, in plot_macrostate_composition
+    raise KeyError(f"Data not found in `adata.obs[{key!r}]`.")
+KeyError: "Data not found in `adata.obs['age']`."

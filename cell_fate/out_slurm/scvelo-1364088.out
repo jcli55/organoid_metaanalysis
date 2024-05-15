@@ -1,0 +1,11 @@
+starting at Sun Apr 28 22:13:17 CDT 2024 on mhgcp-d00.grid.bcm.edu
+SLURM_JOBID=1364088
+recovering dynamics (using 1/48 cores)
+WARNING: Unable to create progress bar. Consider installing `tqdm` as `pip install tqdm` and `ipywidgets` as `pip install ipywidgets`,
+or disable the progress bar using `show_progress_bar=False`.
+    finished (0:25:57) --> added 
+    'fit_pars', fitted parameters for splicing dynamics (adata.var)
+computing velocities
+    finished (0:00:19) --> added 
+    'velocity', velocity vectors for each individual cell (adata.layers)
+ended at Sun Apr 28 22:39:57 CDT 2024 on mhgcp-d00.grid.bcm.edu. Time elapsed: 00:26:40

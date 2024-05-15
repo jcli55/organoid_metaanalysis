@@ -1,0 +1,305 @@
+Loading required package: ggplot2
+Loading required package: SummarizedExperiment
+Loading required package: MatrixGenerics
+Loading required package: matrixStats
+
+Attaching package: ‘MatrixGenerics’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colAlls, colAnyNAs, colAnys, colAvgsPerRowSet, colCollapse,
+    colCounts, colCummaxs, colCummins, colCumprods, colCumsums,
+    colDiffs, colIQRDiffs, colIQRs, colLogSumExps, colMadDiffs,
+    colMads, colMaxs, colMeans2, colMedians, colMins, colOrderStats,
+    colProds, colQuantiles, colRanges, colRanks, colSdDiffs, colSds,
+    colSums2, colTabulates, colVarDiffs, colVars, colWeightedMads,
+    colWeightedMeans, colWeightedMedians, colWeightedSds,
+    colWeightedVars, rowAlls, rowAnyNAs, rowAnys, rowAvgsPerColSet,
+    rowCollapse, rowCounts, rowCummaxs, rowCummins, rowCumprods,
+    rowCumsums, rowDiffs, rowIQRDiffs, rowIQRs, rowLogSumExps,
+    rowMadDiffs, rowMads, rowMaxs, rowMeans2, rowMedians, rowMins,
+    rowOrderStats, rowProds, rowQuantiles, rowRanges, rowRanks,
+    rowSdDiffs, rowSds, rowSums2, rowTabulates, rowVarDiffs, rowVars,
+    rowWeightedMads, rowWeightedMeans, rowWeightedMedians,
+    rowWeightedSds, rowWeightedVars
+
+Loading required package: GenomicRanges
+Loading required package: stats4
+Loading required package: BiocGenerics
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    Filter, Find, Map, Position, Reduce, anyDuplicated, append,
+    as.data.frame, basename, cbind, colnames, dirname, do.call,
+    duplicated, eval, evalq, get, grep, grepl, intersect, is.unsorted,
+    lapply, mapply, match, mget, order, paste, pmax, pmax.int, pmin,
+    pmin.int, rank, rbind, rownames, sapply, setdiff, sort, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Loading required package: S4Vectors
+
+Attaching package: ‘S4Vectors’
+
+The following objects are masked from ‘package:base’:
+
+    I, expand.grid, unname
+
+Loading required package: IRanges
+Loading required package: GenomeInfoDb
+Loading required package: Biobase
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: ‘Biobase’
+
+The following object is masked from ‘package:MatrixGenerics’:
+
+    rowMedians
+
+The following objects are masked from ‘package:matrixStats’:
+
+    anyMissing, rowMedians
+
+Loading required package: data.table
+
+Attaching package: ‘data.table’
+
+The following object is masked from ‘package:SummarizedExperiment’:
+
+    shift
+
+The following object is masked from ‘package:GenomicRanges’:
+
+    shift
+
+The following object is masked from ‘package:IRanges’:
+
+    shift
+
+The following objects are masked from ‘package:S4Vectors’:
+
+    first, second
+
+Loading required package: Matrix
+
+Attaching package: ‘Matrix’
+
+The following object is masked from ‘package:S4Vectors’:
+
+    expand
+
+Loading required package: rhdf5
+Loading required package: magrittr
+Setting default number of Parallel threads to 8.
+Setting default genome to Hg38.
+ArchR logging to : ArchRLogs/ArchR-addDoubletScores-827a1ef60e05-Date-2024-03-28_Time-16-36-17.log
+If there is an issue, please report to github with logFile!
+2024-03-28 16:36:17 : Batch Execution w/ safelapply!, 0 mins elapsed.
+2024-03-28 16:36:17 : Multi_H9_D35 (1 of 18) :  Computing Doublet Statistics, 0.001 mins elapsed.
+Multi_H9_D35 (1 of 18) : UMAP Projection R^2 = 0.95769
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-03-28 16:42:51 : Multi_H9_D47 (2 of 18) :  Computing Doublet Statistics, 6.559 mins elapsed.
+Multi_H9_D47 (2 of 18) : UMAP Projection R^2 = 0.82595
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-03-28 16:49:03 : Multi_organoid_NRL_D075 (3 of 18) :  Computing Doublet Statistics, 12.758 mins elapsed.
+Multi_organoid_NRL_D075 (3 of 18) : UMAP Projection R^2 = 0.92626
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-03-28 16:54:06 : Multi_H9_D100 (4 of 18) :  Computing Doublet Statistics, 17.823 mins elapsed.
+Multi_H9_D100 (4 of 18) : UMAP Projection R^2 = 0.8353
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-03-28 16:58:59 : Multi_NRL_GFP_D123 (5 of 18) :  Computing Doublet Statistics, 22.699 mins elapsed.
+Multi_NRL_GFP_D123 (5 of 18) : UMAP Projection R^2 = 0.96516
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-03-28 17:02:54 : Multi_organoid_D133 (6 of 18) :  Computing Doublet Statistics, 26.61 mins elapsed.
+Multi_organoid_D133 (6 of 18) : UMAP Projection R^2 = 0.97885
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-03-28 17:07:38 : Multi_organoid_D183 (7 of 18) :  Computing Doublet Statistics, 31.356 mins elapsed.
+Multi_organoid_D183 (7 of 18) : UMAP Projection R^2 = 0.98114
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-03-28 17:11:34 : Multi_organoid_NRL_D206 (8 of 18) :  Computing Doublet Statistics, 35.289 mins elapsed.
+Multi_organoid_NRL_D206 (8 of 18) : UMAP Projection R^2 = 0.98561
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-03-28 17:17:41 : Multi_organoid_NRL_D243 (9 of 18) :  Computing Doublet Statistics, 41.392 mins elapsed.
+Multi_organoid_NRL_D243 (9 of 18) : UMAP Projection R^2 = 0.98077
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-03-28 17:27:40 : wt5-1 (10 of 18) :  Computing Doublet Statistics, 51.388 mins elapsed.
+wt5-1 (10 of 18) : UMAP Projection R^2 = 0.74158
+wt5-1 (10 of 18) : Correlation of UMAP Projection is below 0.9 (normally this is ~0.99)
+This means there is little heterogeneity in your sample and thus doubletCalling is inaccurate.
+force = FALSE, thus returning -1 doubletScores and doubletEnrichments!
+Set force = TRUE if you want to continue (not recommended).
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-03-28 17:33:14 : wt5-2 (11 of 18) :  Computing Doublet Statistics, 56.943 mins elapsed.
+wt5-2 (11 of 18) : UMAP Projection R^2 = 0.73107
+wt5-2 (11 of 18) : Correlation of UMAP Projection is below 0.9 (normally this is ~0.99)
+This means there is little heterogeneity in your sample and thus doubletCalling is inaccurate.
+force = FALSE, thus returning -1 doubletScores and doubletEnrichments!
+Set force = TRUE if you want to continue (not recommended).
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-03-28 17:37:57 : wt12-1 (12 of 18) :  Computing Doublet Statistics, 61.664 mins elapsed.
+Biased Clusters : Cluster11 
+wt12-1 (12 of 18) : UMAP Projection R^2 = 0.99289
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-03-28 17:41:43 : wt12-2 (13 of 18) :  Computing Doublet Statistics, 65.433 mins elapsed.
+wt12-2 (13 of 18) : UMAP Projection R^2 = 0.99427
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-03-28 17:45:01 : wt12-3 (14 of 18) :  Computing Doublet Statistics, 68.725 mins elapsed.
+wt12-3 (14 of 18) : UMAP Projection R^2 = 0.9875
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-03-28 17:47:55 : wt20-1 (15 of 18) :  Computing Doublet Statistics, 71.63 mins elapsed.
+wt20-1 (15 of 18) : UMAP Projection R^2 = 0.76663
+wt20-1 (15 of 18) : Correlation of UMAP Projection is below 0.9 (normally this is ~0.99)
+This means there is little heterogeneity in your sample and thus doubletCalling is inaccurate.
+force = FALSE, thus returning -1 doubletScores and doubletEnrichments!
+Set force = TRUE if you want to continue (not recommended).
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-03-28 17:52:16 : wt20-2 (16 of 18) :  Computing Doublet Statistics, 75.984 mins elapsed.
+wt20-2 (16 of 18) : UMAP Projection R^2 = 0.98965
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-03-28 17:56:42 : wt28-1 (17 of 18) :  Computing Doublet Statistics, 80.409 mins elapsed.
+wt28-1 (17 of 18) : UMAP Projection R^2 = 0.97549
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-03-28 18:01:56 : wt28-2 (18 of 18) :  Computing Doublet Statistics, 85.652 mins elapsed.
+wt28-2 (18 of 18) : UMAP Projection R^2 = 0.99274
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+ArchR logging successful to : ArchRLogs/ArchR-addDoubletScores-827a1ef60e05-Date-2024-03-28_Time-16-36-17.log
+Warning message:
+The `<scale>` argument of `guides()` cannot be `FALSE`. Use "none" instead as
+of ggplot2 3.3.4.
+ℹ The deprecated feature was likely used in the ArchR package.
+  Please report the issue to the authors. 
+Using GeneAnnotation set by addArchRGenome(Hg38)!
+Using GeneAnnotation set by addArchRGenome(Hg38)!
+Validating Arrows...
+Getting SampleNames...
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 
+Copying ArrowFiles to Ouptut Directory! If you want to save disk space set copyArrows = FALSE
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 
+Getting Cell Metadata...
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 
+Merging Cell Metadata...
+Initializing ArchRProject...
+
+                                                   / |
+                                                 /    \
+            .                                  /      |.
+            \\\                              /        |.
+              \\\                          /           `|.
+                \\\                      /              |.
+                  \                    /                |\
+                  \\#####\           /                  ||
+                ==###########>      /                   ||
+                 \\##==......\    /                     ||
+            ______ =       =|__ /__                     ||      \\\
+        ,--' ,----`-,__ ___/'  --,-`-===================##========>
+       \               '        ##_______ _____ ,--,__,=##,__   ///
+        ,    __==    ___,-,__,--'#'  ==='      `-'    | ##,-/
+        -,____,---'       \\####\\________________,--\\_##,/
+           ___      .______        ______  __    __  .______      
+          /   \     |   _  \      /      ||  |  |  | |   _  \     
+         /  ^  \    |  |_)  |    |  ,----'|  |__|  | |  |_)  |    
+        /  /_\  \   |      /     |  |     |   __   | |      /     
+       /  _____  \  |  |\  \\___ |  `----.|  |  |  | |  |\  \\___.
+      /__/     \__\ | _| `._____| \______||__|  |__| | _| `._____|
+    
+Saving ArchRProject...
+Loading ArchRProject...
+Successfully loaded ArchRProject!
+
+                                                   / |
+                                                 /    \
+            .                                  /      |.
+            \\\                              /        |.
+              \\\                          /           `|.
+                \\\                      /              |.
+                  \                    /                |\
+                  \\#####\           /                  ||
+                ==###########>      /                   ||
+                 \\##==......\    /                     ||
+            ______ =       =|__ /__                     ||      \\\
+        ,--' ,----`-,__ ___/'  --,-`-===================##========>
+       \               '        ##_______ _____ ,--,__,=##,__   ///
+        ,    __==    ___,-,__,--'#'  ==='      `-'    | ##,-/
+        -,____,---'       \\####\\________________,--\\_##,/
+           ___      .______        ______  __    __  .______      
+          /   \     |   _  \      /      ||  |  |  | |   _  \     
+         /  ^  \    |  |_)  |    |  ,----'|  |__|  | |  |_)  |    
+        /  /_\  \   |      /     |  |     |   __   | |      /     
+       /  _____  \  |  |\  \\___ |  `----.|  |  |  | |  |\  \\___.
+      /__/     \__\ | _| `._____| \______||__|  |__| | _| `._____|
+    
+
+           ___      .______        ______  __    __  .______      
+          /   \     |   _  \      /      ||  |  |  | |   _  \     
+         /  ^  \    |  |_)  |    |  ,----'|  |__|  | |  |_)  |    
+        /  /_\  \   |      /     |  |     |   __   | |      /     
+       /  _____  \  |  |\  \\___ |  `----.|  |  |  | |  |\  \\___.
+      /__/     \__\ | _| `._____| \______||__|  |__| | _| `._____|
+    
+rm: cannot remove ‘/storage/chen/home/u250758/../../tmp/RtmplTdo0D/.nfs00000021233a02220001d59a’: Device or resource busy
+rm: cannot remove ‘/storage/chen/home/u250758/../../tmp/RtmplTdo0D/.nfs00000021233a02240001d5ba’: Device or resource busy
+rm: cannot remove ‘/storage/chen/home/u250758/../../tmp/RtmplTdo0D/.nfs00000021233a02230001d5bc’: Device or resource busy

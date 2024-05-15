@@ -1,0 +1,22 @@
+starting at Mon Mar 11 23:29:19 CDT 2024 on mhgcp-d01.grid.bcm.edu
+SLURM_JOBID=1318514
+Finished reading in data!
+Processing  AC
+Saved AC
+Processing  BC
+Saved BC
+Processing  HC
+Saved HC
+Processing  RGC
+Saved RGC
+Processing  Cone
+Saved Cone
+Processing  Rod
+Saved Rod
+Processing  PRPC
+Saved PRPC
+Processing  NRPC
+Saved NRPC
+Processing  MG
+Saved MG
+ended at Mon Mar 11 23:49:19 CDT 2024 on mhgcp-d01.grid.bcm.edu. Time elapsed: 00:20:00

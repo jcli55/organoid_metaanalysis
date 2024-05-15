@@ -1,0 +1,40 @@
+starting at Fri Apr  5 15:22:13 CDT 2024 on mhgcp-d01.grid.bcm.edu
+SLURM_JOBID=1339410
+     Group nCells nCellsUsed nReplicates nMin nMax maxPeaks
+AC      AC   1879       1406           5  127  500   150000
+BC      BC   4437       2470           5  470  500   150000
+Cone  Cone  18673       2500           5  500  500   150000
+HC      HC    974        748           5   84  280   150000
+MG      MG   3664       2080           5  224  500   150000
+NRPC  NRPC   7342       2500           5  500  500   150000
+PRPC  PRPC  21858       2500           5  500  500   150000
+RGC    RGC   3618       1731           5   84  500   150000
+Rod    Rod  12513       2500           5  500  500   150000
+[1] "/storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/AC-reproduciblePeaks.gr.rds"
+[1] "/storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/BC-reproduciblePeaks.gr.rds"
+[1] "/storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/Cone-reproduciblePeaks.gr.rds"
+[1] "/storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/HC-reproduciblePeaks.gr.rds"
+[1] "/storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/MG-reproduciblePeaks.gr.rds"
+[1] "/storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/NRPC-reproduciblePeaks.gr.rds"
+[1] "/storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/PRPC-reproduciblePeaks.gr.rds"
+[1] "/storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/RGC-reproduciblePeaks.gr.rds"
+[1] "/storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/PeakCalls/Rod-reproduciblePeaks.gr.rds"
+class: ArchRProject 
+outputDirectory: /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter 
+samples(9): Multi_H9_D35 Multi_organoid_NRL_D243 ... Multi_H9_D100
+  Multi_organoid_D183
+sampleColData names(1): ArrowFiles
+cellColData names(20): Sample nMultiFrags ... ReadsInPeaks FRIP
+numberOfCells(1): 74958
+medianTSS(1): 17.7825
+medianFrags(1): 6303
+class: ArchRProject 
+outputDirectory: /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter 
+samples(9): Multi_H9_D35 Multi_organoid_NRL_D243 ... Multi_H9_D100
+  Multi_organoid_D183
+sampleColData names(1): ArrowFiles
+cellColData names(20): Sample nMultiFrags ... ReadsInPeaks FRIP
+numberOfCells(1): 74958
+medianTSS(1): 17.7825
+medianFrags(1): 6303
+ended at Fri Apr  5 17:15:31 CDT 2024 on mhgcp-d01.grid.bcm.edu. Time elapsed: 01:53:18

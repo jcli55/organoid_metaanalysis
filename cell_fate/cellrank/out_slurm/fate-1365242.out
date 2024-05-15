@@ -1,0 +1,6 @@
+starting at Tue Apr 30 17:54:12 CDT 2024 on mhgcp-d01.grid.bcm.edu
+SLURM_JOBID=1365242
+saving figure to file ./figures/scvelo_macrostates.png
+saving figure to file ./figures/scvelo_macrostates_terminal.png
+saving figure to file ./figures/scvelo_macrostates_terminal_cont.png
+ended at Tue Apr 30 17:54:32 CDT 2024 on mhgcp-d01.grid.bcm.edu. Time elapsed: 00:00:20

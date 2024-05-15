@@ -1,0 +1,295 @@
+Loading required package: ggplot2
+Loading required package: SummarizedExperiment
+Loading required package: MatrixGenerics
+Loading required package: matrixStats
+
+Attaching package: ‘MatrixGenerics’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colAlls, colAnyNAs, colAnys, colAvgsPerRowSet, colCollapse,
+    colCounts, colCummaxs, colCummins, colCumprods, colCumsums,
+    colDiffs, colIQRDiffs, colIQRs, colLogSumExps, colMadDiffs,
+    colMads, colMaxs, colMeans2, colMedians, colMins, colOrderStats,
+    colProds, colQuantiles, colRanges, colRanks, colSdDiffs, colSds,
+    colSums2, colTabulates, colVarDiffs, colVars, colWeightedMads,
+    colWeightedMeans, colWeightedMedians, colWeightedSds,
+    colWeightedVars, rowAlls, rowAnyNAs, rowAnys, rowAvgsPerColSet,
+    rowCollapse, rowCounts, rowCummaxs, rowCummins, rowCumprods,
+    rowCumsums, rowDiffs, rowIQRDiffs, rowIQRs, rowLogSumExps,
+    rowMadDiffs, rowMads, rowMaxs, rowMeans2, rowMedians, rowMins,
+    rowOrderStats, rowProds, rowQuantiles, rowRanges, rowRanks,
+    rowSdDiffs, rowSds, rowSums2, rowTabulates, rowVarDiffs, rowVars,
+    rowWeightedMads, rowWeightedMeans, rowWeightedMedians,
+    rowWeightedSds, rowWeightedVars
+
+Loading required package: GenomicRanges
+Loading required package: stats4
+Loading required package: BiocGenerics
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    Filter, Find, Map, Position, Reduce, anyDuplicated, append,
+    as.data.frame, basename, cbind, colnames, dirname, do.call,
+    duplicated, eval, evalq, get, grep, grepl, intersect, is.unsorted,
+    lapply, mapply, match, mget, order, paste, pmax, pmax.int, pmin,
+    pmin.int, rank, rbind, rownames, sapply, setdiff, sort, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Loading required package: S4Vectors
+
+Attaching package: ‘S4Vectors’
+
+The following objects are masked from ‘package:base’:
+
+    I, expand.grid, unname
+
+Loading required package: IRanges
+Loading required package: GenomeInfoDb
+Loading required package: Biobase
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: ‘Biobase’
+
+The following object is masked from ‘package:MatrixGenerics’:
+
+    rowMedians
+
+The following objects are masked from ‘package:matrixStats’:
+
+    anyMissing, rowMedians
+
+Loading required package: data.table
+
+Attaching package: ‘data.table’
+
+The following object is masked from ‘package:SummarizedExperiment’:
+
+    shift
+
+The following object is masked from ‘package:GenomicRanges’:
+
+    shift
+
+The following object is masked from ‘package:IRanges’:
+
+    shift
+
+The following objects are masked from ‘package:S4Vectors’:
+
+    first, second
+
+Loading required package: Matrix
+
+Attaching package: ‘Matrix’
+
+The following object is masked from ‘package:S4Vectors’:
+
+    expand
+
+Loading required package: rhdf5
+Loading required package: magrittr
+Successfully loaded ArchRProject!
+
+                                                   / |
+                                                 /    \
+            .                                  /      |.
+            \\\                              /        |.
+              \\\                          /           `|.
+                \\\                      /              |.
+                  \                    /                |\
+                  \\#####\           /                  ||
+                ==###########>      /                   ||
+                 \\##==......\    /                     ||
+            ______ =       =|__ /__                     ||      \\\
+        ,--' ,----`-,__ ___/'  --,-`-===================##========>
+       \               '        ##_______ _____ ,--,__,=##,__   ///
+        ,    __==    ___,-,__,--'#'  ==='      `-'    | ##,-/
+        -,____,---'       \\####\\________________,--\\_##,/
+           ___      .______        ______  __    __  .______      
+          /   \     |   _  \      /      ||  |  |  | |   _  \     
+         /  ^  \    |  |_)  |    |  ,----'|  |__|  | |  |_)  |    
+        /  /_\  \   |      /     |  |     |   __   | |      /     
+       /  _____  \  |  |\  \\___ |  `----.|  |  |  | |  |\  \\___.
+      /__/     \__\ | _| `._____| \______||__|  |__| | _| `._____|
+    
+Checking Inputs...
+ArchR logging to : ArchRLogs/ArchR-addIterativeLSI-4474649f87c6-Date-2024-04-05_Time-13-00-30.log
+If there is an issue, please report to github with logFile!
+2024-04-05 13:01:02 : Computing Total Across All Features, 0.399 mins elapsed.
+2024-04-05 13:01:12 : Computing Top Features, 0.553 mins elapsed.
+###########
+2024-04-05 13:01:14 : Running LSI (1 of 2) on Top Features, 0.586 mins elapsed.
+###########
+2024-04-05 13:01:14 : Sampling Cells (N = 10004) for Estimated LSI, 0.587 mins elapsed.
+2024-04-05 13:01:14 : Creating Sampled Partial Matrix, 0.587 mins elapsed.
+2024-04-05 13:02:01 : Computing Estimated LSI (projectAll = FALSE), 1.382 mins elapsed.
+2024-04-05 13:04:01 : Identifying Clusters, 3.372 mins elapsed.
+2024-04-05 13:04:32 : Identified 5 Clusters, 3.899 mins elapsed.
+2024-04-05 13:04:32 : Saving LSI Iteration, 3.899 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-05 13:05:03 : Creating Cluster Matrix on the total Group Features, 4.417 mins elapsed.
+2024-04-05 13:06:16 : Computing Variable Features, 5.624 mins elapsed.
+###########
+2024-04-05 13:06:16 : Running LSI (2 of 2) on Variable Features, 5.628 mins elapsed.
+###########
+2024-04-05 13:06:16 : Creating Partial Matrix, 5.628 mins elapsed.
+2024-04-05 13:08:45 : Computing LSI, 8.105 mins elapsed.
+2024-04-05 13:10:29 : Finished Running IterativeLSI, 9.844 mins elapsed.
+ArchR logging to : ArchRLogs/ArchR-addClusters-447410b34e87-Date-2024-04-05_Time-13-10-29.log
+If there is an issue, please report to github with logFile!
+2024-04-05 13:10:30 : Running Seurats FindClusters (Stuart et al. Cell 2019), 0.005 mins elapsed.
+Computing nearest neighbor graph
+Computing SNN
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+5 singletons identified. 24 final clusters.
+2024-04-05 13:13:06 : Testing Biased Clusters, 2.614 mins elapsed.
+2024-04-05 13:13:06 : Testing Outlier Clusters, 2.618 mins elapsed.
+2024-04-05 13:13:06 : Assigning Cluster Names to 24 Clusters, 2.618 mins elapsed.
+2024-04-05 13:13:07 : Finished addClusters, 2.623 mins elapsed.
+ArchR logging to : ArchRLogs/ArchR-addClusters-447445f7be85-Date-2024-04-05_Time-13-13-07.log
+If there is an issue, please report to github with logFile!
+2024-04-05 13:13:07 : Running Seurats FindClusters (Stuart et al. Cell 2019), 0.004 mins elapsed.
+Computing nearest neighbor graph
+Computing SNN
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+5 singletons identified. 20 final clusters.
+2024-04-05 13:15:23 : Testing Biased Clusters, 2.273 mins elapsed.
+2024-04-05 13:15:24 : Testing Outlier Clusters, 2.275 mins elapsed.
+2024-04-05 13:15:24 : Assigning Cluster Names to 20 Clusters, 2.275 mins elapsed.
+2024-04-05 13:15:24 : Finished addClusters, 2.279 mins elapsed.
+ArchR logging to : ArchRLogs/ArchR-addClusters-44746dee7414-Date-2024-04-05_Time-13-15-24.log
+If there is an issue, please report to github with logFile!
+2024-04-05 13:15:24 : Running Seurats FindClusters (Stuart et al. Cell 2019), 0.004 mins elapsed.
+Computing nearest neighbor graph
+Computing SNN
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+5 singletons identified. 8 final clusters.
+2024-04-05 13:17:43 : Testing Biased Clusters, 2.308 mins elapsed.
+2024-04-05 13:17:43 : Testing Outlier Clusters, 2.309 mins elapsed.
+2024-04-05 13:17:43 : Assigning Cluster Names to 8 Clusters, 2.31 mins elapsed.
+2024-04-05 13:17:43 : Finished addClusters, 2.313 mins elapsed.
+13:17:43 UMAP embedding parameters a = 0.583 b = 1.334
+13:17:43 Read 74958 rows and found 30 numeric columns
+13:17:43 Using Annoy for neighbor search, n_neighbors = 30
+13:17:43 Building Annoy index with metric = cosine, n_trees = 50
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+13:17:54 Writing NN index file to temp file /storage/chen/home/u250758/../../tmp/RtmpD1iu69/file44746facc363
+13:17:55 Searching Annoy index using 24 threads, search_k = 3000
+13:17:56 Annoy recall = 100%
+13:17:59 Commencing smooth kNN distance calibration using 24 threads with target n_neighbors = 30
+13:18:04 Initializing from normalized Laplacian + noise (using irlba)
+13:18:11 Commencing optimization for 200 epochs, with 3553764 positive edges
+Using method 'umap'
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+13:20:01 Optimization finished
+13:20:01 Creating temp model dir /storage/chen/home/u250758/../../tmp/RtmpD1iu69/dir447456cf3c1
+13:20:01 Creating dir /storage/chen/home/u250758/../../tmp/RtmpD1iu69/dir447456cf3c1
+13:20:08 Changing to /storage/chen/home/u250758/../../tmp/RtmpD1iu69/dir447456cf3c1
+13:20:08 Creating /storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/Embeddings/Save-Uwot-UMAP-Params-IterativeLSI-4474935db4d-Date-2024-04-05_Time-13-20-01.tar
+Warning messages:
+1: In sprintf(gettext(fmt, domain = domain), ...) :
+  one argument not used by format 'invalid uid value replaced by that for user 'nobody''
+2: invalid uid value replaced by that for user 'nobody' 
+3: In sprintf(gettext(fmt, domain = domain), ...) :
+  one argument not used by format 'invalid gid value replaced by that for user 'nobody''
+4: invalid gid value replaced by that for user 'nobody' 
+Saving ArchRProject...
+Loading ArchRProject...
+Successfully loaded ArchRProject!
+
+                                                   / |
+                                                 /    \
+            .                                  /      |.
+            \\\                              /        |.
+              \\\                          /           `|.
+                \\\                      /              |.
+                  \                    /                |\
+                  \\#####\           /                  ||
+                ==###########>      /                   ||
+                 \\##==......\    /                     ||
+            ______ =       =|__ /__                     ||      \\\
+        ,--' ,----`-,__ ___/'  --,-`-===================##========>
+       \               '        ##_______ _____ ,--,__,=##,__   ///
+        ,    __==    ___,-,__,--'#'  ==='      `-'    | ##,-/
+        -,____,---'       \\####\\________________,--\\_##,/
+           ___      .______        ______  __    __  .______      
+          /   \     |   _  \      /      ||  |  |  | |   _  \     
+         /  ^  \    |  |_)  |    |  ,----'|  |__|  | |  |_)  |    
+        /  /_\  \   |      /     |  |     |   __   | |      /     
+       /  _____  \  |  |\  \\___ |  `----.|  |  |  | |  |\  \\___.
+      /__/     \__\ | _| `._____| \______||__|  |__| | _| `._____|
+    
+
+           ___      .______        ______  __    __  .______      
+          /   \     |   _  \      /      ||  |  |  | |   _  \     
+         /  ^  \    |  |_)  |    |  ,----'|  |__|  | |  |_)  |    
+        /  /_\  \   |      /     |  |     |   __   | |      /     
+       /  _____  \  |  |\  \\___ |  `----.|  |  |  | |  |\  \\___.
+      /__/     \__\ | _| `._____| \______||__|  |__| | _| `._____|
+    
+ArchR logging to : ArchRLogs/ArchR-plotEmbedding-447475bd5b35-Date-2024-04-05_Time-13-20-18.log
+If there is an issue, please report to github with logFile!
+Plotting Embedding
+1 WARNING: Error found with Cairo installation. Continuing without rasterization.
+
+ArchR logging successful to : ArchRLogs/ArchR-plotEmbedding-447475bd5b35-Date-2024-04-05_Time-13-20-18.log
+ArchR logging to : ArchRLogs/ArchR-plotEmbedding-447433ca1a93-Date-2024-04-05_Time-13-20-19.log
+If there is an issue, please report to github with logFile!
+Plotting Embedding
+1 WARNING: Error found with Cairo installation. Continuing without rasterization.
+
+ArchR logging successful to : ArchRLogs/ArchR-plotEmbedding-447433ca1a93-Date-2024-04-05_Time-13-20-19.log
+ArchR logging to : ArchRLogs/ArchR-plotEmbedding-44745a620e32-Date-2024-04-05_Time-13-20-20.log
+If there is an issue, please report to github with logFile!
+Plotting Embedding
+1 WARNING: Error found with Cairo installation. Continuing without rasterization.
+
+ArchR logging successful to : ArchRLogs/ArchR-plotEmbedding-44745a620e32-Date-2024-04-05_Time-13-20-20.log
+ArchR logging to : ArchRLogs/ArchR-plotEmbedding-4474222dc943-Date-2024-04-05_Time-13-20-21.log
+If there is an issue, please report to github with logFile!
+Plotting Embedding
+1 WARNING: Error found with Cairo installation. Continuing without rasterization.
+Length of unique values greater than palette, interpolating..
+
+ArchR logging successful to : ArchRLogs/ArchR-plotEmbedding-4474222dc943-Date-2024-04-05_Time-13-20-21.log
+ArchR logging to : ArchRLogs/ArchR-plotEmbedding-4474c16ff58-Date-2024-04-05_Time-13-20-22.log
+If there is an issue, please report to github with logFile!
+Plotting Embedding
+1 WARNING: Error found with Cairo installation. Continuing without rasterization.
+
+ArchR logging successful to : ArchRLogs/ArchR-plotEmbedding-4474c16ff58-Date-2024-04-05_Time-13-20-22.log
+ArchR logging to : ArchRLogs/ArchR-plotEmbedding-447456631c6c-Date-2024-04-05_Time-13-20-23.log
+If there is an issue, please report to github with logFile!
+Plotting Embedding
+1 WARNING: Error found with Cairo installation. Continuing without rasterization.
+
+ArchR logging successful to : ArchRLogs/ArchR-plotEmbedding-447456631c6c-Date-2024-04-05_Time-13-20-23.log
+Plotting Ggplot!
+Plotting Ggplot!
+Plotting Ggplot!
+Plotting Ggplot!
+Plotting Ggplot!
+Plotting Ggplot!

@@ -1,0 +1,10 @@
+/storage/chen/home/u250758/miniconda3/envs/cellfate/lib/python3.8/site-packages/anndata/_core/anndata.py:1840: UserWarning: Variable names are not unique. To make them unique, call `.var_names_make_unique`.
+  utils.warn_names_duplicates("var")
+Traceback (most recent call last):
+  File "infer_fate_subclass.py", line 21, in <module>
+    g.compute_macrostates(n_states=[16,26], cluster_key="subclass")
+  File "/storage/chen/home/u250758/miniconda3/envs/cellfate/lib/python3.8/site-packages/cellrank/estimators/terminal_states/_gpcca.py", line 181, in compute_macrostates
+    n_states = self._n_states(n_states)
+  File "/storage/chen/home/u250758/miniconda3/envs/cellfate/lib/python3.8/site-packages/cellrank/estimators/terminal_states/_gpcca.py", line 1124, in _n_states
+    raise RuntimeError("Compute Schur decomposition first as `.compute_schur()`.")
+RuntimeError: Compute Schur decomposition first as `.compute_schur()`.

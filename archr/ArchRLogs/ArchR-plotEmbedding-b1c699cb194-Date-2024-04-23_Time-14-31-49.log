@@ -1,0 +1,265 @@
+
+           ___      .______        ______  __    __  .______      
+          /   \     |   _  \      /      ||  |  |  | |   _  \     
+         /  ^  \    |  |_)  |    |  ,----'|  |__|  | |  |_)  |    
+        /  /_\  \   |      /     |  |     |   __   | |      /     
+       /  _____  \  |  |\  \\___ |  `----.|  |  |  | |  |\  \\___.
+      /__/     \__\ | _| `._____| \______||__|  |__| | _| `._____|
+    
+Logging With ArchR!
+
+Start Time : 2024-04-23 14:31:49
+
+------- ArchR Info
+
+ArchRThreads = 1
+
+------- System Info
+
+Computer OS = unix
+Total Cores = 48
+
+------- Session Info
+
+R version 4.1.3 (2022-03-10)
+Platform: x86_64-conda-linux-gnu (64-bit)
+Running under: Red Hat Enterprise Linux
+
+Matrix products: default
+BLAS/LAPACK: /storage/chen/home/u250758/miniconda3/envs/archr/lib/libopenblasp-r0.3.23.so
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8 LC_NUMERIC=C         LC_TIME=C           
+ [4] LC_COLLATE=C         LC_MONETARY=C        LC_MESSAGES=C       
+ [7] LC_PAPER=C           LC_NAME=C            LC_ADDRESS=C        
+[10] LC_TELEPHONE=C       LC_MEASUREMENT=C     LC_IDENTIFICATION=C 
+
+attached base packages:
+[1] parallel  stats4    stats     graphics  grDevices utils     datasets 
+[8] methods   base     
+
+other attached packages:
+ [1] harmony_1.2.0               Rcpp_1.0.11                
+ [3] ArchR_1.0.1                 magrittr_2.0.3             
+ [5] rhdf5_2.38.1                Matrix_1.6-1               
+ [7] data.table_1.14.8           SummarizedExperiment_1.24.0
+ [9] Biobase_2.54.0              GenomicRanges_1.46.1       
+[11] GenomeInfoDb_1.30.1         IRanges_2.28.0             
+[13] S4Vectors_0.32.4            BiocGenerics_0.40.0        
+[15] MatrixGenerics_1.6.0        matrixStats_1.0.0          
+[17] ggplot2_3.4.3              
+
+loaded via a namespace (and not attached):
+ [1] pillar_1.9.0           compiler_4.1.3         XVector_0.34.0        
+ [4] rhdf5filters_1.6.0     bitops_1.0-7           tools_4.1.3           
+ [7] zlibbioc_1.40.0        uwot_0.1.16            lifecycle_1.0.3       
+[10] tibble_3.2.1           gtable_0.3.4           lattice_0.21-8        
+[13] pkgconfig_2.0.3        rlang_1.1.1            DelayedArray_0.20.0   
+[16] cli_3.6.1              RhpcBLASctl_0.23-42    GenomeInfoDbData_1.2.7
+[19] stringr_1.5.0          withr_2.5.0            dplyr_1.1.3           
+[22] gtools_3.9.4           generics_0.1.3         vctrs_0.6.3           
+[25] cowplot_1.1.1          grid_4.1.3             tidyselect_1.2.0      
+[28] glue_1.6.2             R6_2.5.1               RcppAnnoy_0.0.20      
+[31] fansi_1.0.4            irlba_2.3.5.1          Rhdf5lib_1.16.0       
+[34] codetools_0.2-19       scales_1.2.1           colorspace_2.1-0      
+[37] utf8_1.2.3             stringi_1.7.12         RCurl_1.98-1.12       
+[40] munsell_0.5.0         
+
+
+------- Log Info
+
+
+2024-04-23 14:31:49 : Input-Parameters, Class = list
+
+Input-Parameters$ArchRProj: length = 1
+
+Input-Parameters$embedding: length = 1
+[1] "HarmUMAP0.9"
+
+
+Input-Parameters$colorBy: length = 1
+[1] "cellColData"
+
+
+Input-Parameters$name: length = 1
+[1] "Sample"
+
+
+Input-Parameters$log2Norm: length = 0
+NULL
+
+
+Input-Parameters$imputeWeights: length = 0
+NULL
+
+
+Input-Parameters$pal: length = 0
+NULL
+
+
+Input-Parameters$size: length = 1
+[1] 0.1
+
+
+Input-Parameters$sampleCells: length = 0
+NULL
+
+
+Input-Parameters$highlightCells: length = 0
+NULL
+
+
+Input-Parameters$rastr: length = 1
+[1] TRUE
+
+
+Input-Parameters$quantCut: length = 2
+[1] 0.01 0.99
+
+
+Input-Parameters$discreteSet: length = 0
+NULL
+
+
+Input-Parameters$continuousSet: length = 0
+NULL
+
+
+Input-Parameters$randomize: length = 1
+[1] TRUE
+
+
+Input-Parameters$keepAxis: length = 1
+[1] FALSE
+
+
+Input-Parameters$baseSize: length = 1
+[1] 10
+
+
+Input-Parameters$plotAs: length = 0
+NULL
+
+
+Input-Parameters$threads: length = 1
+[1] 1
+
+
+Input-Parameters$logFile: length = 1
+[1] "ArchRLogs/ArchR-plotEmbedding-b1c699cb194-Date-2024-04-23_Time-14-31-49.log"
+
+
+
+2024-04-23 14:31:50 : Getting UMAP Embedding
+
+2024-04-23 14:31:50 : Embedding data.frame, Class = data.frame
+Embedding data.frame: nRows = 209091, nCols = 2
+                                Harmony0.9#UMAP_Dimension_1
+Multi_H9_D35#TTGGATCAGGGTCTAT-1                  -4.4066297
+Multi_H9_D35#AACCTTGCATCGCTTT-1                  -4.2774288
+Multi_H9_D35#CATCAATCATATAACC-1                  -1.4952055
+Multi_H9_D35#CCCGCAACAGCCAGAA-1                   4.4244090
+Multi_H9_D35#AGTCCTGAGCTCCTAC-1                  -1.0411028
+Multi_H9_D35#GTCATTAAGGATCCGC-1                  -0.9815311
+                                Harmony0.9#UMAP_Dimension_2
+Multi_H9_D35#TTGGATCAGGGTCTAT-1                   1.1058479
+Multi_H9_D35#AACCTTGCATCGCTTT-1                   2.0332281
+Multi_H9_D35#CATCAATCATATAACC-1                  -2.1211384
+Multi_H9_D35#CCCGCAACAGCCAGAA-1                  -0.4661752
+Multi_H9_D35#AGTCCTGAGCTCCTAC-1                  -1.8813747
+Multi_H9_D35#GTCATTAAGGATCCGC-1                  -4.7476550
+
+
+
+2024-04-23 14:31:50 : ColorBy = cellColData
+
+2024-04-23 14:31:50 : ColorParams 1, Class = list
+
+ColorParams 1$color: length = 209091
+[1] "Multi_H9_D35" "Multi_H9_D35" "Multi_H9_D35" "Multi_H9_D35" "Multi_H9_D35"
+[6] "Multi_H9_D35"
+
+
+ColorParams 1$discrete: length = 1
+[1] TRUE
+
+
+ColorParams 1$continuousSet: length = 1
+[1] "solarExtra"
+
+
+ColorParams 1$discreteSet: length = 1
+[1] "stallion"
+
+
+ColorParams 1$title: length = 1
+[1] "HarmUMAP0.9 of Harmony0.9  colored by\ncolData :  Sample"
+
+
+
+2024-04-23 14:31:50 : PlotParams-1, Class = list
+
+PlotParams-1$color: length = 209091
+[1] "Multi_H9_D35" "Multi_H9_D35" "Multi_H9_D35" "Multi_H9_D35" "Multi_H9_D35"
+[6] "Multi_H9_D35"
+
+
+PlotParams-1$discrete: length = 1
+[1] TRUE
+
+
+PlotParams-1$continuousSet: length = 1
+[1] "solarExtra"
+
+
+PlotParams-1$discreteSet: length = 1
+[1] "stallion"
+
+
+PlotParams-1$title: length = 1
+[1] "HarmUMAP0.9 of Harmony0.9  colored by\ncolData :  Sample"
+
+
+PlotParams-1$x: length = 209091
+[1] -4.4066297 -4.2774288 -1.4952055  4.4244090 -1.0411028 -0.9815311
+
+
+PlotParams-1$y: length = 209091
+[1]  1.1058479  2.0332281 -2.1211384 -0.4661752 -1.8813747 -4.7476550
+
+
+PlotParams-1$baseSize: length = 1
+[1] 10
+
+
+PlotParams-1$xlabel: length = 1
+[1] "UMAP Dimension 1"
+
+
+PlotParams-1$ylabel: length = 1
+[1] "UMAP Dimension 2"
+
+
+PlotParams-1$rastr: length = 1
+[1] TRUE
+
+
+PlotParams-1$size: length = 1
+[1] 0.1
+
+
+PlotParams-1$randomize: length = 1
+[1] TRUE
+
+
+
+------- Completed
+
+End Time : 2024-04-23 14:31:50
+Elapsed Time Minutes = 0.0309389233589172
+Elapsed Time Hours = 0.00051571422153049
+
+-------
+
+
+

@@ -1,0 +1,245 @@
+Loading required package: ggplot2
+Loading required package: SummarizedExperiment
+Loading required package: MatrixGenerics
+Loading required package: matrixStats
+
+Attaching package: ‘MatrixGenerics’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colAlls, colAnyNAs, colAnys, colAvgsPerRowSet, colCollapse,
+    colCounts, colCummaxs, colCummins, colCumprods, colCumsums,
+    colDiffs, colIQRDiffs, colIQRs, colLogSumExps, colMadDiffs,
+    colMads, colMaxs, colMeans2, colMedians, colMins, colOrderStats,
+    colProds, colQuantiles, colRanges, colRanks, colSdDiffs, colSds,
+    colSums2, colTabulates, colVarDiffs, colVars, colWeightedMads,
+    colWeightedMeans, colWeightedMedians, colWeightedSds,
+    colWeightedVars, rowAlls, rowAnyNAs, rowAnys, rowAvgsPerColSet,
+    rowCollapse, rowCounts, rowCummaxs, rowCummins, rowCumprods,
+    rowCumsums, rowDiffs, rowIQRDiffs, rowIQRs, rowLogSumExps,
+    rowMadDiffs, rowMads, rowMaxs, rowMeans2, rowMedians, rowMins,
+    rowOrderStats, rowProds, rowQuantiles, rowRanges, rowRanks,
+    rowSdDiffs, rowSds, rowSums2, rowTabulates, rowVarDiffs, rowVars,
+    rowWeightedMads, rowWeightedMeans, rowWeightedMedians,
+    rowWeightedSds, rowWeightedVars
+
+Loading required package: GenomicRanges
+Loading required package: stats4
+Loading required package: BiocGenerics
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    Filter, Find, Map, Position, Reduce, anyDuplicated, append,
+    as.data.frame, basename, cbind, colnames, dirname, do.call,
+    duplicated, eval, evalq, get, grep, grepl, intersect, is.unsorted,
+    lapply, mapply, match, mget, order, paste, pmax, pmax.int, pmin,
+    pmin.int, rank, rbind, rownames, sapply, setdiff, sort, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Loading required package: S4Vectors
+
+Attaching package: ‘S4Vectors’
+
+The following objects are masked from ‘package:base’:
+
+    I, expand.grid, unname
+
+Loading required package: IRanges
+Loading required package: GenomeInfoDb
+Loading required package: Biobase
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: ‘Biobase’
+
+The following object is masked from ‘package:MatrixGenerics’:
+
+    rowMedians
+
+The following objects are masked from ‘package:matrixStats’:
+
+    anyMissing, rowMedians
+
+Loading required package: data.table
+
+Attaching package: ‘data.table’
+
+The following object is masked from ‘package:SummarizedExperiment’:
+
+    shift
+
+The following object is masked from ‘package:GenomicRanges’:
+
+    shift
+
+The following object is masked from ‘package:IRanges’:
+
+    shift
+
+The following objects are masked from ‘package:S4Vectors’:
+
+    first, second
+
+Loading required package: Matrix
+
+Attaching package: ‘Matrix’
+
+The following object is masked from ‘package:S4Vectors’:
+
+    expand
+
+Loading required package: rhdf5
+Loading required package: magrittr
+Successfully loaded ArchRProject!
+
+                                                   / |
+                                                 /    \
+            .                                  /      |.
+            \\\                              /        |.
+              \\\                          /           `|.
+                \\\                      /              |.
+                  \                    /                |\
+                  \\#####\           /                  ||
+                ==###########>      /                   ||
+                 \\##==......\    /                     ||
+            ______ =       =|__ /__                     ||      \\\
+        ,--' ,----`-,__ ___/'  --,-`-===================##========>
+       \               '        ##_______ _____ ,--,__,=##,__   ///
+        ,    __==    ___,-,__,--'#'  ==='      `-'    | ##,-/
+        -,____,---'       \\####\\________________,--\\_##,/
+           ___      .______        ______  __    __  .______      
+          /   \     |   _  \      /      ||  |  |  | |   _  \     
+         /  ^  \    |  |_)  |    |  ,----'|  |__|  | |  |_)  |    
+        /  /_\  \   |      /     |  |     |   __   | |      /     
+       /  _____  \  |  |\  \\___ |  `----.|  |  |  | |  |\  \\___.
+      /__/     \__\ | _| `._____| \______||__|  |__| | _| `._____|
+    
+Checking Inputs...
+ArchR logging to : ArchRLogs/ArchR-addIterativeLSI-5752673350e6-Date-2024-04-01_Time-15-39-41.log
+If there is an issue, please report to github with logFile!
+2024-04-01 15:39:44 : Computing Total Across All Features, 0.028 mins elapsed.
+2024-04-01 15:40:49 : Computing Top Features, 1.1 mins elapsed.
+###########
+2024-04-01 15:40:50 : Running LSI (1 of 2) on Top Features, 1.121 mins elapsed.
+###########
+2024-04-01 15:40:50 : Sampling Cells (N = 10009) for Estimated LSI, 1.123 mins elapsed.
+2024-04-01 15:40:50 : Creating Sampled Partial Matrix, 1.123 mins elapsed.
+2024-04-01 15:44:32 : Computing Estimated LSI (projectAll = FALSE), 4.83 mins elapsed.
+2024-04-01 15:44:55 : Identifying Clusters, 5.213 mins elapsed.
+2024-04-01 15:45:17 : Identified 6 Clusters, 5.57 mins elapsed.
+2024-04-01 15:45:17 : Saving LSI Iteration, 5.57 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-01 15:45:56 : Creating Cluster Matrix on the total Group Features, 6.222 mins elapsed.
+2024-04-01 15:47:48 : Computing Variable Features, 8.09 mins elapsed.
+###########
+2024-04-01 15:47:48 : Running LSI (2 of 2) on Variable Features, 8.093 mins elapsed.
+###########
+2024-04-01 15:47:48 : Creating Partial Matrix, 8.094 mins elapsed.
+2024-04-01 16:01:58 : Computing LSI, 22.258 mins elapsed.
+2024-04-01 16:05:37 : Finished Running IterativeLSI, 25.907 mins elapsed.
+Transposing data matrix
+Initializing state using k-means centroids initialization
+Harmony 1/10
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Harmony 2/10
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Harmony 3/10
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Harmony converged after 3 iterations
+Warning messages:
+1: HarmonyMatrix is deprecated and will be removed in the future from the API in the future 
+2: Warning: The parameters do_pca and npcs are deprecated. They will be ignored for this function call and please remove parameters do_pca and npcs and pass to harmony cell_embeddings directly.
+This warning is displayed once per session. 
+3: Quick-TRANSfer stage steps exceeded maximum (= 10454550) 
+4: Quick-TRANSfer stage steps exceeded maximum (= 10454550) 
+5: Quick-TRANSfer stage steps exceeded maximum (= 10454550) 
+6: Quick-TRANSfer stage steps exceeded maximum (= 10454550) 
+7: Quick-TRANSfer stage steps exceeded maximum (= 10454550) 
+8: Quick-TRANSfer stage steps exceeded maximum (= 10454550) 
+ArchR logging to : ArchRLogs/ArchR-addClusters-5752411f0db5-Date-2024-04-01_Time-16-27-58.log
+If there is an issue, please report to github with logFile!
+2024-04-01 16:28:07 : Running Seurats FindClusters (Stuart et al. Cell 2019), 0.021 mins elapsed.
+Computing nearest neighbor graph
+Computing SNN
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+575 singletons identified. 43 final clusters.
+2024-04-01 16:47:21 : Testing Biased Clusters, 19.266 mins elapsed.
+2024-04-01 16:47:24 : Testing Outlier Clusters, 19.313 mins elapsed.
+2024-04-01 16:47:24 : Assigning Outlier Clusters (n = 14, nOutlier < 5 cells) to Neighbors, 19.313 mins elapsed.
+2024-04-01 16:47:28 : Identified more clusters than maxClusters allowed (n = 14). Merging clusters to maxClusters (n = 25).
+If this is not desired set maxClusters = NULL!, 19.383 mins elapsed.
+2024-04-01 16:47:29 : Assigning Cluster Names to 25 Clusters, 19.387 mins elapsed.
+2024-04-01 16:47:29 : Finished addClusters, 19.395 mins elapsed.
+16:47:29 UMAP embedding parameters a = 0.583 b = 1.334
+16:47:29 Read 209091 rows and found 30 numeric columns
+16:47:29 Using Annoy for neighbor search, n_neighbors = 30
+16:47:29 Building Annoy index with metric = cosine, n_trees = 50
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+16:48:39 Writing NN index file to temp file /storage/chen/home/u250758/../../tmp/RtmpzQD856/file57522a074bee
+16:48:40 Searching Annoy index using 24 threads, search_k = 3000
+16:48:47 Annoy recall = 98.02%
+16:48:50 Commencing smooth kNN distance calibration using 24 threads with target n_neighbors = 30
+16:48:59 Initializing from normalized Laplacian + noise (using irlba)
+16:49:26 Commencing optimization for 200 epochs, with 10893028 positive edges
+Using method 'umap'
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+16:55:15 Optimization finished
+16:55:15 Creating temp model dir /storage/chen/home/u250758/../../tmp/RtmpzQD856/dir5752195c3622
+16:55:15 Creating dir /storage/chen/home/u250758/../../tmp/RtmpzQD856/dir5752195c3622
+16:55:34 Changing to /storage/chen/home/u250758/../../tmp/RtmpzQD856/dir5752195c3622
+16:55:34 Creating /storage/singlecell/jeanl/organoid/data/archr/proj_all/Embeddings/Save-Uwot-UMAP-Params-IterativeLSI-575270cf7c5e-Date-2024-04-01_Time-16-55-15.tar
+Warning messages:
+1: In sprintf(gettext(fmt, domain = domain), ...) :
+  one argument not used by format 'invalid uid value replaced by that for user 'nobody''
+2: invalid uid value replaced by that for user 'nobody' 
+3: In sprintf(gettext(fmt, domain = domain), ...) :
+  one argument not used by format 'invalid gid value replaced by that for user 'nobody''
+4: invalid gid value replaced by that for user 'nobody' 
+ArchR logging to : ArchRLogs/ArchR-plotEmbedding-57521005607a-Date-2024-04-01_Time-16-55-43.log
+If there is an issue, please report to github with logFile!
+Plotting Embedding
+1 WARNING: Error found with Cairo installation. Continuing without rasterization.
+
+ArchR logging successful to : ArchRLogs/ArchR-plotEmbedding-57521005607a-Date-2024-04-01_Time-16-55-43.log
+ArchR logging to : ArchRLogs/ArchR-plotEmbedding-57523b659d81-Date-2024-04-01_Time-16-55-51.log
+If there is an issue, please report to github with logFile!
+Error in value[[3L]](cond) : select Not Found in Colnames of cellColData:
+Error in `dplyr::mutate()`:
+ℹ In argument: `tmpNewCol123 = eval(parse(text = select[x]))`.
+Caused by error:
+! object 'Clusters' not found
+Calls: plotEmbedding ... tryCatch -> tryCatchList -> tryCatchOne -> <Anonymous>
+Execution halted
+rm: cannot remove ‘/storage/chen/home/u250758/../../tmp/RtmpzQD856/dir5752195c3622/uwot’: Directory not empty

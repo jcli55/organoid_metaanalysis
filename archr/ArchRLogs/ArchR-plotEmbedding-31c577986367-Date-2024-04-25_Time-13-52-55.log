@@ -1,0 +1,961 @@
+
+           ___      .______        ______  __    __  .______      
+          /   \     |   _  \      /      ||  |  |  | |   _  \     
+         /  ^  \    |  |_)  |    |  ,----'|  |__|  | |  |_)  |    
+        /  /_\  \   |      /     |  |     |   __   | |      /     
+       /  _____  \  |  |\  \\___ |  `----.|  |  |  | |  |\  \\___.
+      /__/     \__\ | _| `._____| \______||__|  |__| | _| `._____|
+    
+Logging With ArchR!
+
+Start Time : 2024-04-25 13:53:00
+
+------- ArchR Info
+
+ArchRThreads = 1
+
+------- System Info
+
+Computer OS = unix
+Total Cores = 48
+
+------- Session Info
+
+R version 4.1.3 (2022-03-10)
+Platform: x86_64-conda-linux-gnu (64-bit)
+Running under: Red Hat Enterprise Linux
+
+Matrix products: default
+BLAS/LAPACK: /storage/chen/home/u250758/miniconda3/envs/archr/lib/libopenblasp-r0.3.23.so
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8 LC_NUMERIC=C         LC_TIME=C           
+ [4] LC_COLLATE=C         LC_MONETARY=C        LC_MESSAGES=C       
+ [7] LC_PAPER=C           LC_NAME=C            LC_ADDRESS=C        
+[10] LC_TELEPHONE=C       LC_MEASUREMENT=C     LC_IDENTIFICATION=C 
+
+attached base packages:
+[1] parallel  stats4    stats     graphics  grDevices utils     datasets 
+[8] methods   base     
+
+other attached packages:
+ [1] ArchR_1.0.1                 magrittr_2.0.3             
+ [3] rhdf5_2.38.1                Matrix_1.6-1               
+ [5] data.table_1.14.8           SummarizedExperiment_1.24.0
+ [7] Biobase_2.54.0              GenomicRanges_1.46.1       
+ [9] GenomeInfoDb_1.30.1         IRanges_2.28.0             
+[11] S4Vectors_0.32.4            BiocGenerics_0.40.0        
+[13] MatrixGenerics_1.6.0        matrixStats_1.0.0          
+[15] ggplot2_3.4.3              
+
+loaded via a namespace (and not attached):
+ [1] Rcpp_1.0.11            pillar_1.9.0           compiler_4.1.3        
+ [4] XVector_0.34.0         rhdf5filters_1.6.0     bitops_1.0-7          
+ [7] tools_4.1.3            zlibbioc_1.40.0        lifecycle_1.0.3       
+[10] tibble_3.2.1           gtable_0.3.4           lattice_0.21-8        
+[13] pkgconfig_2.0.3        rlang_1.1.1            DelayedArray_0.20.0   
+[16] cli_3.6.1              GenomeInfoDbData_1.2.7 stringr_1.5.0         
+[19] withr_2.5.0            dplyr_1.1.3            generics_0.1.3        
+[22] vctrs_0.6.3            grid_4.1.3             tidyselect_1.2.0      
+[25] glue_1.6.2             R6_2.5.1               fansi_1.0.4           
+[28] Rhdf5lib_1.16.0        scales_1.2.1           colorspace_2.1-0      
+[31] utf8_1.2.3             stringi_1.7.12         RCurl_1.98-1.12       
+[34] munsell_0.5.0         
+
+
+------- Log Info
+
+
+2024-04-25 13:53:00 : Input-Parameters, Class = list
+
+Input-Parameters$ArchRProj: length = 1
+
+Input-Parameters$embedding: length = 1
+[1] "HarmUMAP"
+
+
+Input-Parameters$colorBy: length = 1
+[1] "GeneScoreMatrix"
+
+
+Input-Parameters$name: length = 9
+[1] "SFRP2" "NFIA"  "ASCL1" "DLX1"  "DLX2"  "ATOH7"
+
+
+Input-Parameters$log2Norm: length = 0
+NULL
+
+
+Input-Parameters$pal: length = 0
+NULL
+
+
+Input-Parameters$size: length = 1
+[1] 0.1
+
+
+Input-Parameters$sampleCells: length = 0
+NULL
+
+
+Input-Parameters$highlightCells: length = 0
+NULL
+
+
+Input-Parameters$rastr: length = 1
+[1] TRUE
+
+
+Input-Parameters$quantCut: length = 2
+[1] 0.01 0.99
+
+
+Input-Parameters$discreteSet: length = 0
+NULL
+
+
+Input-Parameters$continuousSet: length = 0
+NULL
+
+
+Input-Parameters$randomize: length = 1
+[1] TRUE
+
+
+Input-Parameters$keepAxis: length = 1
+[1] FALSE
+
+
+Input-Parameters$baseSize: length = 1
+[1] 10
+
+
+Input-Parameters$plotAs: length = 0
+NULL
+
+
+Input-Parameters$threads: length = 1
+[1] 1
+
+
+Input-Parameters$logFile: length = 1
+[1] "ArchRLogs/ArchR-plotEmbedding-31c577986367-Date-2024-04-25_Time-13-52-55.log"
+
+
+
+2024-04-25 13:53:00 : Getting UMAP Embedding
+
+2024-04-25 13:53:00 : Embedding data.frame, Class = data.frame
+Embedding data.frame: nRows = 209091, nCols = 2
+                                Harmony#UMAP_Dimension_1
+Multi_H9_D35#TTGGATCAGGGTCTAT-1              -4.28139635
+Multi_H9_D35#AACCTTGCATCGCTTT-1              -3.42044254
+Multi_H9_D35#CATCAATCATATAACC-1              -1.61457439
+Multi_H9_D35#CCCGCAACAGCCAGAA-1              -3.01133009
+Multi_H9_D35#AGTCCTGAGCTCCTAC-1               0.06501107
+Multi_H9_D35#GTCATTAAGGATCCGC-1              -1.61650129
+                                Harmony#UMAP_Dimension_2
+Multi_H9_D35#TTGGATCAGGGTCTAT-1                1.6876802
+Multi_H9_D35#AACCTTGCATCGCTTT-1                3.6580894
+Multi_H9_D35#CATCAATCATATAACC-1               -1.5211041
+Multi_H9_D35#CCCGCAACAGCCAGAA-1               -3.8617024
+Multi_H9_D35#AGTCCTGAGCTCCTAC-1               -0.8664352
+Multi_H9_D35#GTCATTAAGGATCCGC-1               -4.2374019
+
+
+
+2024-04-25 13:53:06 : ColorBy = GeneScoreMatrix
+
+2024-04-25 13:53:06 : Getting Matrix Values...
+
+2024-04-25 13:53:06 : FeatureDF, Class = DFrame
+DataFrame with 24919 rows and 6 columns
+      seqnames     start       end  strand         name     idx
+         <Rle>   <array>   <array> <array>      <array> <array>
+1         chr1     69091     70008       1        OR4F5       1
+2         chr1    140339    139790       2    LOC729737       2
+3         chr1    629010    585990       2 LOC101928626       3
+4         chr1    817371    819837       1       FAM87B       4
+5         chr1    825138    859446       1    LINC01128       5
+...        ...       ...       ...     ...          ...     ...
+24915     chrX 155264589 155258241       2       RAB39B     952
+24916     chrX 155334657 155276211       2        CLIC2     953
+24917     chrX 155380787 155381134       1       H2AFB1     954
+24918     chrX 155382115 155383230       1         F8A2     955
+24919     chrX 155669944 155490115       2        TMLHE     956
+
+
+2024-04-25 13:53:06 : idx, Class = integer
+
+idx: length = 9
+[1] 18337   882  5920 13989 13991  2830
+
+
+
+2024-04-25 13:53:06 : FeatureDF-Subset, Class = DFrame
+DataFrame with 9 rows and 6 columns
+  seqnames     start       end  strand    name     idx
+     <Rle>   <array>   <array> <array> <array> <array>
+1     chr4 153789120 153780592       2   SFRP2     803
+2     chr1  60865259  61462793       1    NFIA     882
+3    chr12 102957686 102960516       1   ASCL1     935
+4     chr2 172084740 172089677       1    DLX1    1040
+5     chr2 172102900 172099439       2    DLX2    1042
+6    chr10  68232103  68230624       2   ATOH7     378
+7    chr15  89221751  89209869       2   RLBP1     715
+8    chr16  21303083  21238874       2    CRYM     346
+9     chr8  27615031  27596917       2     CLU     204
+
+
+2024-04-25 13:54:39 : Feature-Matrix, Class = dgCMatrix
+Feature-Matrix: nRows = 9, nCols = 209091
+Feature-Matrix: NonZeroEntries = 648328, EntryRange = [ 0.034 , 157.835 ]
+5 x 5 sparse Matrix of class "dgCMatrix"
+     Multi_H9_D35#TTGGATCAGGGTCTAT-1 Multi_H9_D35#AACCTTGCATCGCTTT-1
+[1,]                           0.838                           0.404
+[2,]                          14.135                           1.217
+[3,]                           0.333                           0.843
+[4,]                           .                               1.040
+[5,]                           0.212                           0.517
+     Multi_H9_D35#CATCAATCATATAACC-1 Multi_H9_D35#CCCGCAACAGCCAGAA-1
+[1,]                           0.928                           .    
+[2,]                           2.002                           0.303
+[3,]                           0.529                           .    
+[4,]                           .                               .    
+[5,]                           0.065                           0.330
+     Multi_H9_D35#AGTCCTGAGCTCCTAC-1
+[1,]                           0.564
+[2,]                           1.009
+[3,]                           0.274
+[4,]                           0.953
+[5,]                           1.944
+
+
+
+2024-04-25 13:54:39 : colorMat-Before-Impute, Class = matrix
+ 
+2024-04-25 13:54:39 : colorMat-Before-Impute, Class = array
+      Multi_H9_D35#TTGGATCAGGGTCTAT-1 Multi_H9_D35#AACCTTGCATCGCTTT-1
+SFRP2                           0.838                           0.404
+NFIA                           14.135                           1.217
+ASCL1                           0.333                           0.843
+DLX1                            0.000                           1.040
+DLX2                            0.212                           0.517
+      Multi_H9_D35#CATCAATCATATAACC-1 Multi_H9_D35#CCCGCAACAGCCAGAA-1
+SFRP2                           0.928                           0.000
+NFIA                            2.002                           0.303
+ASCL1                           0.529                           0.000
+DLX1                            0.000                           0.000
+DLX2                            0.065                           0.330
+      Multi_H9_D35#AGTCCTGAGCTCCTAC-1
+SFRP2                           0.564
+NFIA                            1.009
+ASCL1                           0.274
+DLX1                            0.953
+DLX2                            1.944
+
+colorMat-Before-Impute: nRows = 9, nCols = 209091
+
+
+2024-04-25 13:54:39 : imputeMatrix Input-Parameters, Class = list
+
+imputeMatrix Input-Parameters$mat: nRows = 9, nCols = 209091
+      Multi_H9_D35#TTGGATCAGGGTCTAT-1 Multi_H9_D35#AACCTTGCATCGCTTT-1
+SFRP2                           0.838                           0.404
+NFIA                           14.135                           1.217
+ASCL1                           0.333                           0.843
+DLX1                            0.000                           1.040
+DLX2                            0.212                           0.517
+      Multi_H9_D35#CATCAATCATATAACC-1 Multi_H9_D35#CCCGCAACAGCCAGAA-1
+SFRP2                           0.928                           0.000
+NFIA                            2.002                           0.303
+ASCL1                           0.529                           0.000
+DLX1                            0.000                           0.000
+DLX2                            0.065                           0.330
+      Multi_H9_D35#AGTCCTGAGCTCCTAC-1
+SFRP2                           0.564
+NFIA                            1.009
+ASCL1                           0.274
+DLX1                            0.953
+DLX2                            1.944
+
+
+imputeMatrix Input-Parameters$threads: length = 1
+[1] 1
+
+
+imputeMatrix Input-Parameters$verbose: length = 1
+[1] FALSE
+
+
+imputeMatrix Input-Parameters$logFile: length = 1
+[1] "ArchRLogs/ArchR-plotEmbedding-31c577986367-Date-2024-04-25_Time-13-52-55.log"
+
+
+
+2024-04-25 13:54:39 : mat, Class = matrix
+ 
+2024-04-25 13:54:39 : mat, Class = array
+      Multi_H9_D35#TTGGATCAGGGTCTAT-1 Multi_H9_D35#AACCTTGCATCGCTTT-1
+SFRP2                           0.838                           0.404
+NFIA                           14.135                           1.217
+ASCL1                           0.333                           0.843
+DLX1                            0.000                           1.040
+DLX2                            0.212                           0.517
+      Multi_H9_D35#CATCAATCATATAACC-1 Multi_H9_D35#CCCGCAACAGCCAGAA-1
+SFRP2                           0.928                           0.000
+NFIA                            2.002                           0.303
+ASCL1                           0.529                           0.000
+DLX1                            0.000                           0.000
+DLX2                            0.065                           0.330
+      Multi_H9_D35#AGTCCTGAGCTCCTAC-1
+SFRP2                           0.564
+NFIA                            1.009
+ASCL1                           0.274
+DLX1                            0.953
+DLX2                            1.944
+
+mat: nRows = 9, nCols = 209091
+
+
+2024-04-25 13:54:39 : weightList, Class = SimpleList
+
+weightList$w1: length = 1
+[1] "/storage/singlecell/jeanl/organoid/data/archr/proj_all/ImputeWeights/Impute-Weights-Rep-1"
+
+
+weightList$w2: length = 1
+[1] "/storage/singlecell/jeanl/organoid/data/archr/proj_all/ImputeWeights/Impute-Weights-Rep-2"
+
+
+2024-04-25 13:54:39 : Imputing Matrix (1 of 2), 0 mins elapsed.
+
+2024-04-25 13:54:39 : Using weights on disk
+
+2024-04-25 13:54:41 : 1 of 42
+
+2024-04-25 13:54:41 : 2 of 42
+
+2024-04-25 13:54:42 : 3 of 42
+
+2024-04-25 13:54:43 : 4 of 42
+
+2024-04-25 13:54:44 : 5 of 42
+
+2024-04-25 13:54:46 : 6 of 42
+
+2024-04-25 13:54:47 : 7 of 42
+
+2024-04-25 13:54:49 : 8 of 42
+
+2024-04-25 13:54:50 : 9 of 42
+
+2024-04-25 13:54:51 : 10 of 42
+
+2024-04-25 13:54:52 : 11 of 42
+
+2024-04-25 13:54:54 : 12 of 42
+
+2024-04-25 13:54:55 : 13 of 42
+
+2024-04-25 13:54:56 : 14 of 42
+
+2024-04-25 13:54:57 : 15 of 42
+
+2024-04-25 13:54:58 : 16 of 42
+
+2024-04-25 13:54:59 : 17 of 42
+
+2024-04-25 13:55:01 : 18 of 42
+
+2024-04-25 13:55:02 : 19 of 42
+
+2024-04-25 13:55:03 : 20 of 42
+
+2024-04-25 13:55:04 : 21 of 42
+
+2024-04-25 13:55:05 : 22 of 42
+
+2024-04-25 13:55:06 : 23 of 42
+
+2024-04-25 13:55:08 : 24 of 42
+
+2024-04-25 13:55:09 : 25 of 42
+
+2024-04-25 13:55:10 : 26 of 42
+
+2024-04-25 13:55:12 : 27 of 42
+
+2024-04-25 13:55:13 : 28 of 42
+
+2024-04-25 13:55:14 : 29 of 42
+
+2024-04-25 13:55:15 : 30 of 42
+
+2024-04-25 13:55:16 : 31 of 42
+
+2024-04-25 13:55:17 : 32 of 42
+
+2024-04-25 13:55:18 : 33 of 42
+
+2024-04-25 13:55:20 : 34 of 42
+
+2024-04-25 13:55:21 : 35 of 42
+
+2024-04-25 13:55:22 : 36 of 42
+
+2024-04-25 13:55:23 : 37 of 42
+
+2024-04-25 13:55:24 : 38 of 42
+
+2024-04-25 13:55:25 : 39 of 42
+
+2024-04-25 13:55:26 : 40 of 42
+
+2024-04-25 13:55:28 : 41 of 42
+
+2024-04-25 13:55:30 : 42 of 42
+2024-04-25 13:55:31 : Imputing Matrix (2 of 2), 0.861 mins elapsed.
+
+2024-04-25 13:55:31 : Using weights on disk
+
+2024-04-25 13:55:32 : 1 of 42
+
+2024-04-25 13:55:33 : 2 of 42
+
+2024-04-25 13:55:35 : 3 of 42
+
+2024-04-25 13:55:35 : 4 of 42
+
+2024-04-25 13:55:37 : 5 of 42
+
+2024-04-25 13:55:38 : 6 of 42
+
+2024-04-25 13:55:39 : 7 of 42
+
+2024-04-25 13:55:41 : 8 of 42
+
+2024-04-25 13:55:42 : 9 of 42
+
+2024-04-25 13:55:43 : 10 of 42
+
+2024-04-25 13:55:45 : 11 of 42
+
+2024-04-25 13:55:47 : 12 of 42
+
+2024-04-25 13:55:48 : 13 of 42
+
+2024-04-25 13:55:49 : 14 of 42
+
+2024-04-25 13:55:50 : 15 of 42
+
+2024-04-25 13:55:52 : 16 of 42
+
+2024-04-25 13:55:53 : 17 of 42
+
+2024-04-25 13:55:54 : 18 of 42
+
+2024-04-25 13:55:55 : 19 of 42
+
+2024-04-25 13:55:56 : 20 of 42
+
+2024-04-25 13:55:58 : 21 of 42
+
+2024-04-25 13:55:59 : 22 of 42
+
+2024-04-25 13:56:00 : 23 of 42
+
+2024-04-25 13:56:01 : 24 of 42
+
+2024-04-25 13:56:02 : 25 of 42
+
+2024-04-25 13:56:03 : 26 of 42
+
+2024-04-25 13:56:05 : 27 of 42
+
+2024-04-25 13:56:06 : 28 of 42
+
+2024-04-25 13:56:08 : 29 of 42
+
+2024-04-25 13:56:09 : 30 of 42
+
+2024-04-25 13:56:10 : 31 of 42
+
+2024-04-25 13:56:11 : 32 of 42
+
+2024-04-25 13:56:12 : 33 of 42
+
+2024-04-25 13:56:13 : 34 of 42
+
+2024-04-25 13:56:14 : 35 of 42
+
+2024-04-25 13:56:15 : 36 of 42
+
+2024-04-25 13:56:17 : 37 of 42
+
+2024-04-25 13:56:18 : 38 of 42
+
+2024-04-25 13:56:19 : 39 of 42
+
+2024-04-25 13:56:20 : 40 of 42
+
+2024-04-25 13:56:21 : 41 of 42
+
+2024-04-25 13:56:22 : 42 of 42
+2024-04-25 13:56:24 : Finished Imputing Matrix, 1.749 mins elapsed.
+
+2024-04-25 13:56:24 : colorMat-After-Impute, Class = matrix
+ 
+2024-04-25 13:56:24 : colorMat-After-Impute, Class = array
+      Multi_H9_D35#TTGGATCAGGGTCTAT-1 Multi_H9_D35#AACCTTGCATCGCTTT-1
+SFRP2                       1.2666774                       1.2208805
+NFIA                        1.6432566                       1.5522892
+ASCL1                       1.1438398                       1.2996887
+DLX1                        0.6017831                       0.6209615
+DLX2                        0.8346632                       0.8082248
+      Multi_H9_D35#CATCAATCATATAACC-1 Multi_H9_D35#CCCGCAACAGCCAGAA-1
+SFRP2                       1.0785496                       0.7956496
+NFIA                        1.4879157                       1.4223890
+ASCL1                       0.8080605                       0.6301822
+DLX1                        0.5074809                       0.4851479
+DLX2                        0.8455609                       0.7511872
+      Multi_H9_D35#AGTCCTGAGCTCCTAC-1
+SFRP2                       0.8796047
+NFIA                        1.4682486
+ASCL1                       0.7653172
+DLX1                        0.5204800
+DLX2                        0.8223188
+
+colorMat-After-Impute: nRows = 9, nCols = 209091
+
+
+2024-04-25 13:56:24 : ColorParams 1, Class = list
+
+ColorParams 1$color: length = 209091
+Multi_H9_D35#TTGGATCAGGGTCTAT-1 Multi_H9_D35#AACCTTGCATCGCTTT-1 
+                      1.2666774                       1.2208805 
+Multi_H9_D35#CATCAATCATATAACC-1 Multi_H9_D35#CCCGCAACAGCCAGAA-1 
+                      1.0785496                       0.7956496 
+Multi_H9_D35#AGTCCTGAGCTCCTAC-1 Multi_H9_D35#GTCATTAAGGATCCGC-1 
+                      0.8796047                       0.8784223 
+
+
+ColorParams 1$discrete: length = 1
+[1] FALSE
+
+
+ColorParams 1$title: length = 1
+[1] "HarmUMAP of Harmony colored by\nGeneScoreMatrix : SFRP2"
+
+
+ColorParams 1$continuousSet: length = 1
+[1] "horizonExtra"
+
+
+
+2024-04-25 13:56:25 : PlotParams-1, Class = list
+
+PlotParams-1$color: length = 209091
+Multi_H9_D35#TTGGATCAGGGTCTAT-1 Multi_H9_D35#AACCTTGCATCGCTTT-1 
+                      1.1805791                       1.1511318 
+Multi_H9_D35#CATCAATCATATAACC-1 Multi_H9_D35#CCCGCAACAGCCAGAA-1 
+                      1.0555772                       0.8445058 
+Multi_H9_D35#AGTCCTGAGCTCCTAC-1 Multi_H9_D35#GTCATTAAGGATCCGC-1 
+                      0.9104293                       0.9095215 
+
+
+PlotParams-1$title: length = 1
+[1] "HarmUMAP of Harmony colored by\nGeneScoreMatrix : SFRP2"
+
+
+PlotParams-1$x: length = 209091
+[1] -4.28139635 -3.42044254 -1.61457439 -3.01133009  0.06501107 -1.61650129
+
+
+PlotParams-1$y: length = 209091
+[1]  1.6876802  3.6580894 -1.5211041 -3.8617024 -0.8664352 -4.2374019
+
+
+PlotParams-1$baseSize: length = 1
+[1] 10
+
+
+PlotParams-1$xlabel: length = 1
+[1] "UMAP Dimension 1"
+
+
+PlotParams-1$ylabel: length = 1
+[1] "UMAP Dimension 2"
+
+
+PlotParams-1$pal: length = 256
+[1] "#000436" "#000439" "#00053D" "#000640" "#000744" "#000848"
+
+
+PlotParams-1$colorTitle: length = 1
+[1] "Log2(NormCounts + 1)"
+
+
+
+2024-04-25 13:56:27 : PlotParams-2, Class = list
+
+PlotParams-2$color: length = 209091
+Multi_H9_D35#TTGGATCAGGGTCTAT-1 Multi_H9_D35#AACCTTGCATCGCTTT-1 
+                       1.402316                        1.351792 
+Multi_H9_D35#CATCAATCATATAACC-1 Multi_H9_D35#CCCGCAACAGCCAGAA-1 
+                       1.314938                        1.276431 
+Multi_H9_D35#AGTCCTGAGCTCCTAC-1 Multi_H9_D35#GTCATTAAGGATCCGC-1 
+                       1.303488                        1.344918 
+
+
+PlotParams-2$title: length = 1
+[1] "HarmUMAP of Harmony colored by\nGeneScoreMatrix : NFIA"
+
+
+PlotParams-2$x: length = 209091
+[1] -4.28139635 -3.42044254 -1.61457439 -3.01133009  0.06501107 -1.61650129
+
+
+PlotParams-2$y: length = 209091
+[1]  1.6876802  3.6580894 -1.5211041 -3.8617024 -0.8664352 -4.2374019
+
+
+PlotParams-2$baseSize: length = 1
+[1] 10
+
+
+PlotParams-2$xlabel: length = 1
+[1] "UMAP Dimension 1"
+
+
+PlotParams-2$ylabel: length = 1
+[1] "UMAP Dimension 2"
+
+
+PlotParams-2$pal: length = 256
+[1] "#000436" "#000439" "#00053D" "#000640" "#000744" "#000848"
+
+
+PlotParams-2$colorTitle: length = 1
+[1] "Log2(NormCounts + 1)"
+
+
+
+2024-04-25 13:56:28 : PlotParams-3, Class = list
+
+PlotParams-3$color: length = 209091
+Multi_H9_D35#TTGGATCAGGGTCTAT-1 Multi_H9_D35#AACCTTGCATCGCTTT-1 
+                      1.1001971                       1.2014386 
+Multi_H9_D35#CATCAATCATATAACC-1 Multi_H9_D35#CCCGCAACAGCCAGAA-1 
+                      0.8544429                       0.7050332 
+Multi_H9_D35#AGTCCTGAGCTCCTAC-1 Multi_H9_D35#GTCATTAAGGATCCGC-1 
+                      0.8199274                       1.0239785 
+
+
+PlotParams-3$title: length = 1
+[1] "HarmUMAP of Harmony colored by\nGeneScoreMatrix : ASCL1"
+
+
+PlotParams-3$x: length = 209091
+[1] -4.28139635 -3.42044254 -1.61457439 -3.01133009  0.06501107 -1.61650129
+
+
+PlotParams-3$y: length = 209091
+[1]  1.6876802  3.6580894 -1.5211041 -3.8617024 -0.8664352 -4.2374019
+
+
+PlotParams-3$baseSize: length = 1
+[1] 10
+
+
+PlotParams-3$xlabel: length = 1
+[1] "UMAP Dimension 1"
+
+
+PlotParams-3$ylabel: length = 1
+[1] "UMAP Dimension 2"
+
+
+PlotParams-3$pal: length = 256
+[1] "#000436" "#000439" "#00053D" "#000640" "#000744" "#000848"
+
+
+PlotParams-3$colorTitle: length = 1
+[1] "Log2(NormCounts + 1)"
+
+
+
+2024-04-25 13:56:29 : PlotParams-4, Class = list
+
+PlotParams-4$color: length = 209091
+Multi_H9_D35#TTGGATCAGGGTCTAT-1 Multi_H9_D35#AACCTTGCATCGCTTT-1 
+                      0.6796788                       0.6968498 
+Multi_H9_D35#CATCAATCATATAACC-1 Multi_H9_D35#CCCGCAACAGCCAGAA-1 
+                      0.5921398                       0.5706066 
+Multi_H9_D35#AGTCCTGAGCTCCTAC-1 Multi_H9_D35#GTCATTAAGGATCCGC-1 
+                      0.6045269                       0.7586045 
+
+
+PlotParams-4$title: length = 1
+[1] "HarmUMAP of Harmony colored by\nGeneScoreMatrix : DLX1"
+
+
+PlotParams-4$x: length = 209091
+[1] -4.28139635 -3.42044254 -1.61457439 -3.01133009  0.06501107 -1.61650129
+
+
+PlotParams-4$y: length = 209091
+[1]  1.6876802  3.6580894 -1.5211041 -3.8617024 -0.8664352 -4.2374019
+
+
+PlotParams-4$baseSize: length = 1
+[1] 10
+
+
+PlotParams-4$xlabel: length = 1
+[1] "UMAP Dimension 1"
+
+
+PlotParams-4$ylabel: length = 1
+[1] "UMAP Dimension 2"
+
+
+PlotParams-4$pal: length = 256
+[1] "#000436" "#000439" "#00053D" "#000640" "#000744" "#000848"
+
+
+PlotParams-4$colorTitle: length = 1
+[1] "Log2(NormCounts + 1)"
+
+
+
+2024-04-25 13:56:31 : PlotParams-5, Class = list
+
+PlotParams-5$color: length = 209091
+Multi_H9_D35#TTGGATCAGGGTCTAT-1 Multi_H9_D35#AACCTTGCATCGCTTT-1 
+                      0.8755152                       0.8545741 
+Multi_H9_D35#CATCAATCATATAACC-1 Multi_H9_D35#CCCGCAACAGCCAGAA-1 
+                      0.8840593                       0.8083333 
+Multi_H9_D35#AGTCCTGAGCTCCTAC-1 Multi_H9_D35#GTCATTAAGGATCCGC-1 
+                      0.8657754                       0.8244322 
+
+
+PlotParams-5$title: length = 1
+[1] "HarmUMAP of Harmony colored by\nGeneScoreMatrix : DLX2"
+
+
+PlotParams-5$x: length = 209091
+[1] -4.28139635 -3.42044254 -1.61457439 -3.01133009  0.06501107 -1.61650129
+
+
+PlotParams-5$y: length = 209091
+[1]  1.6876802  3.6580894 -1.5211041 -3.8617024 -0.8664352 -4.2374019
+
+
+PlotParams-5$baseSize: length = 1
+[1] 10
+
+
+PlotParams-5$xlabel: length = 1
+[1] "UMAP Dimension 1"
+
+
+PlotParams-5$ylabel: length = 1
+[1] "UMAP Dimension 2"
+
+
+PlotParams-5$pal: length = 256
+[1] "#000436" "#000439" "#00053D" "#000640" "#000744" "#000848"
+
+
+PlotParams-5$colorTitle: length = 1
+[1] "Log2(NormCounts + 1)"
+
+
+
+2024-04-25 13:56:32 : PlotParams-6, Class = list
+
+PlotParams-6$color: length = 209091
+Multi_H9_D35#TTGGATCAGGGTCTAT-1 Multi_H9_D35#AACCTTGCATCGCTTT-1 
+                      0.6493518                       0.6766114 
+Multi_H9_D35#CATCAATCATATAACC-1 Multi_H9_D35#CCCGCAACAGCCAGAA-1 
+                      0.5410850                       0.6531018 
+Multi_H9_D35#AGTCCTGAGCTCCTAC-1 Multi_H9_D35#GTCATTAAGGATCCGC-1 
+                      0.6164248                       0.9021455 
+
+
+PlotParams-6$title: length = 1
+[1] "HarmUMAP of Harmony colored by\nGeneScoreMatrix : ATOH7"
+
+
+PlotParams-6$x: length = 209091
+[1] -4.28139635 -3.42044254 -1.61457439 -3.01133009  0.06501107 -1.61650129
+
+
+PlotParams-6$y: length = 209091
+[1]  1.6876802  3.6580894 -1.5211041 -3.8617024 -0.8664352 -4.2374019
+
+
+PlotParams-6$baseSize: length = 1
+[1] 10
+
+
+PlotParams-6$xlabel: length = 1
+[1] "UMAP Dimension 1"
+
+
+PlotParams-6$ylabel: length = 1
+[1] "UMAP Dimension 2"
+
+
+PlotParams-6$pal: length = 256
+[1] "#000436" "#000439" "#00053D" "#000640" "#000744" "#000848"
+
+
+PlotParams-6$colorTitle: length = 1
+[1] "Log2(NormCounts + 1)"
+
+
+
+2024-04-25 13:56:34 : PlotParams-7, Class = list
+
+PlotParams-7$color: length = 209091
+Multi_H9_D35#TTGGATCAGGGTCTAT-1 Multi_H9_D35#AACCTTGCATCGCTTT-1 
+                      0.2389339                       0.3010784 
+Multi_H9_D35#CATCAATCATATAACC-1 Multi_H9_D35#CCCGCAACAGCCAGAA-1 
+                      0.2398249                       0.2328388 
+Multi_H9_D35#AGTCCTGAGCTCCTAC-1 Multi_H9_D35#GTCATTAAGGATCCGC-1 
+                      0.2942425                       0.1673981 
+
+
+PlotParams-7$title: length = 1
+[1] "HarmUMAP of Harmony colored by\nGeneScoreMatrix : RLBP1"
+
+
+PlotParams-7$x: length = 209091
+[1] -4.28139635 -3.42044254 -1.61457439 -3.01133009  0.06501107 -1.61650129
+
+
+PlotParams-7$y: length = 209091
+[1]  1.6876802  3.6580894 -1.5211041 -3.8617024 -0.8664352 -4.2374019
+
+
+PlotParams-7$baseSize: length = 1
+[1] 10
+
+
+PlotParams-7$xlabel: length = 1
+[1] "UMAP Dimension 1"
+
+
+PlotParams-7$ylabel: length = 1
+[1] "UMAP Dimension 2"
+
+
+PlotParams-7$pal: length = 256
+[1] "#000436" "#000439" "#00053D" "#000640" "#000744" "#000848"
+
+
+PlotParams-7$colorTitle: length = 1
+[1] "Log2(NormCounts + 1)"
+
+
+
+2024-04-25 13:56:35 : PlotParams-8, Class = list
+
+PlotParams-8$color: length = 209091
+Multi_H9_D35#TTGGATCAGGGTCTAT-1 Multi_H9_D35#AACCTTGCATCGCTTT-1 
+                      0.4295040                       0.3689751 
+Multi_H9_D35#CATCAATCATATAACC-1 Multi_H9_D35#CCCGCAACAGCCAGAA-1 
+                      0.4309262                       0.3301724 
+Multi_H9_D35#AGTCCTGAGCTCCTAC-1 Multi_H9_D35#GTCATTAAGGATCCGC-1 
+                      0.3781872                       0.3606584 
+
+
+PlotParams-8$title: length = 1
+[1] "HarmUMAP of Harmony colored by\nGeneScoreMatrix : CRYM"
+
+
+PlotParams-8$x: length = 209091
+[1] -4.28139635 -3.42044254 -1.61457439 -3.01133009  0.06501107 -1.61650129
+
+
+PlotParams-8$y: length = 209091
+[1]  1.6876802  3.6580894 -1.5211041 -3.8617024 -0.8664352 -4.2374019
+
+
+PlotParams-8$baseSize: length = 1
+[1] 10
+
+
+PlotParams-8$xlabel: length = 1
+[1] "UMAP Dimension 1"
+
+
+PlotParams-8$ylabel: length = 1
+[1] "UMAP Dimension 2"
+
+
+PlotParams-8$pal: length = 256
+[1] "#000436" "#000439" "#00053D" "#000640" "#000744" "#000848"
+
+
+PlotParams-8$colorTitle: length = 1
+[1] "Log2(NormCounts + 1)"
+
+
+
+2024-04-25 13:56:36 : PlotParams-9, Class = list
+
+PlotParams-9$color: length = 209091
+Multi_H9_D35#TTGGATCAGGGTCTAT-1 Multi_H9_D35#AACCTTGCATCGCTTT-1 
+                      0.9055922                       0.9934071 
+Multi_H9_D35#CATCAATCATATAACC-1 Multi_H9_D35#CCCGCAACAGCCAGAA-1 
+                      0.8745262                       0.7136410 
+Multi_H9_D35#AGTCCTGAGCTCCTAC-1 Multi_H9_D35#GTCATTAAGGATCCGC-1 
+                      0.8213681                       0.9569430 
+
+
+PlotParams-9$title: length = 1
+[1] "HarmUMAP of Harmony colored by\nGeneScoreMatrix : CLU"
+
+
+PlotParams-9$x: length = 209091
+[1] -4.28139635 -3.42044254 -1.61457439 -3.01133009  0.06501107 -1.61650129
+
+
+PlotParams-9$y: length = 209091
+[1]  1.6876802  3.6580894 -1.5211041 -3.8617024 -0.8664352 -4.2374019
+
+
+PlotParams-9$baseSize: length = 1
+[1] 10
+
+
+PlotParams-9$xlabel: length = 1
+[1] "UMAP Dimension 1"
+
+
+PlotParams-9$ylabel: length = 1
+[1] "UMAP Dimension 2"
+
+
+PlotParams-9$pal: length = 256
+[1] "#000436" "#000439" "#00053D" "#000640" "#000744" "#000848"
+
+
+PlotParams-9$colorTitle: length = 1
+[1] "Log2(NormCounts + 1)"
+
+
+
+------- Completed
+
+End Time : 2024-04-25 13:56:38
+Elapsed Time Minutes = 3.63715269565582
+Elapsed Time Hours = 0.0606193923287921
+
+-------
+
+
+

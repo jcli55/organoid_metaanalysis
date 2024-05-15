@@ -1,0 +1,6 @@
+Vim: Warning: Output is not to a terminal
+Vim: Warning: Input is not from a terminal
+Error detected while processing /storage/chen/home/u250758/.vimrc:
+line    3:
+E538: No mouse support: mouse=n
+Press ENTER or type command to continue

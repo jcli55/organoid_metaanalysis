@@ -1,0 +1,12 @@
+starting at Tue Apr 23 13:21:15 CDT 2024 on mhgcp-d02.grid.bcm.edu
+SLURM_JOBID=1361433
+class: ArchRProject 
+outputDirectory: /storage/singlecell/jeanl/organoid/data/archr/proj_all 
+samples(18): Multi_H9_D35 Multi_H9_D47 ... wt28-1 wt28-2
+sampleColData names(1): ArrowFiles
+cellColData names(24): Sample nMultiFrags ... predictedGroup_Un
+  predictedScore_Un
+numberOfCells(1): 209091
+medianTSS(1): 12.797
+medianFrags(1): 7239
+ended at Tue Apr 23 14:33:14 CDT 2024 on mhgcp-d02.grid.bcm.edu. Time elapsed: 01:11:59

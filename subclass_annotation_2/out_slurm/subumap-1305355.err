@@ -1,0 +1,18 @@
+Global seed set to 0
+/storage/chen/home/u250758/miniconda3/envs/scvi/lib/python3.7/site-packages/pytorch_lightning/utilities/warnings.py:54: LightningDeprecationWarning: pytorch_lightning.utilities.warnings.rank_zero_deprecation has been deprecated in v1.6 and will be removed in v1.8. Use the equivalent function from the pytorch_lightning.utilities.rank_zero module instead.
+  "pytorch_lightning.utilities.warnings.rank_zero_deprecation has been deprecated in v1.6"
+/storage/chen/home/u250758/miniconda3/envs/scvi/lib/python3.7/site-packages/pytorch_lightning/utilities/warnings.py:58: LightningDeprecationWarning: The `pytorch_lightning.loggers.base.rank_zero_experiment` is deprecated in v1.7 and will be removed in v1.9. Please use `pytorch_lightning.loggers.logger.rank_zero_experiment` instead.
+  return new_rank_zero_deprecation(*args, **kwargs)
+Traceback (most recent call last):
+  File "scVI_umap.py", line 20, in <module>
+    adata = sc.read_h5ad(inputFile)
+  File "/storage/chen/home/u250758/miniconda3/envs/scvi/lib/python3.7/site-packages/anndata/_io/h5ad.py", line 224, in read_h5ad
+    with h5py.File(filename, "r") as f:
+  File "/storage/chen/home/u250758/miniconda3/envs/scvi/lib/python3.7/site-packages/h5py/_hl/files.py", line 567, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, fcpl, swmr=swmr)
+  File "/storage/chen/home/u250758/miniconda3/envs/scvi/lib/python3.7/site-packages/h5py/_hl/files.py", line 231, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "h5py/h5f.pyx", line 106, in h5py.h5f.open
+FileNotFoundError: [Errno 2] Unable to open file (unable to open file: name = '/storage/singlecell/jeanl/organoid/data/merged_chen/reannotate_w_fetal/subtype_annotation/chen_cherry_AC_raw.h5ad', errno = 2, error message = 'No such file or directory', flags = 0, o_flags = 0)

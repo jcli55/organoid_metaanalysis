@@ -1,0 +1,312 @@
+Loading required package: ggplot2
+Loading required package: SummarizedExperiment
+Loading required package: MatrixGenerics
+Loading required package: matrixStats
+
+Attaching package: ‘MatrixGenerics’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colAlls, colAnyNAs, colAnys, colAvgsPerRowSet, colCollapse,
+    colCounts, colCummaxs, colCummins, colCumprods, colCumsums,
+    colDiffs, colIQRDiffs, colIQRs, colLogSumExps, colMadDiffs,
+    colMads, colMaxs, colMeans2, colMedians, colMins, colOrderStats,
+    colProds, colQuantiles, colRanges, colRanks, colSdDiffs, colSds,
+    colSums2, colTabulates, colVarDiffs, colVars, colWeightedMads,
+    colWeightedMeans, colWeightedMedians, colWeightedSds,
+    colWeightedVars, rowAlls, rowAnyNAs, rowAnys, rowAvgsPerColSet,
+    rowCollapse, rowCounts, rowCummaxs, rowCummins, rowCumprods,
+    rowCumsums, rowDiffs, rowIQRDiffs, rowIQRs, rowLogSumExps,
+    rowMadDiffs, rowMads, rowMaxs, rowMeans2, rowMedians, rowMins,
+    rowOrderStats, rowProds, rowQuantiles, rowRanges, rowRanks,
+    rowSdDiffs, rowSds, rowSums2, rowTabulates, rowVarDiffs, rowVars,
+    rowWeightedMads, rowWeightedMeans, rowWeightedMedians,
+    rowWeightedSds, rowWeightedVars
+
+Loading required package: GenomicRanges
+Loading required package: stats4
+Loading required package: BiocGenerics
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    Filter, Find, Map, Position, Reduce, anyDuplicated, append,
+    as.data.frame, basename, cbind, colnames, dirname, do.call,
+    duplicated, eval, evalq, get, grep, grepl, intersect, is.unsorted,
+    lapply, mapply, match, mget, order, paste, pmax, pmax.int, pmin,
+    pmin.int, rank, rbind, rownames, sapply, setdiff, sort, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Loading required package: S4Vectors
+
+Attaching package: ‘S4Vectors’
+
+The following objects are masked from ‘package:base’:
+
+    I, expand.grid, unname
+
+Loading required package: IRanges
+Loading required package: GenomeInfoDb
+Loading required package: Biobase
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: ‘Biobase’
+
+The following object is masked from ‘package:MatrixGenerics’:
+
+    rowMedians
+
+The following objects are masked from ‘package:matrixStats’:
+
+    anyMissing, rowMedians
+
+Loading required package: data.table
+
+Attaching package: ‘data.table’
+
+The following object is masked from ‘package:SummarizedExperiment’:
+
+    shift
+
+The following object is masked from ‘package:GenomicRanges’:
+
+    shift
+
+The following object is masked from ‘package:IRanges’:
+
+    shift
+
+The following objects are masked from ‘package:S4Vectors’:
+
+    first, second
+
+Loading required package: Matrix
+
+Attaching package: ‘Matrix’
+
+The following object is masked from ‘package:S4Vectors’:
+
+    expand
+
+Loading required package: rhdf5
+Loading required package: magrittr
+Successfully loaded ArchRProject!
+
+                                                   / |
+                                                 /    \
+            .                                  /      |.
+            \\\                              /        |.
+              \\\                          /           `|.
+                \\\                      /              |.
+                  \                    /                |\
+                  \\#####\           /                  ||
+                ==###########>      /                   ||
+                 \\##==......\    /                     ||
+            ______ =       =|__ /__                     ||      \\\
+        ,--' ,----`-,__ ___/'  --,-`-===================##========>
+       \               '        ##_______ _____ ,--,__,=##,__   ///
+        ,    __==    ___,-,__,--'#'  ==='      `-'    | ##,-/
+        -,____,---'       \\####\\________________,--\\_##,/
+           ___      .______        ______  __    __  .______      
+          /   \     |   _  \      /      ||  |  |  | |   _  \     
+         /  ^  \    |  |_)  |    |  ,----'|  |__|  | |  |_)  |    
+        /  /_\  \   |      /     |  |     |   __   | |      /     
+       /  _____  \  |  |\  \\___ |  `----.|  |  |  | |  |\  \\___.
+      /__/     \__\ | _| `._____| \______||__|  |__| | _| `._____|
+    
+Filtering 9 dims correlated > 0.1 to log10(depth + 1)
+Transposing data matrix
+Initializing state using k-means centroids initialization
+Harmony 1/10
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Harmony 2/10
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Harmony 3/10
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Harmony 4/10
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Harmony converged after 4 iterations
+There were 12 warnings (use warnings() to see them)
+Transposing data matrix
+Initializing state using k-means centroids initialization
+Harmony 1/10
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Harmony 2/10
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Harmony 3/10
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+Harmony converged after 3 iterations
+Warning messages:
+1: HarmonyMatrix is deprecated and will be removed in the future from the API in the future 
+2: Quick-TRANSfer stage steps exceeded maximum (= 10454550) 
+3: Quick-TRANSfer stage steps exceeded maximum (= 10454550) 
+4: Quick-TRANSfer stage steps exceeded maximum (= 10454550) 
+5: Quick-TRANSfer stage steps exceeded maximum (= 10454550) 
+6: Quick-TRANSfer stage steps exceeded maximum (= 10454550) 
+7: Quick-TRANSfer stage steps exceeded maximum (= 10454550) 
+8: Quick-TRANSfer stage steps exceeded maximum (= 10454550) 
+15:47:31 UMAP embedding parameters a = 0.583 b = 1.334
+15:47:31 Read 209091 rows and found 21 numeric columns
+15:47:31 Using Annoy for neighbor search, n_neighbors = 30
+15:47:32 Building Annoy index with metric = cosine, n_trees = 50
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+15:48:04 Writing NN index file to temp file /storage/chen/home/u250758/../../tmp/RtmpADmOFC/file2dd43de06fc6
+15:48:04 Searching Annoy index using 24 threads, search_k = 3000
+15:48:12 Annoy recall = 100%
+15:48:13 Commencing smooth kNN distance calibration using 24 threads with target n_neighbors = 30
+15:48:25 Initializing from normalized Laplacian + noise (using irlba)
+15:48:37 Commencing optimization for 200 epochs, with 9808174 positive edges
+Using method 'umap'
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+15:54:13 Optimization finished
+15:54:13 Creating temp model dir /storage/chen/home/u250758/../../tmp/RtmpADmOFC/dir2dd41dbccd1c
+15:54:13 Creating dir /storage/chen/home/u250758/../../tmp/RtmpADmOFC/dir2dd41dbccd1c
+15:54:33 Changing to /storage/chen/home/u250758/../../tmp/RtmpADmOFC/dir2dd41dbccd1c
+15:54:33 Creating /storage/singlecell/jeanl/organoid/data/archr/proj_all/Embeddings/Save-Uwot-UMAP-Params-Harmony0.1-2dd43a952f7d-Date-2024-04-23_Time-15-54-13.tar
+Warning messages:
+1: In sprintf(gettext(fmt, domain = domain), ...) :
+  one argument not used by format 'invalid uid value replaced by that for user 'nobody''
+2: invalid uid value replaced by that for user 'nobody' 
+3: In sprintf(gettext(fmt, domain = domain), ...) :
+  one argument not used by format 'invalid gid value replaced by that for user 'nobody''
+4: invalid gid value replaced by that for user 'nobody' 
+15:54:40 UMAP embedding parameters a = 0.583 b = 1.334
+15:54:40 Read 209091 rows and found 30 numeric columns
+15:54:40 Using Annoy for neighbor search, n_neighbors = 30
+15:54:40 Building Annoy index with metric = cosine, n_trees = 50
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+15:55:53 Writing NN index file to temp file /storage/chen/home/u250758/../../tmp/RtmpADmOFC/file2dd46aa412d4
+15:55:54 Searching Annoy index using 24 threads, search_k = 3000
+15:56:01 Annoy recall = 90.94%
+15:56:02 Commencing smooth kNN distance calibration using 24 threads with target n_neighbors = 30
+15:56:13 Initializing from normalized Laplacian + noise (using irlba)
+15:56:38 Commencing optimization for 200 epochs, with 11145836 positive edges
+Using method 'umap'
+0%   10   20   30   40   50   60   70   80   90   100%
+[----|----|----|----|----|----|----|----|----|----|
+**************************************************|
+16:02:41 Optimization finished
+16:02:41 Creating temp model dir /storage/chen/home/u250758/../../tmp/RtmpADmOFC/dir2dd439082a42
+16:02:41 Creating dir /storage/chen/home/u250758/../../tmp/RtmpADmOFC/dir2dd439082a42
+16:03:01 Changing to /storage/chen/home/u250758/../../tmp/RtmpADmOFC/dir2dd439082a42
+16:03:01 Creating /storage/singlecell/jeanl/organoid/data/archr/proj_all/Embeddings/Save-Uwot-UMAP-Params-Harmony1.0-2dd46af35d6d-Date-2024-04-23_Time-16-02-41.tar
+Warning messages:
+1: In sprintf(gettext(fmt, domain = domain), ...) :
+  one argument not used by format 'invalid uid value replaced by that for user 'nobody''
+2: invalid uid value replaced by that for user 'nobody' 
+3: In sprintf(gettext(fmt, domain = domain), ...) :
+  one argument not used by format 'invalid gid value replaced by that for user 'nobody''
+4: invalid gid value replaced by that for user 'nobody' 
+ArchR logging to : ArchRLogs/ArchR-plotEmbedding-2dd42991b48e-Date-2024-04-23_Time-16-03-08.log
+If there is an issue, please report to github with logFile!
+Plotting Embedding
+1 WARNING: Error found with Cairo installation. Continuing without rasterization.
+
+ArchR logging successful to : ArchRLogs/ArchR-plotEmbedding-2dd42991b48e-Date-2024-04-23_Time-16-03-08.log
+ArchR logging to : ArchRLogs/ArchR-plotEmbedding-2dd4944fd17-Date-2024-04-23_Time-16-03-09.log
+If there is an issue, please report to github with logFile!
+Plotting Embedding
+1 WARNING: Error found with Cairo installation. Continuing without rasterization.
+
+ArchR logging successful to : ArchRLogs/ArchR-plotEmbedding-2dd4944fd17-Date-2024-04-23_Time-16-03-09.log
+ArchR logging to : ArchRLogs/ArchR-plotEmbedding-2dd42b4900be-Date-2024-04-23_Time-16-03-10.log
+If there is an issue, please report to github with logFile!
+Plotting Embedding
+1 WARNING: Error found with Cairo installation. Continuing without rasterization.
+
+ArchR logging successful to : ArchRLogs/ArchR-plotEmbedding-2dd42b4900be-Date-2024-04-23_Time-16-03-10.log
+ArchR logging to : ArchRLogs/ArchR-plotEmbedding-2dd4451154ac-Date-2024-04-23_Time-16-03-11.log
+If there is an issue, please report to github with logFile!
+Plotting Embedding
+1 WARNING: Error found with Cairo installation. Continuing without rasterization.
+
+ArchR logging successful to : ArchRLogs/ArchR-plotEmbedding-2dd4451154ac-Date-2024-04-23_Time-16-03-11.log
+Plotting Ggplot!
+Plotting Ggplot!
+Plotting Ggplot!
+Plotting Ggplot!
+Saving ArchRProject...
+Loading ArchRProject...
+Successfully loaded ArchRProject!
+
+                                                   / |
+                                                 /    \
+            .                                  /      |.
+            \\\                              /        |.
+              \\\                          /           `|.
+                \\\                      /              |.
+                  \                    /                |\
+                  \\#####\           /                  ||
+                ==###########>      /                   ||
+                 \\##==......\    /                     ||
+            ______ =       =|__ /__                     ||      \\\
+        ,--' ,----`-,__ ___/'  --,-`-===================##========>
+       \               '        ##_______ _____ ,--,__,=##,__   ///
+        ,    __==    ___,-,__,--'#'  ==='      `-'    | ##,-/
+        -,____,---'       \\####\\________________,--\\_##,/
+           ___      .______        ______  __    __  .______      
+          /   \     |   _  \      /      ||  |  |  | |   _  \     
+         /  ^  \    |  |_)  |    |  ,----'|  |__|  | |  |_)  |    
+        /  /_\  \   |      /     |  |     |   __   | |      /     
+       /  _____  \  |  |\  \\___ |  `----.|  |  |  | |  |\  \\___.
+      /__/     \__\ | _| `._____| \______||__|  |__| | _| `._____|
+    
+
+           ___      .______        ______  __    __  .______      
+          /   \     |   _  \      /      ||  |  |  | |   _  \     
+         /  ^  \    |  |_)  |    |  ,----'|  |__|  | |  |_)  |    
+        /  /_\  \   |      /     |  |     |   __   | |      /     
+       /  _____  \  |  |\  \\___ |  `----.|  |  |  | |  |\  \\___.
+      /__/     \__\ | _| `._____| \______||__|  |__| | _| `._____|
+    

@@ -1,0 +1,326 @@
+Loading required package: ggplot2
+Loading required package: SummarizedExperiment
+Loading required package: MatrixGenerics
+Loading required package: matrixStats
+
+Attaching package: ‘MatrixGenerics’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colAlls, colAnyNAs, colAnys, colAvgsPerRowSet, colCollapse,
+    colCounts, colCummaxs, colCummins, colCumprods, colCumsums,
+    colDiffs, colIQRDiffs, colIQRs, colLogSumExps, colMadDiffs,
+    colMads, colMaxs, colMeans2, colMedians, colMins, colOrderStats,
+    colProds, colQuantiles, colRanges, colRanks, colSdDiffs, colSds,
+    colSums2, colTabulates, colVarDiffs, colVars, colWeightedMads,
+    colWeightedMeans, colWeightedMedians, colWeightedSds,
+    colWeightedVars, rowAlls, rowAnyNAs, rowAnys, rowAvgsPerColSet,
+    rowCollapse, rowCounts, rowCummaxs, rowCummins, rowCumprods,
+    rowCumsums, rowDiffs, rowIQRDiffs, rowIQRs, rowLogSumExps,
+    rowMadDiffs, rowMads, rowMaxs, rowMeans2, rowMedians, rowMins,
+    rowOrderStats, rowProds, rowQuantiles, rowRanges, rowRanks,
+    rowSdDiffs, rowSds, rowSums2, rowTabulates, rowVarDiffs, rowVars,
+    rowWeightedMads, rowWeightedMeans, rowWeightedMedians,
+    rowWeightedSds, rowWeightedVars
+
+Loading required package: GenomicRanges
+Loading required package: stats4
+Loading required package: BiocGenerics
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    Filter, Find, Map, Position, Reduce, anyDuplicated, append,
+    as.data.frame, basename, cbind, colnames, dirname, do.call,
+    duplicated, eval, evalq, get, grep, grepl, intersect, is.unsorted,
+    lapply, mapply, match, mget, order, paste, pmax, pmax.int, pmin,
+    pmin.int, rank, rbind, rownames, sapply, setdiff, sort, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Loading required package: S4Vectors
+
+Attaching package: ‘S4Vectors’
+
+The following objects are masked from ‘package:base’:
+
+    I, expand.grid, unname
+
+Loading required package: IRanges
+Loading required package: GenomeInfoDb
+Loading required package: Biobase
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: ‘Biobase’
+
+The following object is masked from ‘package:MatrixGenerics’:
+
+    rowMedians
+
+The following objects are masked from ‘package:matrixStats’:
+
+    anyMissing, rowMedians
+
+Loading required package: data.table
+
+Attaching package: ‘data.table’
+
+The following object is masked from ‘package:SummarizedExperiment’:
+
+    shift
+
+The following object is masked from ‘package:GenomicRanges’:
+
+    shift
+
+The following object is masked from ‘package:IRanges’:
+
+    shift
+
+The following objects are masked from ‘package:S4Vectors’:
+
+    first, second
+
+Loading required package: Matrix
+
+Attaching package: ‘Matrix’
+
+The following object is masked from ‘package:S4Vectors’:
+
+    expand
+
+Loading required package: rhdf5
+Loading required package: magrittr
+Successfully loaded ArchRProject!
+
+                                                   / |
+                                                 /    \
+            .                                  /      |.
+            \\\                              /        |.
+              \\\                          /           `|.
+                \\\                      /              |.
+                  \                    /                |\
+                  \\#####\           /                  ||
+                ==###########>      /                   ||
+                 \\##==......\    /                     ||
+            ______ =       =|__ /__                     ||      \\\
+        ,--' ,----`-,__ ___/'  --,-`-===================##========>
+       \               '        ##_______ _____ ,--,__,=##,__   ///
+        ,    __==    ___,-,__,--'#'  ==='      `-'    | ##,-/
+        -,____,---'       \\####\\________________,--\\_##,/
+           ___      .______        ______  __    __  .______      
+          /   \     |   _  \      /      ||  |  |  | |   _  \     
+         /  ^  \    |  |_)  |    |  ,----'|  |__|  | |  |_)  |    
+        /  /_\  \   |      /     |  |     |   __   | |      /     
+       /  _____  \  |  |\  \\___ |  `----.|  |  |  | |  |\  \\___.
+      /__/     \__\ | _| `._____| \______||__|  |__| | _| `._____|
+    
+Loading required package: SeuratObject
+Loading required package: sp
+The legacy packages maptools, rgdal, and rgeos, underpinning this package
+will retire shortly. Please refer to R-spatial evolution reports on
+https://r-spatial.org/r/2023/05/15/evolution4.html for details.
+This package is now running under evolution status 0 
+
+Attaching package: ‘sp’
+
+The following object is masked from ‘package:IRanges’:
+
+    %over%
+
+
+Attaching package: ‘SeuratObject’
+
+The following object is masked from ‘package:SummarizedExperiment’:
+
+    Assays
+
+ArchR logging to : ArchRLogs/ArchR-addGeneIntegrationMatrix-662b5074a96e-Date-2024-04-16_Time-13-28-38.log
+If there is an issue, please report to github with logFile!
+2024-04-16 13:28:39 : Running Seurat's Integration Stuart* et al 2019, 0.013 mins elapsed.
+2024-04-16 13:28:41 : Checking ATAC Input, 0.049 mins elapsed.
+2024-04-16 13:28:41 : Checking RNA Input, 0.05 mins elapsed.
+2024-04-16 13:28:55 : Found 21369 overlapping gene names from gene scores and rna matrix!, 0.283 mins elapsed.
+2024-04-16 13:28:55 : Creating Integration Blocks, 0.283 mins elapsed.
+2024-04-16 13:29:03 : Prepping Interation Data, 0.416 mins elapsed.
+2024-04-16 13:29:05 : Computing Integration in 8 Integration Blocks!, 0 mins elapsed.
+2024-04-16 13:29:05 : Block (1 of 8) : Computing Integration, 0 mins elapsed.
+2024-04-16 13:29:07 : Block (1 of 8) : Identifying Variable Genes, 0.04 mins elapsed.
+2024-04-16 13:29:11 : Block (1 of 8) : Getting GeneScoreMatrix, 0.115 mins elapsed.
+2024-04-16 13:29:48 : Block (1 of 8) : Imputing GeneScoreMatrix, 0.716 mins elapsed.
+Getting ImputeWeights
+2024-04-16 13:31:08 : Block (1 of 8) : Seurat FindTransferAnchors, 2.052 mins elapsed.
+2024-04-16 13:33:24 : Block (1 of 8) : Seurat TransferData Cell Group Labels, 4.32 mins elapsed.
+2024-04-16 13:33:27 : Block (1 of 8) : Seurat TransferData Cell Names Labels, 4.369 mins elapsed.
+2024-04-16 13:33:59 : Block (1 of 8) : Saving TransferAnchors Joint CCA, 4.915 mins elapsed.
+2024-04-16 13:34:01 : Block (1 of 8) : Completed Integration, 4.938 mins elapsed.
+2024-04-16 13:34:02 : Block (2 of 8) : Computing Integration, 4.95 mins elapsed.
+2024-04-16 13:34:04 : Block (2 of 8) : Identifying Variable Genes, 4.995 mins elapsed.
+2024-04-16 13:34:09 : Block (2 of 8) : Getting GeneScoreMatrix, 5.068 mins elapsed.
+2024-04-16 13:34:45 : Block (2 of 8) : Imputing GeneScoreMatrix, 5.666 mins elapsed.
+Getting ImputeWeights
+2024-04-16 13:36:04 : Block (2 of 8) : Seurat FindTransferAnchors, 6.992 mins elapsed.
+2024-04-16 13:38:11 : Block (2 of 8) : Seurat TransferData Cell Group Labels, 9.099 mins elapsed.
+2024-04-16 13:38:13 : Block (2 of 8) : Seurat TransferData Cell Names Labels, 9.148 mins elapsed.
+2024-04-16 13:38:41 : Block (2 of 8) : Saving TransferAnchors Joint CCA, 9.605 mins elapsed.
+2024-04-16 13:38:43 : Block (2 of 8) : Completed Integration, 9.634 mins elapsed.
+2024-04-16 13:38:43 : Block (3 of 8) : Computing Integration, 9.644 mins elapsed.
+2024-04-16 13:38:45 : Block (3 of 8) : Identifying Variable Genes, 9.681 mins elapsed.
+2024-04-16 13:38:49 : Block (3 of 8) : Getting GeneScoreMatrix, 9.734 mins elapsed.
+2024-04-16 13:39:17 : Block (3 of 8) : Imputing GeneScoreMatrix, 10.203 mins elapsed.
+Getting ImputeWeights
+2024-04-16 13:40:29 : Block (3 of 8) : Seurat FindTransferAnchors, 11.414 mins elapsed.
+2024-04-16 13:42:30 : Block (3 of 8) : Seurat TransferData Cell Group Labels, 13.43 mins elapsed.
+2024-04-16 13:42:33 : Block (3 of 8) : Seurat TransferData Cell Names Labels, 13.477 mins elapsed.
+2024-04-16 13:43:02 : Block (3 of 8) : Saving TransferAnchors Joint CCA, 13.956 mins elapsed.
+2024-04-16 13:43:04 : Block (3 of 8) : Completed Integration, 13.983 mins elapsed.
+2024-04-16 13:43:04 : Block (4 of 8) : Computing Integration, 13.994 mins elapsed.
+2024-04-16 13:43:07 : Block (4 of 8) : Identifying Variable Genes, 14.04 mins elapsed.
+2024-04-16 13:43:10 : Block (4 of 8) : Getting GeneScoreMatrix, 14.093 mins elapsed.
+2024-04-16 13:43:39 : Block (4 of 8) : Imputing GeneScoreMatrix, 14.57 mins elapsed.
+Getting ImputeWeights
+2024-04-16 13:44:51 : Block (4 of 8) : Seurat FindTransferAnchors, 15.768 mins elapsed.
+2024-04-16 13:46:38 : Block (4 of 8) : Seurat TransferData Cell Group Labels, 17.553 mins elapsed.
+2024-04-16 13:46:40 : Block (4 of 8) : Seurat TransferData Cell Names Labels, 17.598 mins elapsed.
+2024-04-16 13:47:08 : Block (4 of 8) : Saving TransferAnchors Joint CCA, 18.06 mins elapsed.
+2024-04-16 13:47:10 : Block (4 of 8) : Completed Integration, 18.085 mins elapsed.
+2024-04-16 13:47:10 : Block (5 of 8) : Computing Integration, 18.094 mins elapsed.
+2024-04-16 13:47:12 : Block (5 of 8) : Identifying Variable Genes, 18.131 mins elapsed.
+2024-04-16 13:47:16 : Block (5 of 8) : Getting GeneScoreMatrix, 18.183 mins elapsed.
+2024-04-16 13:47:43 : Block (5 of 8) : Imputing GeneScoreMatrix, 18.646 mins elapsed.
+Getting ImputeWeights
+2024-04-16 13:48:56 : Block (5 of 8) : Seurat FindTransferAnchors, 19.853 mins elapsed.
+2024-04-16 13:50:47 : Block (5 of 8) : Seurat TransferData Cell Group Labels, 21.712 mins elapsed.
+2024-04-16 13:50:50 : Block (5 of 8) : Seurat TransferData Cell Names Labels, 21.757 mins elapsed.
+2024-04-16 13:51:18 : Block (5 of 8) : Saving TransferAnchors Joint CCA, 22.221 mins elapsed.
+2024-04-16 13:51:19 : Block (5 of 8) : Completed Integration, 22.244 mins elapsed.
+2024-04-16 13:51:20 : Block (6 of 8) : Computing Integration, 22.253 mins elapsed.
+2024-04-16 13:51:22 : Block (6 of 8) : Identifying Variable Genes, 22.29 mins elapsed.
+2024-04-16 13:51:25 : Block (6 of 8) : Getting GeneScoreMatrix, 22.343 mins elapsed.
+2024-04-16 13:51:53 : Block (6 of 8) : Imputing GeneScoreMatrix, 22.81 mins elapsed.
+Getting ImputeWeights
+2024-04-16 13:53:06 : Block (6 of 8) : Seurat FindTransferAnchors, 24.02 mins elapsed.
+2024-04-16 13:54:59 : Block (6 of 8) : Seurat TransferData Cell Group Labels, 25.901 mins elapsed.
+2024-04-16 13:55:01 : Block (6 of 8) : Seurat TransferData Cell Names Labels, 25.947 mins elapsed.
+2024-04-16 13:55:30 : Block (6 of 8) : Saving TransferAnchors Joint CCA, 26.423 mins elapsed.
+2024-04-16 13:55:32 : Block (6 of 8) : Completed Integration, 26.451 mins elapsed.
+2024-04-16 13:55:32 : Block (7 of 8) : Computing Integration, 26.462 mins elapsed.
+2024-04-16 13:55:35 : Block (7 of 8) : Identifying Variable Genes, 26.499 mins elapsed.
+2024-04-16 13:55:38 : Block (7 of 8) : Getting GeneScoreMatrix, 26.554 mins elapsed.
+2024-04-16 13:56:09 : Block (7 of 8) : Imputing GeneScoreMatrix, 27.079 mins elapsed.
+Getting ImputeWeights
+2024-04-16 13:57:31 : Block (7 of 8) : Seurat FindTransferAnchors, 28.435 mins elapsed.
+2024-04-16 13:59:55 : Block (7 of 8) : Seurat TransferData Cell Group Labels, 30.848 mins elapsed.
+2024-04-16 13:59:58 : Block (7 of 8) : Seurat TransferData Cell Names Labels, 30.895 mins elapsed.
+2024-04-16 14:00:28 : Block (7 of 8) : Saving TransferAnchors Joint CCA, 31.391 mins elapsed.
+2024-04-16 14:00:30 : Block (7 of 8) : Completed Integration, 31.423 mins elapsed.
+2024-04-16 14:00:31 : Block (8 of 8) : Computing Integration, 31.435 mins elapsed.
+2024-04-16 14:00:33 : Block (8 of 8) : Identifying Variable Genes, 31.478 mins elapsed.
+2024-04-16 14:00:37 : Block (8 of 8) : Getting GeneScoreMatrix, 31.537 mins elapsed.
+2024-04-16 14:01:06 : Block (8 of 8) : Imputing GeneScoreMatrix, 32.02 mins elapsed.
+Getting ImputeWeights
+2024-04-16 14:02:18 : Block (8 of 8) : Seurat FindTransferAnchors, 33.232 mins elapsed.
+2024-04-16 14:04:17 : Block (8 of 8) : Seurat TransferData Cell Group Labels, 35.209 mins elapsed.
+2024-04-16 14:04:20 : Block (8 of 8) : Seurat TransferData Cell Names Labels, 35.254 mins elapsed.
+2024-04-16 14:04:49 : Block (8 of 8) : Saving TransferAnchors Joint CCA, 35.733 mins elapsed.
+2024-04-16 14:04:50 : Block (8 of 8) : Completed Integration, 35.762 mins elapsed.
+2024-04-16 14:04:51 : Block (1 of 8) : Plotting Joint UMAP, 35.774 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-16 14:05:38 : Block (2 of 8) : Plotting Joint UMAP, 36.554 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-16 14:06:24 : Block (3 of 8) : Plotting Joint UMAP, 37.327 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-16 14:07:11 : Block (4 of 8) : Plotting Joint UMAP, 38.1 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-16 14:07:57 : Block (5 of 8) : Plotting Joint UMAP, 38.875 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-16 14:08:44 : Block (6 of 8) : Plotting Joint UMAP, 39.652 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-16 14:09:30 : Block (7 of 8) : Plotting Joint UMAP, 40.426 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-16 14:10:17 : Block (8 of 8) : Plotting Joint UMAP, 41.204 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-16 14:11:04 : Completed Integration with RNA Matrix, 41.985 mins elapsed.
+ArchR logging successful to : ArchRLogs/ArchR-addGeneIntegrationMatrix-662b5074a96e-Date-2024-04-16_Time-13-28-38.log
+Warning messages:
+1: In sprintf("Completed Getting Magic Weights!", round(object.size(weightList)/10^9,  :
+  one argument not used by format 'Completed Getting Magic Weights!'
+2: In sprintf("Completed Getting Magic Weights!", round(object.size(weightList)/10^9,  :
+  one argument not used by format 'Completed Getting Magic Weights!'
+3: In sprintf("Completed Getting Magic Weights!", round(object.size(weightList)/10^9,  :
+  one argument not used by format 'Completed Getting Magic Weights!'
+4: In sprintf("Completed Getting Magic Weights!", round(object.size(weightList)/10^9,  :
+  one argument not used by format 'Completed Getting Magic Weights!'
+5: In sprintf("Completed Getting Magic Weights!", round(object.size(weightList)/10^9,  :
+  one argument not used by format 'Completed Getting Magic Weights!'
+6: In sprintf("Completed Getting Magic Weights!", round(object.size(weightList)/10^9,  :
+  one argument not used by format 'Completed Getting Magic Weights!'
+7: In sprintf("Completed Getting Magic Weights!", round(object.size(weightList)/10^9,  :
+  one argument not used by format 'Completed Getting Magic Weights!'
+8: In sprintf("Completed Getting Magic Weights!", round(object.size(weightList)/10^9,  :
+  one argument not used by format 'Completed Getting Magic Weights!'
+ArchR logging to : ArchRLogs/ArchR-plotEmbedding-662b64c66488-Date-2024-04-16_Time-14-11-04.log
+If there is an issue, please report to github with logFile!
+Plotting Embedding
+1 WARNING: Error found with Cairo installation. Continuing without rasterization.
+
+ArchR logging successful to : ArchRLogs/ArchR-plotEmbedding-662b64c66488-Date-2024-04-16_Time-14-11-04.log
+ArchR logging to : ArchRLogs/ArchR-plotEmbedding-662b20862df7-Date-2024-04-16_Time-14-11-05.log
+If there is an issue, please report to github with logFile!
+Plotting Embedding
+1 WARNING: Error found with Cairo installation. Continuing without rasterization.
+
+ArchR logging successful to : ArchRLogs/ArchR-plotEmbedding-662b20862df7-Date-2024-04-16_Time-14-11-05.log
+Plotting Ggplot!
+Plotting Ggplot!
+Saving ArchRProject...
+Loading ArchRProject...
+Successfully loaded ArchRProject!
+
+                                                   / |
+                                                 /    \
+            .                                  /      |.
+            \\\                              /        |.
+              \\\                          /           `|.
+                \\\                      /              |.
+                  \                    /                |\
+                  \\#####\           /                  ||
+                ==###########>      /                   ||
+                 \\##==......\    /                     ||
+            ______ =       =|__ /__                     ||      \\\
+        ,--' ,----`-,__ ___/'  --,-`-===================##========>
+       \               '        ##_______ _____ ,--,__,=##,__   ///
+        ,    __==    ___,-,__,--'#'  ==='      `-'    | ##,-/
+        -,____,---'       \\####\\________________,--\\_##,/
+           ___      .______        ______  __    __  .______      
+          /   \     |   _  \      /      ||  |  |  | |   _  \     
+         /  ^  \    |  |_)  |    |  ,----'|  |__|  | |  |_)  |    
+        /  /_\  \   |      /     |  |     |   __   | |      /     
+       /  _____  \  |  |\  \\___ |  `----.|  |  |  | |  |\  \\___.
+      /__/     \__\ | _| `._____| \______||__|  |__| | _| `._____|
+    
+
+           ___      .______        ______  __    __  .______      
+          /   \     |   _  \      /      ||  |  |  | |   _  \     
+         /  ^  \    |  |_)  |    |  ,----'|  |__|  | |  |_)  |    
+        /  /_\  \   |      /     |  |     |   __   | |      /     
+       /  _____  \  |  |\  \\___ |  `----.|  |  |  | |  |\  \\___.
+      /__/     \__\ | _| `._____| \______||__|  |__| | _| `._____|
+    

@@ -1,0 +1,148 @@
+
+           ___      .______        ______  __    __  .______      
+          /   \     |   _  \      /      ||  |  |  | |   _  \     
+         /  ^  \    |  |_)  |    |  ,----'|  |__|  | |  |_)  |    
+        /  /_\  \   |      /     |  |     |   __   | |      /     
+       /  _____  \  |  |\  \\___ |  `----.|  |  |  | |  |\  \\___.
+      /__/     \__\ | _| `._____| \______||__|  |__| | _| `._____|
+    
+Logging With ArchR!
+
+Start Time : 2024-04-03 15:11:24
+
+------- ArchR Info
+
+ArchRThreads = 1
+
+------- System Info
+
+Computer OS = unix
+Total Cores = 16
+
+------- Session Info
+
+R version 4.1.3 (2022-03-10)
+Platform: x86_64-conda-linux-gnu (64-bit)
+Running under: Red Hat Enterprise Linux
+
+Matrix products: default
+BLAS/LAPACK: /storage/chen/home/u250758/miniconda3/envs/archr/lib/libopenblasp-r0.3.23.so
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8 LC_NUMERIC=C         LC_TIME=C           
+ [4] LC_COLLATE=C         LC_MONETARY=C        LC_MESSAGES=C       
+ [7] LC_PAPER=C           LC_NAME=C            LC_ADDRESS=C        
+[10] LC_TELEPHONE=C       LC_MEASUREMENT=C     LC_IDENTIFICATION=C 
+
+attached base packages:
+[1] parallel  stats4    stats     graphics  grDevices utils     datasets 
+[8] methods   base     
+
+other attached packages:
+ [1] ArchR_1.0.1                 magrittr_2.0.3             
+ [3] rhdf5_2.38.1                Matrix_1.6-1               
+ [5] data.table_1.14.8           SummarizedExperiment_1.24.0
+ [7] Biobase_2.54.0              GenomicRanges_1.46.1       
+ [9] GenomeInfoDb_1.30.1         IRanges_2.28.0             
+[11] S4Vectors_0.32.4            BiocGenerics_0.40.0        
+[13] MatrixGenerics_1.6.0        matrixStats_1.0.0          
+[15] ggplot2_3.4.3              
+
+loaded via a namespace (and not attached):
+ [1] Rcpp_1.0.11            pillar_1.9.0           compiler_4.1.3        
+ [4] XVector_0.34.0         rhdf5filters_1.6.0     bitops_1.0-7          
+ [7] tools_4.1.3            zlibbioc_1.40.0        lifecycle_1.0.3       
+[10] tibble_3.2.1           gtable_0.3.4           lattice_0.21-8        
+[13] pkgconfig_2.0.3        rlang_1.1.1            DelayedArray_0.20.0   
+[16] cli_3.6.1              GenomeInfoDbData_1.2.7 stringr_1.5.0         
+[19] withr_2.5.0            dplyr_1.1.3            generics_0.1.3        
+[22] vctrs_0.6.3            grid_4.1.3             tidyselect_1.2.0      
+[25] glue_1.6.2             R6_2.5.1               fansi_1.0.4           
+[28] Rhdf5lib_1.16.0        scales_1.2.1           colorspace_2.1-0      
+[31] utf8_1.2.3             stringi_1.7.12         RCurl_1.98-1.12       
+[34] munsell_0.5.0         
+
+
+------- Log Info
+
+
+2024-04-03 15:11:24 : addImputeWeights Input-Parameters, Class = list
+
+addImputeWeights Input-Parameters$ArchRProj: length = 1
+
+addImputeWeights Input-Parameters$reducedDims: length = 1
+[1] "IterativeLSI"
+
+
+addImputeWeights Input-Parameters$dimsToUse: length = 0
+NULL
+
+
+addImputeWeights Input-Parameters$scaleDims: length = 0
+NULL
+
+
+addImputeWeights Input-Parameters$corCutOff: length = 1
+[1] 0.75
+
+
+addImputeWeights Input-Parameters$td: length = 1
+[1] 3
+
+
+addImputeWeights Input-Parameters$ka: length = 1
+[1] 4
+
+
+addImputeWeights Input-Parameters$sampleCells: length = 1
+[1] 5000
+
+
+addImputeWeights Input-Parameters$nRep: length = 1
+[1] 2
+
+
+addImputeWeights Input-Parameters$k: length = 1
+[1] 15
+
+
+addImputeWeights Input-Parameters$epsilon: length = 1
+[1] 1
+
+
+addImputeWeights Input-Parameters$useHdf5: length = 1
+[1] TRUE
+
+
+addImputeWeights Input-Parameters$randomSuffix: length = 1
+[1] FALSE
+
+
+addImputeWeights Input-Parameters$threads: length = 1
+[1] 1
+
+
+addImputeWeights Input-Parameters$seed: length = 1
+[1] 1
+
+
+addImputeWeights Input-Parameters$verbose: length = 1
+[1] TRUE
+
+
+addImputeWeights Input-Parameters$logFile: length = 1
+[1] "ArchRLogs/ArchR-addImputeWeights-42e6cd49490-Date-2024-04-03_Time-15-11-24.log"
+
+
+2024-04-03 15:11:24 : Computing Impute Weights Using Magic (Cell 2018), 0 mins elapsed.
+2024-04-03 15:11:25 : Computing Partial Diffusion Matrix with Magic (1 of 2), 0.023 mins elapsed.
+2024-04-03 15:12:29 : Computing Partial Diffusion Matrix with Magic (1 of 2, Iteration 10 of 42), 1.093 mins elapsed.
+2024-04-03 15:13:47 : Computing Partial Diffusion Matrix with Magic (1 of 2, Iteration 20 of 42), 2.385 mins elapsed.
+2024-04-03 15:15:26 : Computing Partial Diffusion Matrix with Magic (1 of 2, Iteration 30 of 42), 4.036 mins elapsed.
+2024-04-03 15:17:04 : Computing Partial Diffusion Matrix with Magic (1 of 2, Iteration 40 of 42), 5.664 mins elapsed.
+2024-04-03 15:17:24 : Computing Partial Diffusion Matrix with Magic (2 of 2), 6.003 mins elapsed.
+2024-04-03 15:18:26 : Computing Partial Diffusion Matrix with Magic (2 of 2, Iteration 10 of 42), 7.04 mins elapsed.
+2024-04-03 15:19:34 : Computing Partial Diffusion Matrix with Magic (2 of 2, Iteration 20 of 42), 8.173 mins elapsed.
+2024-04-03 15:20:43 : Computing Partial Diffusion Matrix with Magic (2 of 2, Iteration 30 of 42), 9.318 mins elapsed.
+2024-04-03 15:21:50 : Computing Partial Diffusion Matrix with Magic (2 of 2, Iteration 40 of 42), 10.435 mins elapsed.
+2024-04-03 15:22:10 : Completed Getting Magic Weights!, 10.766 mins elapsed.

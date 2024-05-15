@@ -1,0 +1,368 @@
+Loading required package: ggplot2
+Loading required package: SummarizedExperiment
+Loading required package: MatrixGenerics
+Loading required package: matrixStats
+
+Attaching package: ‘MatrixGenerics’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colAlls, colAnyNAs, colAnys, colAvgsPerRowSet, colCollapse,
+    colCounts, colCummaxs, colCummins, colCumprods, colCumsums,
+    colDiffs, colIQRDiffs, colIQRs, colLogSumExps, colMadDiffs,
+    colMads, colMaxs, colMeans2, colMedians, colMins, colOrderStats,
+    colProds, colQuantiles, colRanges, colRanks, colSdDiffs, colSds,
+    colSums2, colTabulates, colVarDiffs, colVars, colWeightedMads,
+    colWeightedMeans, colWeightedMedians, colWeightedSds,
+    colWeightedVars, rowAlls, rowAnyNAs, rowAnys, rowAvgsPerColSet,
+    rowCollapse, rowCounts, rowCummaxs, rowCummins, rowCumprods,
+    rowCumsums, rowDiffs, rowIQRDiffs, rowIQRs, rowLogSumExps,
+    rowMadDiffs, rowMads, rowMaxs, rowMeans2, rowMedians, rowMins,
+    rowOrderStats, rowProds, rowQuantiles, rowRanges, rowRanks,
+    rowSdDiffs, rowSds, rowSums2, rowTabulates, rowVarDiffs, rowVars,
+    rowWeightedMads, rowWeightedMeans, rowWeightedMedians,
+    rowWeightedSds, rowWeightedVars
+
+Loading required package: GenomicRanges
+Loading required package: stats4
+Loading required package: BiocGenerics
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    Filter, Find, Map, Position, Reduce, anyDuplicated, append,
+    as.data.frame, basename, cbind, colnames, dirname, do.call,
+    duplicated, eval, evalq, get, grep, grepl, intersect, is.unsorted,
+    lapply, mapply, match, mget, order, paste, pmax, pmax.int, pmin,
+    pmin.int, rank, rbind, rownames, sapply, setdiff, sort, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Loading required package: S4Vectors
+
+Attaching package: ‘S4Vectors’
+
+The following objects are masked from ‘package:base’:
+
+    I, expand.grid, unname
+
+Loading required package: IRanges
+Loading required package: GenomeInfoDb
+Loading required package: Biobase
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: ‘Biobase’
+
+The following object is masked from ‘package:MatrixGenerics’:
+
+    rowMedians
+
+The following objects are masked from ‘package:matrixStats’:
+
+    anyMissing, rowMedians
+
+Loading required package: data.table
+
+Attaching package: ‘data.table’
+
+The following object is masked from ‘package:SummarizedExperiment’:
+
+    shift
+
+The following object is masked from ‘package:GenomicRanges’:
+
+    shift
+
+The following object is masked from ‘package:IRanges’:
+
+    shift
+
+The following objects are masked from ‘package:S4Vectors’:
+
+    first, second
+
+Loading required package: Matrix
+
+Attaching package: ‘Matrix’
+
+The following object is masked from ‘package:S4Vectors’:
+
+    expand
+
+Loading required package: rhdf5
+Loading required package: magrittr
+Setting default number of Parallel threads to 8.
+Setting default genome to Hg38.
+filterFrags is no longer a valid input. Please use minFrags! Setting filterFrags value to minFrags!
+filterTSS is no longer a valid input. Please use minTSS! Setting filterTSS value to minTSS!
+Using GeneAnnotation set by addArchRGenome(Hg38)!
+Using GeneAnnotation set by addArchRGenome(Hg38)!
+ArchR logging to : ArchRLogs/ArchR-createArrows-13e84c010833-Date-2024-04-15_Time-13-17-27.log
+If there is an issue, please report to github with logFile!
+2024-04-15 13:17:28 : Batch Execution w/ safelapply!, 0 mins elapsed.
+2024-04-15 13:17:29 : (wt20-1 : 3 of 9) Reading In Fragments from inputFiles (readMethod = tabix), 0.01 mins elapsed.
+2024-04-15 13:17:29 : (wt28-2 : 5 of 9) Reading In Fragments from inputFiles (readMethod = tabix), 0.01 mins elapsed.
+2024-04-15 13:17:29 : (wt20-2 : 6 of 9) Reading In Fragments from inputFiles (readMethod = tabix), 0.01 mins elapsed.
+2024-04-15 13:17:29 : (wt12-3 : 8 of 9) Reading In Fragments from inputFiles (readMethod = tabix), 0.01 mins elapsed.
+2024-04-15 13:17:29 : (wt20-1 : 3 of 9) Tabix Bed To Temporary File, 0.01 mins elapsed.
+2024-04-15 13:17:29 : (wt28-2 : 5 of 9) Tabix Bed To Temporary File, 0.011 mins elapsed.
+2024-04-15 13:17:29 : (wt12-2 : 7 of 9) Reading In Fragments from inputFiles (readMethod = tabix), 0.011 mins elapsed.
+2024-04-15 13:17:29 : (wt20-2 : 6 of 9) Tabix Bed To Temporary File, 0.011 mins elapsed.
+2024-04-15 13:17:29 : (wt12-3 : 8 of 9) Tabix Bed To Temporary File, 0.011 mins elapsed.
+2024-04-15 13:17:29 : (wt5-1 : 1 of 9) Reading In Fragments from inputFiles (readMethod = tabix), 0.011 mins elapsed.
+2024-04-15 13:17:29 : (wt5-2 : 2 of 9) Reading In Fragments from inputFiles (readMethod = tabix), 0.011 mins elapsed.
+2024-04-15 13:17:29 : (wt12-2 : 7 of 9) Tabix Bed To Temporary File, 0.012 mins elapsed.
+2024-04-15 13:17:29 : (wt5-1 : 1 of 9) Tabix Bed To Temporary File, 0.012 mins elapsed.
+2024-04-15 13:17:29 : (wt5-2 : 2 of 9) Tabix Bed To Temporary File, 0.012 mins elapsed.
+2024-04-15 13:17:29 : (wt28-1 : 4 of 9) Reading In Fragments from inputFiles (readMethod = tabix), 0.012 mins elapsed.
+2024-04-15 13:17:29 : (wt28-1 : 4 of 9) Tabix Bed To Temporary File, 0.012 mins elapsed.
+2024-04-15 13:19:29 : (wt12-3 : 8 of 9) Reading TabixFile 8 Percent, 2.018 mins elapsed.
+2024-04-15 13:19:43 : (wt12-2 : 7 of 9) Reading TabixFile 8 Percent, 2.246 mins elapsed.
+2024-04-15 13:22:08 : (wt20-2 : 6 of 9) Reading TabixFile 8 Percent, 4.66 mins elapsed.
+2024-04-15 13:22:13 : (wt12-3 : 8 of 9) Reading TabixFile 17 Percent, 4.737 mins elapsed.
+2024-04-15 13:22:23 : (wt12-2 : 7 of 9) Reading TabixFile 17 Percent, 4.918 mins elapsed.
+2024-04-15 13:22:52 : (wt28-2 : 5 of 9) Reading TabixFile 8 Percent, 5.402 mins elapsed.
+2024-04-15 13:23:13 : (wt28-1 : 4 of 9) Reading TabixFile 8 Percent, 5.749 mins elapsed.
+2024-04-15 13:23:37 : (wt5-2 : 2 of 9) Reading TabixFile 8 Percent, 6.14 mins elapsed.
+2024-04-15 13:23:48 : (wt12-3 : 8 of 9) Reading TabixFile 25 Percent, 6.327 mins elapsed.
+2024-04-15 13:23:48 : (wt12-2 : 7 of 9) Reading TabixFile 25 Percent, 6.327 mins elapsed.
+2024-04-15 13:23:50 : (wt20-1 : 3 of 9) Reading TabixFile 8 Percent, 6.362 mins elapsed.
+2024-04-15 13:24:58 : (wt12-3 : 8 of 9) Reading TabixFile 33 Percent, 7.498 mins elapsed.
+2024-04-15 13:25:01 : (wt20-2 : 6 of 9) Reading TabixFile 17 Percent, 7.545 mins elapsed.
+2024-04-15 13:25:03 : (wt12-2 : 7 of 9) Reading TabixFile 33 Percent, 7.583 mins elapsed.
+2024-04-15 13:25:20 : (wt5-1 : 1 of 9) Reading TabixFile 8 Percent, 7.856 mins elapsed.
+2024-04-15 13:26:04 : (wt12-3 : 8 of 9) Reading TabixFile 42 Percent, 8.588 mins elapsed.
+2024-04-15 13:26:07 : (wt28-2 : 5 of 9) Reading TabixFile 17 Percent, 8.642 mins elapsed.
+2024-04-15 13:26:09 : (wt12-2 : 7 of 9) Reading TabixFile 42 Percent, 8.681 mins elapsed.
+2024-04-15 13:26:56 : (wt28-1 : 4 of 9) Reading TabixFile 17 Percent, 9.446 mins elapsed.
+2024-04-15 13:28:48 : (wt20-2 : 6 of 9) Reading TabixFile 25 Percent, 11.336 mins elapsed.
+2024-04-15 13:29:07 : (wt12-2 : 7 of 9) Reading TabixFile 50 Percent, 11.637 mins elapsed.
+2024-04-15 13:29:12 : (wt12-3 : 8 of 9) Reading TabixFile 50 Percent, 11.731 mins elapsed.
+2024-04-15 13:29:18 : (wt20-1 : 3 of 9) Reading TabixFile 17 Percent, 11.832 mins elapsed.
+2024-04-15 13:29:20 : (wt5-2 : 2 of 9) Reading TabixFile 17 Percent, 11.861 mins elapsed.
+2024-04-15 13:29:58 : (wt12-2 : 7 of 9) Reading TabixFile 58 Percent, 12.49 mins elapsed.
+2024-04-15 13:30:03 : (wt12-3 : 8 of 9) Reading TabixFile 58 Percent, 12.58 mins elapsed.
+2024-04-15 13:30:47 : (wt12-2 : 7 of 9) Reading TabixFile 67 Percent, 13.31 mins elapsed.
+2024-04-15 13:30:59 : (wt28-2 : 5 of 9) Reading TabixFile 25 Percent, 13.504 mins elapsed.
+2024-04-15 13:31:03 : (wt12-3 : 8 of 9) Reading TabixFile 67 Percent, 13.575 mins elapsed.
+2024-04-15 13:31:09 : (wt20-2 : 6 of 9) Reading TabixFile 33 Percent, 13.67 mins elapsed.
+2024-04-15 13:31:41 : (wt12-2 : 7 of 9) Reading TabixFile 75 Percent, 14.205 mins elapsed.
+2024-04-15 13:32:02 : (wt12-3 : 8 of 9) Reading TabixFile 75 Percent, 14.555 mins elapsed.
+2024-04-15 13:32:34 : (wt12-2 : 7 of 9) Reading TabixFile 83 Percent, 15.099 mins elapsed.
+2024-04-15 13:32:42 : (wt5-1 : 1 of 9) Reading TabixFile 17 Percent, 15.228 mins elapsed.
+2024-04-15 13:32:43 : (wt12-3 : 8 of 9) Reading TabixFile 83 Percent, 15.245 mins elapsed.
+2024-04-15 13:32:44 : (wt28-1 : 4 of 9) Reading TabixFile 25 Percent, 15.259 mins elapsed.
+2024-04-15 13:32:57 : (wt20-1 : 3 of 9) Reading TabixFile 25 Percent, 15.473 mins elapsed.
+2024-04-15 13:33:03 : (wt12-2 : 7 of 9) Reading TabixFile 92 Percent, 15.573 mins elapsed.
+2024-04-15 13:33:08 : (wt12-3 : 8 of 9) Reading TabixFile 92 Percent, 15.667 mins elapsed.
+2024-04-15 13:33:12 : (wt20-2 : 6 of 9) Reading TabixFile 42 Percent, 15.725 mins elapsed.
+2024-04-15 13:33:19 : (wt5-2 : 2 of 9) Reading TabixFile 25 Percent, 15.837 mins elapsed.
+2024-04-15 13:33:33 : (wt28-2 : 5 of 9) Reading TabixFile 33 Percent, 16.072 mins elapsed.
+2024-04-15 13:33:35 : (wt12-2 : 7 of 9) Reading TabixFile 100 Percent, 16.116 mins elapsed.
+2024-04-15 13:33:36 : (wt12-2 : 7 of 9) Successful creation of Temporary File, 16.136 mins elapsed.
+2024-04-15 13:33:36 : (wt12-2 : 7 of 9) Creating ArrowFile From Temporary File, 16.136 mins elapsed.
+2024-04-15 13:33:42 : (wt12-3 : 8 of 9) Reading TabixFile 100 Percent, 16.22 mins elapsed.
+2024-04-15 13:33:43 : (wt12-3 : 8 of 9) Successful creation of Temporary File, 16.243 mins elapsed.
+2024-04-15 13:33:43 : (wt12-3 : 8 of 9) Creating ArrowFile From Temporary File, 16.243 mins elapsed.
+2024-04-15 13:35:10 : (wt20-2 : 6 of 9) Reading TabixFile 50 Percent, 17.69 mins elapsed.
+2024-04-15 13:35:25 : (wt28-1 : 4 of 9) Reading TabixFile 33 Percent, 17.949 mins elapsed.
+2024-04-15 13:35:37 : (wt28-2 : 5 of 9) Reading TabixFile 42 Percent, 18.144 mins elapsed.
+2024-04-15 13:35:44 : (wt20-1 : 3 of 9) Reading TabixFile 33 Percent, 18.258 mins elapsed.
+2024-04-15 13:36:08 : (wt5-2 : 2 of 9) Reading TabixFile 33 Percent, 18.653 mins elapsed.
+2024-04-15 13:36:25 : (wt20-2 : 6 of 9) Reading TabixFile 58 Percent, 18.948 mins elapsed.
+2024-04-15 13:36:54 : (wt5-1 : 1 of 9) Reading TabixFile 25 Percent, 19.43 mins elapsed.
+2024-04-15 13:37:05 : (wt12-3 : 8 of 9) Successful creation of Arrow File, 19.607 mins elapsed.
+2024-04-15 13:37:08 : (wt12-2 : 7 of 9) Successful creation of Arrow File, 19.67 mins elapsed.
+2024-04-15 13:37:43 : (wt28-1 : 4 of 9) Reading TabixFile 42 Percent, 20.241 mins elapsed.
+2024-04-15 13:37:43 : (wt20-2 : 6 of 9) Reading TabixFile 67 Percent, 20.246 mins elapsed.
+2024-04-15 13:37:47 : (wt28-2 : 5 of 9) Reading TabixFile 50 Percent, 20.314 mins elapsed.
+2024-04-15 13:38:09 : (wt20-1 : 3 of 9) Reading TabixFile 42 Percent, 20.685 mins elapsed.
+2024-04-15 13:38:25 : (wt5-2 : 2 of 9) Reading TabixFile 42 Percent, 20.947 mins elapsed.
+2024-04-15 13:39:00 : (wt20-2 : 6 of 9) Reading TabixFile 75 Percent, 21.525 mins elapsed.
+2024-04-15 13:39:18 : (wt28-2 : 5 of 9) Reading TabixFile 58 Percent, 21.822 mins elapsed.
+2024-04-15 13:40:02 : (wt12-2 : 7 of 9) CellStats : Number of Cells Pass Filter = 6541 , 22.556 mins elapsed.
+2024-04-15 13:40:02 : (wt12-2 : 7 of 9) CellStats : Median Frags = 13476 , 22.557 mins elapsed.
+2024-04-15 13:40:02 : (wt12-2 : 7 of 9) CellStats : Median TSS Enrichment = 9.867 , 22.559 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-15 13:40:07 : (wt12-2 : 7 of 9) Adding Additional Feature Counts!, 22.641 mins elapsed.
+2024-04-15 13:40:07 : (wt12-3 : 8 of 9) CellStats : Number of Cells Pass Filter = 5160 , 22.648 mins elapsed.
+2024-04-15 13:40:07 : (wt12-3 : 8 of 9) CellStats : Median Frags = 16337.5 , 22.649 mins elapsed.
+2024-04-15 13:40:07 : (wt12-3 : 8 of 9) CellStats : Median TSS Enrichment = 9.775 , 22.65 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-15 13:40:10 : (wt12-3 : 8 of 9) Adding Additional Feature Counts!, 22.703 mins elapsed.
+2024-04-15 13:40:11 : (wt20-2 : 6 of 9) Reading TabixFile 83 Percent, 22.704 mins elapsed.
+2024-04-15 13:40:16 : (wt28-1 : 4 of 9) Reading TabixFile 50 Percent, 22.792 mins elapsed.
+2024-04-15 13:40:23 : (wt5-1 : 1 of 9) Reading TabixFile 33 Percent, 22.907 mins elapsed.
+2024-04-15 13:40:32 : (wt20-1 : 3 of 9) Reading TabixFile 50 Percent, 23.061 mins elapsed.
+2024-04-15 13:40:38 : (wt28-2 : 5 of 9) Reading TabixFile 67 Percent, 23.162 mins elapsed.
+2024-04-15 13:40:48 : (wt20-2 : 6 of 9) Reading TabixFile 92 Percent, 23.322 mins elapsed.
+2024-04-15 13:41:07 : (wt5-2 : 2 of 9) Reading TabixFile 50 Percent, 23.651 mins elapsed.
+2024-04-15 13:41:41 : (wt20-2 : 6 of 9) Reading TabixFile 100 Percent, 24.214 mins elapsed.
+2024-04-15 13:41:43 : (wt20-2 : 6 of 9) Successful creation of Temporary File, 24.237 mins elapsed.
+2024-04-15 13:41:43 : (wt20-2 : 6 of 9) Creating ArrowFile From Temporary File, 24.238 mins elapsed.
+2024-04-15 13:41:50 : (wt28-1 : 4 of 9) Reading TabixFile 58 Percent, 24.369 mins elapsed.
+2024-04-15 13:42:03 : (wt28-2 : 5 of 9) Reading TabixFile 75 Percent, 24.585 mins elapsed.
+2024-04-15 13:42:08 : (wt12-2 : 7 of 9) Removing Fragments from Filtered Cells, 24.655 mins elapsed.
+2024-04-15 13:42:08 : (wt12-2 : 7 of 9) Creating Filtered Arrow File, 24.658 mins elapsed.
+2024-04-15 13:42:08 : (wt20-1 : 3 of 9) Reading TabixFile 58 Percent, 24.663 mins elapsed.
+2024-04-15 13:42:08 : (wt12-3 : 8 of 9) Removing Fragments from Filtered Cells, 24.664 mins elapsed.
+2024-04-15 13:42:08 : (wt12-3 : 8 of 9) Creating Filtered Arrow File, 24.664 mins elapsed.
+2024-04-15 13:42:47 : (wt5-2 : 2 of 9) Reading TabixFile 58 Percent, 25.306 mins elapsed.
+2024-04-15 13:43:16 : (wt12-2 : 7 of 9) Finished Constructing Filtered Arrow File!, 25.799 mins elapsed.
+2024-04-15 13:43:17 : (wt12-2 : 7 of 9) Adding TileMatrix!, 25.809 mins elapsed.
+2024-04-15 13:43:17 : (wt12-3 : 8 of 9) Finished Constructing Filtered Arrow File!, 25.816 mins elapsed.
+2024-04-15 13:43:18 : (wt12-3 : 8 of 9) Adding TileMatrix!, 25.825 mins elapsed.
+2024-04-15 13:43:19 : (wt28-2 : 5 of 9) Reading TabixFile 83 Percent, 25.842 mins elapsed.
+2024-04-15 13:43:28 : (wt28-1 : 4 of 9) Reading TabixFile 67 Percent, 25.999 mins elapsed.
+2024-04-15 13:43:37 : (wt5-1 : 1 of 9) Reading TabixFile 42 Percent, 26.148 mins elapsed.
+2024-04-15 13:43:50 : (wt20-1 : 3 of 9) Reading TabixFile 67 Percent, 26.367 mins elapsed.
+2024-04-15 13:43:59 : (wt28-2 : 5 of 9) Reading TabixFile 92 Percent, 26.511 mins elapsed.
+2024-04-15 13:44:24 : (wt5-2 : 2 of 9) Reading TabixFile 67 Percent, 26.921 mins elapsed.
+2024-04-15 13:44:59 : (wt28-2 : 5 of 9) Reading TabixFile 100 Percent, 27.51 mins elapsed.
+2024-04-15 13:45:01 : (wt28-2 : 5 of 9) Successful creation of Temporary File, 27.539 mins elapsed.
+2024-04-15 13:45:01 : (wt28-2 : 5 of 9) Creating ArrowFile From Temporary File, 27.539 mins elapsed.
+2024-04-15 13:45:10 : (wt28-1 : 4 of 9) Reading TabixFile 75 Percent, 27.701 mins elapsed.
+2024-04-15 13:45:38 : (wt20-1 : 3 of 9) Reading TabixFile 75 Percent, 28.155 mins elapsed.
+2024-04-15 13:46:02 : (wt5-2 : 2 of 9) Reading TabixFile 75 Percent, 28.567 mins elapsed.
+2024-04-15 13:46:48 : (wt28-1 : 4 of 9) Reading TabixFile 83 Percent, 29.328 mins elapsed.
+2024-04-15 13:46:59 : (wt12-3 : 8 of 9) Adding GeneScoreMatrix!, 29.511 mins elapsed.
+2024-04-15 13:47:09 : (wt12-2 : 7 of 9) Adding GeneScoreMatrix!, 29.678 mins elapsed.
+2024-04-15 13:47:15 : (wt5-1 : 1 of 9) Reading TabixFile 50 Percent, 29.777 mins elapsed.
+2024-04-15 13:47:18 : (wt20-1 : 3 of 9) Reading TabixFile 83 Percent, 29.825 mins elapsed.
+2024-04-15 13:47:27 : (wt5-2 : 2 of 9) Reading TabixFile 83 Percent, 29.976 mins elapsed.
+2024-04-15 13:47:29 : (wt20-2 : 6 of 9) Successful creation of Arrow File, 30.005 mins elapsed.
+2024-04-15 13:47:34 : (wt28-1 : 4 of 9) Reading TabixFile 92 Percent, 30.099 mins elapsed.
+2024-04-15 13:48:14 : (wt5-2 : 2 of 9) Reading TabixFile 92 Percent, 30.764 mins elapsed.
+2024-04-15 13:48:15 : (wt20-1 : 3 of 9) Reading TabixFile 92 Percent, 30.779 mins elapsed.
+2024-04-15 13:48:37 : (wt28-1 : 4 of 9) Reading TabixFile 100 Percent, 31.146 mins elapsed.
+2024-04-15 13:48:38 : (wt28-1 : 4 of 9) Successful creation of Temporary File, 31.166 mins elapsed.
+2024-04-15 13:48:38 : (wt28-1 : 4 of 9) Creating ArrowFile From Temporary File, 31.167 mins elapsed.
+2024-04-15 13:49:24 : (wt5-2 : 2 of 9) Reading TabixFile 100 Percent, 31.924 mins elapsed.
+2024-04-15 13:49:25 : (wt5-2 : 2 of 9) Successful creation of Temporary File, 31.947 mins elapsed.
+2024-04-15 13:49:25 : (wt5-2 : 2 of 9) Creating ArrowFile From Temporary File, 31.948 mins elapsed.
+2024-04-15 13:49:27 : (wt20-1 : 3 of 9) Reading TabixFile 100 Percent, 31.975 mins elapsed.
+2024-04-15 13:49:28 : (wt20-1 : 3 of 9) Successful creation of Temporary File, 31.997 mins elapsed.
+2024-04-15 13:49:28 : (wt20-1 : 3 of 9) Creating ArrowFile From Temporary File, 31.998 mins elapsed.
+2024-04-15 13:50:06 : (wt5-1 : 1 of 9) Reading TabixFile 58 Percent, 32.634 mins elapsed.
+2024-04-15 13:51:51 : (wt20-2 : 6 of 9) CellStats : Number of Cells Pass Filter = 10551 , 34.381 mins elapsed.
+2024-04-15 13:51:51 : (wt20-2 : 6 of 9) CellStats : Median Frags = 11759 , 34.381 mins elapsed.
+2024-04-15 13:51:51 : (wt20-2 : 6 of 9) CellStats : Median TSS Enrichment = 11.242 , 34.384 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-15 13:51:56 : (wt28-2 : 5 of 9) Successful creation of Arrow File, 34.465 mins elapsed.
+2024-04-15 13:51:57 : (wt20-2 : 6 of 9) Adding Additional Feature Counts!, 34.485 mins elapsed.
+2024-04-15 13:52:15 : (wt5-1 : 1 of 9) Reading TabixFile 67 Percent, 34.785 mins elapsed.
+2024-04-15 13:52:35 : (wt12-3 : 8 of 9) Finished Creating Arrow File, 35.111 mins elapsed.
+2024-04-15 13:52:39 : (wt12-1 : 9 of 9) Reading In Fragments from inputFiles (readMethod = tabix), 35.172 mins elapsed.
+2024-04-15 13:52:39 : (wt12-1 : 9 of 9) Tabix Bed To Temporary File, 35.174 mins elapsed.
+2024-04-15 13:52:58 : (wt12-2 : 7 of 9) Finished Creating Arrow File, 35.489 mins elapsed.
+2024-04-15 13:54:21 : (wt5-1 : 1 of 9) Reading TabixFile 75 Percent, 36.87 mins elapsed.
+2024-04-15 13:54:38 : (wt20-2 : 6 of 9) Removing Fragments from Filtered Cells, 37.167 mins elapsed.
+2024-04-15 13:54:38 : (wt20-2 : 6 of 9) Creating Filtered Arrow File, 37.168 mins elapsed.
+2024-04-15 13:55:04 : (wt12-1 : 9 of 9) Reading TabixFile 8 Percent, 37.601 mins elapsed.
+2024-04-15 13:56:06 : (wt28-1 : 4 of 9) Successful creation of Arrow File, 38.623 mins elapsed.
+2024-04-15 13:56:10 : (wt5-1 : 1 of 9) Reading TabixFile 83 Percent, 38.699 mins elapsed.
+2024-04-15 13:56:22 : (wt20-2 : 6 of 9) Finished Constructing Filtered Arrow File!, 38.893 mins elapsed.
+2024-04-15 13:56:22 : (wt20-2 : 6 of 9) Adding TileMatrix!, 38.899 mins elapsed.
+2024-04-15 13:56:27 : (wt28-2 : 5 of 9) CellStats : Number of Cells Pass Filter = 8595 , 38.979 mins elapsed.
+2024-04-15 13:56:27 : (wt28-2 : 5 of 9) CellStats : Median Frags = 12819 , 38.98 mins elapsed.
+2024-04-15 13:56:27 : (wt28-2 : 5 of 9) CellStats : Median TSS Enrichment = 11.529 , 38.98 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-15 13:56:32 : (wt28-2 : 5 of 9) Adding Additional Feature Counts!, 39.061 mins elapsed.
+2024-04-15 13:56:34 : (wt5-2 : 2 of 9) Successful creation of Arrow File, 39.096 mins elapsed.
+2024-04-15 13:56:36 : (wt20-1 : 3 of 9) Successful creation of Arrow File, 39.13 mins elapsed.
+2024-04-15 13:56:38 : (wt12-1 : 9 of 9) Reading TabixFile 17 Percent, 39.155 mins elapsed.
+2024-04-15 13:57:28 : (wt5-1 : 1 of 9) Reading TabixFile 92 Percent, 39.989 mins elapsed.
+2024-04-15 13:58:17 : (wt12-1 : 9 of 9) Reading TabixFile 25 Percent, 40.804 mins elapsed.
+2024-04-15 13:58:59 : (wt5-1 : 1 of 9) Reading TabixFile 100 Percent, 41.508 mins elapsed.
+2024-04-15 13:59:00 : (wt5-1 : 1 of 9) Successful creation of Temporary File, 41.529 mins elapsed.
+2024-04-15 13:59:00 : (wt5-1 : 1 of 9) Creating ArrowFile From Temporary File, 41.529 mins elapsed.
+2024-04-15 13:59:28 : (wt12-1 : 9 of 9) Reading TabixFile 33 Percent, 41.987 mins elapsed.
+2024-04-15 13:59:34 : (wt28-2 : 5 of 9) Removing Fragments from Filtered Cells, 42.091 mins elapsed.
+2024-04-15 13:59:34 : (wt28-2 : 5 of 9) Creating Filtered Arrow File, 42.095 mins elapsed.
+2024-04-15 14:00:32 : (wt12-1 : 9 of 9) Reading TabixFile 42 Percent, 43.06 mins elapsed.
+2024-04-15 14:01:07 : (wt28-2 : 5 of 9) Finished Constructing Filtered Arrow File!, 43.639 mins elapsed.
+2024-04-15 14:01:07 : (wt28-1 : 4 of 9) CellStats : Number of Cells Pass Filter = 8821 , 43.64 mins elapsed.
+2024-04-15 14:01:07 : (wt28-1 : 4 of 9) CellStats : Median Frags = 16589 , 43.641 mins elapsed.
+2024-04-15 14:01:07 : (wt28-1 : 4 of 9) CellStats : Median TSS Enrichment = 12.167 , 43.642 mins elapsed.
+2024-04-15 14:01:07 : (wt28-2 : 5 of 9) Adding TileMatrix!, 43.652 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-15 14:01:12 : (wt28-1 : 4 of 9) Adding Additional Feature Counts!, 43.724 mins elapsed.
+2024-04-15 14:01:17 : (wt20-1 : 3 of 9) CellStats : Number of Cells Pass Filter = 10124 , 43.81 mins elapsed.
+2024-04-15 14:01:17 : (wt20-1 : 3 of 9) CellStats : Median Frags = 12276 , 43.811 mins elapsed.
+2024-04-15 14:01:17 : (wt20-1 : 3 of 9) CellStats : Median TSS Enrichment = 11.5145 , 43.811 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-15 14:01:22 : (wt20-1 : 3 of 9) Adding Additional Feature Counts!, 43.891 mins elapsed.
+2024-04-15 14:01:29 : (wt5-2 : 2 of 9) CellStats : Number of Cells Pass Filter = 12328 , 44.02 mins elapsed.
+2024-04-15 14:01:30 : (wt5-2 : 2 of 9) CellStats : Median Frags = 11974.5 , 44.02 mins elapsed.
+2024-04-15 14:01:30 : (wt5-2 : 2 of 9) CellStats : Median TSS Enrichment = 9.739 , 44.02 mins elapsed.
+2024-04-15 14:01:30 : (wt20-2 : 6 of 9) Adding GeneScoreMatrix!, 44.032 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-15 14:01:35 : (wt5-2 : 2 of 9) Adding Additional Feature Counts!, 44.114 mins elapsed.
+2024-04-15 14:01:40 : (wt12-1 : 9 of 9) Reading TabixFile 50 Percent, 44.191 mins elapsed.
+2024-04-15 14:02:30 : (wt12-1 : 9 of 9) Reading TabixFile 58 Percent, 45.033 mins elapsed.
+2024-04-15 14:03:16 : (wt12-1 : 9 of 9) Reading TabixFile 67 Percent, 45.793 mins elapsed.
+2024-04-15 14:04:03 : (wt12-1 : 9 of 9) Reading TabixFile 75 Percent, 46.572 mins elapsed.
+2024-04-15 14:04:14 : (wt28-1 : 4 of 9) Removing Fragments from Filtered Cells, 46.757 mins elapsed.
+2024-04-15 14:04:14 : (wt28-1 : 4 of 9) Creating Filtered Arrow File, 46.759 mins elapsed.
+2024-04-15 14:04:14 : (wt20-1 : 3 of 9) Removing Fragments from Filtered Cells, 46.761 mins elapsed.
+2024-04-15 14:04:14 : (wt20-1 : 3 of 9) Creating Filtered Arrow File, 46.762 mins elapsed.
+2024-04-15 14:04:33 : (wt5-2 : 2 of 9) Removing Fragments from Filtered Cells, 47.076 mins elapsed.
+2024-04-15 14:04:33 : (wt5-2 : 2 of 9) Creating Filtered Arrow File, 47.076 mins elapsed.
+2024-04-15 14:04:43 : (wt12-1 : 9 of 9) Reading TabixFile 83 Percent, 47.253 mins elapsed.
+2024-04-15 14:05:09 : (wt12-1 : 9 of 9) Reading TabixFile 92 Percent, 47.673 mins elapsed.
+2024-04-15 14:05:39 : (wt12-1 : 9 of 9) Reading TabixFile 100 Percent, 48.174 mins elapsed.
+2024-04-15 14:05:40 : (wt12-1 : 9 of 9) Successful creation of Temporary File, 48.194 mins elapsed.
+2024-04-15 14:05:40 : (wt12-1 : 9 of 9) Creating ArrowFile From Temporary File, 48.194 mins elapsed.
+2024-04-15 14:05:42 : (wt28-2 : 5 of 9) Adding GeneScoreMatrix!, 48.228 mins elapsed.
+2024-04-15 14:05:51 : (wt28-1 : 4 of 9) Finished Constructing Filtered Arrow File!, 48.381 mins elapsed.
+2024-04-15 14:05:52 : (wt28-1 : 4 of 9) Adding TileMatrix!, 48.388 mins elapsed.
+2024-04-15 14:05:58 : (wt20-1 : 3 of 9) Finished Constructing Filtered Arrow File!, 48.498 mins elapsed.
+2024-04-15 14:05:58 : (wt20-1 : 3 of 9) Adding TileMatrix!, 48.502 mins elapsed.
+2024-04-15 14:06:18 : (wt5-2 : 2 of 9) Finished Constructing Filtered Arrow File!, 48.836 mins elapsed.
+2024-04-15 14:06:19 : (wt5-2 : 2 of 9) Adding TileMatrix!, 48.844 mins elapsed.
+2024-04-15 14:07:10 : (wt5-1 : 1 of 9) Successful creation of Arrow File, 49.698 mins elapsed.
+2024-04-15 14:08:33 : (wt20-2 : 6 of 9) Finished Creating Arrow File, 51.086 mins elapsed.
+2024-04-15 14:09:05 : (wt12-1 : 9 of 9) Successful creation of Arrow File, 51.605 mins elapsed.
+2024-04-15 14:11:11 : (wt28-1 : 4 of 9) Adding GeneScoreMatrix!, 53.709 mins elapsed.
+2024-04-15 14:11:14 : (wt20-1 : 3 of 9) Adding GeneScoreMatrix!, 53.764 mins elapsed.
+2024-04-15 14:11:59 : (wt5-2 : 2 of 9) Adding GeneScoreMatrix!, 54.514 mins elapsed.
+2024-04-15 14:12:04 : (wt12-1 : 9 of 9) CellStats : Number of Cells Pass Filter = 8550 , 54.602 mins elapsed.
+2024-04-15 14:12:04 : (wt12-1 : 9 of 9) CellStats : Median Frags = 9395 , 54.602 mins elapsed.
+2024-04-15 14:12:04 : (wt12-1 : 9 of 9) CellStats : Median TSS Enrichment = 9.652 , 54.603 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-15 14:12:09 : (wt12-1 : 9 of 9) Adding Additional Feature Counts!, 54.682 mins elapsed.
+2024-04-15 14:12:36 : (wt28-2 : 5 of 9) Finished Creating Arrow File, 55.125 mins elapsed.
+2024-04-15 14:12:45 : (wt5-1 : 1 of 9) CellStats : Number of Cells Pass Filter = 11313 , 55.284 mins elapsed.
+2024-04-15 14:12:45 : (wt5-1 : 1 of 9) CellStats : Median Frags = 18456 , 55.285 mins elapsed.
+2024-04-15 14:12:45 : (wt5-1 : 1 of 9) CellStats : Median TSS Enrichment = 9.525 , 55.285 mins elapsed.
+WARNING: Error found with Cairo installation. Continuing without rasterization.
+2024-04-15 14:12:51 : (wt5-1 : 1 of 9) Adding Additional Feature Counts!, 55.377 mins elapsed.
+2024-04-15 14:15:42 : (wt12-1 : 9 of 9) Removing Fragments from Filtered Cells, 58.221 mins elapsed.
+2024-04-15 14:15:42 : (wt12-1 : 9 of 9) Creating Filtered Arrow File, 58.225 mins elapsed.
+2024-04-15 14:17:08 : (wt12-1 : 9 of 9) Finished Constructing Filtered Arrow File!, 59.66 mins elapsed.
+2024-04-15 14:17:08 : (wt12-1 : 9 of 9) Adding TileMatrix!, 59.666 mins elapsed.
+2024-04-15 14:17:53 : (wt5-1 : 1 of 9) Removing Fragments from Filtered Cells, 60.418 mins elapsed.
+2024-04-15 14:17:53 : (wt5-1 : 1 of 9) Creating Filtered Arrow File, 60.418 mins elapsed.
+2024-04-15 14:20:16 : (wt20-1 : 3 of 9) Finished Creating Arrow File, 62.8 mins elapsed.
+2024-04-15 14:20:29 : (wt5-1 : 1 of 9) Finished Constructing Filtered Arrow File!, 63.005 mins elapsed.
+2024-04-15 14:20:29 : (wt5-1 : 1 of 9) Adding TileMatrix!, 63.015 mins elapsed.
+2024-04-15 14:20:45 : (wt28-1 : 4 of 9) Finished Creating Arrow File, 63.27 mins elapsed.
+2024-04-15 14:21:02 : (wt12-1 : 9 of 9) Adding GeneScoreMatrix!, 63.566 mins elapsed.
+2024-04-15 14:21:35 : (wt5-2 : 2 of 9) Finished Creating Arrow File, 64.106 mins elapsed.
+2024-04-15 14:26:06 : (wt12-1 : 9 of 9) Finished Creating Arrow File, 68.632 mins elapsed.
+2024-04-15 14:26:54 : (wt5-1 : 1 of 9) Adding GeneScoreMatrix!, 69.433 mins elapsed.
+2024-04-15 14:37:02 : (wt5-1 : 1 of 9) Finished Creating Arrow File, 79.562 mins elapsed.
+ArchR logging successful to : ArchRLogs/ArchR-createArrows-13e84c010833-Date-2024-04-15_Time-13-17-27.log
+ArchR logging to : ArchRLogs/ArchR-addDoubletScores-13e8544d3e40-Date-2024-04-15_Time-14-37-03.log
+If there is an issue, please report to github with logFile!
+2024-04-15 14:37:19 : Batch Execution w/ safelapply!, 0 mins elapsed.
+slurmstepd: error: *** JOB 1351845 ON mhgcp-d02 CANCELLED AT 2024-04-16T01:16:15 DUE TO TIME LIMIT ***

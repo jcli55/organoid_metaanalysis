@@ -1,0 +1,22 @@
+/storage/chen/home/u250758/miniconda3/envs/cellfate/lib/python3.8/site-packages/anndata/_core/anndata.py:1840: UserWarning: Variable names are not unique. To make them unique, call `.var_names_make_unique`.
+  utils.warn_names_duplicates("var")
+/storage/chen/home/u250758/miniconda3/envs/cellfate/lib/python3.8/site-packages/scvelo/plotting/scatter.py:656: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
+  smp = ax.scatter(
+/storage/chen/home/u250758/miniconda3/envs/cellfate/lib/python3.8/site-packages/scvelo/plotting/scatter.py:694: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
+  ax.scatter(
+/storage/chen/home/u250758/miniconda3/envs/cellfate/lib/python3.8/site-packages/scvelo/plotting/utils.py:1391: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
+  ax.scatter(x, y, s=bg_size, marker=".", c=bg_color, zorder=zord - 2, **kwargs)
+/storage/chen/home/u250758/miniconda3/envs/cellfate/lib/python3.8/site-packages/scvelo/plotting/utils.py:1392: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
+  ax.scatter(x, y, s=gp_size, marker=".", c=gp_color, zorder=zord - 1, **kwargs)
+Traceback (most recent call last):
+  File "infer_fate_advanced.py", line 29, in <module>
+    g.set_terminal_states(states=['RGC','MG','Cone','Rod','AC','HC','BC'])
+  File "/storage/chen/home/u250758/miniconda3/envs/cellfate/lib/python3.8/site-packages/cellrank/estimators/terminal_states/_gpcca.py", line 435, in set_terminal_states
+    memberships = memberships[list(states)].copy()
+  File "/storage/chen/home/u250758/miniconda3/envs/cellfate/lib/python3.8/site-packages/cellrank/_utils/_lineage.py", line 310, in __getitem__
+    obj = self.__getitem(item)
+  File "/storage/chen/home/u250758/miniconda3/envs/cellfate/lib/python3.8/site-packages/cellrank/_utils/_lineage.py", line 391, in __getitem
+    item = (slice(None, None, None), self._maybe_convert_names(item))
+  File "/storage/chen/home/u250758/miniconda3/envs/cellfate/lib/python3.8/site-packages/cellrank/_utils/_lineage.py", line 1034, in _maybe_convert_names
+    raise KeyError(f"Invalid lineage name `{name!r}`. Valid names are: `{list(self.names)}`.")
+KeyError: "Invalid lineage name `'HC'`. Valid names are: `['RGC', 'AC', 'PRPC', 'MG', 'Rod', 'Cone']`."

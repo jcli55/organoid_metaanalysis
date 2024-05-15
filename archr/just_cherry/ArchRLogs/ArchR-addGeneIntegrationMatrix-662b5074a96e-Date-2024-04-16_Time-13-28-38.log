@@ -1,0 +1,2182 @@
+
+           ___      .______        ______  __    __  .______      
+          /   \     |   _  \      /      ||  |  |  | |   _  \     
+         /  ^  \    |  |_)  |    |  ,----'|  |__|  | |  |_)  |    
+        /  /_\  \   |      /     |  |     |   __   | |      /     
+       /  _____  \  |  |\  \\___ |  `----.|  |  |  | |  |\  \\___.
+      /__/     \__\ | _| `._____| \______||__|  |__| | _| `._____|
+    
+Logging With ArchR!
+
+Start Time : 2024-04-16 13:28:38
+
+------- ArchR Info
+
+ArchRThreads = 1
+
+------- System Info
+
+Computer OS = unix
+Total Cores = 48
+
+------- Session Info
+
+R version 4.1.3 (2022-03-10)
+Platform: x86_64-conda-linux-gnu (64-bit)
+Running under: Red Hat Enterprise Linux
+
+Matrix products: default
+BLAS/LAPACK: /storage/chen/home/u250758/miniconda3/envs/archr/lib/libopenblasp-r0.3.23.so
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8 LC_NUMERIC=C         LC_TIME=C           
+ [4] LC_COLLATE=C         LC_MONETARY=C        LC_MESSAGES=C       
+ [7] LC_PAPER=C           LC_NAME=C            LC_ADDRESS=C        
+[10] LC_TELEPHONE=C       LC_MEASUREMENT=C     LC_IDENTIFICATION=C 
+
+attached base packages:
+[1] parallel  stats4    stats     graphics  grDevices utils     datasets 
+[8] methods   base     
+
+other attached packages:
+ [1] SeuratObject_4.1.3          sp_1.6-1                   
+ [3] ArchR_1.0.1                 magrittr_2.0.3             
+ [5] rhdf5_2.38.1                Matrix_1.6-1               
+ [7] data.table_1.14.8           SummarizedExperiment_1.24.0
+ [9] Biobase_2.54.0              GenomicRanges_1.46.1       
+[11] GenomeInfoDb_1.30.1         IRanges_2.28.0             
+[13] S4Vectors_0.32.4            BiocGenerics_0.40.0        
+[15] MatrixGenerics_1.6.0        matrixStats_1.0.0          
+[17] ggplot2_3.4.3              
+
+loaded via a namespace (and not attached):
+ [1] Rcpp_1.0.11            progressr_0.13.0       pillar_1.9.0          
+ [4] compiler_4.1.3         XVector_0.34.0         rhdf5filters_1.6.0    
+ [7] bitops_1.0-7           tools_4.1.3            zlibbioc_1.40.0       
+[10] digest_0.6.33          lifecycle_1.0.3        tibble_3.2.1          
+[13] gtable_0.3.4           lattice_0.21-8         pkgconfig_2.0.3       
+[16] rlang_1.1.1            DelayedArray_0.20.0    cli_3.6.1             
+[19] GenomeInfoDbData_1.2.7 stringr_1.5.0          withr_2.5.0           
+[22] dplyr_1.1.3            globals_0.16.2         generics_0.1.3        
+[25] vctrs_0.6.3            grid_4.1.3             tidyselect_1.2.0      
+[28] glue_1.6.2             listenv_0.9.0          R6_2.5.1              
+[31] future.apply_1.11.0    parallelly_1.36.0      fansi_1.0.4           
+[34] Rhdf5lib_1.16.0        codetools_0.2-19       scales_1.2.1          
+[37] future_1.32.0          colorspace_2.1-0       utf8_1.2.3            
+[40] stringi_1.7.12         RCurl_1.98-1.12        munsell_0.5.0         
+
+
+------- Log Info
+
+2024-04-16 13:28:39 : Running Seurat's Integration Stuart* et al 2019, 0.013 mins elapsed.
+
+2024-04-16 13:28:41 : Input-Parameters, Class = list
+
+Input-Parameters$: length = 1
+                       
+1 function (name)      
+2 .Internal(args(name))
+
+
+Input-Parameters$ArchRProj: length = 1
+
+Input-Parameters$useMatrix: length = 1
+[1] "GeneScoreMatrix"
+
+
+Input-Parameters$matrixName: length = 1
+[1] "GeneIntegrationMatrix"
+
+
+Input-Parameters$reducedDims: length = 1
+[1] "IterativeLSI"
+
+
+Input-Parameters$seRNA: length = 1
+                              orig.ident nCount_RNA nFeature_RNA majorclass age
+wt5-1_AAACCCAAGCCAAGTG-1-0 SeuratProject       3994         2235       PRPC wk5
+wt5-1_AAACCCAAGCCTGAGA-1-0 SeuratProject        851          703       PRPC wk5
+wt5-1_AAACCCAAGTCCGCGT-1-0 SeuratProject       1757         1317       PRPC wk5
+wt5-1_AAACCCAAGTGCGCTC-1-0 SeuratProject       2022         1399       PRPC wk5
+wt5-1_AAACCCACAGGAGACT-1-0 SeuratProject       3325         2061       PRPC wk5
+wt5-1_AAACCCACAGGCAATG-1-0 SeuratProject       3097         1813       PRPC wk5
+wt5-1_AAACCCACATCACAGT-1-0 SeuratProject       1845         1330       PRPC wk5
+wt5-1_AAACCCACATGACACT-1-0 SeuratProject       1901         1182        RGC wk5
+wt5-1_AAACCCAGTTGACGGA-1-0 SeuratProject       1225          965       PRPC wk5
+wt5-1_AAACCCATCACCGACG-1-0 SeuratProject       2193         1511       PRPC wk5
+
+
+Input-Parameters$groupATAC: length = 0
+NULL
+
+
+Input-Parameters$groupRNA: length = 1
+[1] "majorclass"
+
+
+Input-Parameters$groupList: length = 0
+NULL
+
+
+Input-Parameters$sampleCellsATAC: length = 1
+[1] 10000
+
+
+Input-Parameters$sampleCellsRNA: length = 1
+[1] 10000
+
+
+Input-Parameters$embeddingATAC: length = 0
+NULL
+
+
+Input-Parameters$embeddingRNA: length = 0
+NULL
+
+
+Input-Parameters$dimsToUse: length = 30
+[1] 1 2 3 4 5 6
+
+
+Input-Parameters$scaleDims: length = 0
+NULL
+
+
+Input-Parameters$corCutOff: length = 1
+[1] 0.75
+
+
+Input-Parameters$plotUMAP: length = 1
+[1] TRUE
+
+
+Input-Parameters$nGenes: length = 1
+[1] 2000
+
+
+Input-Parameters$useImputation: length = 1
+[1] TRUE
+
+
+Input-Parameters$reduction: length = 1
+[1] "cca"
+
+
+Input-Parameters$addToArrow: length = 1
+[1] FALSE
+
+
+Input-Parameters$scaleTo: length = 1
+[1] 10000
+
+
+Input-Parameters$genesUse: length = 0
+NULL
+
+
+Input-Parameters$nameCell: length = 1
+[1] "predictedCell_Un"
+
+
+Input-Parameters$nameGroup: length = 1
+[1] "predictedGroup_Un"
+
+
+Input-Parameters$nameScore: length = 1
+[1] "predictedScore_Un"
+
+
+Input-Parameters$threads: length = 1
+[1] 1
+
+
+Input-Parameters$verbose: length = 1
+[1] TRUE
+
+
+Input-Parameters$force: length = 1
+[1] FALSE
+
+
+Input-Parameters$logFile: length = 1
+[1] "ArchRLogs/ArchR-addGeneIntegrationMatrix-662b5074a96e-Date-2024-04-16_Time-13-28-38.log"
+
+
+2024-04-16 13:28:41 : Checking ATAC Input, 0.049 mins elapsed.
+2024-04-16 13:28:41 : Checking RNA Input, 0.05 mins elapsed.
+2024-04-16 13:28:55 : Found 21369 overlapping gene names from gene scores and rna matrix!, 0.283 mins elapsed.
+2024-04-16 13:28:55 : Creating Integration Blocks, 0.283 mins elapsed.
+2024-04-16 13:29:03 : Prepping Interation Data, 0.416 mins elapsed.
+2024-04-16 13:29:05 : Computing Integration in 8 Integration Blocks!, 0 mins elapsed.
+2024-04-16 13:29:05 : Block (1 of 8) : Computing Integration, 0 mins elapsed.
+2024-04-16 13:29:07 : Block (1 of 8) : Identifying Variable Genes, 0.04 mins elapsed.
+2024-04-16 13:29:11 : Block (1 of 8) : Getting GeneScoreMatrix, 0.115 mins elapsed.
+
+2024-04-16 13:29:47 : GeneScoreMat-Block-1, Class = dgCMatrix
+GeneScoreMat-Block-1: nRows = 2000, nCols = 9742
+GeneScoreMat-Block-1: NonZeroEntries = 9315630, EntryRange = [ 0.011 , 610.597 ]
+5 x 5 sparse Matrix of class "dgCMatrix"
+       wt12-1#AGCCCGACAGAGCCAA-1 wt5-1#CACAGATTCACCCTTG-1
+HES5                       4.257                    .    
+PRDM16                     2.072                    0.831
+AJAP1                      1.090                    .    
+ESPN                       1.947                    .    
+PER3                       .                        .    
+       wt5-1#TCACCACTCTTCATAC-1 wt5-1#GAGATTCTCACCCTTG-1
+HES5                      .                        .    
+PRDM16                    .                        5.775
+AJAP1                     .                        .    
+ESPN                      .                        2.034
+PER3                      0.517                    1.789
+       wt12-1#TTTACGTGTAAGGTCG-1
+HES5                       .    
+PRDM16                     .    
+AJAP1                      .    
+ESPN                       1.039
+PER3                       .    
+
+
+2024-04-16 13:29:48 : Block (1 of 8) : Imputing GeneScoreMatrix, 0.716 mins elapsed.
+
+2024-04-16 13:29:48 : addImputeWeights Input-Parameters, Class = list
+
+addImputeWeights Input-Parameters$ArchRProj: length = 1
+
+addImputeWeights Input-Parameters$reducedDims: length = 1
+[1] "IterativeLSI"
+
+
+addImputeWeights Input-Parameters$dimsToUse: length = 30
+[1] 1 2 3 4 5 6
+
+
+addImputeWeights Input-Parameters$scaleDims: length = 0
+NULL
+
+
+addImputeWeights Input-Parameters$corCutOff: length = 1
+[1] 0.75
+
+
+addImputeWeights Input-Parameters$td: length = 1
+[1] 3
+
+
+addImputeWeights Input-Parameters$ka: length = 1
+[1] 4
+
+
+addImputeWeights Input-Parameters$sampleCells: length = 1
+[1] 5000
+
+
+addImputeWeights Input-Parameters$nRep: length = 1
+[1] 2
+
+
+addImputeWeights Input-Parameters$k: length = 1
+[1] 15
+
+
+addImputeWeights Input-Parameters$epsilon: length = 1
+[1] 1
+
+
+addImputeWeights Input-Parameters$useHdf5: length = 1
+[1] TRUE
+
+
+addImputeWeights Input-Parameters$randomSuffix: length = 1
+[1] TRUE
+
+
+addImputeWeights Input-Parameters$threads: length = 1
+[1] 1
+
+
+addImputeWeights Input-Parameters$seed: length = 1
+[1] 1
+
+
+addImputeWeights Input-Parameters$verbose: length = 1
+[1] TRUE
+
+
+addImputeWeights Input-Parameters$logFile: length = 1
+[1] "ArchRLogs/ArchR-addGeneIntegrationMatrix-662b5074a96e-Date-2024-04-16_Time-13-28-38.log"
+
+
+2024-04-16 13:29:48 : Computing Impute Weights Using Magic (Cell 2018), 0 mins elapsed.
+2024-04-16 13:29:48 : Computing Partial Diffusion Matrix with Magic (1 of 2), 0.001 mins elapsed.
+2024-04-16 13:29:56 : Computing Partial Diffusion Matrix with Magic (2 of 2), 0.144 mins elapsed.
+2024-04-16 13:30:04 : Completed Getting Magic Weights!, 0.281 mins elapsed.
+
+2024-04-16 13:30:04 : imputeMatrix Input-Parameters, Class = list
+
+imputeMatrix Input-Parameters$mat: nRows = 2000, nCols = 9742
+imputeMatrix Input-Parameters$mat: NonZeroEntries = 9315630, EntryRange = [ 0.011 , 610.597 ]
+5 x 5 sparse Matrix of class "dgCMatrix"
+       wt12-1#AGCCCGACAGAGCCAA-1 wt5-1#CACAGATTCACCCTTG-1
+HES5                       4.257                    .    
+PRDM16                     2.072                    0.831
+AJAP1                      1.090                    .    
+ESPN                       1.947                    .    
+PER3                       .                        .    
+       wt5-1#TCACCACTCTTCATAC-1 wt5-1#GAGATTCTCACCCTTG-1
+HES5                      .                        .    
+PRDM16                    .                        5.775
+AJAP1                     .                        .    
+ESPN                      .                        2.034
+PER3                      0.517                    1.789
+       wt12-1#TTTACGTGTAAGGTCG-1
+HES5                       .    
+PRDM16                     .    
+AJAP1                      .    
+ESPN                       1.039
+PER3                       .    
+
+
+imputeMatrix Input-Parameters$threads: length = 1
+[1] 1
+
+
+imputeMatrix Input-Parameters$verbose: length = 1
+[1] FALSE
+
+
+imputeMatrix Input-Parameters$logFile: length = 1
+[1] "ArchRLogs/ArchR-addGeneIntegrationMatrix-662b5074a96e-Date-2024-04-16_Time-13-28-38.log"
+
+
+
+2024-04-16 13:30:05 : mat, Class = dgCMatrix
+mat: nRows = 2000, nCols = 9742
+mat: NonZeroEntries = 9315630, EntryRange = [ 0.011 , 610.597 ]
+5 x 5 sparse Matrix of class "dgCMatrix"
+       wt12-1#AGCCCGACAGAGCCAA-1 wt5-1#CACAGATTCACCCTTG-1
+HES5                       4.257                    .    
+PRDM16                     2.072                    0.831
+AJAP1                      1.090                    .    
+ESPN                       1.947                    .    
+PER3                       .                        .    
+       wt5-1#TCACCACTCTTCATAC-1 wt5-1#GAGATTCTCACCCTTG-1
+HES5                      .                        .    
+PRDM16                    .                        5.775
+AJAP1                     .                        .    
+ESPN                      .                        2.034
+PER3                      0.517                    1.789
+       wt12-1#TTTACGTGTAAGGTCG-1
+HES5                       .    
+PRDM16                     .    
+AJAP1                      .    
+ESPN                       1.039
+PER3                       .    
+
+
+
+2024-04-16 13:30:05 : weightList, Class = SimpleList
+
+weightList$w1: length = 1
+[1] "/storage/singlecell/jeanl/organoid/data/archr/cherry_project/ImputeWeights/Impute-Weights-662b1aba71e6-Date-2024-04-16_Time-13-29-48-Rep-1"
+
+
+weightList$w2: length = 1
+[1] "/storage/singlecell/jeanl/organoid/data/archr/cherry_project/ImputeWeights/Impute-Weights-662b1aba71e6-Date-2024-04-16_Time-13-29-48-Rep-2"
+
+
+2024-04-16 13:30:05 : Imputing Matrix (1 of 2), 0 mins elapsed.
+
+2024-04-16 13:30:05 : 
+
+2024-04-16 13:30:05 : 
+
+2024-04-16 13:30:19 : 
+2024-04-16 13:30:34 : Imputing Matrix (2 of 2), 0.483 mins elapsed.
+
+2024-04-16 13:30:34 : 
+
+2024-04-16 13:30:34 : 
+
+2024-04-16 13:30:47 : 
+2024-04-16 13:31:02 : Finished Imputing Matrix, 0.95 mins elapsed.
+
+2024-04-16 13:31:02 : GeneScoreMat-Block-Impute-1, Class = dgeMatrix
+GeneScoreMat-Block-Impute-1: nRows = 2000, nCols = 9742
+GeneScoreMat-Block-Impute-1: NonZeroEntries = 19484000, EntryRange = [ 0 , 8.59773300581396 ]
+5 x 5 Matrix of class "dgeMatrix"
+       wt12-1#AGCCCGACAGAGCCAA-1 wt5-1#CACAGATTCACCCTTG-1
+HES5                   1.1747279                0.9911285
+PRDM16                 1.7179869                1.5071630
+AJAP1                  0.7107054                0.4009471
+ESPN                   0.4418880                0.3547984
+PER3                   0.3826888                0.2902639
+       wt5-1#TCACCACTCTTCATAC-1 wt5-1#GAGATTCTCACCCTTG-1
+HES5                  1.6296817                1.5369476
+PRDM16                1.7201890                2.3532511
+AJAP1                 0.4677131                0.4790925
+ESPN                  0.4776735                0.5786137
+PER3                  0.3380567                0.4185183
+       wt12-1#TTTACGTGTAAGGTCG-1
+HES5                   2.3367281
+PRDM16                 2.1225505
+AJAP1                  0.4701546
+ESPN                   0.7329343
+PER3                   0.3503178
+
+
+2024-04-16 13:31:08 : Block (1 of 8) : Seurat FindTransferAnchors, 2.052 mins elapsed.
+
+2024-04-16 13:33:24 : transferAnchors-1, Class = character
+
+transferAnchors-1: length = 1
+[1] "An AnchorSet object containing 2169 anchors between the reference and query Seurat objects. \n This can be used as input to TransferData."
+
+
+
+2024-04-16 13:33:24 : rDSub-1, Class = matrix
+ 
+2024-04-16 13:33:24 : rDSub-1, Class = array
+                               LSI1       LSI2       LSI3         LSI4
+wt12-1#AGCCCGACAGAGCCAA-1 -5.080495 -0.6552434  0.2576278  0.001218136
+wt5-1#CACAGATTCACCCTTG-1  -4.272283  2.0080184  1.1129194  1.472126942
+wt5-1#TCACCACTCTTCATAC-1  -4.550014  1.6448345  0.8849190  0.518414012
+wt5-1#GAGATTCTCACCCTTG-1  -4.950089  1.2074840  0.6397063  0.334787109
+wt12-1#TTTACGTGTAAGGTCG-1 -4.944366  1.4316774 -0.1864626 -0.007671684
+                                LSI5
+wt12-1#AGCCCGACAGAGCCAA-1 -0.3293521
+wt5-1#CACAGATTCACCCTTG-1  -0.6967153
+wt5-1#TCACCACTCTTCATAC-1  -1.0272924
+wt5-1#GAGATTCTCACCCTTG-1   0.5620594
+wt12-1#TTTACGTGTAAGGTCG-1  0.3086564
+
+rDSub-1: nRows = 9742, nCols = 30
+
+2024-04-16 13:33:24 : Block (1 of 8) : Seurat TransferData Cell Group Labels, 4.32 mins elapsed.
+2024-04-16 13:33:27 : Block (1 of 8) : Seurat TransferData Cell Names Labels, 4.369 mins elapsed.
+2024-04-16 13:33:59 : Block (1 of 8) : Saving TransferAnchors Joint CCA, 4.915 mins elapsed.
+2024-04-16 13:34:01 : Block (1 of 8) : Completed Integration, 4.938 mins elapsed.
+2024-04-16 13:34:02 : Block (2 of 8) : Computing Integration, 4.95 mins elapsed.
+2024-04-16 13:34:04 : Block (2 of 8) : Identifying Variable Genes, 4.995 mins elapsed.
+2024-04-16 13:34:09 : Block (2 of 8) : Getting GeneScoreMatrix, 5.068 mins elapsed.
+
+2024-04-16 13:34:44 : GeneScoreMat-Block-2, Class = dgCMatrix
+GeneScoreMat-Block-2: nRows = 2000, nCols = 9742
+GeneScoreMat-Block-2: NonZeroEntries = 9319033, EntryRange = [ 0.009 , 265.669 ]
+5 x 5 sparse Matrix of class "dgCMatrix"
+       wt20-2#CGATGATGTTGCCTGG-1 wt12-1#AATGGAATCGTTCTAT-1
+RNF223                         .                     .    
+TTLL10                         .                     .    
+FNDC10                         .                     .    
+PRDM16                         .                     0.883
+AJAP1                          .                     .    
+       wt5-2#ACTCGGGAGACAGCTG-1 wt5-1#GGGTTATAGGAGTACC-1
+RNF223                    .                        .    
+TTLL10                    .                        .    
+FNDC10                    .                        .    
+PRDM16                    3.159                    1.427
+AJAP1                     0.855                    0.069
+       wt28-1#CATTCATCAGGTGTGA-1
+RNF223                     2.038
+TTLL10                     .    
+FNDC10                     .    
+PRDM16                     1.993
+AJAP1                      .    
+
+
+2024-04-16 13:34:45 : Block (2 of 8) : Imputing GeneScoreMatrix, 5.666 mins elapsed.
+
+2024-04-16 13:34:45 : addImputeWeights Input-Parameters, Class = list
+
+addImputeWeights Input-Parameters$ArchRProj: length = 1
+
+addImputeWeights Input-Parameters$reducedDims: length = 1
+[1] "IterativeLSI"
+
+
+addImputeWeights Input-Parameters$dimsToUse: length = 30
+[1] 1 2 3 4 5 6
+
+
+addImputeWeights Input-Parameters$scaleDims: length = 0
+NULL
+
+
+addImputeWeights Input-Parameters$corCutOff: length = 1
+[1] 0.75
+
+
+addImputeWeights Input-Parameters$td: length = 1
+[1] 3
+
+
+addImputeWeights Input-Parameters$ka: length = 1
+[1] 4
+
+
+addImputeWeights Input-Parameters$sampleCells: length = 1
+[1] 5000
+
+
+addImputeWeights Input-Parameters$nRep: length = 1
+[1] 2
+
+
+addImputeWeights Input-Parameters$k: length = 1
+[1] 15
+
+
+addImputeWeights Input-Parameters$epsilon: length = 1
+[1] 1
+
+
+addImputeWeights Input-Parameters$useHdf5: length = 1
+[1] TRUE
+
+
+addImputeWeights Input-Parameters$randomSuffix: length = 1
+[1] TRUE
+
+
+addImputeWeights Input-Parameters$threads: length = 1
+[1] 1
+
+
+addImputeWeights Input-Parameters$seed: length = 1
+[1] 1
+
+
+addImputeWeights Input-Parameters$verbose: length = 1
+[1] TRUE
+
+
+addImputeWeights Input-Parameters$logFile: length = 1
+[1] "ArchRLogs/ArchR-addGeneIntegrationMatrix-662b5074a96e-Date-2024-04-16_Time-13-28-38.log"
+
+
+2024-04-16 13:34:45 : Computing Impute Weights Using Magic (Cell 2018), 0 mins elapsed.
+2024-04-16 13:34:45 : Computing Partial Diffusion Matrix with Magic (1 of 2), 0.001 mins elapsed.
+2024-04-16 13:34:54 : Computing Partial Diffusion Matrix with Magic (2 of 2), 0.15 mins elapsed.
+2024-04-16 13:35:02 : Completed Getting Magic Weights!, 0.294 mins elapsed.
+
+2024-04-16 13:35:02 : imputeMatrix Input-Parameters, Class = list
+
+imputeMatrix Input-Parameters$mat: nRows = 2000, nCols = 9742
+imputeMatrix Input-Parameters$mat: NonZeroEntries = 9319033, EntryRange = [ 0.009 , 265.669 ]
+5 x 5 sparse Matrix of class "dgCMatrix"
+       wt20-2#CGATGATGTTGCCTGG-1 wt12-1#AATGGAATCGTTCTAT-1
+RNF223                         .                     .    
+TTLL10                         .                     .    
+FNDC10                         .                     .    
+PRDM16                         .                     0.883
+AJAP1                          .                     .    
+       wt5-2#ACTCGGGAGACAGCTG-1 wt5-1#GGGTTATAGGAGTACC-1
+RNF223                    .                        .    
+TTLL10                    .                        .    
+FNDC10                    .                        .    
+PRDM16                    3.159                    1.427
+AJAP1                     0.855                    0.069
+       wt28-1#CATTCATCAGGTGTGA-1
+RNF223                     2.038
+TTLL10                     .    
+FNDC10                     .    
+PRDM16                     1.993
+AJAP1                      .    
+
+
+imputeMatrix Input-Parameters$threads: length = 1
+[1] 1
+
+
+imputeMatrix Input-Parameters$verbose: length = 1
+[1] FALSE
+
+
+imputeMatrix Input-Parameters$logFile: length = 1
+[1] "ArchRLogs/ArchR-addGeneIntegrationMatrix-662b5074a96e-Date-2024-04-16_Time-13-28-38.log"
+
+
+
+2024-04-16 13:35:02 : mat, Class = dgCMatrix
+mat: nRows = 2000, nCols = 9742
+mat: NonZeroEntries = 9319033, EntryRange = [ 0.009 , 265.669 ]
+5 x 5 sparse Matrix of class "dgCMatrix"
+       wt20-2#CGATGATGTTGCCTGG-1 wt12-1#AATGGAATCGTTCTAT-1
+RNF223                         .                     .    
+TTLL10                         .                     .    
+FNDC10                         .                     .    
+PRDM16                         .                     0.883
+AJAP1                          .                     .    
+       wt5-2#ACTCGGGAGACAGCTG-1 wt5-1#GGGTTATAGGAGTACC-1
+RNF223                    .                        .    
+TTLL10                    .                        .    
+FNDC10                    .                        .    
+PRDM16                    3.159                    1.427
+AJAP1                     0.855                    0.069
+       wt28-1#CATTCATCAGGTGTGA-1
+RNF223                     2.038
+TTLL10                     .    
+FNDC10                     .    
+PRDM16                     1.993
+AJAP1                      .    
+
+
+
+2024-04-16 13:35:02 : weightList, Class = SimpleList
+
+weightList$w1: length = 1
+[1] "/storage/singlecell/jeanl/organoid/data/archr/cherry_project/ImputeWeights/Impute-Weights-662b4cecac37-Date-2024-04-16_Time-13-34-45-Rep-1"
+
+
+weightList$w2: length = 1
+[1] "/storage/singlecell/jeanl/organoid/data/archr/cherry_project/ImputeWeights/Impute-Weights-662b4cecac37-Date-2024-04-16_Time-13-34-45-Rep-2"
+
+
+2024-04-16 13:35:02 : Imputing Matrix (1 of 2), 0 mins elapsed.
+
+2024-04-16 13:35:02 : 
+
+2024-04-16 13:35:02 : 
+
+2024-04-16 13:35:16 : 
+2024-04-16 13:35:30 : Imputing Matrix (2 of 2), 0.451 mins elapsed.
+
+2024-04-16 13:35:30 : 
+
+2024-04-16 13:35:30 : 
+
+2024-04-16 13:35:44 : 
+2024-04-16 13:35:59 : Finished Imputing Matrix, 0.941 mins elapsed.
+
+2024-04-16 13:35:59 : GeneScoreMat-Block-Impute-2, Class = dgeMatrix
+GeneScoreMat-Block-Impute-2: nRows = 2000, nCols = 9742
+GeneScoreMat-Block-Impute-2: NonZeroEntries = 19484000, EntryRange = [ 0 , 6.93371794205265 ]
+5 x 5 Matrix of class "dgeMatrix"
+       wt20-2#CGATGATGTTGCCTGG-1 wt12-1#AATGGAATCGTTCTAT-1
+RNF223                 0.5354056                 0.6354635
+TTLL10                 0.1075868                 0.1786941
+FNDC10                 0.2812899                 0.2371913
+PRDM16                 1.0299709                 2.2811411
+AJAP1                  0.3926636                 0.4957389
+       wt5-2#ACTCGGGAGACAGCTG-1 wt5-1#GGGTTATAGGAGTACC-1
+RNF223                0.6166586                0.6615547
+TTLL10                0.2703040                0.2552804
+FNDC10                0.3177619                0.3431708
+PRDM16                2.0839945                1.9535912
+AJAP1                 0.4280952                0.4445599
+       wt28-1#CATTCATCAGGTGTGA-1
+RNF223                 0.6988639
+TTLL10                 0.1178982
+FNDC10                 0.3788700
+PRDM16                 1.4896474
+AJAP1                  0.6963340
+
+
+2024-04-16 13:36:04 : Block (2 of 8) : Seurat FindTransferAnchors, 6.992 mins elapsed.
+
+2024-04-16 13:38:10 : transferAnchors-2, Class = character
+
+transferAnchors-2: length = 1
+[1] "An AnchorSet object containing 2095 anchors between the reference and query Seurat objects. \n This can be used as input to TransferData."
+
+
+
+2024-04-16 13:38:11 : rDSub-2, Class = matrix
+ 
+2024-04-16 13:38:11 : rDSub-2, Class = array
+                               LSI1      LSI2       LSI3       LSI4       LSI5
+wt20-2#CGATGATGTTGCCTGG-1 -4.625635 -1.596789  0.1751030  0.1783292  0.9846661
+wt12-1#AATGGAATCGTTCTAT-1 -4.602159  2.334284 -0.8250471  0.5166051 -0.1156847
+wt5-2#ACTCGGGAGACAGCTG-1  -4.675821  2.008195  0.9800386  1.1183899 -0.1728420
+wt5-1#GGGTTATAGGAGTACC-1  -4.682812  2.075700  0.7782978  0.7605815  0.3308785
+wt28-1#CATTCATCAGGTGTGA-1 -4.659897 -1.083577  0.1460945 -1.0933491  0.3646938
+
+rDSub-2: nRows = 9742, nCols = 30
+
+2024-04-16 13:38:11 : Block (2 of 8) : Seurat TransferData Cell Group Labels, 9.099 mins elapsed.
+2024-04-16 13:38:13 : Block (2 of 8) : Seurat TransferData Cell Names Labels, 9.148 mins elapsed.
+2024-04-16 13:38:41 : Block (2 of 8) : Saving TransferAnchors Joint CCA, 9.605 mins elapsed.
+2024-04-16 13:38:43 : Block (2 of 8) : Completed Integration, 9.634 mins elapsed.
+2024-04-16 13:38:43 : Block (3 of 8) : Computing Integration, 9.644 mins elapsed.
+2024-04-16 13:38:45 : Block (3 of 8) : Identifying Variable Genes, 9.681 mins elapsed.
+2024-04-16 13:38:49 : Block (3 of 8) : Getting GeneScoreMatrix, 9.734 mins elapsed.
+
+2024-04-16 13:39:17 : GeneScoreMat-Block-3, Class = dgCMatrix
+GeneScoreMat-Block-3: nRows = 2000, nCols = 9741
+GeneScoreMat-Block-3: NonZeroEntries = 9182508, EntryRange = [ 0.011 , 408.945 ]
+5 x 5 sparse Matrix of class "dgCMatrix"
+       wt20-1#TTTGGTTAGGAGACTC-1 wt5-2#GCCAGCACATTGAACC-1
+TTLL10                     .                        .    
+PRDM16                     0.818                    2.017
+AJAP1                      0.177                    2.184
+CHD5                       0.386                    .    
+ESPN                       .                        .    
+       wt5-2#TACATGGAGATCACCT-1 wt20-1#AGGACGACATACCCGG-1
+TTLL10                     .                        .    
+PRDM16                     .                        .    
+AJAP1                      .                        .    
+CHD5                       .                        .    
+ESPN                       4.64                     6.293
+       wt28-2#TTGCGAACATGGAGGT-1
+TTLL10                     0.156
+PRDM16                     .    
+AJAP1                      0.394
+CHD5                       .    
+ESPN                       .    
+
+
+2024-04-16 13:39:17 : Block (3 of 8) : Imputing GeneScoreMatrix, 10.203 mins elapsed.
+
+2024-04-16 13:39:17 : addImputeWeights Input-Parameters, Class = list
+
+addImputeWeights Input-Parameters$ArchRProj: length = 1
+
+addImputeWeights Input-Parameters$reducedDims: length = 1
+[1] "IterativeLSI"
+
+
+addImputeWeights Input-Parameters$dimsToUse: length = 30
+[1] 1 2 3 4 5 6
+
+
+addImputeWeights Input-Parameters$scaleDims: length = 0
+NULL
+
+
+addImputeWeights Input-Parameters$corCutOff: length = 1
+[1] 0.75
+
+
+addImputeWeights Input-Parameters$td: length = 1
+[1] 3
+
+
+addImputeWeights Input-Parameters$ka: length = 1
+[1] 4
+
+
+addImputeWeights Input-Parameters$sampleCells: length = 1
+[1] 5000
+
+
+addImputeWeights Input-Parameters$nRep: length = 1
+[1] 2
+
+
+addImputeWeights Input-Parameters$k: length = 1
+[1] 15
+
+
+addImputeWeights Input-Parameters$epsilon: length = 1
+[1] 1
+
+
+addImputeWeights Input-Parameters$useHdf5: length = 1
+[1] TRUE
+
+
+addImputeWeights Input-Parameters$randomSuffix: length = 1
+[1] TRUE
+
+
+addImputeWeights Input-Parameters$threads: length = 1
+[1] 1
+
+
+addImputeWeights Input-Parameters$seed: length = 1
+[1] 1
+
+
+addImputeWeights Input-Parameters$verbose: length = 1
+[1] TRUE
+
+
+addImputeWeights Input-Parameters$logFile: length = 1
+[1] "ArchRLogs/ArchR-addGeneIntegrationMatrix-662b5074a96e-Date-2024-04-16_Time-13-28-38.log"
+
+
+2024-04-16 13:39:17 : Computing Impute Weights Using Magic (Cell 2018), 0 mins elapsed.
+2024-04-16 13:39:17 : Computing Partial Diffusion Matrix with Magic (1 of 2), 0.001 mins elapsed.
+2024-04-16 13:39:25 : Computing Partial Diffusion Matrix with Magic (2 of 2), 0.131 mins elapsed.
+2024-04-16 13:39:32 : Completed Getting Magic Weights!, 0.258 mins elapsed.
+
+2024-04-16 13:39:32 : imputeMatrix Input-Parameters, Class = list
+
+imputeMatrix Input-Parameters$mat: nRows = 2000, nCols = 9741
+imputeMatrix Input-Parameters$mat: NonZeroEntries = 9182508, EntryRange = [ 0.011 , 408.945 ]
+5 x 5 sparse Matrix of class "dgCMatrix"
+       wt20-1#TTTGGTTAGGAGACTC-1 wt5-2#GCCAGCACATTGAACC-1
+TTLL10                     .                        .    
+PRDM16                     0.818                    2.017
+AJAP1                      0.177                    2.184
+CHD5                       0.386                    .    
+ESPN                       .                        .    
+       wt5-2#TACATGGAGATCACCT-1 wt20-1#AGGACGACATACCCGG-1
+TTLL10                     .                        .    
+PRDM16                     .                        .    
+AJAP1                      .                        .    
+CHD5                       .                        .    
+ESPN                       4.64                     6.293
+       wt28-2#TTGCGAACATGGAGGT-1
+TTLL10                     0.156
+PRDM16                     .    
+AJAP1                      0.394
+CHD5                       .    
+ESPN                       .    
+
+
+imputeMatrix Input-Parameters$threads: length = 1
+[1] 1
+
+
+imputeMatrix Input-Parameters$verbose: length = 1
+[1] FALSE
+
+
+imputeMatrix Input-Parameters$logFile: length = 1
+[1] "ArchRLogs/ArchR-addGeneIntegrationMatrix-662b5074a96e-Date-2024-04-16_Time-13-28-38.log"
+
+
+
+2024-04-16 13:39:32 : mat, Class = dgCMatrix
+mat: nRows = 2000, nCols = 9741
+mat: NonZeroEntries = 9182508, EntryRange = [ 0.011 , 408.945 ]
+5 x 5 sparse Matrix of class "dgCMatrix"
+       wt20-1#TTTGGTTAGGAGACTC-1 wt5-2#GCCAGCACATTGAACC-1
+TTLL10                     .                        .    
+PRDM16                     0.818                    2.017
+AJAP1                      0.177                    2.184
+CHD5                       0.386                    .    
+ESPN                       .                        .    
+       wt5-2#TACATGGAGATCACCT-1 wt20-1#AGGACGACATACCCGG-1
+TTLL10                     .                        .    
+PRDM16                     .                        .    
+AJAP1                      .                        .    
+CHD5                       .                        .    
+ESPN                       4.64                     6.293
+       wt28-2#TTGCGAACATGGAGGT-1
+TTLL10                     0.156
+PRDM16                     .    
+AJAP1                      0.394
+CHD5                       .    
+ESPN                       .    
+
+
+
+2024-04-16 13:39:33 : weightList, Class = SimpleList
+
+weightList$w1: length = 1
+[1] "/storage/singlecell/jeanl/organoid/data/archr/cherry_project/ImputeWeights/Impute-Weights-662bf3130d9-Date-2024-04-16_Time-13-39-17-Rep-1"
+
+
+weightList$w2: length = 1
+[1] "/storage/singlecell/jeanl/organoid/data/archr/cherry_project/ImputeWeights/Impute-Weights-662bf3130d9-Date-2024-04-16_Time-13-39-17-Rep-2"
+
+
+2024-04-16 13:39:33 : Imputing Matrix (1 of 2), 0 mins elapsed.
+
+2024-04-16 13:39:33 : 
+
+2024-04-16 13:39:33 : 
+
+2024-04-16 13:39:45 : 
+2024-04-16 13:39:58 : Imputing Matrix (2 of 2), 0.429 mins elapsed.
+
+2024-04-16 13:39:58 : 
+
+2024-04-16 13:39:58 : 
+
+2024-04-16 13:40:11 : 
+2024-04-16 13:40:24 : Finished Imputing Matrix, 0.866 mins elapsed.
+
+2024-04-16 13:40:25 : GeneScoreMat-Block-Impute-3, Class = dgeMatrix
+GeneScoreMat-Block-Impute-3: nRows = 2000, nCols = 9741
+GeneScoreMat-Block-Impute-3: NonZeroEntries = 19482000, EntryRange = [ 0 , 7.25570573264621 ]
+5 x 5 Matrix of class "dgeMatrix"
+       wt20-1#TTTGGTTAGGAGACTC-1 wt5-2#GCCAGCACATTGAACC-1
+TTLL10                 0.1417686                0.1723804
+PRDM16                 1.6266558                1.4563789
+AJAP1                  0.4788205                0.3763462
+CHD5                   0.2057631                0.2166286
+ESPN                   0.9372103                0.3426177
+       wt5-2#TACATGGAGATCACCT-1 wt20-1#AGGACGACATACCCGG-1
+TTLL10                0.2120969                 0.1443815
+PRDM16                1.5383135                 1.8516789
+AJAP1                 0.6622647                 0.4424514
+CHD5                  0.4072546                 0.2200870
+ESPN                  0.5421251                 0.9912744
+       wt28-2#TTGCGAACATGGAGGT-1
+TTLL10                0.09477778
+PRDM16                1.48151667
+AJAP1                 0.43073752
+CHD5                  0.17741231
+ESPN                  0.70779113
+
+
+2024-04-16 13:40:29 : Block (3 of 8) : Seurat FindTransferAnchors, 11.414 mins elapsed.
+
+2024-04-16 13:42:30 : transferAnchors-3, Class = character
+
+transferAnchors-3: length = 1
+[1] "An AnchorSet object containing 2550 anchors between the reference and query Seurat objects. \n This can be used as input to TransferData."
+
+
+
+2024-04-16 13:42:30 : rDSub-3, Class = matrix
+ 
+2024-04-16 13:42:30 : rDSub-3, Class = array
+                               LSI1      LSI2       LSI3       LSI4        LSI5
+wt20-1#TTTGGTTAGGAGACTC-1 -4.685110 1.7050116 -1.3223419 -0.1689606  0.14108988
+wt5-2#GCCAGCACATTGAACC-1  -4.385266 1.5850847  1.2461095  1.2540314  0.07911876
+wt5-2#TACATGGAGATCACCT-1  -4.428419 0.3874089  1.2192849 -0.7982617 -1.38437365
+wt20-1#AGGACGACATACCCGG-1 -4.294271 1.0178574 -0.5146427  0.2291333  0.55741442
+wt28-2#TTGCGAACATGGAGGT-1 -4.252161 1.9329782 -1.5851302  0.4690393 -0.61845550
+
+rDSub-3: nRows = 9741, nCols = 30
+
+2024-04-16 13:42:30 : Block (3 of 8) : Seurat TransferData Cell Group Labels, 13.43 mins elapsed.
+2024-04-16 13:42:33 : Block (3 of 8) : Seurat TransferData Cell Names Labels, 13.477 mins elapsed.
+2024-04-16 13:43:02 : Block (3 of 8) : Saving TransferAnchors Joint CCA, 13.956 mins elapsed.
+2024-04-16 13:43:04 : Block (3 of 8) : Completed Integration, 13.983 mins elapsed.
+2024-04-16 13:43:04 : Block (4 of 8) : Computing Integration, 13.994 mins elapsed.
+2024-04-16 13:43:07 : Block (4 of 8) : Identifying Variable Genes, 14.04 mins elapsed.
+2024-04-16 13:43:10 : Block (4 of 8) : Getting GeneScoreMatrix, 14.093 mins elapsed.
+
+2024-04-16 13:43:39 : GeneScoreMat-Block-4, Class = dgCMatrix
+GeneScoreMat-Block-4: nRows = 2000, nCols = 9741
+GeneScoreMat-Block-4: NonZeroEntries = 9290500, EntryRange = [ 0.011 , 369.631 ]
+5 x 5 sparse Matrix of class "dgCMatrix"
+          wt28-1#AACCGATAGCAATAAC-1 wt5-2#CGGACTGGTAACTGAA-1
+PRDM16                            .                    2.365
+AJAP1                             .                    0.766
+CHD5                              .                    0.858
+ESPN                              .                    0.256
+LINC01714                         .                    0.864
+          wt20-2#GAGGATGCACAGGAAC-1 wt12-1#GCTCGAGGTGATAAGT-1
+PRDM16                            .                     2.447
+AJAP1                             .                     0.662
+CHD5                              .                     .    
+ESPN                              .                     .    
+LINC01714                         .                     0.333
+          wt5-2#TGCTCGTTCGTTTGAG-1
+PRDM16                       2.180
+AJAP1                        0.094
+CHD5                         .    
+ESPN                         0.614
+LINC01714                    0.247
+
+
+2024-04-16 13:43:39 : Block (4 of 8) : Imputing GeneScoreMatrix, 14.57 mins elapsed.
+
+2024-04-16 13:43:39 : addImputeWeights Input-Parameters, Class = list
+
+addImputeWeights Input-Parameters$ArchRProj: length = 1
+
+addImputeWeights Input-Parameters$reducedDims: length = 1
+[1] "IterativeLSI"
+
+
+addImputeWeights Input-Parameters$dimsToUse: length = 30
+[1] 1 2 3 4 5 6
+
+
+addImputeWeights Input-Parameters$scaleDims: length = 0
+NULL
+
+
+addImputeWeights Input-Parameters$corCutOff: length = 1
+[1] 0.75
+
+
+addImputeWeights Input-Parameters$td: length = 1
+[1] 3
+
+
+addImputeWeights Input-Parameters$ka: length = 1
+[1] 4
+
+
+addImputeWeights Input-Parameters$sampleCells: length = 1
+[1] 5000
+
+
+addImputeWeights Input-Parameters$nRep: length = 1
+[1] 2
+
+
+addImputeWeights Input-Parameters$k: length = 1
+[1] 15
+
+
+addImputeWeights Input-Parameters$epsilon: length = 1
+[1] 1
+
+
+addImputeWeights Input-Parameters$useHdf5: length = 1
+[1] TRUE
+
+
+addImputeWeights Input-Parameters$randomSuffix: length = 1
+[1] TRUE
+
+
+addImputeWeights Input-Parameters$threads: length = 1
+[1] 1
+
+
+addImputeWeights Input-Parameters$seed: length = 1
+[1] 1
+
+
+addImputeWeights Input-Parameters$verbose: length = 1
+[1] TRUE
+
+
+addImputeWeights Input-Parameters$logFile: length = 1
+[1] "ArchRLogs/ArchR-addGeneIntegrationMatrix-662b5074a96e-Date-2024-04-16_Time-13-28-38.log"
+
+
+2024-04-16 13:43:39 : Computing Impute Weights Using Magic (Cell 2018), 0 mins elapsed.
+2024-04-16 13:43:39 : Computing Partial Diffusion Matrix with Magic (1 of 2), 0.001 mins elapsed.
+2024-04-16 13:43:47 : Computing Partial Diffusion Matrix with Magic (2 of 2), 0.13 mins elapsed.
+2024-04-16 13:43:54 : Completed Getting Magic Weights!, 0.254 mins elapsed.
+
+2024-04-16 13:43:54 : imputeMatrix Input-Parameters, Class = list
+
+imputeMatrix Input-Parameters$mat: nRows = 2000, nCols = 9741
+imputeMatrix Input-Parameters$mat: NonZeroEntries = 9290500, EntryRange = [ 0.011 , 369.631 ]
+5 x 5 sparse Matrix of class "dgCMatrix"
+          wt28-1#AACCGATAGCAATAAC-1 wt5-2#CGGACTGGTAACTGAA-1
+PRDM16                            .                    2.365
+AJAP1                             .                    0.766
+CHD5                              .                    0.858
+ESPN                              .                    0.256
+LINC01714                         .                    0.864
+          wt20-2#GAGGATGCACAGGAAC-1 wt12-1#GCTCGAGGTGATAAGT-1
+PRDM16                            .                     2.447
+AJAP1                             .                     0.662
+CHD5                              .                     .    
+ESPN                              .                     .    
+LINC01714                         .                     0.333
+          wt5-2#TGCTCGTTCGTTTGAG-1
+PRDM16                       2.180
+AJAP1                        0.094
+CHD5                         .    
+ESPN                         0.614
+LINC01714                    0.247
+
+
+imputeMatrix Input-Parameters$threads: length = 1
+[1] 1
+
+
+imputeMatrix Input-Parameters$verbose: length = 1
+[1] FALSE
+
+
+imputeMatrix Input-Parameters$logFile: length = 1
+[1] "ArchRLogs/ArchR-addGeneIntegrationMatrix-662b5074a96e-Date-2024-04-16_Time-13-28-38.log"
+
+
+
+2024-04-16 13:43:54 : mat, Class = dgCMatrix
+mat: nRows = 2000, nCols = 9741
+mat: NonZeroEntries = 9290500, EntryRange = [ 0.011 , 369.631 ]
+5 x 5 sparse Matrix of class "dgCMatrix"
+          wt28-1#AACCGATAGCAATAAC-1 wt5-2#CGGACTGGTAACTGAA-1
+PRDM16                            .                    2.365
+AJAP1                             .                    0.766
+CHD5                              .                    0.858
+ESPN                              .                    0.256
+LINC01714                         .                    0.864
+          wt20-2#GAGGATGCACAGGAAC-1 wt12-1#GCTCGAGGTGATAAGT-1
+PRDM16                            .                     2.447
+AJAP1                             .                     0.662
+CHD5                              .                     .    
+ESPN                              .                     .    
+LINC01714                         .                     0.333
+          wt5-2#TGCTCGTTCGTTTGAG-1
+PRDM16                       2.180
+AJAP1                        0.094
+CHD5                         .    
+ESPN                         0.614
+LINC01714                    0.247
+
+
+
+2024-04-16 13:43:54 : weightList, Class = SimpleList
+
+weightList$w1: length = 1
+[1] "/storage/singlecell/jeanl/organoid/data/archr/cherry_project/ImputeWeights/Impute-Weights-662b2963737a-Date-2024-04-16_Time-13-43-39-Rep-1"
+
+
+weightList$w2: length = 1
+[1] "/storage/singlecell/jeanl/organoid/data/archr/cherry_project/ImputeWeights/Impute-Weights-662b2963737a-Date-2024-04-16_Time-13-43-39-Rep-2"
+
+
+2024-04-16 13:43:54 : Imputing Matrix (1 of 2), 0 mins elapsed.
+
+2024-04-16 13:43:54 : 
+
+2024-04-16 13:43:54 : 
+
+2024-04-16 13:44:07 : 
+2024-04-16 13:44:20 : Imputing Matrix (2 of 2), 0.422 mins elapsed.
+
+2024-04-16 13:44:20 : 
+
+2024-04-16 13:44:20 : 
+
+2024-04-16 13:44:32 : 
+2024-04-16 13:44:46 : Finished Imputing Matrix, 0.858 mins elapsed.
+
+2024-04-16 13:44:46 : GeneScoreMat-Block-Impute-4, Class = dgeMatrix
+GeneScoreMat-Block-Impute-4: nRows = 2000, nCols = 9741
+GeneScoreMat-Block-Impute-4: NonZeroEntries = 19482000, EntryRange = [ 0 , 6.44440495360358 ]
+5 x 5 Matrix of class "dgeMatrix"
+          wt28-1#AACCGATAGCAATAAC-1 wt5-2#CGGACTGGTAACTGAA-1
+PRDM16                    0.9899653                2.2261684
+AJAP1                     0.3617279                0.4797313
+CHD5                      0.2407439                0.3099878
+ESPN                      0.3987948                0.4711793
+LINC01714                 0.1468024                0.2849529
+          wt20-2#GAGGATGCACAGGAAC-1 wt12-1#GCTCGAGGTGATAAGT-1
+PRDM16                    0.8895308                 2.2306207
+AJAP1                     0.3572780                 0.6749513
+CHD5                      0.1635274                 0.2018755
+ESPN                      0.4734739                 0.4748612
+LINC01714                 0.1413859                 0.2514295
+          wt5-2#TGCTCGTTCGTTTGAG-1
+PRDM16                   1.9862495
+AJAP1                    0.4463751
+CHD5                     0.2921376
+ESPN                     0.4939272
+LINC01714                0.2511209
+
+
+2024-04-16 13:44:51 : Block (4 of 8) : Seurat FindTransferAnchors, 15.768 mins elapsed.
+
+2024-04-16 13:46:38 : transferAnchors-4, Class = character
+
+transferAnchors-4: length = 1
+[1] "An AnchorSet object containing 2078 anchors between the reference and query Seurat objects. \n This can be used as input to TransferData."
+
+
+
+2024-04-16 13:46:38 : rDSub-4, Class = matrix
+ 
+2024-04-16 13:46:38 : rDSub-4, Class = array
+                               LSI1       LSI2        LSI3      LSI4
+wt28-1#AACCGATAGCAATAAC-1 -4.722378 -1.6660510  0.34169041 0.6936180
+wt5-2#CGGACTGGTAACTGAA-1  -4.898094  1.7307340  0.70700267 0.1305080
+wt20-2#GAGGATGCACAGGAAC-1 -4.506001 -1.7304792  0.07227386 0.8963458
+wt12-1#GCTCGAGGTGATAAGT-1 -4.942408 -0.3559911 -0.15470783 0.3059386
+wt5-2#TGCTCGTTCGTTTGAG-1  -4.896366  1.7886984  0.70362111 0.3972084
+                                 LSI5
+wt28-1#AACCGATAGCAATAAC-1 -0.06928200
+wt5-2#CGGACTGGTAACTGAA-1   0.74204402
+wt20-2#GAGGATGCACAGGAAC-1 -0.27837076
+wt12-1#GCTCGAGGTGATAAGT-1  0.06098669
+wt5-2#TGCTCGTTCGTTTGAG-1   0.64802808
+
+rDSub-4: nRows = 9741, nCols = 30
+
+2024-04-16 13:46:38 : Block (4 of 8) : Seurat TransferData Cell Group Labels, 17.553 mins elapsed.
+2024-04-16 13:46:40 : Block (4 of 8) : Seurat TransferData Cell Names Labels, 17.598 mins elapsed.
+2024-04-16 13:47:08 : Block (4 of 8) : Saving TransferAnchors Joint CCA, 18.06 mins elapsed.
+2024-04-16 13:47:10 : Block (4 of 8) : Completed Integration, 18.085 mins elapsed.
+2024-04-16 13:47:10 : Block (5 of 8) : Computing Integration, 18.094 mins elapsed.
+2024-04-16 13:47:12 : Block (5 of 8) : Identifying Variable Genes, 18.131 mins elapsed.
+2024-04-16 13:47:16 : Block (5 of 8) : Getting GeneScoreMatrix, 18.183 mins elapsed.
+
+2024-04-16 13:47:43 : GeneScoreMat-Block-5, Class = dgCMatrix
+GeneScoreMat-Block-5: nRows = 2000, nCols = 9741
+GeneScoreMat-Block-5: NonZeroEntries = 9344794, EntryRange = [ 0.01 , 502.544 ]
+5 x 5 sparse Matrix of class "dgCMatrix"
+          wt5-2#GCGGAAAAGAGCCTGA-1 wt20-1#AGTGCGCAGGTGAACC-1
+PRDM16                       1.266                     0.654
+AJAP1                        0.315                     0.472
+CHD5                         0.448                     .    
+LINC00337                    .                         .    
+ESPN                         0.357                     0.922
+          wt28-1#AGGACGAAGTTCAGGG-1 wt5-2#TCACAAGGTAACTCCA-1
+PRDM16                        0.907                    0.847
+AJAP1                         0.446                    0.611
+CHD5                          .                        .    
+LINC00337                     0.595                    0.879
+ESPN                          .                        0.795
+          wt5-2#AGATTCGAGGAATGGA-1
+PRDM16                       0.609
+AJAP1                        0.659
+CHD5                         0.717
+LINC00337                    .    
+ESPN                         0.429
+
+
+2024-04-16 13:47:43 : Block (5 of 8) : Imputing GeneScoreMatrix, 18.646 mins elapsed.
+
+2024-04-16 13:47:43 : addImputeWeights Input-Parameters, Class = list
+
+addImputeWeights Input-Parameters$ArchRProj: length = 1
+
+addImputeWeights Input-Parameters$reducedDims: length = 1
+[1] "IterativeLSI"
+
+
+addImputeWeights Input-Parameters$dimsToUse: length = 30
+[1] 1 2 3 4 5 6
+
+
+addImputeWeights Input-Parameters$scaleDims: length = 0
+NULL
+
+
+addImputeWeights Input-Parameters$corCutOff: length = 1
+[1] 0.75
+
+
+addImputeWeights Input-Parameters$td: length = 1
+[1] 3
+
+
+addImputeWeights Input-Parameters$ka: length = 1
+[1] 4
+
+
+addImputeWeights Input-Parameters$sampleCells: length = 1
+[1] 5000
+
+
+addImputeWeights Input-Parameters$nRep: length = 1
+[1] 2
+
+
+addImputeWeights Input-Parameters$k: length = 1
+[1] 15
+
+
+addImputeWeights Input-Parameters$epsilon: length = 1
+[1] 1
+
+
+addImputeWeights Input-Parameters$useHdf5: length = 1
+[1] TRUE
+
+
+addImputeWeights Input-Parameters$randomSuffix: length = 1
+[1] TRUE
+
+
+addImputeWeights Input-Parameters$threads: length = 1
+[1] 1
+
+
+addImputeWeights Input-Parameters$seed: length = 1
+[1] 1
+
+
+addImputeWeights Input-Parameters$verbose: length = 1
+[1] TRUE
+
+
+addImputeWeights Input-Parameters$logFile: length = 1
+[1] "ArchRLogs/ArchR-addGeneIntegrationMatrix-662b5074a96e-Date-2024-04-16_Time-13-28-38.log"
+
+
+2024-04-16 13:47:43 : Computing Impute Weights Using Magic (Cell 2018), 0 mins elapsed.
+2024-04-16 13:47:43 : Computing Partial Diffusion Matrix with Magic (1 of 2), 0.001 mins elapsed.
+2024-04-16 13:47:51 : Computing Partial Diffusion Matrix with Magic (2 of 2), 0.126 mins elapsed.
+2024-04-16 13:47:59 : Completed Getting Magic Weights!, 0.255 mins elapsed.
+
+2024-04-16 13:47:59 : imputeMatrix Input-Parameters, Class = list
+
+imputeMatrix Input-Parameters$mat: nRows = 2000, nCols = 9741
+imputeMatrix Input-Parameters$mat: NonZeroEntries = 9344794, EntryRange = [ 0.01 , 502.544 ]
+5 x 5 sparse Matrix of class "dgCMatrix"
+          wt5-2#GCGGAAAAGAGCCTGA-1 wt20-1#AGTGCGCAGGTGAACC-1
+PRDM16                       1.266                     0.654
+AJAP1                        0.315                     0.472
+CHD5                         0.448                     .    
+LINC00337                    .                         .    
+ESPN                         0.357                     0.922
+          wt28-1#AGGACGAAGTTCAGGG-1 wt5-2#TCACAAGGTAACTCCA-1
+PRDM16                        0.907                    0.847
+AJAP1                         0.446                    0.611
+CHD5                          .                        .    
+LINC00337                     0.595                    0.879
+ESPN                          .                        0.795
+          wt5-2#AGATTCGAGGAATGGA-1
+PRDM16                       0.609
+AJAP1                        0.659
+CHD5                         0.717
+LINC00337                    .    
+ESPN                         0.429
+
+
+imputeMatrix Input-Parameters$threads: length = 1
+[1] 1
+
+
+imputeMatrix Input-Parameters$verbose: length = 1
+[1] FALSE
+
+
+imputeMatrix Input-Parameters$logFile: length = 1
+[1] "ArchRLogs/ArchR-addGeneIntegrationMatrix-662b5074a96e-Date-2024-04-16_Time-13-28-38.log"
+
+
+
+2024-04-16 13:47:59 : mat, Class = dgCMatrix
+mat: nRows = 2000, nCols = 9741
+mat: NonZeroEntries = 9344794, EntryRange = [ 0.01 , 502.544 ]
+5 x 5 sparse Matrix of class "dgCMatrix"
+          wt5-2#GCGGAAAAGAGCCTGA-1 wt20-1#AGTGCGCAGGTGAACC-1
+PRDM16                       1.266                     0.654
+AJAP1                        0.315                     0.472
+CHD5                         0.448                     .    
+LINC00337                    .                         .    
+ESPN                         0.357                     0.922
+          wt28-1#AGGACGAAGTTCAGGG-1 wt5-2#TCACAAGGTAACTCCA-1
+PRDM16                        0.907                    0.847
+AJAP1                         0.446                    0.611
+CHD5                          .                        .    
+LINC00337                     0.595                    0.879
+ESPN                          .                        0.795
+          wt5-2#AGATTCGAGGAATGGA-1
+PRDM16                       0.609
+AJAP1                        0.659
+CHD5                         0.717
+LINC00337                    .    
+ESPN                         0.429
+
+
+
+2024-04-16 13:47:59 : weightList, Class = SimpleList
+
+weightList$w1: length = 1
+[1] "/storage/singlecell/jeanl/organoid/data/archr/cherry_project/ImputeWeights/Impute-Weights-662b308eaddf-Date-2024-04-16_Time-13-47-43-Rep-1"
+
+
+weightList$w2: length = 1
+[1] "/storage/singlecell/jeanl/organoid/data/archr/cherry_project/ImputeWeights/Impute-Weights-662b308eaddf-Date-2024-04-16_Time-13-47-43-Rep-2"
+
+
+2024-04-16 13:47:59 : Imputing Matrix (1 of 2), 0 mins elapsed.
+
+2024-04-16 13:47:59 : 
+
+2024-04-16 13:47:59 : 
+
+2024-04-16 13:48:12 : 
+2024-04-16 13:48:25 : Imputing Matrix (2 of 2), 0.428 mins elapsed.
+
+2024-04-16 13:48:25 : 
+
+2024-04-16 13:48:25 : 
+
+2024-04-16 13:48:37 : 
+2024-04-16 13:48:51 : Finished Imputing Matrix, 0.866 mins elapsed.
+
+2024-04-16 13:48:51 : GeneScoreMat-Block-Impute-5, Class = dgeMatrix
+GeneScoreMat-Block-Impute-5: nRows = 2000, nCols = 9741
+GeneScoreMat-Block-Impute-5: NonZeroEntries = 19482000, EntryRange = [ 0 , 7.93911700702129 ]
+5 x 5 Matrix of class "dgeMatrix"
+          wt5-2#GCGGAAAAGAGCCTGA-1 wt20-1#AGTGCGCAGGTGAACC-1
+PRDM16                   2.0000503                 1.6400185
+AJAP1                    0.4778667                 0.4474535
+CHD5                     0.2696670                 0.1267033
+LINC00337                0.2751601                 0.2254449
+ESPN                     0.4745978                 0.7190942
+          wt28-1#AGGACGAAGTTCAGGG-1 wt5-2#TCACAAGGTAACTCCA-1
+PRDM16                    1.6079146                1.9952806
+AJAP1                     0.4360075                0.5014155
+CHD5                      0.1448683                0.2516559
+LINC00337                 0.2855378                0.3293968
+ESPN                      0.6635277                0.4896412
+          wt5-2#AGATTCGAGGAATGGA-1
+PRDM16                   1.7516120
+AJAP1                    0.4923891
+CHD5                     0.2155812
+LINC00337                0.2674859
+ESPN                     0.5242807
+
+
+2024-04-16 13:48:56 : Block (5 of 8) : Seurat FindTransferAnchors, 19.853 mins elapsed.
+
+2024-04-16 13:50:47 : transferAnchors-5, Class = character
+
+transferAnchors-5: length = 1
+[1] "An AnchorSet object containing 2396 anchors between the reference and query Seurat objects. \n This can be used as input to TransferData."
+
+
+
+2024-04-16 13:50:47 : rDSub-5, Class = matrix
+ 
+2024-04-16 13:50:47 : rDSub-5, Class = array
+                               LSI1      LSI2        LSI3      LSI4        LSI5
+wt5-2#GCGGAAAAGAGCCTGA-1  -4.812352 1.9062807  0.99584617 0.6453086  0.03363381
+wt20-1#AGTGCGCAGGTGAACC-1 -4.391158 1.9608772 -1.83179455 0.1756638 -0.17534119
+wt28-1#AGGACGAAGTTCAGGG-1 -4.284419 1.7751170 -1.90875558 0.1331875 -0.12075792
+wt5-2#TCACAAGGTAACTCCA-1  -4.908856 1.6780475  0.69011239 0.4060548  0.68073976
+wt5-2#AGATTCGAGGAATGGA-1  -4.797283 0.1437432 -0.03214045 0.1452255 -0.48007311
+
+rDSub-5: nRows = 9741, nCols = 30
+
+2024-04-16 13:50:47 : Block (5 of 8) : Seurat TransferData Cell Group Labels, 21.712 mins elapsed.
+2024-04-16 13:50:50 : Block (5 of 8) : Seurat TransferData Cell Names Labels, 21.757 mins elapsed.
+2024-04-16 13:51:18 : Block (5 of 8) : Saving TransferAnchors Joint CCA, 22.221 mins elapsed.
+2024-04-16 13:51:19 : Block (5 of 8) : Completed Integration, 22.244 mins elapsed.
+2024-04-16 13:51:20 : Block (6 of 8) : Computing Integration, 22.253 mins elapsed.
+2024-04-16 13:51:22 : Block (6 of 8) : Identifying Variable Genes, 22.29 mins elapsed.
+2024-04-16 13:51:25 : Block (6 of 8) : Getting GeneScoreMatrix, 22.343 mins elapsed.
+
+2024-04-16 13:51:53 : GeneScoreMat-Block-6, Class = dgCMatrix
+GeneScoreMat-Block-6: nRows = 2000, nCols = 9741
+GeneScoreMat-Block-6: NonZeroEntries = 9384147, EntryRange = [ 0.01 , 491.575 ]
+5 x 5 sparse Matrix of class "dgCMatrix"
+       wt12-1#GACTAGTAGATATGTG-1 wt28-2#GATCATGTCAGTTGAC-1
+TTLL10                     .                         .    
+PRDM16                     0.896                     0.365
+AJAP1                      0.802                     0.106
+CHD5                       .                         0.861
+ESPN                       .                         .    
+       wt5-2#CGTAAACTCATTCATC-1 wt12-1#TAGCACACACTTGCGG-1
+TTLL10                    .                             .
+PRDM16                    1.608                         .
+AJAP1                     1.741                         .
+CHD5                      .                             .
+ESPN                      .                             .
+       wt5-1#GCGTAGCAGGAGACTC-1
+TTLL10                    1.718
+PRDM16                    0.239
+AJAP1                     0.942
+CHD5                      .    
+ESPN                      .    
+
+
+2024-04-16 13:51:53 : Block (6 of 8) : Imputing GeneScoreMatrix, 22.81 mins elapsed.
+
+2024-04-16 13:51:53 : addImputeWeights Input-Parameters, Class = list
+
+addImputeWeights Input-Parameters$ArchRProj: length = 1
+
+addImputeWeights Input-Parameters$reducedDims: length = 1
+[1] "IterativeLSI"
+
+
+addImputeWeights Input-Parameters$dimsToUse: length = 30
+[1] 1 2 3 4 5 6
+
+
+addImputeWeights Input-Parameters$scaleDims: length = 0
+NULL
+
+
+addImputeWeights Input-Parameters$corCutOff: length = 1
+[1] 0.75
+
+
+addImputeWeights Input-Parameters$td: length = 1
+[1] 3
+
+
+addImputeWeights Input-Parameters$ka: length = 1
+[1] 4
+
+
+addImputeWeights Input-Parameters$sampleCells: length = 1
+[1] 5000
+
+
+addImputeWeights Input-Parameters$nRep: length = 1
+[1] 2
+
+
+addImputeWeights Input-Parameters$k: length = 1
+[1] 15
+
+
+addImputeWeights Input-Parameters$epsilon: length = 1
+[1] 1
+
+
+addImputeWeights Input-Parameters$useHdf5: length = 1
+[1] TRUE
+
+
+addImputeWeights Input-Parameters$randomSuffix: length = 1
+[1] TRUE
+
+
+addImputeWeights Input-Parameters$threads: length = 1
+[1] 1
+
+
+addImputeWeights Input-Parameters$seed: length = 1
+[1] 1
+
+
+addImputeWeights Input-Parameters$verbose: length = 1
+[1] TRUE
+
+
+addImputeWeights Input-Parameters$logFile: length = 1
+[1] "ArchRLogs/ArchR-addGeneIntegrationMatrix-662b5074a96e-Date-2024-04-16_Time-13-28-38.log"
+
+
+2024-04-16 13:51:53 : Computing Impute Weights Using Magic (Cell 2018), 0 mins elapsed.
+2024-04-16 13:51:53 : Computing Partial Diffusion Matrix with Magic (1 of 2), 0.001 mins elapsed.
+2024-04-16 13:52:01 : Computing Partial Diffusion Matrix with Magic (2 of 2), 0.129 mins elapsed.
+2024-04-16 13:52:08 : Completed Getting Magic Weights!, 0.254 mins elapsed.
+
+2024-04-16 13:52:08 : imputeMatrix Input-Parameters, Class = list
+
+imputeMatrix Input-Parameters$mat: nRows = 2000, nCols = 9741
+imputeMatrix Input-Parameters$mat: NonZeroEntries = 9384147, EntryRange = [ 0.01 , 491.575 ]
+5 x 5 sparse Matrix of class "dgCMatrix"
+       wt12-1#GACTAGTAGATATGTG-1 wt28-2#GATCATGTCAGTTGAC-1
+TTLL10                     .                         .    
+PRDM16                     0.896                     0.365
+AJAP1                      0.802                     0.106
+CHD5                       .                         0.861
+ESPN                       .                         .    
+       wt5-2#CGTAAACTCATTCATC-1 wt12-1#TAGCACACACTTGCGG-1
+TTLL10                    .                             .
+PRDM16                    1.608                         .
+AJAP1                     1.741                         .
+CHD5                      .                             .
+ESPN                      .                             .
+       wt5-1#GCGTAGCAGGAGACTC-1
+TTLL10                    1.718
+PRDM16                    0.239
+AJAP1                     0.942
+CHD5                      .    
+ESPN                      .    
+
+
+imputeMatrix Input-Parameters$threads: length = 1
+[1] 1
+
+
+imputeMatrix Input-Parameters$verbose: length = 1
+[1] FALSE
+
+
+imputeMatrix Input-Parameters$logFile: length = 1
+[1] "ArchRLogs/ArchR-addGeneIntegrationMatrix-662b5074a96e-Date-2024-04-16_Time-13-28-38.log"
+
+
+
+2024-04-16 13:52:09 : mat, Class = dgCMatrix
+mat: nRows = 2000, nCols = 9741
+mat: NonZeroEntries = 9384147, EntryRange = [ 0.01 , 491.575 ]
+5 x 5 sparse Matrix of class "dgCMatrix"
+       wt12-1#GACTAGTAGATATGTG-1 wt28-2#GATCATGTCAGTTGAC-1
+TTLL10                     .                         .    
+PRDM16                     0.896                     0.365
+AJAP1                      0.802                     0.106
+CHD5                       .                         0.861
+ESPN                       .                         .    
+       wt5-2#CGTAAACTCATTCATC-1 wt12-1#TAGCACACACTTGCGG-1
+TTLL10                    .                             .
+PRDM16                    1.608                         .
+AJAP1                     1.741                         .
+CHD5                      .                             .
+ESPN                      .                             .
+       wt5-1#GCGTAGCAGGAGACTC-1
+TTLL10                    1.718
+PRDM16                    0.239
+AJAP1                     0.942
+CHD5                      .    
+ESPN                      .    
+
+
+
+2024-04-16 13:52:09 : weightList, Class = SimpleList
+
+weightList$w1: length = 1
+[1] "/storage/singlecell/jeanl/organoid/data/archr/cherry_project/ImputeWeights/Impute-Weights-662b700eefcf-Date-2024-04-16_Time-13-51-53-Rep-1"
+
+
+weightList$w2: length = 1
+[1] "/storage/singlecell/jeanl/organoid/data/archr/cherry_project/ImputeWeights/Impute-Weights-662b700eefcf-Date-2024-04-16_Time-13-51-53-Rep-2"
+
+
+2024-04-16 13:52:09 : Imputing Matrix (1 of 2), 0 mins elapsed.
+
+2024-04-16 13:52:09 : 
+
+2024-04-16 13:52:09 : 
+
+2024-04-16 13:52:22 : 
+2024-04-16 13:52:34 : Imputing Matrix (2 of 2), 0.43 mins elapsed.
+
+2024-04-16 13:52:34 : 
+
+2024-04-16 13:52:35 : 
+
+2024-04-16 13:52:47 : 
+2024-04-16 13:53:01 : Finished Imputing Matrix, 0.869 mins elapsed.
+
+2024-04-16 13:53:01 : GeneScoreMat-Block-Impute-6, Class = dgeMatrix
+GeneScoreMat-Block-Impute-6: nRows = 2000, nCols = 9741
+GeneScoreMat-Block-Impute-6: NonZeroEntries = 19482000, EntryRange = [ 0 , 6.92427122066252 ]
+5 x 5 Matrix of class "dgeMatrix"
+       wt12-1#GACTAGTAGATATGTG-1 wt28-2#GATCATGTCAGTTGAC-1
+TTLL10                 0.2435706                0.06807625
+PRDM16                 1.9108393                0.96204217
+AJAP1                  0.7363861                0.34227256
+CHD5                   0.4353799                0.20456319
+ESPN                   0.4454268                0.52749085
+       wt5-2#CGTAAACTCATTCATC-1 wt12-1#TAGCACACACTTGCGG-1
+TTLL10                0.2509991                 0.1194713
+PRDM16                2.1474408                 1.9293753
+AJAP1                 0.5240070                 0.4150790
+CHD5                  0.3319653                 0.1419576
+ESPN                  0.5091823                 0.7278737
+       wt5-1#GCGTAGCAGGAGACTC-1
+TTLL10                0.2304582
+PRDM16                1.9254233
+AJAP1                 0.4770138
+CHD5                  0.2976452
+ESPN                  0.4704896
+
+
+2024-04-16 13:53:06 : Block (6 of 8) : Seurat FindTransferAnchors, 24.02 mins elapsed.
+
+2024-04-16 13:54:59 : transferAnchors-6, Class = character
+
+transferAnchors-6: length = 1
+[1] "An AnchorSet object containing 2196 anchors between the reference and query Seurat objects. \n This can be used as input to TransferData."
+
+
+
+2024-04-16 13:54:59 : rDSub-6, Class = matrix
+ 
+2024-04-16 13:54:59 : rDSub-6, Class = array
+                               LSI1       LSI2       LSI3       LSI4
+wt12-1#GACTAGTAGATATGTG-1 -4.758764  0.2116696  1.1218393 -1.3119419
+wt28-2#GATCATGTCAGTTGAC-1 -4.666549 -1.8449516  0.1086068  0.9682781
+wt5-2#CGTAAACTCATTCATC-1  -4.476026  0.8031350  0.7343834  1.0907194
+wt12-1#TAGCACACACTTGCGG-1 -4.446516  1.8092009 -0.5346883  0.6707840
+wt5-1#GCGTAGCAGGAGACTC-1  -4.812799  1.8662415  0.7603900  0.7578035
+                                 LSI5
+wt12-1#GACTAGTAGATATGTG-1 -0.54971583
+wt28-2#GATCATGTCAGTTGAC-1  0.04473398
+wt5-2#CGTAAACTCATTCATC-1   0.64925398
+wt12-1#TAGCACACACTTGCGG-1 -0.82688533
+wt5-1#GCGTAGCAGGAGACTC-1   0.54647629
+
+rDSub-6: nRows = 9741, nCols = 30
+
+2024-04-16 13:54:59 : Block (6 of 8) : Seurat TransferData Cell Group Labels, 25.901 mins elapsed.
+2024-04-16 13:55:01 : Block (6 of 8) : Seurat TransferData Cell Names Labels, 25.947 mins elapsed.
+2024-04-16 13:55:30 : Block (6 of 8) : Saving TransferAnchors Joint CCA, 26.423 mins elapsed.
+2024-04-16 13:55:32 : Block (6 of 8) : Completed Integration, 26.451 mins elapsed.
+2024-04-16 13:55:32 : Block (7 of 8) : Computing Integration, 26.462 mins elapsed.
+2024-04-16 13:55:35 : Block (7 of 8) : Identifying Variable Genes, 26.499 mins elapsed.
+2024-04-16 13:55:38 : Block (7 of 8) : Getting GeneScoreMatrix, 26.554 mins elapsed.
+
+2024-04-16 13:56:09 : GeneScoreMat-Block-7, Class = dgCMatrix
+GeneScoreMat-Block-7: nRows = 2000, nCols = 9741
+GeneScoreMat-Block-7: NonZeroEntries = 9275891, EntryRange = [ 0.011 , 688.689 ]
+5 x 5 sparse Matrix of class "dgCMatrix"
+         wt12-2#GGTCATAAGCATTCCA-1 wt12-2#CCTGGGAGTTTGATCG-1
+PRDM16                       3.287                     .    
+AJAP1                        0.536                     0.845
+ESPN                         .                         2.199
+SLC2A7                       .                         .    
+MIR34AHG                     1.179                     .    
+         wt5-2#TAGACTGTCATCGCTC-1 wt12-3#TGCCTGTGTCACATTG-1
+PRDM16                      3.283                     2.071
+AJAP1                       0.621                     .    
+ESPN                        0.712                     0.417
+SLC2A7                      0.412                     .    
+MIR34AHG                    0.362                     .    
+         wt5-2#GGAGTAGGTGCACCCA-1
+PRDM16                      9.202
+AJAP1                       0.498
+ESPN                        .    
+SLC2A7                      .    
+MIR34AHG                    2.641
+
+
+2024-04-16 13:56:09 : Block (7 of 8) : Imputing GeneScoreMatrix, 27.079 mins elapsed.
+
+2024-04-16 13:56:09 : addImputeWeights Input-Parameters, Class = list
+
+addImputeWeights Input-Parameters$ArchRProj: length = 1
+
+addImputeWeights Input-Parameters$reducedDims: length = 1
+[1] "IterativeLSI"
+
+
+addImputeWeights Input-Parameters$dimsToUse: length = 30
+[1] 1 2 3 4 5 6
+
+
+addImputeWeights Input-Parameters$scaleDims: length = 0
+NULL
+
+
+addImputeWeights Input-Parameters$corCutOff: length = 1
+[1] 0.75
+
+
+addImputeWeights Input-Parameters$td: length = 1
+[1] 3
+
+
+addImputeWeights Input-Parameters$ka: length = 1
+[1] 4
+
+
+addImputeWeights Input-Parameters$sampleCells: length = 1
+[1] 5000
+
+
+addImputeWeights Input-Parameters$nRep: length = 1
+[1] 2
+
+
+addImputeWeights Input-Parameters$k: length = 1
+[1] 15
+
+
+addImputeWeights Input-Parameters$epsilon: length = 1
+[1] 1
+
+
+addImputeWeights Input-Parameters$useHdf5: length = 1
+[1] TRUE
+
+
+addImputeWeights Input-Parameters$randomSuffix: length = 1
+[1] TRUE
+
+
+addImputeWeights Input-Parameters$threads: length = 1
+[1] 1
+
+
+addImputeWeights Input-Parameters$seed: length = 1
+[1] 1
+
+
+addImputeWeights Input-Parameters$verbose: length = 1
+[1] TRUE
+
+
+addImputeWeights Input-Parameters$logFile: length = 1
+[1] "ArchRLogs/ArchR-addGeneIntegrationMatrix-662b5074a96e-Date-2024-04-16_Time-13-28-38.log"
+
+
+2024-04-16 13:56:09 : Computing Impute Weights Using Magic (Cell 2018), 0 mins elapsed.
+2024-04-16 13:56:09 : Computing Partial Diffusion Matrix with Magic (1 of 2), 0.001 mins elapsed.
+2024-04-16 13:56:19 : Computing Partial Diffusion Matrix with Magic (2 of 2), 0.157 mins elapsed.
+2024-04-16 13:56:28 : Completed Getting Magic Weights!, 0.317 mins elapsed.
+
+2024-04-16 13:56:28 : imputeMatrix Input-Parameters, Class = list
+
+imputeMatrix Input-Parameters$mat: nRows = 2000, nCols = 9741
+imputeMatrix Input-Parameters$mat: NonZeroEntries = 9275891, EntryRange = [ 0.011 , 688.689 ]
+5 x 5 sparse Matrix of class "dgCMatrix"
+         wt12-2#GGTCATAAGCATTCCA-1 wt12-2#CCTGGGAGTTTGATCG-1
+PRDM16                       3.287                     .    
+AJAP1                        0.536                     0.845
+ESPN                         .                         2.199
+SLC2A7                       .                         .    
+MIR34AHG                     1.179                     .    
+         wt5-2#TAGACTGTCATCGCTC-1 wt12-3#TGCCTGTGTCACATTG-1
+PRDM16                      3.283                     2.071
+AJAP1                       0.621                     .    
+ESPN                        0.712                     0.417
+SLC2A7                      0.412                     .    
+MIR34AHG                    0.362                     .    
+         wt5-2#GGAGTAGGTGCACCCA-1
+PRDM16                      9.202
+AJAP1                       0.498
+ESPN                        .    
+SLC2A7                      .    
+MIR34AHG                    2.641
+
+
+imputeMatrix Input-Parameters$threads: length = 1
+[1] 1
+
+
+imputeMatrix Input-Parameters$verbose: length = 1
+[1] FALSE
+
+
+imputeMatrix Input-Parameters$logFile: length = 1
+[1] "ArchRLogs/ArchR-addGeneIntegrationMatrix-662b5074a96e-Date-2024-04-16_Time-13-28-38.log"
+
+
+
+2024-04-16 13:56:29 : mat, Class = dgCMatrix
+mat: nRows = 2000, nCols = 9741
+mat: NonZeroEntries = 9275891, EntryRange = [ 0.011 , 688.689 ]
+5 x 5 sparse Matrix of class "dgCMatrix"
+         wt12-2#GGTCATAAGCATTCCA-1 wt12-2#CCTGGGAGTTTGATCG-1
+PRDM16                       3.287                     .    
+AJAP1                        0.536                     0.845
+ESPN                         .                         2.199
+SLC2A7                       .                         .    
+MIR34AHG                     1.179                     .    
+         wt5-2#TAGACTGTCATCGCTC-1 wt12-3#TGCCTGTGTCACATTG-1
+PRDM16                      3.283                     2.071
+AJAP1                       0.621                     .    
+ESPN                        0.712                     0.417
+SLC2A7                      0.412                     .    
+MIR34AHG                    0.362                     .    
+         wt5-2#GGAGTAGGTGCACCCA-1
+PRDM16                      9.202
+AJAP1                       0.498
+ESPN                        .    
+SLC2A7                      .    
+MIR34AHG                    2.641
+
+
+
+2024-04-16 13:56:29 : weightList, Class = SimpleList
+
+weightList$w1: length = 1
+[1] "/storage/singlecell/jeanl/organoid/data/archr/cherry_project/ImputeWeights/Impute-Weights-662b22de9354-Date-2024-04-16_Time-13-56-09-Rep-1"
+
+
+weightList$w2: length = 1
+[1] "/storage/singlecell/jeanl/organoid/data/archr/cherry_project/ImputeWeights/Impute-Weights-662b22de9354-Date-2024-04-16_Time-13-56-09-Rep-2"
+
+
+2024-04-16 13:56:29 : Imputing Matrix (1 of 2), 0 mins elapsed.
+
+2024-04-16 13:56:29 : 
+
+2024-04-16 13:56:29 : 
+
+2024-04-16 13:56:43 : 
+2024-04-16 13:56:57 : Imputing Matrix (2 of 2), 0.466 mins elapsed.
+
+2024-04-16 13:56:57 : 
+
+2024-04-16 13:56:57 : 
+
+2024-04-16 13:57:11 : 
+2024-04-16 13:57:25 : Finished Imputing Matrix, 0.94 mins elapsed.
+
+2024-04-16 13:57:25 : GeneScoreMat-Block-Impute-7, Class = dgeMatrix
+GeneScoreMat-Block-Impute-7: nRows = 2000, nCols = 9741
+GeneScoreMat-Block-Impute-7: NonZeroEntries = 19482000, EntryRange = [ 0 , 9.85644800720027 ]
+5 x 5 Matrix of class "dgeMatrix"
+         wt12-2#GGTCATAAGCATTCCA-1 wt12-2#CCTGGGAGTTTGATCG-1
+PRDM16                  2.24152334                 1.6186180
+AJAP1                   0.76371290                 0.6455734
+ESPN                    0.42731527                 0.6723274
+SLC2A7                  0.09136745                 0.1035281
+MIR34AHG                0.18297662                 0.1373192
+         wt5-2#TAGACTGTCATCGCTC-1 wt12-3#TGCCTGTGTCACATTG-1
+PRDM16                  1.9511954                 2.0974211
+AJAP1                   0.5166701                 0.4416546
+ESPN                    0.5103514                 0.7104967
+SLC2A7                  0.1722628                 0.0929211
+MIR34AHG                0.2135491                 0.1427840
+         wt5-2#GGAGTAGGTGCACCCA-1
+PRDM16                  2.0443247
+AJAP1                   0.4516300
+ESPN                    0.5134698
+SLC2A7                  0.1998702
+MIR34AHG                0.2426466
+
+
+2024-04-16 13:57:31 : Block (7 of 8) : Seurat FindTransferAnchors, 28.435 mins elapsed.
+
+2024-04-16 13:59:55 : transferAnchors-7, Class = character
+
+transferAnchors-7: length = 1
+[1] "An AnchorSet object containing 1811 anchors between the reference and query Seurat objects. \n This can be used as input to TransferData."
+
+
+
+2024-04-16 13:59:55 : rDSub-7, Class = matrix
+ 
+2024-04-16 13:59:55 : rDSub-7, Class = array
+                               LSI1      LSI2        LSI3       LSI4
+wt12-2#GGTCATAAGCATTCCA-1 -4.776449 0.5654492  1.05006459 -1.7335616
+wt12-2#CCTGGGAGTTTGATCG-1 -4.784311 0.9363130  0.05738758 -0.5458508
+wt5-2#TAGACTGTCATCGCTC-1  -4.981747 1.3488636  0.91817826  0.1279749
+wt12-3#TGCCTGTGTCACATTG-1 -4.723185 2.0471415 -0.82888120  0.1837983
+wt5-2#GGAGTAGGTGCACCCA-1  -4.832882 1.7032681  0.63655289  0.3307967
+                                 LSI5
+wt12-2#GGTCATAAGCATTCCA-1  0.47500458
+wt12-2#CCTGGGAGTTTGATCG-1 -0.54015649
+wt5-2#TAGACTGTCATCGCTC-1  -0.05669640
+wt12-3#TGCCTGTGTCACATTG-1 -0.09873561
+wt5-2#GGAGTAGGTGCACCCA-1   0.56837296
+
+rDSub-7: nRows = 9741, nCols = 30
+
+2024-04-16 13:59:55 : Block (7 of 8) : Seurat TransferData Cell Group Labels, 30.848 mins elapsed.
+2024-04-16 13:59:58 : Block (7 of 8) : Seurat TransferData Cell Names Labels, 30.895 mins elapsed.
+2024-04-16 14:00:28 : Block (7 of 8) : Saving TransferAnchors Joint CCA, 31.391 mins elapsed.
+2024-04-16 14:00:30 : Block (7 of 8) : Completed Integration, 31.423 mins elapsed.
+2024-04-16 14:00:31 : Block (8 of 8) : Computing Integration, 31.435 mins elapsed.
+2024-04-16 14:00:33 : Block (8 of 8) : Identifying Variable Genes, 31.478 mins elapsed.
+2024-04-16 14:00:37 : Block (8 of 8) : Getting GeneScoreMatrix, 31.537 mins elapsed.
+
+2024-04-16 14:01:06 : GeneScoreMat-Block-8, Class = dgCMatrix
+GeneScoreMat-Block-8: nRows = 2000, nCols = 9741
+GeneScoreMat-Block-8: NonZeroEntries = 9331546, EntryRange = [ 0.011 , 656.475 ]
+5 x 5 sparse Matrix of class "dgCMatrix"
+       wt5-2#GCGGAAAGTAAGTGCG-1 wt20-1#TCGATTTGTGGAGTGT-1
+RNF223                    1.501                     .    
+HES5                      1.258                     1.994
+PRDM16                    2.192                     1.364
+AJAP1                     0.594                     0.079
+ESPN                      0.386                     .    
+       wt5-1#ACTTTCAAGTCCGATT-1 wt20-1#CTGGCAGCAACGGACA-1
+RNF223                    1.131                         .
+HES5                      .                             .
+PRDM16                    0.743                         .
+AJAP1                     .                             .
+ESPN                      1.047                         .
+       wt12-1#AAACTGCTCAGTTGAC-1
+RNF223                     .    
+HES5                       .    
+PRDM16                     .    
+AJAP1                      .    
+ESPN                       1.527
+
+
+2024-04-16 14:01:06 : Block (8 of 8) : Imputing GeneScoreMatrix, 32.02 mins elapsed.
+
+2024-04-16 14:01:06 : addImputeWeights Input-Parameters, Class = list
+
+addImputeWeights Input-Parameters$ArchRProj: length = 1
+
+addImputeWeights Input-Parameters$reducedDims: length = 1
+[1] "IterativeLSI"
+
+
+addImputeWeights Input-Parameters$dimsToUse: length = 30
+[1] 1 2 3 4 5 6
+
+
+addImputeWeights Input-Parameters$scaleDims: length = 0
+NULL
+
+
+addImputeWeights Input-Parameters$corCutOff: length = 1
+[1] 0.75
+
+
+addImputeWeights Input-Parameters$td: length = 1
+[1] 3
+
+
+addImputeWeights Input-Parameters$ka: length = 1
+[1] 4
+
+
+addImputeWeights Input-Parameters$sampleCells: length = 1
+[1] 5000
+
+
+addImputeWeights Input-Parameters$nRep: length = 1
+[1] 2
+
+
+addImputeWeights Input-Parameters$k: length = 1
+[1] 15
+
+
+addImputeWeights Input-Parameters$epsilon: length = 1
+[1] 1
+
+
+addImputeWeights Input-Parameters$useHdf5: length = 1
+[1] TRUE
+
+
+addImputeWeights Input-Parameters$randomSuffix: length = 1
+[1] TRUE
+
+
+addImputeWeights Input-Parameters$threads: length = 1
+[1] 1
+
+
+addImputeWeights Input-Parameters$seed: length = 1
+[1] 1
+
+
+addImputeWeights Input-Parameters$verbose: length = 1
+[1] TRUE
+
+
+addImputeWeights Input-Parameters$logFile: length = 1
+[1] "ArchRLogs/ArchR-addGeneIntegrationMatrix-662b5074a96e-Date-2024-04-16_Time-13-28-38.log"
+
+
+2024-04-16 14:01:06 : Computing Impute Weights Using Magic (Cell 2018), 0 mins elapsed.
+2024-04-16 14:01:06 : Computing Partial Diffusion Matrix with Magic (1 of 2), 0.001 mins elapsed.
+2024-04-16 14:01:14 : Computing Partial Diffusion Matrix with Magic (2 of 2), 0.131 mins elapsed.
+2024-04-16 14:01:21 : Completed Getting Magic Weights!, 0.262 mins elapsed.
+
+2024-04-16 14:01:21 : imputeMatrix Input-Parameters, Class = list
+
+imputeMatrix Input-Parameters$mat: nRows = 2000, nCols = 9741
+imputeMatrix Input-Parameters$mat: NonZeroEntries = 9331546, EntryRange = [ 0.011 , 656.475 ]
+5 x 5 sparse Matrix of class "dgCMatrix"
+       wt5-2#GCGGAAAGTAAGTGCG-1 wt20-1#TCGATTTGTGGAGTGT-1
+RNF223                    1.501                     .    
+HES5                      1.258                     1.994
+PRDM16                    2.192                     1.364
+AJAP1                     0.594                     0.079
+ESPN                      0.386                     .    
+       wt5-1#ACTTTCAAGTCCGATT-1 wt20-1#CTGGCAGCAACGGACA-1
+RNF223                    1.131                         .
+HES5                      .                             .
+PRDM16                    0.743                         .
+AJAP1                     .                             .
+ESPN                      1.047                         .
+       wt12-1#AAACTGCTCAGTTGAC-1
+RNF223                     .    
+HES5                       .    
+PRDM16                     .    
+AJAP1                      .    
+ESPN                       1.527
+
+
+imputeMatrix Input-Parameters$threads: length = 1
+[1] 1
+
+
+imputeMatrix Input-Parameters$verbose: length = 1
+[1] FALSE
+
+
+imputeMatrix Input-Parameters$logFile: length = 1
+[1] "ArchRLogs/ArchR-addGeneIntegrationMatrix-662b5074a96e-Date-2024-04-16_Time-13-28-38.log"
+
+
+
+2024-04-16 14:01:22 : mat, Class = dgCMatrix
+mat: nRows = 2000, nCols = 9741
+mat: NonZeroEntries = 9331546, EntryRange = [ 0.011 , 656.475 ]
+5 x 5 sparse Matrix of class "dgCMatrix"
+       wt5-2#GCGGAAAGTAAGTGCG-1 wt20-1#TCGATTTGTGGAGTGT-1
+RNF223                    1.501                     .    
+HES5                      1.258                     1.994
+PRDM16                    2.192                     1.364
+AJAP1                     0.594                     0.079
+ESPN                      0.386                     .    
+       wt5-1#ACTTTCAAGTCCGATT-1 wt20-1#CTGGCAGCAACGGACA-1
+RNF223                    1.131                         .
+HES5                      .                             .
+PRDM16                    0.743                         .
+AJAP1                     .                             .
+ESPN                      1.047                         .
+       wt12-1#AAACTGCTCAGTTGAC-1
+RNF223                     .    
+HES5                       .    
+PRDM16                     .    
+AJAP1                      .    
+ESPN                       1.527
+
+
+
+2024-04-16 14:01:22 : weightList, Class = SimpleList
+
+weightList$w1: length = 1
+[1] "/storage/singlecell/jeanl/organoid/data/archr/cherry_project/ImputeWeights/Impute-Weights-662b4e31be1f-Date-2024-04-16_Time-14-01-06-Rep-1"
+
+
+weightList$w2: length = 1
+[1] "/storage/singlecell/jeanl/organoid/data/archr/cherry_project/ImputeWeights/Impute-Weights-662b4e31be1f-Date-2024-04-16_Time-14-01-06-Rep-2"
+
+
+2024-04-16 14:01:22 : Imputing Matrix (1 of 2), 0 mins elapsed.
+
+2024-04-16 14:01:22 : 
+
+2024-04-16 14:01:22 : 
+
+2024-04-16 14:01:35 : 
+2024-04-16 14:01:47 : Imputing Matrix (2 of 2), 0.423 mins elapsed.
+
+2024-04-16 14:01:47 : 
+
+2024-04-16 14:01:47 : 
+
+2024-04-16 14:02:00 : 
+2024-04-16 14:02:13 : Finished Imputing Matrix, 0.863 mins elapsed.
+
+2024-04-16 14:02:14 : GeneScoreMat-Block-Impute-8, Class = dgeMatrix
+GeneScoreMat-Block-Impute-8: nRows = 2000, nCols = 9741
+GeneScoreMat-Block-Impute-8: NonZeroEntries = 19482000, EntryRange = [ 0 , 11.2847373665073 ]
+5 x 5 Matrix of class "dgeMatrix"
+       wt5-2#GCGGAAAGTAAGTGCG-1 wt20-1#TCGATTTGTGGAGTGT-1
+RNF223                0.7537390                 0.5148145
+HES5                  1.7159671                 0.8156479
+PRDM16                1.9938946                 1.1770458
+AJAP1                 0.5073874                 0.3446458
+ESPN                  0.4971548                 0.4081193
+       wt5-1#ACTTTCAAGTCCGATT-1 wt20-1#CTGGCAGCAACGGACA-1
+RNF223                0.4768831                 0.5034281
+HES5                  0.8879490                 0.8166614
+PRDM16                1.6022786                 0.9846820
+AJAP1                 0.3766851                 0.3592701
+ESPN                  0.3367282                 0.4747923
+       wt12-1#AAACTGCTCAGTTGAC-1
+RNF223                 0.5908816
+HES5                   0.9473317
+PRDM16                 1.9653925
+AJAP1                  0.7429637
+ESPN                   0.5254532
+
+
+2024-04-16 14:02:18 : Block (8 of 8) : Seurat FindTransferAnchors, 33.232 mins elapsed.
+
+2024-04-16 14:04:17 : transferAnchors-8, Class = character
+
+transferAnchors-8: length = 1
+[1] "An AnchorSet object containing 2214 anchors between the reference and query Seurat objects. \n This can be used as input to TransferData."
+
+
+
+2024-04-16 14:04:17 : rDSub-8, Class = matrix
+ 
+2024-04-16 14:04:17 : rDSub-8, Class = array
+                               LSI1       LSI2      LSI3       LSI4        LSI5
+wt5-2#GCGGAAAGTAAGTGCG-1  -4.824285  1.5182490 1.1043064  0.4152405  0.14994748
+wt20-1#TCGATTTGTGGAGTGT-1 -4.635407 -2.0322919 0.1516883  0.4804214  0.01660423
+wt5-1#ACTTTCAAGTCCGATT-1  -4.365267  1.5734644 0.7058926  1.3394141 -0.98562957
+wt20-1#CTGGCAGCAACGGACA-1 -4.635863 -1.5565210 0.2764086  0.8817405 -0.32829603
+wt12-1#AAACTGCTCAGTTGAC-1 -4.420356  0.1896829 1.0309919 -1.3510174 -0.03332564
+
+rDSub-8: nRows = 9741, nCols = 30
+
+2024-04-16 14:04:17 : Block (8 of 8) : Seurat TransferData Cell Group Labels, 35.209 mins elapsed.
+2024-04-16 14:04:20 : Block (8 of 8) : Seurat TransferData Cell Names Labels, 35.254 mins elapsed.
+2024-04-16 14:04:49 : Block (8 of 8) : Saving TransferAnchors Joint CCA, 35.733 mins elapsed.
+2024-04-16 14:04:50 : Block (8 of 8) : Completed Integration, 35.762 mins elapsed.
+2024-04-16 14:04:51 : Block (1 of 8) : Plotting Joint UMAP, 35.774 mins elapsed.
+2024-04-16 14:05:38 : Block (2 of 8) : Plotting Joint UMAP, 36.554 mins elapsed.
+2024-04-16 14:06:24 : Block (3 of 8) : Plotting Joint UMAP, 37.327 mins elapsed.
+2024-04-16 14:07:11 : Block (4 of 8) : Plotting Joint UMAP, 38.1 mins elapsed.
+2024-04-16 14:07:57 : Block (5 of 8) : Plotting Joint UMAP, 38.875 mins elapsed.
+2024-04-16 14:08:44 : Block (6 of 8) : Plotting Joint UMAP, 39.652 mins elapsed.
+2024-04-16 14:09:30 : Block (7 of 8) : Plotting Joint UMAP, 40.426 mins elapsed.
+2024-04-16 14:10:17 : Block (8 of 8) : Plotting Joint UMAP, 41.204 mins elapsed.
+2024-04-16 14:11:04 : Completed Integration with RNA Matrix, 41.985 mins elapsed.
+
+------- Completed
+
+End Time : 2024-04-16 14:11:04
+Elapsed Time Minutes = 42.4399035255114
+Elapsed Time Hours = 0.707331881456905
+
+-------
+
+
+

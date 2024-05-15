@@ -1,0 +1,12 @@
+starting at Thu Mar 28 16:36:02 CDT 2024 on mhgcp-d00.grid.bcm.edu
+SLURM_JOBID=1331585
+class: ArchRProject 
+outputDirectory: /storage/singlecell/jeanl/organoid/data/archr/proj_all 
+samples(18): Multi_H9_D35 Multi_H9_D47 ... wt28-1 wt28-2
+sampleColData names(1): ArrowFiles
+cellColData names(15): Sample nMultiFrags ... DoubletEnrichment
+  BlacklistRatio
+numberOfCells(1): 222686
+medianTSS(1): 12.964
+medianFrags(1): 7629
+ended at Thu Mar 28 18:08:57 CDT 2024 on mhgcp-d00.grid.bcm.edu. Time elapsed: 01:32:55

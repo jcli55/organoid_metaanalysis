@@ -1,0 +1,1297 @@
+
+           ___      .______        ______  __    __  .______      
+          /   \     |   _  \      /      ||  |  |  | |   _  \     
+         /  ^  \    |  |_)  |    |  ,----'|  |__|  | |  |_)  |    
+        /  /_\  \   |      /     |  |     |   __   | |      /     
+       /  _____  \  |  |\  \\___ |  `----.|  |  |  | |  |\  \\___.
+      /__/     \__\ | _| `._____| \______||__|  |__| | _| `._____|
+    
+Logging With ArchR!
+
+Start Time : 2024-04-16 17:05:49
+
+------- ArchR Info
+
+ArchRThreads = 1
+
+------- System Info
+
+Computer OS = unix
+Total Cores = 48
+
+------- Session Info
+
+R version 4.1.3 (2022-03-10)
+Platform: x86_64-conda-linux-gnu (64-bit)
+Running under: Red Hat Enterprise Linux
+
+Matrix products: default
+BLAS/LAPACK: /storage/chen/home/u250758/miniconda3/envs/archr/lib/libopenblasp-r0.3.23.so
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8 LC_NUMERIC=C         LC_TIME=C           
+ [4] LC_COLLATE=C         LC_MONETARY=C        LC_MESSAGES=C       
+ [7] LC_PAPER=C           LC_NAME=C            LC_ADDRESS=C        
+[10] LC_TELEPHONE=C       LC_MEASUREMENT=C     LC_IDENTIFICATION=C 
+
+attached base packages:
+[1] parallel  stats4    stats     graphics  grDevices utils     datasets 
+[8] methods   base     
+
+other attached packages:
+ [1] ArchR_1.0.1                 magrittr_2.0.3             
+ [3] rhdf5_2.38.1                Matrix_1.6-1               
+ [5] data.table_1.14.8           SummarizedExperiment_1.24.0
+ [7] Biobase_2.54.0              GenomicRanges_1.46.1       
+ [9] GenomeInfoDb_1.30.1         IRanges_2.28.0             
+[11] S4Vectors_0.32.4            BiocGenerics_0.40.0        
+[13] MatrixGenerics_1.6.0        matrixStats_1.0.0          
+[15] ggplot2_3.4.3              
+
+loaded via a namespace (and not attached):
+ [1] Rcpp_1.0.11            nabor_0.5.0            pillar_1.9.0          
+ [4] compiler_4.1.3         XVector_0.34.0         rhdf5filters_1.6.0    
+ [7] bitops_1.0-7           tools_4.1.3            zlibbioc_1.40.0       
+[10] lifecycle_1.0.3        tibble_3.2.1           gtable_0.3.4          
+[13] lattice_0.21-8         pkgconfig_2.0.3        rlang_1.1.1           
+[16] DelayedArray_0.20.0    cli_3.6.1              hexbin_1.28.3         
+[19] GenomeInfoDbData_1.2.7 stringr_1.5.0          withr_2.5.0           
+[22] dplyr_1.1.3            gtools_3.9.4           generics_0.1.3        
+[25] vctrs_0.6.3            grid_4.1.3             tidyselect_1.2.0      
+[28] glue_1.6.2             R6_2.5.1               fansi_1.0.4           
+[31] farver_2.1.1           Rhdf5lib_1.16.0        codetools_0.2-19      
+[34] scales_1.2.1           colorspace_2.1-0       labeling_0.4.3        
+[37] utf8_1.2.3             stringi_1.7.12         RCurl_1.98-1.12       
+[40] munsell_0.5.0         
+
+
+------- Log Info
+
+
+2024-04-16 17:05:49 : Input-Parameters, Class = list
+
+Input-Parameters$ArchRProj: length = 1
+
+Input-Parameters$embedding: length = 1
+[1] "UMAP"
+
+
+Input-Parameters$colorBy: length = 1
+[1] "GeneIntegrationMatrix"
+
+
+Input-Parameters$name: length = 20
+[1] "RHO"   "RCVRN" "CRX"   "PROM1" "ARR3"  "OTX2" 
+
+
+Input-Parameters$log2Norm: length = 0
+NULL
+
+
+Input-Parameters$pal: length = 0
+NULL
+
+
+Input-Parameters$size: length = 1
+[1] 0.1
+
+
+Input-Parameters$sampleCells: length = 0
+NULL
+
+
+Input-Parameters$highlightCells: length = 0
+NULL
+
+
+Input-Parameters$rastr: length = 1
+[1] TRUE
+
+
+Input-Parameters$quantCut: length = 2
+[1] 0.01 0.99
+
+
+Input-Parameters$discreteSet: length = 0
+NULL
+
+
+Input-Parameters$continuousSet: length = 0
+NULL
+
+
+Input-Parameters$randomize: length = 1
+[1] TRUE
+
+
+Input-Parameters$keepAxis: length = 1
+[1] FALSE
+
+
+Input-Parameters$baseSize: length = 1
+[1] 10
+
+
+Input-Parameters$plotAs: length = 0
+NULL
+
+
+Input-Parameters$threads: length = 1
+[1] 1
+
+
+Input-Parameters$logFile: length = 1
+[1] "ArchRLogs/ArchR-plotEmbedding-be954b6940b-Date-2024-04-16_Time-17-05-49.log"
+
+
+
+2024-04-16 17:05:49 : Getting UMAP Embedding
+
+2024-04-16 17:05:49 : Embedding data.frame, Class = data.frame
+Embedding data.frame: nRows = 77930, nCols = 2
+                         IterativeLSI#UMAP_Dimension_1
+wt5-1#TTAGCGAAGTGTCACT-1                      6.228827
+wt5-1#GTGCCAGGTTCAGAAA-1                      7.828236
+wt5-1#CTACTTACACTGAAGG-1                      8.318253
+wt5-1#TAAGTGCCAACTCAAC-1                      3.100343
+wt5-1#AACAAAGTCTCGACAA-1                      6.788727
+wt5-1#AGCGTGCGTACATGGG-1                      7.164586
+                         IterativeLSI#UMAP_Dimension_2
+wt5-1#TTAGCGAAGTGTCACT-1                      6.700024
+wt5-1#GTGCCAGGTTCAGAAA-1                      5.279011
+wt5-1#CTACTTACACTGAAGG-1                      5.437188
+wt5-1#TAAGTGCCAACTCAAC-1                      3.161135
+wt5-1#AACAAAGTCTCGACAA-1                      6.165235
+wt5-1#AGCGTGCGTACATGGG-1                      6.641668
+
+
+
+2024-04-16 17:05:49 : ColorBy = GeneIntegrationMatrix
+
+2024-04-16 17:05:49 : Getting Matrix Values...
+
+2024-04-16 17:05:49 : FeatureDF, Class = DFrame
+DataFrame with 21369 rows and 6 columns
+      seqnames     start       end  strand      name     idx
+         <Rle>   <array>   <array> <array>   <array> <array>
+1         chr1     69091     70008       1     OR4F5       1
+2         chr1    817371    819837       1    FAM87B       2
+3         chr1    825138    859446       1 LINC01128       3
+4         chr1    827522    826206       2 LINC00115       4
+5         chr1    876903    868071       2    FAM41C       5
+...        ...       ...       ...     ...       ...     ...
+21365     chrX 155264589 155258241       2    RAB39B     808
+21366     chrX 155334657 155276211       2     CLIC2     809
+21367     chrX 155380787 155381134       1    H2AFB1     810
+21368     chrX 155382115 155383230       1      F8A2     811
+21369     chrX 155669944 155490115       2     TMLHE     812
+
+
+2024-04-16 17:05:49 : idx, Class = integer
+
+idx: length = 20
+[1] 14643  8331 10686 15212 20905  6220
+
+
+
+2024-04-16 17:05:49 : FeatureDF-Subset, Class = DFrame
+DataFrame with 20 rows and 6 columns
+    seqnames     start       end  strand    name     idx
+       <Rle>   <array>   <array> <array> <array> <array>
+1       chr3 129528640 129535169       1     RHO     813
+2      chr17   9905621   9896320       2   RCVRN     226
+3      chr19  47819779  47843330       1     CRX    1041
+4       chr4  16084378  15963076       2   PROM1     138
+5       chrX  70268305  70281840       1    ARR3     348
+...      ...       ...       ...     ...     ...     ...
+16      chr8  30384479  30572261       1   RBPMS     188
+17      chr4 146638893 146642474       1  POU4F2     678
+18     chr15  89221751  89209869       2   RLBP1     550
+19      chr5  36606355  36688334       1  SLC1A3     132
+20      chr4 153789120 153780592       2   SFRP2     706
+
+
+2024-04-16 17:06:50 : Feature-Matrix, Class = dgCMatrix
+Feature-Matrix: nRows = 20, nCols = 77930
+Feature-Matrix: NonZeroEntries = 1053089, EntryRange = [ 9.02779642939483e-05 , 35.4456278775192 ]
+5 x 5 sparse Matrix of class "dgCMatrix"
+     wt5-1#TTAGCGAAGTGTCACT-1 wt5-1#GTGCCAGGTTCAGAAA-1 wt5-1#CTACTTACACTGAAGG-1
+[1,]              .                         .                        .         
+[2,]              0.005938803               .                        0.04097086
+[3,]              0.012296841               0.20356803               0.03373242
+[4,]              0.695083734               1.85432970               0.67515594
+[5,]              .                         0.01468364               0.19847772
+     wt5-1#TAAGTGCCAACTCAAC-1 wt5-1#AACAAAGTCTCGACAA-1
+[1,]               .                        .         
+[2,]               0.02628128               0.01218068
+[3,]               0.14039092               0.02525926
+[4,]               2.49161940               0.69807447
+[5,]               0.02628128               .         
+
+
+
+2024-04-16 17:06:50 : colorMat-Before-Impute, Class = matrix
+ 
+2024-04-16 17:06:50 : colorMat-Before-Impute, Class = array
+      wt5-1#TTAGCGAAGTGTCACT-1 wt5-1#GTGCCAGGTTCAGAAA-1
+RHO                0.000000000               0.00000000
+RCVRN              0.005938803               0.00000000
+CRX                0.012296841               0.20356803
+PROM1              0.695083734               1.85432970
+ARR3               0.000000000               0.01468364
+      wt5-1#CTACTTACACTGAAGG-1 wt5-1#TAAGTGCCAACTCAAC-1
+RHO                 0.00000000               0.00000000
+RCVRN               0.04097086               0.02628128
+CRX                 0.03373242               0.14039092
+PROM1               0.67515594               2.49161940
+ARR3                0.19847772               0.02628128
+      wt5-1#AACAAAGTCTCGACAA-1
+RHO                 0.00000000
+RCVRN               0.01218068
+CRX                 0.02525926
+PROM1               0.69807447
+ARR3                0.00000000
+
+colorMat-Before-Impute: nRows = 20, nCols = 77930
+
+
+2024-04-16 17:06:50 : imputeMatrix Input-Parameters, Class = list
+
+imputeMatrix Input-Parameters$mat: nRows = 20, nCols = 77930
+      wt5-1#TTAGCGAAGTGTCACT-1 wt5-1#GTGCCAGGTTCAGAAA-1
+RHO                0.000000000               0.00000000
+RCVRN              0.005938803               0.00000000
+CRX                0.012296841               0.20356803
+PROM1              0.695083734               1.85432970
+ARR3               0.000000000               0.01468364
+      wt5-1#CTACTTACACTGAAGG-1 wt5-1#TAAGTGCCAACTCAAC-1
+RHO                 0.00000000               0.00000000
+RCVRN               0.04097086               0.02628128
+CRX                 0.03373242               0.14039092
+PROM1               0.67515594               2.49161940
+ARR3                0.19847772               0.02628128
+      wt5-1#AACAAAGTCTCGACAA-1
+RHO                 0.00000000
+RCVRN               0.01218068
+CRX                 0.02525926
+PROM1               0.69807447
+ARR3                0.00000000
+
+
+imputeMatrix Input-Parameters$threads: length = 1
+[1] 1
+
+
+imputeMatrix Input-Parameters$verbose: length = 1
+[1] FALSE
+
+
+imputeMatrix Input-Parameters$logFile: length = 1
+[1] "ArchRLogs/ArchR-plotEmbedding-be954b6940b-Date-2024-04-16_Time-17-05-49.log"
+
+
+
+2024-04-16 17:06:50 : mat, Class = matrix
+ 
+2024-04-16 17:06:50 : mat, Class = array
+      wt5-1#TTAGCGAAGTGTCACT-1 wt5-1#GTGCCAGGTTCAGAAA-1
+RHO                0.000000000               0.00000000
+RCVRN              0.005938803               0.00000000
+CRX                0.012296841               0.20356803
+PROM1              0.695083734               1.85432970
+ARR3               0.000000000               0.01468364
+      wt5-1#CTACTTACACTGAAGG-1 wt5-1#TAAGTGCCAACTCAAC-1
+RHO                 0.00000000               0.00000000
+RCVRN               0.04097086               0.02628128
+CRX                 0.03373242               0.14039092
+PROM1               0.67515594               2.49161940
+ARR3                0.19847772               0.02628128
+      wt5-1#AACAAAGTCTCGACAA-1
+RHO                 0.00000000
+RCVRN               0.01218068
+CRX                 0.02525926
+PROM1               0.69807447
+ARR3                0.00000000
+
+mat: nRows = 20, nCols = 77930
+
+
+2024-04-16 17:06:50 : weightList, Class = SimpleList
+
+weightList$w1: length = 1
+[1] "/storage/singlecell/jeanl/organoid/data/archr/cherry_project/ImputeWeights/Impute-Weights-Rep-1"
+
+
+weightList$w2: length = 1
+[1] "/storage/singlecell/jeanl/organoid/data/archr/cherry_project/ImputeWeights/Impute-Weights-Rep-2"
+
+
+2024-04-16 17:06:50 : Imputing Matrix (1 of 2), 0 mins elapsed.
+
+2024-04-16 17:06:50 : Using weights on disk
+
+2024-04-16 17:06:50 : 1 of 16
+
+2024-04-16 17:06:52 : 2 of 16
+
+2024-04-16 17:06:53 : 3 of 16
+
+2024-04-16 17:06:54 : 4 of 16
+
+2024-04-16 17:06:56 : 5 of 16
+
+2024-04-16 17:06:57 : 6 of 16
+
+2024-04-16 17:06:59 : 7 of 16
+
+2024-04-16 17:07:01 : 8 of 16
+
+2024-04-16 17:07:02 : 9 of 16
+
+2024-04-16 17:07:04 : 10 of 16
+
+2024-04-16 17:07:06 : 11 of 16
+
+2024-04-16 17:07:07 : 12 of 16
+
+2024-04-16 17:07:09 : 13 of 16
+
+2024-04-16 17:07:11 : 14 of 16
+
+2024-04-16 17:07:12 : 15 of 16
+
+2024-04-16 17:07:14 : 16 of 16
+2024-04-16 17:07:16 : Imputing Matrix (2 of 2), 0.425 mins elapsed.
+
+2024-04-16 17:07:16 : Using weights on disk
+
+2024-04-16 17:07:16 : 1 of 16
+
+2024-04-16 17:07:17 : 2 of 16
+
+2024-04-16 17:07:18 : 3 of 16
+
+2024-04-16 17:07:20 : 4 of 16
+
+2024-04-16 17:07:21 : 5 of 16
+
+2024-04-16 17:07:23 : 6 of 16
+
+2024-04-16 17:07:24 : 7 of 16
+
+2024-04-16 17:07:26 : 8 of 16
+
+2024-04-16 17:07:28 : 9 of 16
+
+2024-04-16 17:07:30 : 10 of 16
+
+2024-04-16 17:07:31 : 11 of 16
+
+2024-04-16 17:07:33 : 12 of 16
+
+2024-04-16 17:07:34 : 13 of 16
+
+2024-04-16 17:07:36 : 14 of 16
+
+2024-04-16 17:07:37 : 15 of 16
+
+2024-04-16 17:07:39 : 16 of 16
+2024-04-16 17:07:41 : Finished Imputing Matrix, 0.848 mins elapsed.
+
+2024-04-16 17:07:41 : colorMat-After-Impute, Class = matrix
+ 
+2024-04-16 17:07:41 : colorMat-After-Impute, Class = array
+      wt5-1#TTAGCGAAGTGTCACT-1 wt5-1#GTGCCAGGTTCAGAAA-1
+RHO                0.004601415              0.004650512
+RCVRN              0.007142340              0.009230550
+CRX                0.065314599              0.076258296
+PROM1              0.851990874              0.847464261
+ARR3               0.020324282              0.025048369
+      wt5-1#CTACTTACACTGAAGG-1 wt5-1#TAAGTGCCAACTCAAC-1
+RHO                0.002984086               0.01949980
+RCVRN              0.008213434               0.04690022
+CRX                0.066639771               0.39899072
+PROM1              0.828203863               0.86750197
+ARR3               0.025437608               0.05223391
+      wt5-1#AACAAAGTCTCGACAA-1
+RHO                0.004462367
+RCVRN              0.008380998
+CRX                0.078350948
+PROM1              0.816534790
+ARR3               0.023473584
+
+colorMat-After-Impute: nRows = 20, nCols = 77930
+
+
+2024-04-16 17:07:41 : ColorParams 1, Class = list
+
+ColorParams 1$color: length = 77930
+wt5-1#TTAGCGAAGTGTCACT-1 wt5-1#GTGCCAGGTTCAGAAA-1 wt5-1#CTACTTACACTGAAGG-1 
+             0.004601415              0.004650512              0.002984086 
+wt5-1#TAAGTGCCAACTCAAC-1 wt5-1#AACAAAGTCTCGACAA-1 wt5-1#AGCGTGCGTACATGGG-1 
+             0.019499803              0.004462367              0.003709440 
+
+
+ColorParams 1$discrete: length = 1
+[1] FALSE
+
+
+ColorParams 1$title: length = 1
+[1] "UMAP of IterativeLSI colored by\nGeneIntegrationMatrix : RHO"
+
+
+ColorParams 1$continuousSet: length = 1
+[1] "solarExtra"
+
+
+
+2024-04-16 17:07:41 : PlotParams-1, Class = list
+
+PlotParams-1$color: length = 77930
+wt5-1#TTAGCGAAGTGTCACT-1 wt5-1#GTGCCAGGTTCAGAAA-1 wt5-1#CTACTTACACTGAAGG-1 
+             0.004601415              0.004650512              0.002984086 
+wt5-1#TAAGTGCCAACTCAAC-1 wt5-1#AACAAAGTCTCGACAA-1 wt5-1#AGCGTGCGTACATGGG-1 
+             0.019499803              0.004462367              0.003709440 
+
+
+PlotParams-1$title: length = 1
+[1] "UMAP of IterativeLSI colored by\nGeneIntegrationMatrix : RHO"
+
+
+PlotParams-1$x: length = 77930
+[1] 6.228827 7.828236 8.318253 3.100343 6.788727 7.164586
+
+
+PlotParams-1$y: length = 77930
+[1] 6.700024 5.279011 5.437188 3.161135 6.165235 6.641668
+
+
+PlotParams-1$baseSize: length = 1
+[1] 10
+
+
+PlotParams-1$xlabel: length = 1
+[1] "UMAP Dimension 1"
+
+
+PlotParams-1$ylabel: length = 1
+[1] "UMAP Dimension 2"
+
+
+PlotParams-1$pal: length = 256
+[1] "#3361A5" "#3262A7" "#3263A9" "#3164AC" "#3166AE" "#3067B1"
+
+
+PlotParams-1$colorTitle: length = 1
+[1] "NormCounts"
+
+
+
+2024-04-16 17:07:42 : PlotParams-2, Class = list
+
+PlotParams-2$color: length = 77930
+wt5-1#TTAGCGAAGTGTCACT-1 wt5-1#GTGCCAGGTTCAGAAA-1 wt5-1#CTACTTACACTGAAGG-1 
+             0.007142340              0.009230550              0.008213434 
+wt5-1#TAAGTGCCAACTCAAC-1 wt5-1#AACAAAGTCTCGACAA-1 wt5-1#AGCGTGCGTACATGGG-1 
+             0.046900218              0.008380998              0.006469713 
+
+
+PlotParams-2$title: length = 1
+[1] "UMAP of IterativeLSI colored by\nGeneIntegrationMatrix : RCVRN"
+
+
+PlotParams-2$x: length = 77930
+[1] 6.228827 7.828236 8.318253 3.100343 6.788727 7.164586
+
+
+PlotParams-2$y: length = 77930
+[1] 6.700024 5.279011 5.437188 3.161135 6.165235 6.641668
+
+
+PlotParams-2$baseSize: length = 1
+[1] 10
+
+
+PlotParams-2$xlabel: length = 1
+[1] "UMAP Dimension 1"
+
+
+PlotParams-2$ylabel: length = 1
+[1] "UMAP Dimension 2"
+
+
+PlotParams-2$pal: length = 256
+[1] "#3361A5" "#3262A7" "#3263A9" "#3164AC" "#3166AE" "#3067B1"
+
+
+PlotParams-2$colorTitle: length = 1
+[1] "NormCounts"
+
+
+
+2024-04-16 17:07:43 : PlotParams-3, Class = list
+
+PlotParams-3$color: length = 77930
+wt5-1#TTAGCGAAGTGTCACT-1 wt5-1#GTGCCAGGTTCAGAAA-1 wt5-1#CTACTTACACTGAAGG-1 
+              0.06531460               0.07625830               0.06663977 
+wt5-1#TAAGTGCCAACTCAAC-1 wt5-1#AACAAAGTCTCGACAA-1 wt5-1#AGCGTGCGTACATGGG-1 
+              0.39899072               0.07835095               0.07042668 
+
+
+PlotParams-3$title: length = 1
+[1] "UMAP of IterativeLSI colored by\nGeneIntegrationMatrix : CRX"
+
+
+PlotParams-3$x: length = 77930
+[1] 6.228827 7.828236 8.318253 3.100343 6.788727 7.164586
+
+
+PlotParams-3$y: length = 77930
+[1] 6.700024 5.279011 5.437188 3.161135 6.165235 6.641668
+
+
+PlotParams-3$baseSize: length = 1
+[1] 10
+
+
+PlotParams-3$xlabel: length = 1
+[1] "UMAP Dimension 1"
+
+
+PlotParams-3$ylabel: length = 1
+[1] "UMAP Dimension 2"
+
+
+PlotParams-3$pal: length = 256
+[1] "#3361A5" "#3262A7" "#3263A9" "#3164AC" "#3166AE" "#3067B1"
+
+
+PlotParams-3$colorTitle: length = 1
+[1] "NormCounts"
+
+
+
+2024-04-16 17:07:44 : PlotParams-4, Class = list
+
+PlotParams-4$color: length = 77930
+wt5-1#TTAGCGAAGTGTCACT-1 wt5-1#GTGCCAGGTTCAGAAA-1 wt5-1#CTACTTACACTGAAGG-1 
+               0.8519909                0.8474643                0.8282039 
+wt5-1#TAAGTGCCAACTCAAC-1 wt5-1#AACAAAGTCTCGACAA-1 wt5-1#AGCGTGCGTACATGGG-1 
+               0.8675020                0.8165348                0.8756621 
+
+
+PlotParams-4$title: length = 1
+[1] "UMAP of IterativeLSI colored by\nGeneIntegrationMatrix : PROM1"
+
+
+PlotParams-4$x: length = 77930
+[1] 6.228827 7.828236 8.318253 3.100343 6.788727 7.164586
+
+
+PlotParams-4$y: length = 77930
+[1] 6.700024 5.279011 5.437188 3.161135 6.165235 6.641668
+
+
+PlotParams-4$baseSize: length = 1
+[1] 10
+
+
+PlotParams-4$xlabel: length = 1
+[1] "UMAP Dimension 1"
+
+
+PlotParams-4$ylabel: length = 1
+[1] "UMAP Dimension 2"
+
+
+PlotParams-4$pal: length = 256
+[1] "#3361A5" "#3262A7" "#3263A9" "#3164AC" "#3166AE" "#3067B1"
+
+
+PlotParams-4$colorTitle: length = 1
+[1] "NormCounts"
+
+
+
+2024-04-16 17:07:45 : PlotParams-5, Class = list
+
+PlotParams-5$color: length = 77930
+wt5-1#TTAGCGAAGTGTCACT-1 wt5-1#GTGCCAGGTTCAGAAA-1 wt5-1#CTACTTACACTGAAGG-1 
+              0.02032428               0.02504837               0.02543761 
+wt5-1#TAAGTGCCAACTCAAC-1 wt5-1#AACAAAGTCTCGACAA-1 wt5-1#AGCGTGCGTACATGGG-1 
+              0.05223391               0.02347358               0.02253916 
+
+
+PlotParams-5$title: length = 1
+[1] "UMAP of IterativeLSI colored by\nGeneIntegrationMatrix : ARR3"
+
+
+PlotParams-5$x: length = 77930
+[1] 6.228827 7.828236 8.318253 3.100343 6.788727 7.164586
+
+
+PlotParams-5$y: length = 77930
+[1] 6.700024 5.279011 5.437188 3.161135 6.165235 6.641668
+
+
+PlotParams-5$baseSize: length = 1
+[1] 10
+
+
+PlotParams-5$xlabel: length = 1
+[1] "UMAP Dimension 1"
+
+
+PlotParams-5$ylabel: length = 1
+[1] "UMAP Dimension 2"
+
+
+PlotParams-5$pal: length = 256
+[1] "#3361A5" "#3262A7" "#3263A9" "#3164AC" "#3166AE" "#3067B1"
+
+
+PlotParams-5$colorTitle: length = 1
+[1] "NormCounts"
+
+
+
+2024-04-16 17:07:46 : PlotParams-6, Class = list
+
+PlotParams-6$color: length = 77930
+wt5-1#TTAGCGAAGTGTCACT-1 wt5-1#GTGCCAGGTTCAGAAA-1 wt5-1#CTACTTACACTGAAGG-1 
+               0.4396434                0.4252105                0.3908484 
+wt5-1#TAAGTGCCAACTCAAC-1 wt5-1#AACAAAGTCTCGACAA-1 wt5-1#AGCGTGCGTACATGGG-1 
+               1.0237394                0.4550557                0.4029300 
+
+
+PlotParams-6$title: length = 1
+[1] "UMAP of IterativeLSI colored by\nGeneIntegrationMatrix : OTX2"
+
+
+PlotParams-6$x: length = 77930
+[1] 6.228827 7.828236 8.318253 3.100343 6.788727 7.164586
+
+
+PlotParams-6$y: length = 77930
+[1] 6.700024 5.279011 5.437188 3.161135 6.165235 6.641668
+
+
+PlotParams-6$baseSize: length = 1
+[1] 10
+
+
+PlotParams-6$xlabel: length = 1
+[1] "UMAP Dimension 1"
+
+
+PlotParams-6$ylabel: length = 1
+[1] "UMAP Dimension 2"
+
+
+PlotParams-6$pal: length = 256
+[1] "#3361A5" "#3262A7" "#3263A9" "#3164AC" "#3166AE" "#3067B1"
+
+
+PlotParams-6$colorTitle: length = 1
+[1] "NormCounts"
+
+
+
+2024-04-16 17:07:48 : PlotParams-7, Class = list
+
+PlotParams-7$color: length = 77930
+wt5-1#TTAGCGAAGTGTCACT-1 wt5-1#GTGCCAGGTTCAGAAA-1 wt5-1#CTACTTACACTGAAGG-1 
+              0.04985462               0.05248018               0.04261326 
+wt5-1#TAAGTGCCAACTCAAC-1 wt5-1#AACAAAGTCTCGACAA-1 wt5-1#AGCGTGCGTACATGGG-1 
+              0.06229733               0.05051195               0.04711687 
+
+
+PlotParams-7$title: length = 1
+[1] "UMAP of IterativeLSI colored by\nGeneIntegrationMatrix : VSX1"
+
+
+PlotParams-7$x: length = 77930
+[1] 6.228827 7.828236 8.318253 3.100343 6.788727 7.164586
+
+
+PlotParams-7$y: length = 77930
+[1] 6.700024 5.279011 5.437188 3.161135 6.165235 6.641668
+
+
+PlotParams-7$baseSize: length = 1
+[1] 10
+
+
+PlotParams-7$xlabel: length = 1
+[1] "UMAP Dimension 1"
+
+
+PlotParams-7$ylabel: length = 1
+[1] "UMAP Dimension 2"
+
+
+PlotParams-7$pal: length = 256
+[1] "#3361A5" "#3262A7" "#3263A9" "#3164AC" "#3166AE" "#3067B1"
+
+
+PlotParams-7$colorTitle: length = 1
+[1] "NormCounts"
+
+
+
+2024-04-16 17:07:49 : PlotParams-8, Class = list
+
+PlotParams-8$color: length = 77930
+wt5-1#TTAGCGAAGTGTCACT-1 wt5-1#GTGCCAGGTTCAGAAA-1 wt5-1#CTACTTACACTGAAGG-1 
+                2.819565                 2.904625                 2.993237 
+wt5-1#TAAGTGCCAACTCAAC-1 wt5-1#AACAAAGTCTCGACAA-1 wt5-1#AGCGTGCGTACATGGG-1 
+                1.516277                 2.811682                 2.926463 
+
+
+PlotParams-8$title: length = 1
+[1] "UMAP of IterativeLSI colored by\nGeneIntegrationMatrix : VSX2"
+
+
+PlotParams-8$x: length = 77930
+[1] 6.228827 7.828236 8.318253 3.100343 6.788727 7.164586
+
+
+PlotParams-8$y: length = 77930
+[1] 6.700024 5.279011 5.437188 3.161135 6.165235 6.641668
+
+
+PlotParams-8$baseSize: length = 1
+[1] 10
+
+
+PlotParams-8$xlabel: length = 1
+[1] "UMAP Dimension 1"
+
+
+PlotParams-8$ylabel: length = 1
+[1] "UMAP Dimension 2"
+
+
+PlotParams-8$pal: length = 256
+[1] "#3361A5" "#3262A7" "#3263A9" "#3164AC" "#3166AE" "#3067B1"
+
+
+PlotParams-8$colorTitle: length = 1
+[1] "NormCounts"
+
+
+
+2024-04-16 17:07:50 : PlotParams-9, Class = list
+
+PlotParams-9$color: length = 77930
+wt5-1#TTAGCGAAGTGTCACT-1 wt5-1#GTGCCAGGTTCAGAAA-1 wt5-1#CTACTTACACTGAAGG-1 
+               0.1149267                0.1277588                0.1255918 
+wt5-1#TAAGTGCCAACTCAAC-1 wt5-1#AACAAAGTCTCGACAA-1 wt5-1#AGCGTGCGTACATGGG-1 
+               0.3200818                0.1211151                0.1115437 
+
+
+PlotParams-9$title: length = 1
+[1] "UMAP of IterativeLSI colored by\nGeneIntegrationMatrix : GAD1"
+
+
+PlotParams-9$x: length = 77930
+[1] 6.228827 7.828236 8.318253 3.100343 6.788727 7.164586
+
+
+PlotParams-9$y: length = 77930
+[1] 6.700024 5.279011 5.437188 3.161135 6.165235 6.641668
+
+
+PlotParams-9$baseSize: length = 1
+[1] 10
+
+
+PlotParams-9$xlabel: length = 1
+[1] "UMAP Dimension 1"
+
+
+PlotParams-9$ylabel: length = 1
+[1] "UMAP Dimension 2"
+
+
+PlotParams-9$pal: length = 256
+[1] "#3361A5" "#3262A7" "#3263A9" "#3164AC" "#3166AE" "#3067B1"
+
+
+PlotParams-9$colorTitle: length = 1
+[1] "NormCounts"
+
+
+
+2024-04-16 17:07:50 : PlotParams-10, Class = list
+
+PlotParams-10$color: length = 77930
+wt5-1#TTAGCGAAGTGTCACT-1 wt5-1#GTGCCAGGTTCAGAAA-1 wt5-1#CTACTTACACTGAAGG-1 
+              0.09047051               0.09418123               0.09873193 
+wt5-1#TAAGTGCCAACTCAAC-1 wt5-1#AACAAAGTCTCGACAA-1 wt5-1#AGCGTGCGTACATGGG-1 
+              0.12161810               0.09916286               0.09540988 
+
+
+PlotParams-10$title: length = 1
+[1] "UMAP of IterativeLSI colored by\nGeneIntegrationMatrix : GAD2"
+
+
+PlotParams-10$x: length = 77930
+[1] 6.228827 7.828236 8.318253 3.100343 6.788727 7.164586
+
+
+PlotParams-10$y: length = 77930
+[1] 6.700024 5.279011 5.437188 3.161135 6.165235 6.641668
+
+
+PlotParams-10$baseSize: length = 1
+[1] 10
+
+
+PlotParams-10$xlabel: length = 1
+[1] "UMAP Dimension 1"
+
+
+PlotParams-10$ylabel: length = 1
+[1] "UMAP Dimension 2"
+
+
+PlotParams-10$pal: length = 256
+[1] "#3361A5" "#3262A7" "#3263A9" "#3164AC" "#3166AE" "#3067B1"
+
+
+PlotParams-10$colorTitle: length = 1
+[1] "NormCounts"
+
+
+
+2024-04-16 17:07:51 : PlotParams-11, Class = list
+
+PlotParams-11$color: length = 77930
+wt5-1#TTAGCGAAGTGTCACT-1 wt5-1#GTGCCAGGTTCAGAAA-1 wt5-1#CTACTTACACTGAAGG-1 
+             0.004369332              0.003934479              0.003096455 
+wt5-1#TAAGTGCCAACTCAAC-1 wt5-1#AACAAAGTCTCGACAA-1 wt5-1#AGCGTGCGTACATGGG-1 
+             0.119520823              0.009822665              0.004321606 
+
+
+PlotParams-11$title: length = 1
+[1] "UMAP of IterativeLSI colored by\nGeneIntegrationMatrix : TFAP2A"
+
+
+PlotParams-11$x: length = 77930
+[1] 6.228827 7.828236 8.318253 3.100343 6.788727 7.164586
+
+
+PlotParams-11$y: length = 77930
+[1] 6.700024 5.279011 5.437188 3.161135 6.165235 6.641668
+
+
+PlotParams-11$baseSize: length = 1
+[1] 10
+
+
+PlotParams-11$xlabel: length = 1
+[1] "UMAP Dimension 1"
+
+
+PlotParams-11$ylabel: length = 1
+[1] "UMAP Dimension 2"
+
+
+PlotParams-11$pal: length = 256
+[1] "#3361A5" "#3262A7" "#3263A9" "#3164AC" "#3166AE" "#3067B1"
+
+
+PlotParams-11$colorTitle: length = 1
+[1] "NormCounts"
+
+
+
+2024-04-16 17:07:52 : PlotParams-12, Class = list
+
+PlotParams-12$color: length = 77930
+wt5-1#TTAGCGAAGTGTCACT-1 wt5-1#GTGCCAGGTTCAGAAA-1 wt5-1#CTACTTACACTGAAGG-1 
+             0.007499711              0.005657419              0.005038332 
+wt5-1#TAAGTGCCAACTCAAC-1 wt5-1#AACAAAGTCTCGACAA-1 wt5-1#AGCGTGCGTACATGGG-1 
+             0.101217853              0.013249118              0.006656910 
+
+
+PlotParams-12$title: length = 1
+[1] "UMAP of IterativeLSI colored by\nGeneIntegrationMatrix : TFAP2B"
+
+
+PlotParams-12$x: length = 77930
+[1] 6.228827 7.828236 8.318253 3.100343 6.788727 7.164586
+
+
+PlotParams-12$y: length = 77930
+[1] 6.700024 5.279011 5.437188 3.161135 6.165235 6.641668
+
+
+PlotParams-12$baseSize: length = 1
+[1] 10
+
+
+PlotParams-12$xlabel: length = 1
+[1] "UMAP Dimension 1"
+
+
+PlotParams-12$ylabel: length = 1
+[1] "UMAP Dimension 2"
+
+
+PlotParams-12$pal: length = 256
+[1] "#3361A5" "#3262A7" "#3263A9" "#3164AC" "#3166AE" "#3067B1"
+
+
+PlotParams-12$colorTitle: length = 1
+[1] "NormCounts"
+
+
+
+2024-04-16 17:07:53 : PlotParams-13, Class = list
+
+PlotParams-13$color: length = 77930
+wt5-1#TTAGCGAAGTGTCACT-1 wt5-1#GTGCCAGGTTCAGAAA-1 wt5-1#CTACTTACACTGAAGG-1 
+               0.1591714                0.1618486                0.1644388 
+wt5-1#TAAGTGCCAACTCAAC-1 wt5-1#AACAAAGTCTCGACAA-1 wt5-1#AGCGTGCGTACATGGG-1 
+               0.4791265                0.1780739                0.1671686 
+
+
+PlotParams-13$title: length = 1
+[1] "UMAP of IterativeLSI colored by\nGeneIntegrationMatrix : ONECUT1"
+
+
+PlotParams-13$x: length = 77930
+[1] 6.228827 7.828236 8.318253 3.100343 6.788727 7.164586
+
+
+PlotParams-13$y: length = 77930
+[1] 6.700024 5.279011 5.437188 3.161135 6.165235 6.641668
+
+
+PlotParams-13$baseSize: length = 1
+[1] 10
+
+
+PlotParams-13$xlabel: length = 1
+[1] "UMAP Dimension 1"
+
+
+PlotParams-13$ylabel: length = 1
+[1] "UMAP Dimension 2"
+
+
+PlotParams-13$pal: length = 256
+[1] "#3361A5" "#3262A7" "#3263A9" "#3164AC" "#3166AE" "#3067B1"
+
+
+PlotParams-13$colorTitle: length = 1
+[1] "NormCounts"
+
+
+
+2024-04-16 17:07:54 : PlotParams-14, Class = list
+
+PlotParams-14$color: length = 77930
+wt5-1#TTAGCGAAGTGTCACT-1 wt5-1#GTGCCAGGTTCAGAAA-1 wt5-1#CTACTTACACTGAAGG-1 
+               0.5166053                0.3947378                0.3982373 
+wt5-1#TAAGTGCCAACTCAAC-1 wt5-1#AACAAAGTCTCGACAA-1 wt5-1#AGCGTGCGTACATGGG-1 
+               0.5472998                0.4957444                0.4688196 
+
+
+PlotParams-14$title: length = 1
+[1] "UMAP of IterativeLSI colored by\nGeneIntegrationMatrix : ONECUT2"
+
+
+PlotParams-14$x: length = 77930
+[1] 6.228827 7.828236 8.318253 3.100343 6.788727 7.164586
+
+
+PlotParams-14$y: length = 77930
+[1] 6.700024 5.279011 5.437188 3.161135 6.165235 6.641668
+
+
+PlotParams-14$baseSize: length = 1
+[1] 10
+
+
+PlotParams-14$xlabel: length = 1
+[1] "UMAP Dimension 1"
+
+
+PlotParams-14$ylabel: length = 1
+[1] "UMAP Dimension 2"
+
+
+PlotParams-14$pal: length = 256
+[1] "#3361A5" "#3262A7" "#3263A9" "#3164AC" "#3166AE" "#3067B1"
+
+
+PlotParams-14$colorTitle: length = 1
+[1] "NormCounts"
+
+
+
+2024-04-16 17:07:55 : PlotParams-15, Class = list
+
+PlotParams-15$color: length = 77930
+wt5-1#TTAGCGAAGTGTCACT-1 wt5-1#GTGCCAGGTTCAGAAA-1 wt5-1#CTACTTACACTGAAGG-1 
+             0.004748373              0.003830946              0.003090347 
+wt5-1#TAAGTGCCAACTCAAC-1 wt5-1#AACAAAGTCTCGACAA-1 wt5-1#AGCGTGCGTACATGGG-1 
+             0.004872467              0.005946502              0.003985015 
+
+
+PlotParams-15$title: length = 1
+[1] "UMAP of IterativeLSI colored by\nGeneIntegrationMatrix : NEFM"
+
+
+PlotParams-15$x: length = 77930
+[1] 6.228827 7.828236 8.318253 3.100343 6.788727 7.164586
+
+
+PlotParams-15$y: length = 77930
+[1] 6.700024 5.279011 5.437188 3.161135 6.165235 6.641668
+
+
+PlotParams-15$baseSize: length = 1
+[1] 10
+
+
+PlotParams-15$xlabel: length = 1
+[1] "UMAP Dimension 1"
+
+
+PlotParams-15$ylabel: length = 1
+[1] "UMAP Dimension 2"
+
+
+PlotParams-15$pal: length = 256
+[1] "#3361A5" "#3262A7" "#3263A9" "#3164AC" "#3166AE" "#3067B1"
+
+
+PlotParams-15$colorTitle: length = 1
+[1] "NormCounts"
+
+
+
+2024-04-16 17:07:56 : PlotParams-16, Class = list
+
+PlotParams-16$color: length = 77930
+wt5-1#TTAGCGAAGTGTCACT-1 wt5-1#GTGCCAGGTTCAGAAA-1 wt5-1#CTACTTACACTGAAGG-1 
+               1.0330312                0.9182091                0.9515506 
+wt5-1#TAAGTGCCAACTCAAC-1 wt5-1#AACAAAGTCTCGACAA-1 wt5-1#AGCGTGCGTACATGGG-1 
+               1.3754904                1.0650315                0.9935422 
+
+
+PlotParams-16$title: length = 1
+[1] "UMAP of IterativeLSI colored by\nGeneIntegrationMatrix : RBPMS"
+
+
+PlotParams-16$x: length = 77930
+[1] 6.228827 7.828236 8.318253 3.100343 6.788727 7.164586
+
+
+PlotParams-16$y: length = 77930
+[1] 6.700024 5.279011 5.437188 3.161135 6.165235 6.641668
+
+
+PlotParams-16$baseSize: length = 1
+[1] 10
+
+
+PlotParams-16$xlabel: length = 1
+[1] "UMAP Dimension 1"
+
+
+PlotParams-16$ylabel: length = 1
+[1] "UMAP Dimension 2"
+
+
+PlotParams-16$pal: length = 256
+[1] "#3361A5" "#3262A7" "#3263A9" "#3164AC" "#3166AE" "#3067B1"
+
+
+PlotParams-16$colorTitle: length = 1
+[1] "NormCounts"
+
+
+
+2024-04-16 17:07:57 : PlotParams-17, Class = list
+
+PlotParams-17$color: length = 77930
+wt5-1#TTAGCGAAGTGTCACT-1 wt5-1#GTGCCAGGTTCAGAAA-1 wt5-1#CTACTTACACTGAAGG-1 
+              0.04039417               0.02271655               0.03020599 
+wt5-1#TAAGTGCCAACTCAAC-1 wt5-1#AACAAAGTCTCGACAA-1 wt5-1#AGCGTGCGTACATGGG-1 
+              0.01372603               0.04236070               0.04038315 
+
+
+PlotParams-17$title: length = 1
+[1] "UMAP of IterativeLSI colored by\nGeneIntegrationMatrix : POU4F2"
+
+
+PlotParams-17$x: length = 77930
+[1] 6.228827 7.828236 8.318253 3.100343 6.788727 7.164586
+
+
+PlotParams-17$y: length = 77930
+[1] 6.700024 5.279011 5.437188 3.161135 6.165235 6.641668
+
+
+PlotParams-17$baseSize: length = 1
+[1] 10
+
+
+PlotParams-17$xlabel: length = 1
+[1] "UMAP Dimension 1"
+
+
+PlotParams-17$ylabel: length = 1
+[1] "UMAP Dimension 2"
+
+
+PlotParams-17$pal: length = 256
+[1] "#3361A5" "#3262A7" "#3263A9" "#3164AC" "#3166AE" "#3067B1"
+
+
+PlotParams-17$colorTitle: length = 1
+[1] "NormCounts"
+
+
+
+2024-04-16 17:07:58 : PlotParams-18, Class = list
+
+PlotParams-18$color: length = 77930
+wt5-1#TTAGCGAAGTGTCACT-1 wt5-1#GTGCCAGGTTCAGAAA-1 wt5-1#CTACTTACACTGAAGG-1 
+              0.01509534               0.01490335               0.01183335 
+wt5-1#TAAGTGCCAACTCAAC-1 wt5-1#AACAAAGTCTCGACAA-1 wt5-1#AGCGTGCGTACATGGG-1 
+              0.41563627               0.02116462               0.01502821 
+
+
+PlotParams-18$title: length = 1
+[1] "UMAP of IterativeLSI colored by\nGeneIntegrationMatrix : RLBP1"
+
+
+PlotParams-18$x: length = 77930
+[1] 6.228827 7.828236 8.318253 3.100343 6.788727 7.164586
+
+
+PlotParams-18$y: length = 77930
+[1] 6.700024 5.279011 5.437188 3.161135 6.165235 6.641668
+
+
+PlotParams-18$baseSize: length = 1
+[1] 10
+
+
+PlotParams-18$xlabel: length = 1
+[1] "UMAP Dimension 1"
+
+
+PlotParams-18$ylabel: length = 1
+[1] "UMAP Dimension 2"
+
+
+PlotParams-18$pal: length = 256
+[1] "#3361A5" "#3262A7" "#3263A9" "#3164AC" "#3166AE" "#3067B1"
+
+
+PlotParams-18$colorTitle: length = 1
+[1] "NormCounts"
+
+
+
+2024-04-16 17:07:59 : PlotParams-19, Class = list
+
+PlotParams-19$color: length = 77930
+wt5-1#TTAGCGAAGTGTCACT-1 wt5-1#GTGCCAGGTTCAGAAA-1 wt5-1#CTACTTACACTGAAGG-1 
+               0.6662748                0.7652664                0.6919634 
+wt5-1#TAAGTGCCAACTCAAC-1 wt5-1#AACAAAGTCTCGACAA-1 wt5-1#AGCGTGCGTACATGGG-1 
+               0.7082792                0.7033988                0.6989523 
+
+
+PlotParams-19$title: length = 1
+[1] "UMAP of IterativeLSI colored by\nGeneIntegrationMatrix : SLC1A3"
+
+
+PlotParams-19$x: length = 77930
+[1] 6.228827 7.828236 8.318253 3.100343 6.788727 7.164586
+
+
+PlotParams-19$y: length = 77930
+[1] 6.700024 5.279011 5.437188 3.161135 6.165235 6.641668
+
+
+PlotParams-19$baseSize: length = 1
+[1] 10
+
+
+PlotParams-19$xlabel: length = 1
+[1] "UMAP Dimension 1"
+
+
+PlotParams-19$ylabel: length = 1
+[1] "UMAP Dimension 2"
+
+
+PlotParams-19$pal: length = 256
+[1] "#3361A5" "#3262A7" "#3263A9" "#3164AC" "#3166AE" "#3067B1"
+
+
+PlotParams-19$colorTitle: length = 1
+[1] "NormCounts"
+
+
+
+2024-04-16 17:08:00 : PlotParams-20, Class = list
+
+PlotParams-20$color: length = 77930
+wt5-1#TTAGCGAAGTGTCACT-1 wt5-1#GTGCCAGGTTCAGAAA-1 wt5-1#CTACTTACACTGAAGG-1 
+                3.650897                 3.782996                 3.755953 
+wt5-1#TAAGTGCCAACTCAAC-1 wt5-1#AACAAAGTCTCGACAA-1 wt5-1#AGCGTGCGTACATGGG-1 
+                1.912207                 3.559348                 3.711178 
+
+
+PlotParams-20$title: length = 1
+[1] "UMAP of IterativeLSI colored by\nGeneIntegrationMatrix : SFRP2"
+
+
+PlotParams-20$x: length = 77930
+[1] 6.228827 7.828236 8.318253 3.100343 6.788727 7.164586
+
+
+PlotParams-20$y: length = 77930
+[1] 6.700024 5.279011 5.437188 3.161135 6.165235 6.641668
+
+
+PlotParams-20$baseSize: length = 1
+[1] 10
+
+
+PlotParams-20$xlabel: length = 1
+[1] "UMAP Dimension 1"
+
+
+PlotParams-20$ylabel: length = 1
+[1] "UMAP Dimension 2"
+
+
+PlotParams-20$pal: length = 256
+[1] "#3361A5" "#3262A7" "#3263A9" "#3164AC" "#3166AE" "#3067B1"
+
+
+PlotParams-20$colorTitle: length = 1
+[1] "NormCounts"
+
+
+
+------- Completed
+
+End Time : 2024-04-16 17:08:01
+Elapsed Time Minutes = 2.20359046061834
+Elapsed Time Hours = 0.0367265763547685
+
+-------
+
+
+

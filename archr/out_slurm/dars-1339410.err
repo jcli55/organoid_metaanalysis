@@ -1,0 +1,530 @@
+Loading required package: ggplot2
+Loading required package: SummarizedExperiment
+Loading required package: MatrixGenerics
+Loading required package: matrixStats
+
+Attaching package: ‘MatrixGenerics’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colAlls, colAnyNAs, colAnys, colAvgsPerRowSet, colCollapse,
+    colCounts, colCummaxs, colCummins, colCumprods, colCumsums,
+    colDiffs, colIQRDiffs, colIQRs, colLogSumExps, colMadDiffs,
+    colMads, colMaxs, colMeans2, colMedians, colMins, colOrderStats,
+    colProds, colQuantiles, colRanges, colRanks, colSdDiffs, colSds,
+    colSums2, colTabulates, colVarDiffs, colVars, colWeightedMads,
+    colWeightedMeans, colWeightedMedians, colWeightedSds,
+    colWeightedVars, rowAlls, rowAnyNAs, rowAnys, rowAvgsPerColSet,
+    rowCollapse, rowCounts, rowCummaxs, rowCummins, rowCumprods,
+    rowCumsums, rowDiffs, rowIQRDiffs, rowIQRs, rowLogSumExps,
+    rowMadDiffs, rowMads, rowMaxs, rowMeans2, rowMedians, rowMins,
+    rowOrderStats, rowProds, rowQuantiles, rowRanges, rowRanks,
+    rowSdDiffs, rowSds, rowSums2, rowTabulates, rowVarDiffs, rowVars,
+    rowWeightedMads, rowWeightedMeans, rowWeightedMedians,
+    rowWeightedSds, rowWeightedVars
+
+Loading required package: GenomicRanges
+Loading required package: stats4
+Loading required package: BiocGenerics
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    Filter, Find, Map, Position, Reduce, anyDuplicated, append,
+    as.data.frame, basename, cbind, colnames, dirname, do.call,
+    duplicated, eval, evalq, get, grep, grepl, intersect, is.unsorted,
+    lapply, mapply, match, mget, order, paste, pmax, pmax.int, pmin,
+    pmin.int, rank, rbind, rownames, sapply, setdiff, sort, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Loading required package: S4Vectors
+
+Attaching package: ‘S4Vectors’
+
+The following objects are masked from ‘package:base’:
+
+    I, expand.grid, unname
+
+Loading required package: IRanges
+Loading required package: GenomeInfoDb
+Loading required package: Biobase
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: ‘Biobase’
+
+The following object is masked from ‘package:MatrixGenerics’:
+
+    rowMedians
+
+The following objects are masked from ‘package:matrixStats’:
+
+    anyMissing, rowMedians
+
+Loading required package: data.table
+
+Attaching package: ‘data.table’
+
+The following object is masked from ‘package:SummarizedExperiment’:
+
+    shift
+
+The following object is masked from ‘package:GenomicRanges’:
+
+    shift
+
+The following object is masked from ‘package:IRanges’:
+
+    shift
+
+The following objects are masked from ‘package:S4Vectors’:
+
+    first, second
+
+Loading required package: Matrix
+
+Attaching package: ‘Matrix’
+
+The following object is masked from ‘package:S4Vectors’:
+
+    expand
+
+Loading required package: rhdf5
+Loading required package: magrittr
+Successfully loaded ArchRProject!
+
+                                                   / |
+                                                 /    \
+            .                                  /      |.
+            \\\                              /        |.
+              \\\                          /           `|.
+                \\\                      /              |.
+                  \                    /                |\
+                  \\#####\           /                  ||
+                ==###########>      /                   ||
+                 \\##==......\    /                     ||
+            ______ =       =|__ /__                     ||      \\\
+        ,--' ,----`-,__ ___/'  --,-`-===================##========>
+       \               '        ##_______ _____ ,--,__,=##,__   ///
+        ,    __==    ___,-,__,--'#'  ==='      `-'    | ##,-/
+        -,____,---'       \\####\\________________,--\\_##,/
+           ___      .______        ______  __    __  .______      
+          /   \     |   _  \      /      ||  |  |  | |   _  \     
+         /  ^  \    |  |_)  |    |  ,----'|  |__|  | |  |_)  |    
+        /  /_\  \   |      /     |  |     |   __   | |      /     
+       /  _____  \  |  |\  \\___ |  `----.|  |  |  | |  |\  \\___.
+      /__/     \__\ | _| `._____| \______||__|  |__| | _| `._____|
+    
+ArchR logging to : ArchRLogs/ArchR-addGroupCoverages-9be8505c51ac-Date-2024-04-05_Time-15-22-22.log
+If there is an issue, please report to github with logFile!
+2024-04-05 15:22:35 : Creating Coverage Files!, 0.226 mins elapsed.
+2024-04-05 15:22:35 : Batch Execution w/ safelapply!, 0.226 mins elapsed.
+2024-04-05 15:22:35 : Group AC._.Multi_H9_D100 (1 of 45) : Creating Group Coverage File : AC._.Multi_H9_D100.insertions.coverage.h5, 0.226 mins elapsed.
+2024-04-05 15:22:58 : Group AC._.Multi_NRL_GFP_D123 (2 of 45) : Creating Group Coverage File : AC._.Multi_NRL_GFP_D123.insertions.coverage.h5, 0.605 mins elapsed.
+2024-04-05 15:23:20 : Group AC._.Multi_organoid_NRL_D075 (3 of 45) : Creating Group Coverage File : AC._.Multi_organoid_NRL_D075.insertions.coverage.h5, 0.964 mins elapsed.
+2024-04-05 15:23:43 : Group AC._.Multi_organoid_D133 (4 of 45) : Creating Group Coverage File : AC._.Multi_organoid_D133.insertions.coverage.h5, 1.356 mins elapsed.
+2024-04-05 15:24:07 : Group AC._.Multi_organoid_NRL_D243 (5 of 45) : Creating Group Coverage File : AC._.Multi_organoid_NRL_D243.insertions.coverage.h5, 1.758 mins elapsed.
+2024-04-05 15:24:33 : Group BC._.Multi_organoid_D183 (6 of 45) : Creating Group Coverage File : BC._.Multi_organoid_D183.insertions.coverage.h5, 2.178 mins elapsed.
+2024-04-05 15:24:53 : Group BC._.Multi_organoid_D133 (7 of 45) : Creating Group Coverage File : BC._.Multi_organoid_D133.insertions.coverage.h5, 2.516 mins elapsed.
+2024-04-05 15:25:17 : Group BC._.Multi_organoid_NRL_D243 (8 of 45) : Creating Group Coverage File : BC._.Multi_organoid_NRL_D243.insertions.coverage.h5, 2.915 mins elapsed.
+2024-04-05 15:25:42 : Group BC._.Multi_organoid_NRL_D206 (9 of 45) : Creating Group Coverage File : BC._.Multi_organoid_NRL_D206.insertions.coverage.h5, 3.336 mins elapsed.
+2024-04-05 15:26:05 : Group BC._.Multi_NRL_GFP_D123 (10 of 45) : Creating Group Coverage File : BC._.Multi_NRL_GFP_D123.insertions.coverage.h5, 3.727 mins elapsed.
+2024-04-05 15:26:28 : Group Cone._.Multi_organoid_NRL_D075 (11 of 45) : Creating Group Coverage File : Cone._.Multi_organoid_NRL_D075.insertions.coverage.h5, 4.099 mins elapsed.
+2024-04-05 15:26:51 : Group Cone._.Multi_organoid_NRL_D243 (12 of 45) : Creating Group Coverage File : Cone._.Multi_organoid_NRL_D243.insertions.coverage.h5, 4.48 mins elapsed.
+2024-04-05 15:27:16 : Group Cone._.Multi_organoid_D183 (13 of 45) : Creating Group Coverage File : Cone._.Multi_organoid_D183.insertions.coverage.h5, 4.899 mins elapsed.
+2024-04-05 15:27:38 : Group Cone._.Multi_organoid_D133 (14 of 45) : Creating Group Coverage File : Cone._.Multi_organoid_D133.insertions.coverage.h5, 5.261 mins elapsed.
+2024-04-05 15:28:06 : Group Cone._.Multi_organoid_NRL_D206 (15 of 45) : Creating Group Coverage File : Cone._.Multi_organoid_NRL_D206.insertions.coverage.h5, 5.728 mins elapsed.
+2024-04-05 15:28:32 : Group HC._.Multi_H9_D100 (16 of 45) : Creating Group Coverage File : HC._.Multi_H9_D100.insertions.coverage.h5, 6.174 mins elapsed.
+2024-04-05 15:28:54 : Group HC._.Multi_H9_D47 (17 of 45) : Creating Group Coverage File : HC._.Multi_H9_D47.insertions.coverage.h5, 6.536 mins elapsed.
+2024-04-05 15:29:18 : Group HC._.Multi_H9_D35 (18 of 45) : Creating Group Coverage File : HC._.Multi_H9_D35.insertions.coverage.h5, 6.937 mins elapsed.
+2024-04-05 15:29:43 : Group HC._.Multi_organoid_NRL_D075 (19 of 45) : Creating Group Coverage File : HC._.Multi_organoid_NRL_D075.insertions.coverage.h5, 7.349 mins elapsed.
+2024-04-05 15:30:05 : Group HC._.Multi_organoid_NRL_D243 (20 of 45) : Creating Group Coverage File : HC._.Multi_organoid_NRL_D243.insertions.coverage.h5, 7.712 mins elapsed.
+2024-04-05 15:30:28 : Group MG._.Multi_organoid_NRL_D206 (21 of 45) : Creating Group Coverage File : MG._.Multi_organoid_NRL_D206.insertions.coverage.h5, 8.109 mins elapsed.
+2024-04-05 15:30:52 : Group MG._.Multi_organoid_D183 (22 of 45) : Creating Group Coverage File : MG._.Multi_organoid_D183.insertions.coverage.h5, 8.498 mins elapsed.
+2024-04-05 15:31:13 : Group MG._.Multi_organoid_NRL_D243 (23 of 45) : Creating Group Coverage File : MG._.Multi_organoid_NRL_D243.insertions.coverage.h5, 8.846 mins elapsed.
+2024-04-05 15:31:39 : Group MG._.Multi_organoid_D133 (24 of 45) : Creating Group Coverage File : MG._.Multi_organoid_D133.insertions.coverage.h5, 9.289 mins elapsed.
+2024-04-05 15:32:04 : Group MG._.Multi_NRL_GFP_D123 (25 of 45) : Creating Group Coverage File : MG._.Multi_NRL_GFP_D123.insertions.coverage.h5, 9.697 mins elapsed.
+2024-04-05 15:32:24 : Group NRPC._.Multi_H9_D47 (26 of 45) : Creating Group Coverage File : NRPC._.Multi_H9_D47.insertions.coverage.h5, 10.038 mins elapsed.
+2024-04-05 15:32:49 : Group NRPC._.Multi_H9_D100 (27 of 45) : Creating Group Coverage File : NRPC._.Multi_H9_D100.insertions.coverage.h5, 10.448 mins elapsed.
+2024-04-05 15:33:10 : Group NRPC._.Multi_organoid_NRL_D206 (28 of 45) : Creating Group Coverage File : NRPC._.Multi_organoid_NRL_D206.insertions.coverage.h5, 10.804 mins elapsed.
+2024-04-05 15:33:33 : Group NRPC._.Multi_organoid_NRL_D075 (29 of 45) : Creating Group Coverage File : NRPC._.Multi_organoid_NRL_D075.insertions.coverage.h5, 11.187 mins elapsed.
+2024-04-05 15:33:57 : Group NRPC._.Multi_H9_D35 (30 of 45) : Creating Group Coverage File : NRPC._.Multi_H9_D35.insertions.coverage.h5, 11.592 mins elapsed.
+2024-04-05 15:34:22 : Group PRPC._.Multi_organoid_NRL_D075 (31 of 45) : Creating Group Coverage File : PRPC._.Multi_organoid_NRL_D075.insertions.coverage.h5, 12.009 mins elapsed.
+2024-04-05 15:34:49 : Group PRPC._.Multi_H9_D47 (32 of 45) : Creating Group Coverage File : PRPC._.Multi_H9_D47.insertions.coverage.h5, 12.456 mins elapsed.
+2024-04-05 15:35:17 : Group PRPC._.Multi_H9_D35 (33 of 45) : Creating Group Coverage File : PRPC._.Multi_H9_D35.insertions.coverage.h5, 12.911 mins elapsed.
+2024-04-05 15:35:43 : Group PRPC._.Multi_organoid_NRL_D206 (34 of 45) : Creating Group Coverage File : PRPC._.Multi_organoid_NRL_D206.insertions.coverage.h5, 13.352 mins elapsed.
+2024-04-05 15:36:07 : Group PRPC._.Multi_NRL_GFP_D123 (35 of 45) : Creating Group Coverage File : PRPC._.Multi_NRL_GFP_D123.insertions.coverage.h5, 13.756 mins elapsed.
+2024-04-05 15:36:31 : Group RGC._.Multi_H9_D35 (36 of 45) : Creating Group Coverage File : RGC._.Multi_H9_D35.insertions.coverage.h5, 14.149 mins elapsed.
+2024-04-05 15:36:58 : Group RGC._.Multi_organoid_NRL_D075 (37 of 45) : Creating Group Coverage File : RGC._.Multi_organoid_NRL_D075.insertions.coverage.h5, 14.609 mins elapsed.
+2024-04-05 15:37:24 : Group RGC._.Multi_H9_D47 (38 of 45) : Creating Group Coverage File : RGC._.Multi_H9_D47.insertions.coverage.h5, 15.028 mins elapsed.
+2024-04-05 15:37:50 : Group RGC._.Multi_H9_D100 (39 of 45) : Creating Group Coverage File : RGC._.Multi_H9_D100.insertions.coverage.h5, 15.474 mins elapsed.
+2024-04-05 15:38:12 : Group RGC._.Multi_organoid_NRL_D206 (40 of 45) : Creating Group Coverage File : RGC._.Multi_organoid_NRL_D206.insertions.coverage.h5, 15.828 mins elapsed.
+2024-04-05 15:38:33 : Group Rod._.Multi_organoid_NRL_D243 (41 of 45) : Creating Group Coverage File : Rod._.Multi_organoid_NRL_D243.insertions.coverage.h5, 16.192 mins elapsed.
+2024-04-05 15:39:00 : Group Rod._.Multi_organoid_D133 (42 of 45) : Creating Group Coverage File : Rod._.Multi_organoid_D133.insertions.coverage.h5, 16.64 mins elapsed.
+2024-04-05 15:39:25 : Group Rod._.Multi_organoid_D183 (43 of 45) : Creating Group Coverage File : Rod._.Multi_organoid_D183.insertions.coverage.h5, 17.052 mins elapsed.
+2024-04-05 15:39:46 : Group Rod._.Multi_NRL_GFP_D123 (44 of 45) : Creating Group Coverage File : Rod._.Multi_NRL_GFP_D123.insertions.coverage.h5, 17.405 mins elapsed.
+2024-04-05 15:40:08 : Group Rod._.Multi_organoid_NRL_D206 (45 of 45) : Creating Group Coverage File : Rod._.Multi_organoid_NRL_D206.insertions.coverage.h5, 17.772 mins elapsed.
+2024-04-05 15:40:32 : Adding Kmer Bias to Coverage Files!, 18.174 mins elapsed.
+chr1 chr10 chr11 chr12 chr13 chr14 chr15 chr16 chr17 chr18 chr19 chr2 chr20 chr21 chr22 chr3 chr4 chr5 chr6 chr7 chr8 chr9 chrX chrY 2024-04-05 15:57:13 : Finished Creation of Coverage Files!, 34.854 mins elapsed.
+ArchR logging successful to : ArchRLogs/ArchR-addGroupCoverages-9be8505c51ac-Date-2024-04-05_Time-15-22-22.log
+Searching For MACS2..
+Found with $path!
+ArchR logging to : ArchRLogs/ArchR-addReproduciblePeakSet-9be827113c57-Date-2024-04-05_Time-15-57-15.log
+If there is an issue, please report to github with logFile!
+2024-04-05 15:57:16 : Peak Calling Parameters!, 0.007 mins elapsed.
+2024-04-05 15:57:16 : Batching Peak Calls!, 0.008 mins elapsed.
+2024-04-05 15:57:16 : Batch Execution w/ safelapply!, 0 mins elapsed.
+2024-04-05 15:57:16 : Group 1 of 45, Calling Peaks with MACS2!, 0 mins elapsed.
+2024-04-05 15:58:17 : Group 2 of 45, Calling Peaks with MACS2!, 1.012 mins elapsed.
+2024-04-05 15:59:02 : Group 3 of 45, Calling Peaks with MACS2!, 1.768 mins elapsed.
+2024-04-05 16:00:08 : Group 4 of 45, Calling Peaks with MACS2!, 2.864 mins elapsed.
+2024-04-05 16:01:27 : Group 5 of 45, Calling Peaks with MACS2!, 4.184 mins elapsed.
+2024-04-05 16:02:11 : Group 6 of 45, Calling Peaks with MACS2!, 4.922 mins elapsed.
+2024-04-05 16:03:07 : Group 7 of 45, Calling Peaks with MACS2!, 5.846 mins elapsed.
+2024-04-05 16:04:37 : Group 8 of 45, Calling Peaks with MACS2!, 7.342 mins elapsed.
+2024-04-05 16:05:26 : Group 9 of 45, Calling Peaks with MACS2!, 8.174 mins elapsed.
+2024-04-05 16:06:04 : Group 10 of 45, Calling Peaks with MACS2!, 8.799 mins elapsed.
+2024-04-05 16:07:01 : Group 11 of 45, Calling Peaks with MACS2!, 9.752 mins elapsed.
+2024-04-05 16:08:01 : Group 12 of 45, Calling Peaks with MACS2!, 10.744 mins elapsed.
+2024-04-05 16:09:09 : Group 13 of 45, Calling Peaks with MACS2!, 11.891 mins elapsed.
+2024-04-05 16:10:35 : Group 14 of 45, Calling Peaks with MACS2!, 13.313 mins elapsed.
+2024-04-05 16:12:49 : Group 15 of 45, Calling Peaks with MACS2!, 15.555 mins elapsed.
+2024-04-05 16:13:55 : Group 16 of 45, Calling Peaks with MACS2!, 16.655 mins elapsed.
+2024-04-05 16:14:52 : Group 17 of 45, Calling Peaks with MACS2!, 17.597 mins elapsed.
+2024-04-05 16:15:52 : Group 18 of 45, Calling Peaks with MACS2!, 18.599 mins elapsed.
+2024-04-05 16:16:16 : Group 19 of 45, Calling Peaks with MACS2!, 19.003 mins elapsed.
+2024-04-05 16:16:42 : Group 20 of 45, Calling Peaks with MACS2!, 19.435 mins elapsed.
+2024-04-05 16:17:18 : Group 21 of 45, Calling Peaks with MACS2!, 20.037 mins elapsed.
+2024-04-05 16:18:29 : Group 22 of 45, Calling Peaks with MACS2!, 21.21 mins elapsed.
+2024-04-05 16:19:39 : Group 23 of 45, Calling Peaks with MACS2!, 22.389 mins elapsed.
+2024-04-05 16:20:57 : Group 24 of 45, Calling Peaks with MACS2!, 23.678 mins elapsed.
+2024-04-05 16:22:33 : Group 25 of 45, Calling Peaks with MACS2!, 25.275 mins elapsed.
+2024-04-05 16:23:31 : Group 26 of 45, Calling Peaks with MACS2!, 26.253 mins elapsed.
+2024-04-05 16:24:58 : Group 27 of 45, Calling Peaks with MACS2!, 27.707 mins elapsed.
+2024-04-05 16:26:15 : Group 28 of 45, Calling Peaks with MACS2!, 28.977 mins elapsed.
+2024-04-05 16:27:00 : Group 29 of 45, Calling Peaks with MACS2!, 29.737 mins elapsed.
+2024-04-05 16:28:43 : Group 30 of 45, Calling Peaks with MACS2!, 31.445 mins elapsed.
+2024-04-05 16:30:19 : Group 31 of 45, Calling Peaks with MACS2!, 33.052 mins elapsed.
+2024-04-05 16:31:54 : Group 32 of 45, Calling Peaks with MACS2!, 34.63 mins elapsed.
+2024-04-05 16:33:33 : Group 33 of 45, Calling Peaks with MACS2!, 36.281 mins elapsed.
+2024-04-05 16:35:02 : Group 34 of 45, Calling Peaks with MACS2!, 37.771 mins elapsed.
+2024-04-05 16:36:47 : Group 35 of 45, Calling Peaks with MACS2!, 39.51 mins elapsed.
+2024-04-05 16:38:25 : Group 36 of 45, Calling Peaks with MACS2!, 41.147 mins elapsed.
+2024-04-05 16:40:09 : Group 37 of 45, Calling Peaks with MACS2!, 42.889 mins elapsed.
+2024-04-05 16:42:04 : Group 38 of 45, Calling Peaks with MACS2!, 44.798 mins elapsed.
+2024-04-05 16:44:01 : Group 39 of 45, Calling Peaks with MACS2!, 46.748 mins elapsed.
+2024-04-05 16:44:58 : Group 40 of 45, Calling Peaks with MACS2!, 47.701 mins elapsed.
+2024-04-05 16:45:13 : Group 41 of 45, Calling Peaks with MACS2!, 47.955 mins elapsed.
+2024-04-05 16:46:09 : Group 42 of 45, Calling Peaks with MACS2!, 48.886 mins elapsed.
+2024-04-05 16:47:31 : Group 43 of 45, Calling Peaks with MACS2!, 50.258 mins elapsed.
+2024-04-05 16:48:31 : Group 44 of 45, Calling Peaks with MACS2!, 51.25 mins elapsed.
+2024-04-05 16:49:42 : Group 45 of 45, Calling Peaks with MACS2!, 52.427 mins elapsed.
+2024-04-05 16:50:27 : Identifying Reproducible Peaks!, 53.185 mins elapsed.
+2024-04-05 16:52:14 : Creating Union Peak Set!, 54.973 mins elapsed.
+Converged after 8 iterations!
+Plotting Ggplot!
+2024-04-05 16:52:28 : Finished Creating Union Peak Set (339165)!, 55.209 mins elapsed.
+ArchR logging to : ArchRLogs/ArchR-addPeakMatrix-9be8b9517c5-Date-2024-04-05_Time-16-52-28.log
+If there is an issue, please report to github with logFile!
+2024-04-05 16:52:28 : Batch Execution w/ safelapply!, 0 mins elapsed.
+2024-04-05 16:52:30 : Adding Multi_H9_D35 to PeakMatrix for Chr (1 of 23)!, 0.023 mins elapsed.
+2024-04-05 16:52:40 : Adding Multi_H9_D35 to PeakMatrix for Chr (2 of 23)!, 0.184 mins elapsed.
+2024-04-05 16:52:47 : Adding Multi_H9_D35 to PeakMatrix for Chr (3 of 23)!, 0.304 mins elapsed.
+2024-04-05 16:52:52 : Adding Multi_H9_D35 to PeakMatrix for Chr (4 of 23)!, 0.398 mins elapsed.
+2024-04-05 16:52:57 : Adding Multi_H9_D35 to PeakMatrix for Chr (5 of 23)!, 0.474 mins elapsed.
+2024-04-05 16:53:02 : Adding Multi_H9_D35 to PeakMatrix for Chr (6 of 23)!, 0.559 mins elapsed.
+2024-04-05 16:53:07 : Adding Multi_H9_D35 to PeakMatrix for Chr (7 of 23)!, 0.638 mins elapsed.
+2024-04-05 16:53:12 : Adding Multi_H9_D35 to PeakMatrix for Chr (8 of 23)!, 0.723 mins elapsed.
+2024-04-05 16:53:16 : Adding Multi_H9_D35 to PeakMatrix for Chr (9 of 23)!, 0.798 mins elapsed.
+2024-04-05 16:53:21 : Adding Multi_H9_D35 to PeakMatrix for Chr (10 of 23)!, 0.869 mins elapsed.
+2024-04-05 16:53:25 : Adding Multi_H9_D35 to PeakMatrix for Chr (11 of 23)!, 0.947 mins elapsed.
+2024-04-05 16:53:31 : Adding Multi_H9_D35 to PeakMatrix for Chr (12 of 23)!, 1.04 mins elapsed.
+2024-04-05 16:53:36 : Adding Multi_H9_D35 to PeakMatrix for Chr (13 of 23)!, 1.13 mins elapsed.
+2024-04-05 16:53:40 : Adding Multi_H9_D35 to PeakMatrix for Chr (14 of 23)!, 1.195 mins elapsed.
+2024-04-05 16:53:44 : Adding Multi_H9_D35 to PeakMatrix for Chr (15 of 23)!, 1.261 mins elapsed.
+2024-04-05 16:53:48 : Adding Multi_H9_D35 to PeakMatrix for Chr (16 of 23)!, 1.322 mins elapsed.
+2024-04-05 16:53:52 : Adding Multi_H9_D35 to PeakMatrix for Chr (17 of 23)!, 1.398 mins elapsed.
+2024-04-05 16:53:57 : Adding Multi_H9_D35 to PeakMatrix for Chr (18 of 23)!, 1.481 mins elapsed.
+2024-04-05 16:54:00 : Adding Multi_H9_D35 to PeakMatrix for Chr (19 of 23)!, 1.532 mins elapsed.
+2024-04-05 16:54:06 : Adding Multi_H9_D35 to PeakMatrix for Chr (20 of 23)!, 1.618 mins elapsed.
+2024-04-05 16:54:09 : Adding Multi_H9_D35 to PeakMatrix for Chr (21 of 23)!, 1.678 mins elapsed.
+2024-04-05 16:54:12 : Adding Multi_H9_D35 to PeakMatrix for Chr (22 of 23)!, 1.717 mins elapsed.
+2024-04-05 16:54:15 : Adding Multi_H9_D35 to PeakMatrix for Chr (23 of 23)!, 1.769 mins elapsed.
+2024-04-05 16:54:20 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (1 of 23)!, 0.023 mins elapsed.
+2024-04-05 16:54:30 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (2 of 23)!, 0.187 mins elapsed.
+2024-04-05 16:54:37 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (3 of 23)!, 0.312 mins elapsed.
+2024-04-05 16:54:43 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (4 of 23)!, 0.415 mins elapsed.
+2024-04-05 16:54:48 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (5 of 23)!, 0.499 mins elapsed.
+2024-04-05 16:54:54 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (6 of 23)!, 0.586 mins elapsed.
+2024-04-05 16:54:59 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (7 of 23)!, 0.676 mins elapsed.
+2024-04-05 16:55:04 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (8 of 23)!, 0.764 mins elapsed.
+2024-04-05 16:55:09 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (9 of 23)!, 0.84 mins elapsed.
+2024-04-05 16:55:14 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (10 of 23)!, 0.921 mins elapsed.
+2024-04-05 16:55:19 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (11 of 23)!, 1.005 mins elapsed.
+2024-04-05 16:55:25 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (12 of 23)!, 1.112 mins elapsed.
+2024-04-05 16:55:31 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (13 of 23)!, 1.209 mins elapsed.
+2024-04-05 16:55:34 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (14 of 23)!, 1.264 mins elapsed.
+2024-04-05 16:55:39 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (15 of 23)!, 1.336 mins elapsed.
+2024-04-05 16:55:43 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (16 of 23)!, 1.406 mins elapsed.
+2024-04-05 16:55:47 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (17 of 23)!, 1.479 mins elapsed.
+2024-04-05 16:55:53 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (18 of 23)!, 1.572 mins elapsed.
+2024-04-05 16:55:56 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (19 of 23)!, 1.629 mins elapsed.
+2024-04-05 16:56:02 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (20 of 23)!, 1.722 mins elapsed.
+2024-04-05 16:56:06 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (21 of 23)!, 1.785 mins elapsed.
+2024-04-05 16:56:08 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (22 of 23)!, 1.831 mins elapsed.
+2024-04-05 16:56:12 : Adding Multi_organoid_NRL_D243 to PeakMatrix for Chr (23 of 23)!, 1.89 mins elapsed.
+2024-04-05 16:56:18 : Adding Multi_H9_D47 to PeakMatrix for Chr (1 of 23)!, 0.024 mins elapsed.
+2024-04-05 16:56:27 : Adding Multi_H9_D47 to PeakMatrix for Chr (2 of 23)!, 0.184 mins elapsed.
+2024-04-05 16:56:34 : Adding Multi_H9_D47 to PeakMatrix for Chr (3 of 23)!, 0.305 mins elapsed.
+2024-04-05 16:56:40 : Adding Multi_H9_D47 to PeakMatrix for Chr (4 of 23)!, 0.402 mins elapsed.
+2024-04-05 16:56:45 : Adding Multi_H9_D47 to PeakMatrix for Chr (5 of 23)!, 0.487 mins elapsed.
+2024-04-05 16:56:51 : Adding Multi_H9_D47 to PeakMatrix for Chr (6 of 23)!, 0.583 mins elapsed.
+2024-04-05 16:56:56 : Adding Multi_H9_D47 to PeakMatrix for Chr (7 of 23)!, 0.67 mins elapsed.
+2024-04-05 16:57:01 : Adding Multi_H9_D47 to PeakMatrix for Chr (8 of 23)!, 0.757 mins elapsed.
+2024-04-05 16:57:06 : Adding Multi_H9_D47 to PeakMatrix for Chr (9 of 23)!, 0.833 mins elapsed.
+2024-04-05 16:57:11 : Adding Multi_H9_D47 to PeakMatrix for Chr (10 of 23)!, 0.914 mins elapsed.
+2024-04-05 16:57:16 : Adding Multi_H9_D47 to PeakMatrix for Chr (11 of 23)!, 1.005 mins elapsed.
+2024-04-05 16:57:22 : Adding Multi_H9_D47 to PeakMatrix for Chr (12 of 23)!, 1.1 mins elapsed.
+2024-04-05 16:57:27 : Adding Multi_H9_D47 to PeakMatrix for Chr (13 of 23)!, 1.183 mins elapsed.
+2024-04-05 16:57:30 : Adding Multi_H9_D47 to PeakMatrix for Chr (14 of 23)!, 1.24 mins elapsed.
+2024-04-05 16:57:34 : Adding Multi_H9_D47 to PeakMatrix for Chr (15 of 23)!, 1.304 mins elapsed.
+2024-04-05 16:57:38 : Adding Multi_H9_D47 to PeakMatrix for Chr (16 of 23)!, 1.369 mins elapsed.
+2024-04-05 16:57:43 : Adding Multi_H9_D47 to PeakMatrix for Chr (17 of 23)!, 1.443 mins elapsed.
+2024-04-05 16:57:48 : Adding Multi_H9_D47 to PeakMatrix for Chr (18 of 23)!, 1.529 mins elapsed.
+2024-04-05 16:57:51 : Adding Multi_H9_D47 to PeakMatrix for Chr (19 of 23)!, 1.583 mins elapsed.
+2024-04-05 16:57:56 : Adding Multi_H9_D47 to PeakMatrix for Chr (20 of 23)!, 1.669 mins elapsed.
+2024-04-05 16:58:00 : Adding Multi_H9_D47 to PeakMatrix for Chr (21 of 23)!, 1.728 mins elapsed.
+2024-04-05 16:58:02 : Adding Multi_H9_D47 to PeakMatrix for Chr (22 of 23)!, 1.769 mins elapsed.
+2024-04-05 16:58:06 : Adding Multi_H9_D47 to PeakMatrix for Chr (23 of 23)!, 1.826 mins elapsed.
+2024-04-05 16:58:11 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (1 of 23)!, 0.022 mins elapsed.
+2024-04-05 16:58:22 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (2 of 23)!, 0.193 mins elapsed.
+2024-04-05 16:58:31 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (3 of 23)!, 0.348 mins elapsed.
+2024-04-05 16:58:38 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (4 of 23)!, 0.462 mins elapsed.
+2024-04-05 16:58:43 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (5 of 23)!, 0.556 mins elapsed.
+2024-04-05 16:58:50 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (6 of 23)!, 0.663 mins elapsed.
+2024-04-05 16:58:56 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (7 of 23)!, 0.76 mins elapsed.
+2024-04-05 16:59:02 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (8 of 23)!, 0.86 mins elapsed.
+2024-04-05 16:59:07 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (9 of 23)!, 0.951 mins elapsed.
+2024-04-05 16:59:13 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (10 of 23)!, 1.048 mins elapsed.
+2024-04-05 16:59:18 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (11 of 23)!, 1.14 mins elapsed.
+2024-04-05 16:59:25 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (12 of 23)!, 1.248 mins elapsed.
+2024-04-05 16:59:30 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (13 of 23)!, 1.34 mins elapsed.
+2024-04-05 16:59:34 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (14 of 23)!, 1.396 mins elapsed.
+2024-04-05 16:59:38 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (15 of 23)!, 1.466 mins elapsed.
+2024-04-05 16:59:42 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (16 of 23)!, 1.535 mins elapsed.
+2024-04-05 16:59:46 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (17 of 23)!, 1.608 mins elapsed.
+2024-04-05 16:59:53 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (18 of 23)!, 1.716 mins elapsed.
+2024-04-05 16:59:57 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (19 of 23)!, 1.781 mins elapsed.
+2024-04-05 17:00:02 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (20 of 23)!, 1.869 mins elapsed.
+2024-04-05 17:00:06 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (21 of 23)!, 1.936 mins elapsed.
+2024-04-05 17:00:09 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (22 of 23)!, 1.982 mins elapsed.
+2024-04-05 17:00:12 : Adding Multi_organoid_NRL_D075 to PeakMatrix for Chr (23 of 23)!, 2.041 mins elapsed.
+2024-04-05 17:00:18 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (1 of 23)!, 0.022 mins elapsed.
+2024-04-05 17:00:25 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (2 of 23)!, 0.145 mins elapsed.
+2024-04-05 17:00:31 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (3 of 23)!, 0.244 mins elapsed.
+2024-04-05 17:00:36 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (4 of 23)!, 0.327 mins elapsed.
+2024-04-05 17:00:40 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (5 of 23)!, 0.394 mins elapsed.
+2024-04-05 17:00:44 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (6 of 23)!, 0.464 mins elapsed.
+2024-04-05 17:00:49 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (7 of 23)!, 0.536 mins elapsed.
+2024-04-05 17:00:53 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (8 of 23)!, 0.609 mins elapsed.
+2024-04-05 17:00:57 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (9 of 23)!, 0.675 mins elapsed.
+2024-04-05 17:01:01 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (10 of 23)!, 0.743 mins elapsed.
+2024-04-05 17:01:05 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (11 of 23)!, 0.81 mins elapsed.
+2024-04-05 17:01:09 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (12 of 23)!, 0.882 mins elapsed.
+2024-04-05 17:01:13 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (13 of 23)!, 0.951 mins elapsed.
+2024-04-05 17:01:16 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (14 of 23)!, 1.001 mins elapsed.
+2024-04-05 17:01:20 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (15 of 23)!, 1.058 mins elapsed.
+2024-04-05 17:01:23 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (16 of 23)!, 1.117 mins elapsed.
+2024-04-05 17:01:27 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (17 of 23)!, 1.181 mins elapsed.
+2024-04-05 17:01:31 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (18 of 23)!, 1.253 mins elapsed.
+2024-04-05 17:01:34 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (19 of 23)!, 1.299 mins elapsed.
+2024-04-05 17:01:38 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (20 of 23)!, 1.368 mins elapsed.
+2024-04-05 17:01:42 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (21 of 23)!, 1.424 mins elapsed.
+2024-04-05 17:01:44 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (22 of 23)!, 1.46 mins elapsed.
+2024-04-05 17:01:47 : Adding Multi_organoid_NRL_D206 to PeakMatrix for Chr (23 of 23)!, 1.509 mins elapsed.
+2024-04-05 17:01:52 : Adding Multi_organoid_D133 to PeakMatrix for Chr (1 of 23)!, 0.021 mins elapsed.
+2024-04-05 17:02:02 : Adding Multi_organoid_D133 to PeakMatrix for Chr (2 of 23)!, 0.196 mins elapsed.
+2024-04-05 17:02:10 : Adding Multi_organoid_D133 to PeakMatrix for Chr (3 of 23)!, 0.336 mins elapsed.
+2024-04-05 17:02:17 : Adding Multi_organoid_D133 to PeakMatrix for Chr (4 of 23)!, 0.454 mins elapsed.
+2024-04-05 17:02:23 : Adding Multi_organoid_D133 to PeakMatrix for Chr (5 of 23)!, 0.538 mins elapsed.
+2024-04-05 17:02:28 : Adding Multi_organoid_D133 to PeakMatrix for Chr (6 of 23)!, 0.631 mins elapsed.
+2024-04-05 17:02:34 : Adding Multi_organoid_D133 to PeakMatrix for Chr (7 of 23)!, 0.723 mins elapsed.
+2024-04-05 17:02:39 : Adding Multi_organoid_D133 to PeakMatrix for Chr (8 of 23)!, 0.818 mins elapsed.
+2024-04-05 17:02:44 : Adding Multi_organoid_D133 to PeakMatrix for Chr (9 of 23)!, 0.898 mins elapsed.
+2024-04-05 17:02:49 : Adding Multi_organoid_D133 to PeakMatrix for Chr (10 of 23)!, 0.978 mins elapsed.
+2024-04-05 17:02:54 : Adding Multi_organoid_D133 to PeakMatrix for Chr (11 of 23)!, 1.067 mins elapsed.
+2024-04-05 17:03:00 : Adding Multi_organoid_D133 to PeakMatrix for Chr (12 of 23)!, 1.165 mins elapsed.
+2024-04-05 17:03:05 : Adding Multi_organoid_D133 to PeakMatrix for Chr (13 of 23)!, 1.252 mins elapsed.
+2024-04-05 17:03:08 : Adding Multi_organoid_D133 to PeakMatrix for Chr (14 of 23)!, 1.304 mins elapsed.
+2024-04-05 17:03:12 : Adding Multi_organoid_D133 to PeakMatrix for Chr (15 of 23)!, 1.366 mins elapsed.
+2024-04-05 17:03:16 : Adding Multi_organoid_D133 to PeakMatrix for Chr (16 of 23)!, 1.427 mins elapsed.
+2024-04-05 17:03:20 : Adding Multi_organoid_D133 to PeakMatrix for Chr (17 of 23)!, 1.498 mins elapsed.
+2024-04-05 17:03:26 : Adding Multi_organoid_D133 to PeakMatrix for Chr (18 of 23)!, 1.588 mins elapsed.
+2024-04-05 17:03:29 : Adding Multi_organoid_D133 to PeakMatrix for Chr (19 of 23)!, 1.639 mins elapsed.
+2024-04-05 17:03:34 : Adding Multi_organoid_D133 to PeakMatrix for Chr (20 of 23)!, 1.728 mins elapsed.
+2024-04-05 17:03:37 : Adding Multi_organoid_D133 to PeakMatrix for Chr (21 of 23)!, 1.787 mins elapsed.
+2024-04-05 17:03:40 : Adding Multi_organoid_D133 to PeakMatrix for Chr (22 of 23)!, 1.825 mins elapsed.
+2024-04-05 17:03:43 : Adding Multi_organoid_D133 to PeakMatrix for Chr (23 of 23)!, 1.877 mins elapsed.
+2024-04-05 17:03:48 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (1 of 23)!, 0.021 mins elapsed.
+2024-04-05 17:03:56 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (2 of 23)!, 0.143 mins elapsed.
+2024-04-05 17:04:01 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (3 of 23)!, 0.229 mins elapsed.
+2024-04-05 17:04:05 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (4 of 23)!, 0.304 mins elapsed.
+2024-04-05 17:04:09 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (5 of 23)!, 0.363 mins elapsed.
+2024-04-05 17:04:13 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (6 of 23)!, 0.431 mins elapsed.
+2024-04-05 17:04:17 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (7 of 23)!, 0.497 mins elapsed.
+2024-04-05 17:04:21 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (8 of 23)!, 0.563 mins elapsed.
+2024-04-05 17:04:24 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (9 of 23)!, 0.622 mins elapsed.
+2024-04-05 17:04:28 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (10 of 23)!, 0.682 mins elapsed.
+2024-04-05 17:04:32 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (11 of 23)!, 0.745 mins elapsed.
+2024-04-05 17:04:36 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (12 of 23)!, 0.814 mins elapsed.
+2024-04-05 17:04:40 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (13 of 23)!, 0.879 mins elapsed.
+2024-04-05 17:04:43 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (14 of 23)!, 0.925 mins elapsed.
+2024-04-05 17:04:46 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (15 of 23)!, 0.978 mins elapsed.
+2024-04-05 17:04:49 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (16 of 23)!, 1.028 mins elapsed.
+2024-04-05 17:04:52 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (17 of 23)!, 1.087 mins elapsed.
+2024-04-05 17:04:56 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (18 of 23)!, 1.155 mins elapsed.
+2024-04-05 17:04:59 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (19 of 23)!, 1.199 mins elapsed.
+2024-04-05 17:05:03 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (20 of 23)!, 1.27 mins elapsed.
+2024-04-05 17:05:06 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (21 of 23)!, 1.319 mins elapsed.
+2024-04-05 17:05:08 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (22 of 23)!, 1.354 mins elapsed.
+2024-04-05 17:05:11 : Adding Multi_NRL_GFP_D123 to PeakMatrix for Chr (23 of 23)!, 1.399 mins elapsed.
+2024-04-05 17:05:15 : Adding Multi_H9_D100 to PeakMatrix for Chr (1 of 23)!, 0.021 mins elapsed.
+2024-04-05 17:05:22 : Adding Multi_H9_D100 to PeakMatrix for Chr (2 of 23)!, 0.13 mins elapsed.
+2024-04-05 17:05:27 : Adding Multi_H9_D100 to PeakMatrix for Chr (3 of 23)!, 0.218 mins elapsed.
+2024-04-05 17:05:32 : Adding Multi_H9_D100 to PeakMatrix for Chr (4 of 23)!, 0.295 mins elapsed.
+2024-04-05 17:05:35 : Adding Multi_H9_D100 to PeakMatrix for Chr (5 of 23)!, 0.355 mins elapsed.
+2024-04-05 17:05:39 : Adding Multi_H9_D100 to PeakMatrix for Chr (6 of 23)!, 0.422 mins elapsed.
+2024-04-05 17:05:44 : Adding Multi_H9_D100 to PeakMatrix for Chr (7 of 23)!, 0.491 mins elapsed.
+2024-04-05 17:05:48 : Adding Multi_H9_D100 to PeakMatrix for Chr (8 of 23)!, 0.558 mins elapsed.
+2024-04-05 17:05:51 : Adding Multi_H9_D100 to PeakMatrix for Chr (9 of 23)!, 0.618 mins elapsed.
+2024-04-05 17:05:55 : Adding Multi_H9_D100 to PeakMatrix for Chr (10 of 23)!, 0.678 mins elapsed.
+2024-04-05 17:05:59 : Adding Multi_H9_D100 to PeakMatrix for Chr (11 of 23)!, 0.749 mins elapsed.
+2024-04-05 17:06:04 : Adding Multi_H9_D100 to PeakMatrix for Chr (12 of 23)!, 0.827 mins elapsed.
+2024-04-05 17:06:08 : Adding Multi_H9_D100 to PeakMatrix for Chr (13 of 23)!, 0.894 mins elapsed.
+2024-04-05 17:06:11 : Adding Multi_H9_D100 to PeakMatrix for Chr (14 of 23)!, 0.943 mins elapsed.
+2024-04-05 17:06:14 : Adding Multi_H9_D100 to PeakMatrix for Chr (15 of 23)!, 0.999 mins elapsed.
+2024-04-05 17:06:17 : Adding Multi_H9_D100 to PeakMatrix for Chr (16 of 23)!, 1.053 mins elapsed.
+2024-04-05 17:06:21 : Adding Multi_H9_D100 to PeakMatrix for Chr (17 of 23)!, 1.113 mins elapsed.
+2024-04-05 17:06:25 : Adding Multi_H9_D100 to PeakMatrix for Chr (18 of 23)!, 1.184 mins elapsed.
+2024-04-05 17:06:28 : Adding Multi_H9_D100 to PeakMatrix for Chr (19 of 23)!, 1.228 mins elapsed.
+2024-04-05 17:06:32 : Adding Multi_H9_D100 to PeakMatrix for Chr (20 of 23)!, 1.299 mins elapsed.
+2024-04-05 17:06:35 : Adding Multi_H9_D100 to PeakMatrix for Chr (21 of 23)!, 1.348 mins elapsed.
+2024-04-05 17:06:37 : Adding Multi_H9_D100 to PeakMatrix for Chr (22 of 23)!, 1.385 mins elapsed.
+2024-04-05 17:06:40 : Adding Multi_H9_D100 to PeakMatrix for Chr (23 of 23)!, 1.432 mins elapsed.
+2024-04-05 17:06:45 : Adding Multi_organoid_D183 to PeakMatrix for Chr (1 of 23)!, 0.02 mins elapsed.
+2024-04-05 17:06:49 : Adding Multi_organoid_D183 to PeakMatrix for Chr (2 of 23)!, 0.095 mins elapsed.
+2024-04-05 17:06:53 : Adding Multi_organoid_D183 to PeakMatrix for Chr (3 of 23)!, 0.159 mins elapsed.
+2024-04-05 17:06:57 : Adding Multi_organoid_D183 to PeakMatrix for Chr (4 of 23)!, 0.229 mins elapsed.
+2024-04-05 17:07:00 : Adding Multi_organoid_D183 to PeakMatrix for Chr (5 of 23)!, 0.28 mins elapsed.
+2024-04-05 17:07:04 : Adding Multi_organoid_D183 to PeakMatrix for Chr (6 of 23)!, 0.333 mins elapsed.
+2024-04-05 17:07:07 : Adding Multi_organoid_D183 to PeakMatrix for Chr (7 of 23)!, 0.386 mins elapsed.
+2024-04-05 17:07:10 : Adding Multi_organoid_D183 to PeakMatrix for Chr (8 of 23)!, 0.439 mins elapsed.
+2024-04-05 17:07:13 : Adding Multi_organoid_D183 to PeakMatrix for Chr (9 of 23)!, 0.485 mins elapsed.
+2024-04-05 17:07:15 : Adding Multi_organoid_D183 to PeakMatrix for Chr (10 of 23)!, 0.532 mins elapsed.
+2024-04-05 17:07:18 : Adding Multi_organoid_D183 to PeakMatrix for Chr (11 of 23)!, 0.582 mins elapsed.
+2024-04-05 17:07:22 : Adding Multi_organoid_D183 to PeakMatrix for Chr (12 of 23)!, 0.635 mins elapsed.
+2024-04-05 17:07:25 : Adding Multi_organoid_D183 to PeakMatrix for Chr (13 of 23)!, 0.684 mins elapsed.
+2024-04-05 17:07:27 : Adding Multi_organoid_D183 to PeakMatrix for Chr (14 of 23)!, 0.723 mins elapsed.
+2024-04-05 17:07:29 : Adding Multi_organoid_D183 to PeakMatrix for Chr (15 of 23)!, 0.766 mins elapsed.
+2024-04-05 17:07:32 : Adding Multi_organoid_D183 to PeakMatrix for Chr (16 of 23)!, 0.81 mins elapsed.
+2024-04-05 17:07:35 : Adding Multi_organoid_D183 to PeakMatrix for Chr (17 of 23)!, 0.855 mins elapsed.
+2024-04-05 17:07:38 : Adding Multi_organoid_D183 to PeakMatrix for Chr (18 of 23)!, 0.905 mins elapsed.
+2024-04-05 17:07:40 : Adding Multi_organoid_D183 to PeakMatrix for Chr (19 of 23)!, 0.943 mins elapsed.
+2024-04-05 17:07:43 : Adding Multi_organoid_D183 to PeakMatrix for Chr (20 of 23)!, 0.992 mins elapsed.
+2024-04-05 17:07:45 : Adding Multi_organoid_D183 to PeakMatrix for Chr (21 of 23)!, 1.032 mins elapsed.
+2024-04-05 17:07:47 : Adding Multi_organoid_D183 to PeakMatrix for Chr (22 of 23)!, 1.064 mins elapsed.
+2024-04-05 17:07:50 : Adding Multi_organoid_D183 to PeakMatrix for Chr (23 of 23)!, 1.105 mins elapsed.
+ArchR logging successful to : ArchRLogs/ArchR-addPeakMatrix-9be8b9517c5-Date-2024-04-05_Time-16-52-28.log
+Saving ArchRProject...
+Loading ArchRProject...
+Successfully loaded ArchRProject!
+
+                                                   / |
+                                                 /    \
+            .                                  /      |.
+            \\\                              /        |.
+              \\\                          /           `|.
+                \\\                      /              |.
+                  \                    /                |\
+                  \\#####\           /                  ||
+                ==###########>      /                   ||
+                 \\##==......\    /                     ||
+            ______ =       =|__ /__                     ||      \\\
+        ,--' ,----`-,__ ___/'  --,-`-===================##========>
+       \               '        ##_______ _____ ,--,__,=##,__   ///
+        ,    __==    ___,-,__,--'#'  ==='      `-'    | ##,-/
+        -,____,---'       \\####\\________________,--\\_##,/
+           ___      .______        ______  __    __  .______      
+          /   \     |   _  \      /      ||  |  |  | |   _  \     
+         /  ^  \    |  |_)  |    |  ,----'|  |__|  | |  |_)  |    
+        /  /_\  \   |      /     |  |     |   __   | |      /     
+       /  _____  \  |  |\  \\___ |  `----.|  |  |  | |  |\  \\___.
+      /__/     \__\ | _| `._____| \______||__|  |__| | _| `._____|
+    
+
+           ___      .______        ______  __    __  .______      
+          /   \     |   _  \      /      ||  |  |  | |   _  \     
+         /  ^  \    |  |_)  |    |  ,----'|  |__|  | |  |_)  |    
+        /  /_\  \   |      /     |  |     |   __   | |      /     
+       /  _____  \  |  |\  \\___ |  `----.|  |  |  | |  |\  \\___.
+      /__/     \__\ | _| `._____| \______||__|  |__| | _| `._____|
+    
+ArchR logging to : ArchRLogs/ArchR-getMarkerFeatures-9be827cea108-Date-2024-04-05_Time-17-08-06.log
+If there is an issue, please report to github with logFile!
+2024-04-05 17:08:07 : Matching Known Biases, 0.009 mins elapsed.
+2024-04-05 17:08:17 : Computing Pairwise Tests (1 of 9), 0.18 mins elapsed.
+2024-04-05 17:09:12 : Computing Pairwise Tests (2 of 9), 1.091 mins elapsed.
+2024-04-05 17:09:56 : Computing Pairwise Tests (3 of 9), 1.834 mins elapsed.
+2024-04-05 17:10:40 : Computing Pairwise Tests (4 of 9), 2.563 mins elapsed.
+2024-04-05 17:11:23 : Computing Pairwise Tests (5 of 9), 3.276 mins elapsed.
+2024-04-05 17:12:05 : Computing Pairwise Tests (6 of 9), 3.977 mins elapsed.
+2024-04-05 17:12:47 : Computing Pairwise Tests (7 of 9), 4.684 mins elapsed.
+2024-04-05 17:13:32 : Computing Pairwise Tests (8 of 9), 5.433 mins elapsed.
+2024-04-05 17:14:15 : Computing Pairwise Tests (9 of 9), 6.15 mins elapsed.
+###########
+2024-04-05 17:14:58 : Completed Pairwise Tests, 6.868 mins elapsed.
+###########
+ArchR logging successful to : ArchRLogs/ArchR-getMarkerFeatures-9be827cea108-Date-2024-04-05_Time-17-08-06.log
+Saving ArchRProject...
+Loading ArchRProject...
+Successfully loaded ArchRProject!
+
+                                                   / |
+                                                 /    \
+            .                                  /      |.
+            \\\                              /        |.
+              \\\                          /           `|.
+                \\\                      /              |.
+                  \                    /                |\
+                  \\#####\           /                  ||
+                ==###########>      /                   ||
+                 \\##==......\    /                     ||
+            ______ =       =|__ /__                     ||      \\\
+        ,--' ,----`-,__ ___/'  --,-`-===================##========>
+       \               '        ##_______ _____ ,--,__,=##,__   ///
+        ,    __==    ___,-,__,--'#'  ==='      `-'    | ##,-/
+        -,____,---'       \\####\\________________,--\\_##,/
+           ___      .______        ______  __    __  .______      
+          /   \     |   _  \      /      ||  |  |  | |   _  \     
+         /  ^  \    |  |_)  |    |  ,----'|  |__|  | |  |_)  |    
+        /  /_\  \   |      /     |  |     |   __   | |      /     
+       /  _____  \  |  |\  \\___ |  `----.|  |  |  | |  |\  \\___.
+      /__/     \__\ | _| `._____| \______||__|  |__| | _| `._____|
+    
+
+           ___      .______        ______  __    __  .______      
+          /   \     |   _  \      /      ||  |  |  | |   _  \     
+         /  ^  \    |  |_)  |    |  ,----'|  |__|  | |  |_)  |    
+        /  /_\  \   |      /     |  |     |   __   | |      /     
+       /  _____  \  |  |\  \\___ |  `----.|  |  |  | |  |\  \\___.
+      /__/     \__\ | _| `._____| \______||__|  |__| | _| `._____|
+    

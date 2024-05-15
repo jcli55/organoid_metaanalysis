@@ -1,0 +1,6 @@
+starting at Wed Apr 10 14:40:12 CDT 2024 on mhgcp-r00.grid.bcm.edu
+SLURM_JOBID=1344463
+ [1] "RHO"     "RCVRN"   "CRX"     "PROM1"   "ARR3"    "OTX2"    "VSX1"   
+ [8] "VSX2"    "GAD1"    "GAD2"    "TFAP2A"  "TFAP2B"  "ONECUT1" "ONECUT2"
+[15] "NEFM"    "RBPMS"   "POU4F2"  "RLBP1"   "SLC1A3"  "SFRP2"  
+ended at Wed Apr 10 14:54:22 CDT 2024 on mhgcp-r00.grid.bcm.edu. Time elapsed: 00:14:10

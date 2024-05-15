@@ -1,0 +1,125 @@
+Loading required package: ggplot2
+Loading required package: SummarizedExperiment
+Loading required package: MatrixGenerics
+Loading required package: matrixStats
+
+Attaching package: ‘MatrixGenerics’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colAlls, colAnyNAs, colAnys, colAvgsPerRowSet, colCollapse,
+    colCounts, colCummaxs, colCummins, colCumprods, colCumsums,
+    colDiffs, colIQRDiffs, colIQRs, colLogSumExps, colMadDiffs,
+    colMads, colMaxs, colMeans2, colMedians, colMins, colOrderStats,
+    colProds, colQuantiles, colRanges, colRanks, colSdDiffs, colSds,
+    colSums2, colTabulates, colVarDiffs, colVars, colWeightedMads,
+    colWeightedMeans, colWeightedMedians, colWeightedSds,
+    colWeightedVars, rowAlls, rowAnyNAs, rowAnys, rowAvgsPerColSet,
+    rowCollapse, rowCounts, rowCummaxs, rowCummins, rowCumprods,
+    rowCumsums, rowDiffs, rowIQRDiffs, rowIQRs, rowLogSumExps,
+    rowMadDiffs, rowMads, rowMaxs, rowMeans2, rowMedians, rowMins,
+    rowOrderStats, rowProds, rowQuantiles, rowRanges, rowRanks,
+    rowSdDiffs, rowSds, rowSums2, rowTabulates, rowVarDiffs, rowVars,
+    rowWeightedMads, rowWeightedMeans, rowWeightedMedians,
+    rowWeightedSds, rowWeightedVars
+
+Loading required package: GenomicRanges
+Loading required package: stats4
+Loading required package: BiocGenerics
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    Filter, Find, Map, Position, Reduce, anyDuplicated, append,
+    as.data.frame, basename, cbind, colnames, dirname, do.call,
+    duplicated, eval, evalq, get, grep, grepl, intersect, is.unsorted,
+    lapply, mapply, match, mget, order, paste, pmax, pmax.int, pmin,
+    pmin.int, rank, rbind, rownames, sapply, setdiff, sort, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Loading required package: S4Vectors
+
+Attaching package: ‘S4Vectors’
+
+The following objects are masked from ‘package:base’:
+
+    I, expand.grid, unname
+
+Loading required package: IRanges
+Loading required package: GenomeInfoDb
+Loading required package: Biobase
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: ‘Biobase’
+
+The following object is masked from ‘package:MatrixGenerics’:
+
+    rowMedians
+
+The following objects are masked from ‘package:matrixStats’:
+
+    anyMissing, rowMedians
+
+Loading required package: data.table
+
+Attaching package: ‘data.table’
+
+The following object is masked from ‘package:SummarizedExperiment’:
+
+    shift
+
+The following object is masked from ‘package:GenomicRanges’:
+
+    shift
+
+The following object is masked from ‘package:IRanges’:
+
+    shift
+
+The following objects are masked from ‘package:S4Vectors’:
+
+    first, second
+
+Loading required package: Matrix
+
+Attaching package: ‘Matrix’
+
+The following object is masked from ‘package:S4Vectors’:
+
+    expand
+
+Loading required package: rhdf5
+Loading required package: magrittr
+Setting default number of Parallel threads to 8.
+Setting default genome to Hg38.
+filterFrags is no longer a valid input. Please use minFrags! Setting filterFrags value to minFrags!
+filterTSS is no longer a valid input. Please use minTSS! Setting filterTSS value to minTSS!
+Using GeneAnnotation set by addArchRGenome(Hg38)!
+Using GeneAnnotation set by addArchRGenome(Hg38)!
+ArchR logging to : ArchRLogs/ArchR-createArrows-667c3885a3b3-Date-2024-02-13_Time-16-33-45.log
+If there is an issue, please report to github with logFile!
+2024-02-13 16:33:46 : Batch Execution w/ safelapply!, 0 mins elapsed.
+2024-02-13 16:33:46 : (Multi_organoid_D183 : 1 of 9) Arrow Exists! Marking as completed since force = FALSE!, 0.001 mins elapsed.
+2024-02-13 16:33:46 : (Multi_organoid_NRL_D243 : 2 of 9) Arrow Exists! Marking as completed since force = FALSE!, 0.002 mins elapsed.
+2024-02-13 16:33:46 : (Multi_organoid_NRL_D206 : 3 of 9) Arrow Exists! Marking as completed since force = FALSE!, 0.002 mins elapsed.
+2024-02-13 16:33:46 : (Multi_H9_D35 : 4 of 9) Arrow Exists! Marking as completed since force = FALSE!, 0.002 mins elapsed.
+2024-02-13 16:33:46 : (Multi_organoid_NRL_D075 : 5 of 9) Arrow Exists! Marking as completed since force = FALSE!, 0.002 mins elapsed.
+2024-02-13 16:33:46 : (Multi_H9_D47 : 6 of 9) Arrow Exists! Marking as completed since force = FALSE!, 0.003 mins elapsed.
+2024-02-13 16:33:46 : (Multi_organoid_D133 : 7 of 9) Arrow Exists! Marking as completed since force = FALSE!, 0.003 mins elapsed.
+2024-02-13 16:33:46 : (Multi_NRL_GFP_D123 : 8 of 9) Arrow Exists! Marking as completed since force = FALSE!, 0.003 mins elapsed.
+2024-02-13 16:33:46 : (Multi_H9_D100 : 9 of 9) Arrow Exists! Marking as completed since force = FALSE!, 0.003 mins elapsed.
+ArchR logging successful to : ArchRLogs/ArchR-createArrows-667c3885a3b3-Date-2024-02-13_Time-16-33-45.log
+Using GeneAnnotation set by addArchRGenome(Hg38)!
+Using GeneAnnotation set by addArchRGenome(Hg38)!
+Validating Arrows...
+slurmstepd: error: *** JOB 1296614 ON mhgcp-d03 CANCELLED AT 2024-02-14T04:34:00 DUE TO TIME LIMIT ***

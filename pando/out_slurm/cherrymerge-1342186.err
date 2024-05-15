@@ -1,0 +1,3 @@
+Warning message:
+In CheckDuplicateCellNames(object.list = objects) :
+  Some cell names are duplicated across objects provided. Renaming to enforce unique cell names.

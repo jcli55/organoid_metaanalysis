@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "infer_fate_multivelo.py", line 11, in <module>
+    ck.compute_transition_matrix()
+  File "/storage/chen/home/u250758/miniconda3/envs/cellfate/lib/python3.8/site-packages/cellrank/kernels/_connectivity_kernel.py", line 72, in compute_transition_matrix
+    self.transition_matrix = conn
+  File "/storage/chen/home/u250758/miniconda3/envs/cellfate/lib/python3.8/site-packages/cellrank/kernels/_base_kernel.py", line 720, in transition_matrix
+    KernelExpression.transition_matrix.fset(self, matrix)
+  File "/storage/chen/home/u250758/miniconda3/envs/cellfate/lib/python3.8/site-packages/cellrank/kernels/_base_kernel.py", line 433, in transition_matrix
+    raise ValueError(f"Transition matrix is not row stochastic, {n_inv} rows do not sum to 1.")
+ValueError: Transition matrix is not row stochastic, 8 rows do not sum to 1.

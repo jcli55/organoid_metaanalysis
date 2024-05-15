@@ -1,0 +1,190 @@
+Loading required package: ggplot2
+Loading required package: SummarizedExperiment
+Loading required package: MatrixGenerics
+Loading required package: matrixStats
+
+Attaching package: ‘MatrixGenerics’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colAlls, colAnyNAs, colAnys, colAvgsPerRowSet, colCollapse,
+    colCounts, colCummaxs, colCummins, colCumprods, colCumsums,
+    colDiffs, colIQRDiffs, colIQRs, colLogSumExps, colMadDiffs,
+    colMads, colMaxs, colMeans2, colMedians, colMins, colOrderStats,
+    colProds, colQuantiles, colRanges, colRanks, colSdDiffs, colSds,
+    colSums2, colTabulates, colVarDiffs, colVars, colWeightedMads,
+    colWeightedMeans, colWeightedMedians, colWeightedSds,
+    colWeightedVars, rowAlls, rowAnyNAs, rowAnys, rowAvgsPerColSet,
+    rowCollapse, rowCounts, rowCummaxs, rowCummins, rowCumprods,
+    rowCumsums, rowDiffs, rowIQRDiffs, rowIQRs, rowLogSumExps,
+    rowMadDiffs, rowMads, rowMaxs, rowMeans2, rowMedians, rowMins,
+    rowOrderStats, rowProds, rowQuantiles, rowRanges, rowRanks,
+    rowSdDiffs, rowSds, rowSums2, rowTabulates, rowVarDiffs, rowVars,
+    rowWeightedMads, rowWeightedMeans, rowWeightedMedians,
+    rowWeightedSds, rowWeightedVars
+
+Loading required package: GenomicRanges
+Loading required package: stats4
+Loading required package: BiocGenerics
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    Filter, Find, Map, Position, Reduce, anyDuplicated, append,
+    as.data.frame, basename, cbind, colnames, dirname, do.call,
+    duplicated, eval, evalq, get, grep, grepl, intersect, is.unsorted,
+    lapply, mapply, match, mget, order, paste, pmax, pmax.int, pmin,
+    pmin.int, rank, rbind, rownames, sapply, setdiff, sort, table,
+    tapply, union, unique, unsplit, which.max, which.min
+
+Loading required package: S4Vectors
+
+Attaching package: ‘S4Vectors’
+
+The following objects are masked from ‘package:base’:
+
+    I, expand.grid, unname
+
+Loading required package: IRanges
+Loading required package: GenomeInfoDb
+Loading required package: Biobase
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: ‘Biobase’
+
+The following object is masked from ‘package:MatrixGenerics’:
+
+    rowMedians
+
+The following objects are masked from ‘package:matrixStats’:
+
+    anyMissing, rowMedians
+
+Loading required package: data.table
+
+Attaching package: ‘data.table’
+
+The following object is masked from ‘package:SummarizedExperiment’:
+
+    shift
+
+The following object is masked from ‘package:GenomicRanges’:
+
+    shift
+
+The following object is masked from ‘package:IRanges’:
+
+    shift
+
+The following objects are masked from ‘package:S4Vectors’:
+
+    first, second
+
+Loading required package: Matrix
+
+Attaching package: ‘Matrix’
+
+The following object is masked from ‘package:S4Vectors’:
+
+    expand
+
+Loading required package: rhdf5
+Loading required package: magrittr
+Successfully loaded ArchRProject!
+
+                                                   / |
+                                                 /    \
+            .                                  /      |.
+            \\\                              /        |.
+              \\\                          /           `|.
+                \\\                      /              |.
+                  \                    /                |\
+                  \\#####\           /                  ||
+                ==###########>      /                   ||
+                 \\##==......\    /                     ||
+            ______ =       =|__ /__                     ||      \\\
+        ,--' ,----`-,__ ___/'  --,-`-===================##========>
+       \               '        ##_______ _____ ,--,__,=##,__   ///
+        ,    __==    ___,-,__,--'#'  ==='      `-'    | ##,-/
+        -,____,---'       \\####\\________________,--\\_##,/
+           ___      .______        ______  __    __  .______      
+          /   \     |   _  \      /      ||  |  |  | |   _  \     
+         /  ^  \    |  |_)  |    |  ,----'|  |__|  | |  |_)  |    
+        /  /_\  \   |      /     |  |     |   __   | |      /     
+       /  _____  \  |  |\  \\___ |  `----.|  |  |  | |  |\  \\___.
+      /__/     \__\ | _| `._____| \______||__|  |__| | _| `._____|
+    
+ArchR logging to : ArchRLogs/ArchR-addImputeWeights-33d95ddf7735-Date-2024-04-10_Time-14-40-27.log
+If there is an issue, please report to github with logFile!
+2024-04-10 14:40:28 : Computing Impute Weights Using Magic (Cell 2018), 0 mins elapsed.
+Warning message:
+In sprintf("Completed Getting Magic Weights!", round(object.size(weightList)/10^9,  :
+  one argument not used by format 'Completed Getting Magic Weights!'
+Getting ImputeWeights
+ArchR logging to : ArchRLogs/ArchR-plotEmbedding-33d977f749e5-Date-2024-04-10_Time-14-43-00.log
+If there is an issue, please report to github with logFile!
+2024-04-10 14:43:08 : Getting Matrix Values...
+1 2 3 4 5 6 7 8 9 
+Imputing Matrix
+Plotting Embedding
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 
+ArchR logging successful to : ArchRLogs/ArchR-plotEmbedding-33d977f749e5-Date-2024-04-10_Time-14-43-00.log
+ArchR logging to : ArchRLogs/ArchR-getMarkerFeatures-33d953cc57d4-Date-2024-04-10_Time-14-45-42.log
+If there is an issue, please report to github with logFile!
+2024-04-10 14:45:43 : Matching Known Biases, 0.003 mins elapsed.
+2024-04-10 14:45:58 : Computing Pairwise Tests (1 of 9), 0.254 mins elapsed.
+2024-04-10 14:47:23 : Computing Pairwise Tests (2 of 9), 1.659 mins elapsed.
+2024-04-10 14:48:15 : Computing Pairwise Tests (3 of 9), 2.525 mins elapsed.
+2024-04-10 14:49:03 : Computing Pairwise Tests (4 of 9), 3.336 mins elapsed.
+2024-04-10 14:49:55 : Computing Pairwise Tests (5 of 9), 4.197 mins elapsed.
+2024-04-10 14:50:42 : Computing Pairwise Tests (6 of 9), 4.987 mins elapsed.
+2024-04-10 14:51:35 : Computing Pairwise Tests (7 of 9), 5.869 mins elapsed.
+2024-04-10 14:52:33 : Computing Pairwise Tests (8 of 9), 6.823 mins elapsed.
+2024-04-10 14:53:25 : Computing Pairwise Tests (9 of 9), 7.704 mins elapsed.
+###########
+2024-04-10 14:54:16 : Completed Pairwise Tests, 8.544 mins elapsed.
+###########
+ArchR logging successful to : ArchRLogs/ArchR-getMarkerFeatures-33d953cc57d4-Date-2024-04-10_Time-14-45-42.log
+ArchR logging to : ArchRLogs/ArchR-plotMarkerHeatmap-33d93ed583-Date-2024-04-10_Time-14-54-16.log
+If there is an issue, please report to github with logFile!
+Printing Top Marker Genes:
+AC:
+	NPHP4, ACOT7, FAM43B, C1orf194, KCNA3, SYT6, KCNJ9, CD84, PCP4L1, DPT, SMG7-AS1, MIR181A1, SERTAD4-AS1, NLRP3, LINC00840
+BC:
+	ACAP3, LINC01141, HPCA, RIIAD1, ARHGEF2, MIR6738, CCSAP, ACTA1, RYR2, CEND1, ABCC8, C11orf96, RCOR2, RIMKLB, SLC38A1
+Cone:
+	CLSTN1, MTOR, MTOR-AS1, PLA2G5, PINK1-AS, NIPAL3, LOC100506985, PAFAH2, SLC30A2, OPRD1, MIR5585, PABPC4-AS1, PPT1, MED8, LOC101929592
+HC:
+	TNFRSF14, SPSB1, FBLIM1, MIR4695, PLA2G2E, PLA2G2A, UBXN10-AS1, WNT4, C1orf94, DLGAP3, CSF3R, GRIK3, EBNA1BP2, SLC5A9, PDE4B
+MG:
+	KAZN, TACSTD2, HSD52, MIR4711, DEPDC1-AS1, IFI44L, DDAH1, KYAT3, RBMXL1, TMEM56-RWDD3, RWDD3, LOC101928118, S1PR1, KCNA10, KCNA2
+NRPC:
+	KLHL40, LINC01088, ACAP3, MIR6726, PANK4, HES5, TNFRSF14, CEP104, DFFB, LINC01346, NPHP4, KCNAB2, LOC102724450, ACOT7, ESPN
+PRPC:
+	PANK4, HES5, ESPN, TNFRSF1B, FHAD1, MIR4684, MIR4253, EVA1B, ERI3, ERI3-IT1, C8A, LINC01135, LINC01358, MIR6068, LOC101927139
+RGC:
+	MIR6726, LINC01346, LINC01647, DRAXIN, NPPA-AS1, NPPA, ARHGEF10L, KLHDC7A, TMCO4, RNF186, MDS2, IL22RA1, MIR4425, SLC9A1, TMEM39B
+Rod:
+	LOC102724450, EPHA8, GUK1, EML3, ROM1, POU6F1, NRL, NR2E3, CTSH, DCUN1D3, PLCD3, ACBD4, C17orf58, FAM161A, LINC01101
+Identified 3232 markers!
+Adding Annotations..
+Preparing Main Heatmap..
+'magick' package is suggested to install to give better rasterization.
+
+Set `ht_opt$message = FALSE` to turn off this message.
+ArchR logging successful to : ArchRLogs/ArchR-plotMarkerHeatmap-33d93ed583-Date-2024-04-10_Time-14-54-16.log
+Warning message:
+'markerHeatmap' is deprecated.
+Use 'plotMarkerHeatmap' instead.
+See help("Deprecated") 
+Plotting ComplexHeatmap!
