@@ -24,8 +24,8 @@ adata = ad.concat(data_list, join='inner')
 adata.write_h5ad(f'{outPath}sc_ro_rna_merged_raw.h5ad')
 
 #Load and preprocess the data
-adata = sc.read_h5ad(f'{outPath}samples_merged_raw.h5ad')
-temp = sc.read_h5ad(f'{outPath}samples_merged_raw.h5ad')
+adata = sc.read_h5ad(f'{outPath}sc_ro_rna_merged_raw.h5ad')
+temp = sc.read_h5ad(f'{outPath}sc_ro_rna_merged_raw.h5ad')
 
 sc.pp.normalize_total(adata, target_sum=1e4)
 sc.pp.log1p(adata)
