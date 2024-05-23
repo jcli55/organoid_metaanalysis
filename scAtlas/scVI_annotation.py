@@ -86,7 +86,7 @@ sc.pp.neighbors(adata_full, use_rep="X_scANVI")
 sc.tl.leiden(adata_full)
 sc.tl.umap(adata_full)
 
-del adata_full.var['_index']
+#del adata_full.var['_index']
 
 #adata_full.write("/storage/singlecell/jeanl/organoid/data/merged_chen/reannotate_w_fetal/chen_cherry_ro_merged_annotated.h5ad")
 adata_full.write("/storage/singlecell/jeanl/organoid/data/other_data_merged/scAtlas/sc_ro_rna_merged_annotated.h5ad")
