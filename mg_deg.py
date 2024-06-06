@@ -2,7 +2,7 @@ import scanpy as sc
 import pandas as pd
 
 # DEG between fetal and organoid MG
-
+# !!DEPRECIATED - INCORPORATED INTO rank_genes_groups_sampletype.py!!
 adata = sc.read_h5ad("/storage/singlecell/jeanl/organoid/data/merged_chen/reannotate_w_fetal/chen_cherry_merged_clean.h5ad")
 adata = adata[adata.obs.majorclass == 'MG']
 
