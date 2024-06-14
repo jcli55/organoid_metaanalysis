@@ -9,7 +9,7 @@ import pandas as pd
 
 #Load in the data and the markers
 #adata = sc.read_h5ad("/storage/singlecell/jeanl/organoid/data/merged_chen/reannotate_w_fetal/chen_cherry_merged_clean.h5ad")
-adata = sc.read_h5ad("/storage/singlecell/jeanl/organoid/data/other_data_merged/scAtlas/sc_ro_rna_merged_annotated.h5ad")
+adata = sc.read_h5ad("/storage/singlecell/jeanl/organoid/data/other_data_merged/scAtlas/sc_ro_rna_merged_annotated_ro_ref.h5ad")
 adata = adata[adata.obs.batch == 'Query',]
 #adata = adata[adata.obs.source == 'chen']
 
@@ -33,8 +33,8 @@ for age in adata.obs.age.cat.categories:
 	data = adata[adata.obs.age==age]
 	for gene in gene_list:
 		sc.pl.umap(data, color=gene, frameon=False, title=f'{age}_{gene}', save=f'_ro_{gene}_{age}.png')
-
+'''
 for key in gene_list.keys():
 	sc.pl.umap(adata, color=gene_list[key], frameon=False, ncols=3, size=6, save=f'_ro_{key}_genes.png')
-'''
-sc.pl.umap(adata, color=['source','majorclass'], frameon=False, ncols=2, size=6, save=f'_ro_source_class.png')
+
+#sc.pl.umap(adata, color=['source','majorclass'], frameon=False, ncols=2, size=6, save=f'_ro_source_class.png')

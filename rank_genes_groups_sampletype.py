@@ -37,3 +37,5 @@ for mclass in adata.obs.majorclass.cat.categories:
         d['pts_rest'] = list 
 
         pd.DataFrame.to_csv(d, f'/storage/singlecell/jeanl/organoid/csv/reannotation/majorclass_degs/degs_by_sampletype/{j}_{mclass}_deg.csv')
+
+    sc.pl.rank_genes_groups_dotplot(temp, n_genes = 10, title=f'{mclass}', save = f'{mclass}_deg_by_sampletype.png')
