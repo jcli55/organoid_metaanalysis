@@ -1,0 +1,12 @@
+# ignore out_slurm/
+**/out_slurm/
+
+# ignore figures/
+**/figures/
+
+# ignore other files
+**/ArchRLogs/
+**/cache/
+**/Rplots.pdf
+**/.Rhistory
+**/.Rdata
