@@ -9,7 +9,7 @@ import pandas as pd
 
 #Load in the data and the markers
 #adata = sc.read_h5ad("/storage/singlecell/jeanl/organoid/data/merged_chen/reannotate_w_fetal/chen_cherry_merged_clean.h5ad")
-adata = sc.read_h5ad("/storage/singlecell/jeanl/organoid/data/other_data_merged/scAtlas/sc_ro_rna_merged_annotated_ro_ref.h5ad")
+adata = sc.read_h5ad("q/storage/singlecell/jeanl/organoid/data/other_data_merged/scAtlas/sc_ro_rna_merged_annotated_ro_ref.h5ad")
 adata = adata[adata.obs.batch == 'Query',]
 #adata = adata[adata.obs.source == 'chen']
 
