@@ -18,7 +18,11 @@ adata.obs["maturityclass"] = adata.obs.subclass.replace(
         "SACs": "AC",
         "dual ACs": "AC",
         "HC0": "HC",
-        "HC1": "HC"
+        "HC1": "HC",
+        "OFF_MGC": "RGC",
+        "OFF_PGC": "RGC",
+        "ON_MGC": "RGC",
+        "ON_PGC": "RGC"
     }
 )
 
