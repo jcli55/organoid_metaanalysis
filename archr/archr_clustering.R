@@ -7,7 +7,7 @@ library(parallel)
 project <- loadArchRProject("/storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/")
 
 # Remove doublets
-#project <- filterDoublets(project)
+project <- filterDoublets(project)
 
 # Dim Red using Iterative LSI (not deterministic!)
 project <- addIterativeLSI(

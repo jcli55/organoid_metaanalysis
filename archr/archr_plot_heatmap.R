@@ -76,7 +76,7 @@ heatmapGS <- markerHeatmap(
 
 plotPDF(heatmapGS, name = "GeneScores-Marker-Heatmap", width = 8, height = 6, ArchRProj = project, addDOC = FALSE)
 
-## How I made the mclass markers heatmap like the one I have for RNA-seq
+## How I made the mclass markers heatmap like the one I have for RNA-seq, reorder rows/columns
 #subset <- markersGS[which(markersGS@elementMetaData$name %in% markerGenes),]
 #
 #heatmapGS <- markerHeatmap(
