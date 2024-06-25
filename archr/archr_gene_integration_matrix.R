@@ -57,7 +57,8 @@ project <- addGeneIntegrationMatrix(
     matrixName = "GeneIntegrationMatrix",
     reducedDims = "IterativeLSI",
     seRNA = RNA,
-    addToArrow = TRUE, 
+    addToArrow = TRUE,
+    force = TRUE, 
     groupList = groupList,
     groupRNA = "majorclass",
     nameCell = "predictedCell_Co",
@@ -67,4 +68,4 @@ project <- addGeneIntegrationMatrix(
 
 project <- addImputeWeights(project)
 
-saveArchRProject('/storage/singlecell/jeanl/organoid/data/archr/chen_double_filter/')
+saveArchRProject(project)
