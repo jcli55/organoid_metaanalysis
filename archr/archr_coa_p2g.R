@@ -30,20 +30,6 @@ cA.GR <- getCoAccessibility(
 )
 write.csv(cA.GR, '/storage/singlecell/jeanl/organoid/csv/coaccessibility_GR.csv')
 
-'''
-p <- plotBrowserTrack(
-  ArchRProj = project, 
-  groupBy = "majorclass", 
-  geneSymbol = markerGenes, 
-  upstream = 50000,
-  downstream = 50000,
-  loops = getCoAccessibility(project, resolution = 1000)
-)
-plotPDF(plotList = p, 
-        name = "Plot-Tracks-Marker-Genes-with-CoAccessibility.pdf", 
-        ArchRProj = project, 
-        addDOC = FALSE, width = 5, height = 5)
-'''
 # Peaks-to-Genes
 project <- addPeak2GeneLinks(
   ArchRProj = project,
@@ -66,19 +52,33 @@ p2g.GR <- getPeak2GeneLinks(
 )
 write.csv(p2g.GR, '/storage/singlecell/jeanl/organoid/csv/peak2genes_GR.csv')
 
-'''
-p <- plotBrowserTrack(
-  ArchRProj = project, 
-  groupBy = "majorclass", 
-  geneSymbol = markerGenes, 
-  upstream = 50000,
-  downstream = 50000,
-  loops = getPeak2GeneLinks(project, resolution = 1000)
-)
-plotPDF(plotList = p, 
-        name = "Plot-Tracks-Marker-Genes-with-Peak2GeneLinks.pdf", 
-        ArchRProj = project, 
-        addDOC = FALSE, width = 5, height = 5)
-'''
+# If marker genes are provided, plot browser tracks
+if (len(markerGenes) > 0) {
+  p <- plotBrowserTrack(
+    ArchRProj = project, 
+    groupBy = "majorclass", 
+    geneSymbol = markerGenes, 
+    upstream = 50000,
+    downstream = 50000,
+    loops = getCoAccessibility(project, resolution = 1000)
+  )
+  plotPDF(plotList = p, 
+          name = "Plot-Tracks-Marker-Genes-with-CoAccessibility.pdf", 
+          ArchRProj = project, 
+          addDOC = FALSE, width = 5, height = 5)
 
-saveArchRProject(project)
+  p <- plotBrowserTrack(
+    ArchRProj = project, 
+    groupBy = "majorclass", 
+    geneSymbol = markerGenes, 
+    upstream = 50000,
+    downstream = 50000,
+    loops = getPeak2GeneLinks(project, resolution = 1000)
+  )
+  plotPDF(plotList = p, 
+          name = "Plot-Tracks-Marker-Genes-with-Peak2GeneLinks.pdf", 
+          ArchRProj = project, 
+          addDOC = FALSE, width = 5, height = 5)
+}
+
+#saveArchRProject(project)
