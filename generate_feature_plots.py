@@ -17,6 +17,16 @@ adata = adata[adata.obs.batch == 'Query',]
 #gene_list = {'Astrocyte': ['GFAP','AQP4','S100B','GLUL'], 'Microglia': ['CD74','DOCK8','CTSB','SLC11A1'], 'RPE': ['RPE65','BEST1','LINC00276','COL8A1'], 'CiliaryMargin': ['ZIC1','WNT2B','KCNJ8','TPM2']}
 gene_list = {'Rod': ['RHO','RCVRN','CRX'], 'Cone': ['PROM1','ARR3','OTX2'], 'BC': ['VSX1','VSX2'], 'AC': ['GAD1','GAD2','TFAP2A'], 'HC': ['TFAP2B','ONECUT1','ONECUT2'], 'RGC': ['NEFM','RBPMS','POU4F2'], 'MG': ['RLBP1','SLC1A3','SFRP2']}
 
+'''
+# Known lineage drivers for cell fate
+gene_list={'rgc': ['POU4F2','ISL1','ATOH7','POU4F1'],
+           'ac': ['NEUROD4','PAX6','PTF1A','PRDM13'],
+           'hc': ['ONECUT1','ONECUT2','ONECUT3','PROX1'],
+           'bc': ['PRDM1','VSX1','VSX2','OTX2'],
+           'cone': ['PRDM1','CRX','THRB','OTX2'],
+           'rod': ['NRL','CRX','NR2E3','OTX2']}
+'''
+
 #Normalize the data
 sc.pp.normalize_total(adata, target_sum=1e4)
 sc.pp.log1p(adata)
@@ -35,6 +45,8 @@ for age in adata.obs.age.cat.categories:
 		sc.pl.umap(data, color=gene, frameon=False, title=f'{age}_{gene}', save=f'_ro_{gene}_{age}.png')
 '''
 for key in gene_list.keys():
-	sc.pl.umap(adata, color=gene_list[key], frameon=False, ncols=3, size=6, save=f'_ro_{key}_genes.png')
+        # Plot known lineage drivers for cell fate
+        #sc.pl.umap(adata[adata.obs['majorclass'].isin(['PRPC','NRPC'])], color=gene_list[key], frameon=False, ncols=4, size=12, save=f'_progs_{key}_genes.png')
+        sc.pl.umap(adata, color=gene_list[key], frameon=False, ncols=3, size=6, save=f'_ro_{key}_genes.png')
 
 #sc.pl.umap(adata, color=['source','majorclass'], frameon=False, ncols=2, size=6, save=f'_ro_source_class.png')
