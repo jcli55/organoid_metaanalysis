@@ -52,6 +52,9 @@ adata_result.obs['class'] = class_list
 adata_result.obs['subclass'] = subclass_list
 adata_result.obs['age'] = age_list
 
+# Effectively renaming velo_s to velocity so cellrank can run on the multivelo object
+adata.layers['velocity'] = adata.layers['velo_s']
+
 # Plot velocity stream and latent time
 scv.pp.neighbors(adata_result)
 

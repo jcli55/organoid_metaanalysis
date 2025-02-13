@@ -1,12 +1,16 @@
 #!/bin/bash
 #SBATCH --job-name=mv1
-#SBATCH --partition=interactive
-#SBATCH --ntasks-per-node=1
+#SBATCH --partition=free
+#SBATCH --ntasks-per-node=2
 #SBATCH --nodes=1
 #SBATCH --mem=25G
 #SBATCH --time=3-00:00:00
 #SBATCH -o out_slurm/mv1-%j.out
 #SBATCH -e out_slurm/mv1-%j.err
+
+
+
+
 
 
 

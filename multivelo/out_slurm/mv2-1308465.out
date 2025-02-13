@@ -1,5 +1,0 @@
-starting at Wed Mar  6 13:14:27 CST 2024 on mhgcp-d03.grid.bcm.edu
-SLURM_JOBID=1308465
-WARNING: The neighbor graph has an unexpected format (e.g. computed outside scvelo) 
-or is corrupted (e.g. due to subsetting). Consider recomputing with `pp.neighbors`.
-ended at Wed Mar  6 14:05:39 CST 2024 on mhgcp-d03.grid.bcm.edu. Time elapsed: 00:51:12
