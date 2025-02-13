@@ -6,15 +6,17 @@
 # We used libblas 3.9.1 and liblapack 3.9.1 to generate the results in the paper. The visualizations differ slightly if you use a different version.
 # To reproduce the exact results from the paper, please match the libblas and liblapack versions or use the supplied WNN files on GitHub.
 
+# Updated to run on hpc3 and on the whole data - 2/13/25
+
 library(Seurat)
 library(Signac)
 
 # read in expression and accessbility data
-brain <- readRDS("/storage/singlecell/jeanl/organoid/data/Chen/rds/merged.rds")
+brain <- readRDS("/dfs3b/ruic20_lab/singlecell/jeanl/organoid/data/Chen/rds/merged.rds")
 brain <- RenameCells(brain, new.names = paste(colnames(brain), '-0', sep=''))
 
 # subset for the same cells in the jointly filtered anndata object
-barcodes <- read.delim("/storage/singlecell/jeanl/organoid/data/Chen/h5ad/multivelo/seurat_wnn/filtered_cells.txt", header = F, stringsAsFactors = F)$V1
+barcodes <- read.delim("/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/seurat_wnn/filtered_cells.txt", header = F, stringsAsFactors = F)$V1
 brain <- subset(brain, cells = barcodes)
 
 # # preprocess RNA
@@ -44,9 +46,9 @@ nn_dist <- brain@neighbors$weighted.nn@nn.dist
 nn_cells <- brain@neighbors$weighted.nn@cell.names
 
 # save neighborhood graph
-write.table(nn_idx, "/storage/singlecell/jeanl/organoid/data/Chen/h5ad/multivelo/seurat_wnn/nn_idx.txt", sep = ',', row.names = F, col.names = F, quote = F)
-write.table(nn_dist, "/storage/singlecell/jeanl/organoid/data/Chen/h5ad/multivelo/seurat_wnn/nn_dist.txt", sep = ',', row.names = F, col.names = F, quote = F)
-write.table(nn_cells, "/storage/singlecell/jeanl/organoid/data/Chen/h5ad/multivelo/seurat_wnn/nn_cells.txt", sep = ',', row.names = F, col.names = F, quote = F)
+write.table(nn_idx, "/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/seurat_wnn/nn_idx.txt", sep = ',', row.names = F, col.names = F, quote = F)
+write.table(nn_dist, "/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/seurat_wnn/nn_dist.txt", sep = ',', row.names = F, col.names = F, quote = F)
+write.table(nn_cells, "/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/seurat_wnn/nn_cells.txt", sep = ',', row.names = F, col.names = F, quote = F)
 
 # save sessionInfo for reproducibility
-writeLines(capture.output(sessionInfo()), "/storage/singlecell/jeanl/organoid/data/Chen/h5ad/multivelo/seurat_wnn/sessionInfo.txt")
+writeLines(capture.output(sessionInfo()), "/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/seurat_wnn/sessionInfo.txt")

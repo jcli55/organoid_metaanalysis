@@ -7,7 +7,8 @@ import scvelo as scv
 import multivelo as mv
 
 # Runs part 1 of the multivelo pipeline
-# Adapted to run on the reannotated data - 3/5/24
+# Adapted to run on the reannotated data - 3/5/24 (old)
+# Adapted to run on hpc3 without downsampling - 2/13/25
 
 # Demo params --------------
 # scv.settings.verbosity = 3
@@ -20,7 +21,7 @@ import multivelo as mv
 # Part 1 -------------------------------------
 # Read in and prepare the merged rna and atac data
 # RNA
-adata_rna = sc.read_h5ad("/storage/singlecell/jeanl/organoid/data/Chen/h5ad/merged_spliced_unspliced.h5ad")
+adata_rna = sc.read_h5ad("/dfs3b/ruic20_lab/singlecell/jeanl/organoid/data/Chen/h5ad/merged_spliced_unspliced.h5ad")
 adata_rna.var_names_make_unique()
 # Added this functionality in the merge_loom.py so no need for this in here anymore
 # names = []
@@ -29,7 +30,7 @@ adata_rna.var_names_make_unique()
 # adata_rna.obs_names = names
 
 # Transfer the cell labels to the spliced + unspliced data
-filtered_annotated_rna = sc.read_h5ad("/storage/singlecell/jeanl/organoid/data/Chen/h5ad/adata_rna.h5ad")
+filtered_annotated_rna = sc.read_h5ad("/dfs3b/ruic20_lab/singlecell/jeanl/organoid/data/Chen/h5ad/adata_rna.h5ad")
 
 filtered_cells = pd.Index(np.intersect1d(adata_rna.obs_names, filtered_annotated_rna.obs_names))
 adata_rna = adata_rna[filtered_cells]
@@ -41,7 +42,7 @@ adata_rna.obs['majorclass'] = celltypes
 adata_rna.obs['majorclass'] = adata_rna.obs['majorclass'].astype('category')
 
 # ATAC
-adata_atac = sc.read_h5ad("/storage/singlecell/jeanl/organoid/data/Chen/h5ad/adata_atac.h5ad")
+adata_atac = sc.read_h5ad("/dfs3b/ruic20_lab/singlecell/jeanl/organoid/data/Chen/h5ad/adata_atac.h5ad")
 
 # Get shared cells and genes between rna and atac and subset on just these
 shared_cells = pd.Index(np.intersect1d(adata_rna.obs_names, adata_atac.obs_names))
@@ -57,6 +58,7 @@ scv.pp.moments(adata_rna, n_pcs=30, n_neighbors=50) # Might need to move to afte
 
 mv.tfidf_norm(adata_atac)
 
+'''
 # Subset cells and genes (to reduce runtime and memory requirements)
 sc.pp.highly_variable_genes(adata_rna, flavor="seurat_v3", n_top_genes=2000, subset=True)
 sc.pp.subsample(adata_rna, n_obs=10000)
@@ -67,6 +69,7 @@ shared_genes = pd.Index(np.intersect1d(adata_rna.var_names, adata_atac.var_names
 
 adata_rna = adata_rna[shared_cells, shared_genes]
 adata_atac = adata_atac[shared_cells, shared_genes]
+'''
 
 # Transfer the umap coordinates to the spliced/unspliced data
 # Create a dictionary of sampleid/barcodes mapped to their umap coordinate
@@ -82,11 +85,11 @@ for i in range(1, len(adata_rna)):
 # Set the umap
 adata_rna.obsm['X_umap'] = array
 
-adata_rna.write("/storage/singlecell/jeanl/organoid/data/Chen/h5ad/adata_rna_normalized_downsampled.h5ad")
-adata_atac.write("/storage/singlecell/jeanl/organoid/data/Chen/h5ad/adata_atac_normalized_downsampled.h5ad")
+adata_rna.write("/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/adata_rna_normalized_full.h5ad")
+adata_atac.write("/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/adata_atac_normalized_full.h5ad")
 
 # Generate the filtered cells txt for the R script
-adata_rna.obs_names.to_frame().to_csv('/storage/singlecell/jeanl/organoid/data/Chen/h5ad/multivelo/seurat_wnn/filtered_cells.txt', header=False, index=False)
+adata_rna.obs_names.to_frame().to_csv('/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/seurat_wnn/filtered_cells.txt', header=False, index=False)
 
 # -------------------------------------------
 # Run Seurat WNN script to generate WNN files

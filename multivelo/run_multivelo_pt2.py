@@ -9,15 +9,16 @@ import multivelo as mv
 # This is part 2 of the multivelo script after running seurat_wnn.R
 # Part 1 is in run_multivelo.py
 # By Jean Li 12/11/2023
+# Updated to run on hpc3 and on the full data - 2/13/25
 
 # Part 2 ------------------------------------
-adata_rna = sc.read_h5ad("/storage/singlecell/jeanl/organoid/data/Chen/h5ad/adata_rna_normalized_downsampled.h5ad")
-adata_atac = sc.read_h5ad("/storage/singlecell/jeanl/organoid/data/Chen/h5ad/adata_atac_normalized_downsampled.h5ad")
+adata_rna = sc.read_h5ad("/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/adata_rna_normalized_full.h5ad")
+adata_atac = sc.read_h5ad("/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/adata_atac_normalized_full.h5ad")
 
 # Read in Seurat WNN neighbors.
-nn_idx = np.loadtxt("/storage/singlecell/jeanl/organoid/data/Chen/h5ad/multivelo/seurat_wnn/nn_idx.txt", delimiter=',')
-nn_dist = np.loadtxt("/storage/singlecell/jeanl/organoid/data/Chen/h5ad/multivelo/seurat_wnn/nn_dist.txt", delimiter=',')
-nn_cells = pd.Index(pd.read_csv("/storage/singlecell/jeanl/organoid/data/Chen/h5ad/multivelo/seurat_wnn/nn_cells.txt", header=None)[0])
+nn_idx = np.loadtxt("/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/seurat_wnn/nn_idx.txt", delimiter=',')
+nn_dist = np.loadtxt("/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/seurat_wnn/nn_dist.txt", delimiter=',')
+nn_cells = pd.Index(pd.read_csv("/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/seurat_wnn/nn_cells.txt", header=None)[0])
 
 # Make sure cell names match.
 #np.all(nn_cells == adata_atac.obs_names)
@@ -39,7 +40,7 @@ adata_result = mv.recover_dynamics_chrom(adata_rna,
                                         )
 
 # Transfer some metadata labels to the object
-metadata = pd.read_csv('/storage/singlecell/jeanl/organoid/csv/metadata_clean.csv', index_col = 0)
+metadata = pd.read_csv('/dfs3b/ruic20_lab/singlecell/jeanl/organoid/csv/metadata_clean.csv', index_col = 0)
 class_list = []
 subclass_list = []
 age_list = []
@@ -61,4 +62,4 @@ mv.velocity_embedding_stream(adata_result, basis='umap', color='majorclass', sav
 scv.pl.scatter(adata_result, color='latent_time', color_map='gnuplot', size=80, save='latent_time.png')
 
 # Save the result for use later on
-adata_result.write("/storage/singlecell/jeanl/organoid/data/Chen/h5ad/multivelo/multivelo_result.h5ad")
+adata_result.write("/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/multivelo_result.h5ad")
