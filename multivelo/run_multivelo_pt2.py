@@ -12,15 +12,15 @@ import multivelo as mv
 # Updated to run on hpc3 and on the full data - 2/13/25
 
 # Part 2 ------------------------------------
-adata_rna = sc.read_h5ad("/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/adata_rna_normalized_full.h5ad")
-adata_atac = sc.read_h5ad("/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/adata_atac_normalized_full.h5ad")
+adata_rna = sc.read_h5ad("/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/adata_rna_normalized_full_highly_variable.h5ad")
+adata_atac = sc.read_h5ad("/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/adata_atac_normalized_full_highly_variable.h5ad")
 
 # Read in Seurat WNN neighbors.
 nn_idx = np.loadtxt("/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/seurat_wnn/nn_idx.txt", delimiter=',')
 nn_dist = np.loadtxt("/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/seurat_wnn/nn_dist.txt", delimiter=',')
-nn_cells = pd.Index(pd.read_csv("/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/seurat_wnn/nn_cells.txt", header=None)[0])
 
 # Make sure cell names match.
+#nn_cells = pd.Index(pd.read_csv("/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/seurat_wnn/nn_cells.txt", header=None)[0])
 #np.all(nn_cells == adata_atac.obs_names)
 
 mv.knn_smooth_chrom(adata_atac, nn_idx, nn_dist)
@@ -33,11 +33,14 @@ adata_result = mv.recover_dynamics_chrom(adata_rna,
                                          max_iter=5, 
                                          init_mode="invert",
                                          parallel=True,
+                                         n_jobs=20,
                                          save_plot=False,
                                          rna_only=False,
                                          fit=True,
                                          n_anchors=500, 
                                         )
+
+adata_result.write("/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/multivelo_result.h5ad")
 
 # Transfer some metadata labels to the object
 metadata = pd.read_csv('/dfs3b/ruic20_lab/singlecell/jeanl/organoid/csv/metadata_clean.csv', index_col = 0)
@@ -53,7 +56,7 @@ adata_result.obs['subclass'] = subclass_list
 adata_result.obs['age'] = age_list
 
 # Effectively renaming velo_s to velocity so cellrank can run on the multivelo object
-adata.layers['velocity'] = adata.layers['velo_s']
+adata_result.layers['velocity'] = adata_result.layers['velo_s']
 
 # Plot velocity stream and latent time
 scv.pp.neighbors(adata_result)

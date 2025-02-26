@@ -29,20 +29,29 @@ adata_rna.var_names_make_unique()
 #     names.append(f'{name}-0')
 # adata_rna.obs_names = names
 
-# Transfer the cell labels to the spliced + unspliced data
+# Transfer the sample and cell labels to the spliced + unspliced data
 filtered_annotated_rna = sc.read_h5ad("/dfs3b/ruic20_lab/singlecell/jeanl/organoid/data/Chen/h5ad/adata_rna.h5ad")
 
 filtered_cells = pd.Index(np.intersect1d(adata_rna.obs_names, filtered_annotated_rna.obs_names))
 adata_rna = adata_rna[filtered_cells]
 
 celltypes = []
+samples = []
 for name in adata_rna.obs_names:
     celltypes.append(filtered_annotated_rna.obs.loc[name]['majorclass'])
+    samples.append(filtered_annotated_rna.obs.loc[name]['sampleid'])
 adata_rna.obs['majorclass'] = celltypes
 adata_rna.obs['majorclass'] = adata_rna.obs['majorclass'].astype('category')
+adata_rna.obs['sampleid'] = samples
+adata_rna.obs['sampleid'] = adata_rna.obs['sampleid'].astype('category')
 
 # ATAC
 adata_atac = sc.read_h5ad("/dfs3b/ruic20_lab/singlecell/jeanl/organoid/data/Chen/h5ad/adata_atac.h5ad")
+
+# ATAC processing
+# Peaks are already aggregated in merge_atacseq.py
+#sc.pp.filter_cells(adata_atac, min_counts = 400)
+#sc.pp.filter_cells(adata_atac, max_counts = 25000)
 
 # Get shared cells and genes between rna and atac and subset on just these
 shared_cells = pd.Index(np.intersect1d(adata_rna.obs_names, adata_atac.obs_names))
@@ -52,16 +61,16 @@ adata_rna = adata_rna[shared_cells, shared_genes]
 adata_atac = adata_atac[shared_cells, shared_genes]
 
 # Normalization for rna and atac
-scv.pp.normalize_per_cell(adata_rna)
-scv.pp.log1p(adata_rna)
+sc.pp.normalize_per_cell(adata_rna)
+sc.pp.log1p(adata_rna)
 scv.pp.moments(adata_rna, n_pcs=30, n_neighbors=50) # Might need to move to after subsetting bc it will corrupt the neighbors graph
 
 mv.tfidf_norm(adata_atac)
 
-'''
-# Subset cells and genes (to reduce runtime and memory requirements)
+
+# Subset (cells) and genes (to reduce runtime and memory requirements)
 sc.pp.highly_variable_genes(adata_rna, flavor="seurat_v3", n_top_genes=2000, subset=True)
-sc.pp.subsample(adata_rna, n_obs=10000)
+#sc.pp.subsample(adata_rna, n_obs=10000)
 
 # Another round of subset to get atac to match
 shared_cells = pd.Index(np.intersect1d(adata_rna.obs_names, adata_atac.obs_names))
@@ -69,7 +78,7 @@ shared_genes = pd.Index(np.intersect1d(adata_rna.var_names, adata_atac.var_names
 
 adata_rna = adata_rna[shared_cells, shared_genes]
 adata_atac = adata_atac[shared_cells, shared_genes]
-'''
+
 
 # Transfer the umap coordinates to the spliced/unspliced data
 # Create a dictionary of sampleid/barcodes mapped to their umap coordinate
@@ -85,8 +94,8 @@ for i in range(1, len(adata_rna)):
 # Set the umap
 adata_rna.obsm['X_umap'] = array
 
-adata_rna.write("/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/adata_rna_normalized_full.h5ad")
-adata_atac.write("/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/adata_atac_normalized_full.h5ad")
+adata_rna.write("/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/adata_rna_normalized_full_highly_variable.h5ad")
+adata_atac.write("/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/adata_atac_normalized_full_highly_variable.h5ad")
 
 # Generate the filtered cells txt for the R script
 adata_rna.obs_names.to_frame().to_csv('/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/seurat_wnn/filtered_cells.txt', header=False, index=False)
