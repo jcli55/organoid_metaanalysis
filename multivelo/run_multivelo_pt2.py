@@ -64,7 +64,7 @@ scv.pp.neighbors(adata_result)
 mv.velocity_graph(adata_result)
 mv.latent_time(adata_result)
 
-mv.velocity_embedding_stream(adata_result, basis='umap', color='majorclass', save='velocity_stream.png')
+mv.velocity_embedding_stream(adata_result, basis='umap', color='class', save='velocity_stream.png')
 scv.pl.scatter(adata_result, color='latent_time', color_map='gnuplot', size=80, save='latent_time.png')
 
 # Save the result for use later on
