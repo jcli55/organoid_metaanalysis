@@ -55,6 +55,39 @@ adata_result.obs['class'] = class_list
 adata_result.obs['subclass'] = subclass_list
 adata_result.obs['age'] = age_list
 
+# Moved these from set_macrostates_scvi.py
+adata_result.obs["maturityclass"] = adata_result.obs.subclass.replace(
+    {
+        "ML_Cone": "Cone",
+        "S_Cone": "Cone",
+        "OFF-BC": "BC",
+        "ON-BC": "BC",
+        "RBC": "BC",
+        "GABAergic": "AC",
+        "Glycinergic": "AC",
+        "SACs": "AC",
+        "dual ACs": "AC",
+        "HC0": "HC",
+        "HC1": "HC",
+        "OFF_MGC": "RGC",
+        "OFF_PGC": "RGC",
+        "ON_MGC": "RGC",
+        "ON_PGC": "RGC"
+    }
+)
+
+adata_result.obs['terminalstates'] = adata_result.obs.maturityclass.replace(
+    {
+        "Cone Precursor": np.nan,
+        "Rod Precursor": np.nan,
+        "BC Precursor": np.nan,
+        "AC Precursor": np.nan,
+        "HC Precursor": np.nan,
+        "PRPC": np.nan,
+        "NRPC": np.nan
+    }
+)
+
 # Effectively renaming velo_s to velocity so cellrank can run on the multivelo object
 adata_result.layers['velocity'] = adata_result.layers['velo_s']
 

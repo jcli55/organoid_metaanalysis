@@ -1,12 +1,14 @@
 import joblib
 import cellrank as cr
-import scvelo as scv
+import scanpy as sc
 
 # CellRank meets RNA velocity
+# Written by Jean Li 02/13/24
+# Adpated to run on hpc3 02/26/25
 
-adata = scv.read('/storage/singlecell/jeanl/organoid/data/Chen/h5ad/multivelo/multivelo_result.h5ad')
+adata = scv.read('/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/multivelo_result.h5ad')
 
 vk = cr.kernels.VelocityKernel(adata)
 vk.compute_transition_matrix()
 
-joblib.dump(vk, "/storage/singlecell/jeanl/organoid/data/Chen/h5ad/cellrank/velocity_kernel_multivelo.h5ad")
+joblib.dump(vk, "/dfs3b/ruic20_lab/jeancl2/data/cellrank_full/velocity_kernel_multivelo.h5ad")
