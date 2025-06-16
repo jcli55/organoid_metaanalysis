@@ -25,6 +25,8 @@ for i in range(0, len(adata)):
     if(barcode in transition_cells.name.to_list()):
         adata.obs.loc[barcode, 'transition_cell'] = 'Transition Cell'
 adata.obs.transition_cell = adata.obs.transition_cell.astype('category')
+adata.obs.transition_cell = adata.obs.transition_cell.cat.set_categories(['Non-transition Cell','Transition Cell'], ordered=False)
+adata.obs.transition_cell = adata.obs.transition_cell.fillna('Non-transition Cell')
 
 # Save the updated object
 adata.write_h5ad('/dfs3b/ruic20_lab/jeancl2/data/chen_ro_clean.h5ad')

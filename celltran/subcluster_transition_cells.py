@@ -20,6 +20,19 @@ sc.pl.umap(
 		frameon=False,
 		save='transition_cells_subclustered.png'
 	)
+sc.pl.umap(
+		adata,
+		color=['ac_fwd_probs', 'bc_fwd_probs', 'cone_fwd_probs', 'hc_fwd_probs', 'mg_fwd_probs', 'rgc_precursor_fwd_probs', 'rod_fwd_probs'],
+		frameon=False,
+        ncols=4,
+		save='transition_cells_subclustered_fates.png'
+	)
+sc.pl.umap(
+		adata,
+		color=['latent_time', 'velo_s_norm_pseudotime'],
+		frameon=False,
+		save='transition_cells_subclustered_pseudotime.png'
+	)
 
 #Save h5ad
 adata.write_h5ad('/dfs3b/ruic20_lab/jeancl2/data/celltran/transition_cells_subclustered.h5ad')
