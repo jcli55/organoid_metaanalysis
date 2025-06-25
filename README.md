@@ -1,6 +1,6 @@
 Generation of the object:
 scVI_annotation_fetal_ref.py,
-subclass_annotation/ - 
+subclass_annotation_2/ - 
   separate_class.py,
   scVI_umap.py,
   annotate_subclass.py,
