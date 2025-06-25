@@ -35,7 +35,7 @@ Misc:
 enhancer_assay_candidate/,
 merfish/,
 scAtlas/,
-sc_markers_1_10/
-tf_list_11_27/
-samples.txt
+sc_markers_1_10/,
+tf_list_11_27/,
+samples.txt,
 RPE65_pos_cells.txt
