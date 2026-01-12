@@ -12,8 +12,8 @@ import multivelo as mv
 # Updated to run on hpc3 and on the full data - 2/13/25
 
 # Part 2 ------------------------------------
-adata_rna = sc.read_h5ad("/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/adata_rna_normalized_full_highly_variable.h5ad")
-adata_atac = sc.read_h5ad("/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/adata_atac_normalized_full_highly_variable.h5ad")
+adata_rna = sc.read_h5ad("/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/adata_rna_normalized_full_10k_highly_variable.h5ad")
+adata_atac = sc.read_h5ad("/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/adata_atac_normalized_full_10k_highly_variable.h5ad")
 
 # Read in Seurat WNN neighbors.
 nn_idx = np.loadtxt("/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/seurat_wnn/nn_idx.txt", delimiter=',')
@@ -40,7 +40,7 @@ adata_result = mv.recover_dynamics_chrom(adata_rna,
                                          n_anchors=500, 
                                         )
 
-adata_result.write("/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/multivelo_result.h5ad")
+adata_result.write("/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/multivelo_result_10k_hvg.h5ad")
 
 # Transfer some metadata labels to the object
 metadata = pd.read_csv('/dfs3b/ruic20_lab/singlecell/jeanl/organoid/csv/metadata_clean.csv', index_col = 0)
@@ -97,8 +97,8 @@ scv.pp.neighbors(adata_result)
 mv.velocity_graph(adata_result)
 mv.latent_time(adata_result)
 
-mv.velocity_embedding_stream(adata_result, basis='umap', color='class', save='velocity_stream.png')
-scv.pl.scatter(adata_result, color='latent_time', color_map='gnuplot', size=80, save='latent_time.png')
+mv.velocity_embedding_stream(adata_result, basis='umap', color='class', save='velocity_stream_10k_hvg.png')
+scv.pl.scatter(adata_result, color='latent_time', color_map='gnuplot', size=80, save='latent_time_10k_hvg.png')
 
 # Save the result for use later on
-adata_result.write("/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/multivelo_result.h5ad")
+adata_result.write("/dfs3b/ruic20_lab/jeancl2/data/multivelo_full/multivelo_result_10k_hvg.h5ad")

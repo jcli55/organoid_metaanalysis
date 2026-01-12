@@ -9,13 +9,13 @@ import pandas as pd
 
 #Load in the data and the markers
 #adata = sc.read_h5ad("/storage/singlecell/jeanl/organoid/data/merged_chen/reannotate_w_fetal/chen_cherry_merged_clean.h5ad")
-adata = sc.read_h5ad("q/storage/singlecell/jeanl/organoid/data/other_data_merged/scAtlas/sc_ro_rna_merged_annotated_ro_ref.h5ad")
-adata = adata[adata.obs.batch == 'Query',]
+adata = sc.read_h5ad("/dfs3b/ruic20_lab/jeancl2/data/chen_ro_clean.h5ad")
+#adata = adata[adata.obs.batch == 'Query',]
 #adata = adata[adata.obs.source == 'chen']
 
 #gene_list = ['FABP5','NFKB1','VAX2','TBX5']
-#gene_list = {'Astrocyte': ['GFAP','AQP4','S100B','GLUL'], 'Microglia': ['CD74','DOCK8','CTSB','SLC11A1'], 'RPE': ['RPE65','BEST1','LINC00276','COL8A1'], 'CiliaryMargin': ['ZIC1','WNT2B','KCNJ8','TPM2']}
-gene_list = {'Rod': ['RHO','RCVRN','CRX'], 'Cone': ['PROM1','ARR3','OTX2'], 'BC': ['VSX1','VSX2'], 'AC': ['GAD1','GAD2','TFAP2A'], 'HC': ['TFAP2B','ONECUT1','ONECUT2'], 'RGC': ['NEFM','RBPMS','POU4F2'], 'MG': ['RLBP1','SLC1A3','SFRP2']}
+gene_list = {'Astrocyte': ['GFAP','AQP4','ALDH1L1','S100B'], 'Microglia': ['CD74','DOCK8','CTSB','SLC11A1'], 'RPE': ['RPE65','BEST1','LINC00276','COL8A1'], 'CiliaryMargin': ['ZIC1','WNT2B','KCNJ8','TPM2']}
+#gene_list = {'Rod': ['RHO','RCVRN','CRX'], 'Cone': ['PROM1','ARR3','OTX2'], 'BC': ['VSX1','VSX2'], 'AC': ['GAD1','GAD2','TFAP2A'], 'HC': ['TFAP2B','ONECUT1','ONECUT2'], 'RGC': ['NEFM','RBPMS','POU4F2'], 'MG': ['RLBP1','SLC1A3','SFRP2']}
 
 '''
 # Known lineage drivers for cell fate
@@ -47,6 +47,6 @@ for age in adata.obs.age.cat.categories:
 for key in gene_list.keys():
         # Plot known lineage drivers for cell fate
         #sc.pl.umap(adata[adata.obs['majorclass'].isin(['PRPC','NRPC'])], color=gene_list[key], frameon=False, ncols=4, size=12, save=f'_progs_{key}_genes.png')
-        sc.pl.umap(adata, color=gene_list[key], frameon=False, ncols=3, size=6, save=f'_ro_{key}_genes.png')
+        sc.pl.umap(adata, color=gene_list[key], frameon=False, ncols=2, size=6, save=f'_ro_{key}_genes.png')
 
 #sc.pl.umap(adata, color=['source','majorclass'], frameon=False, ncols=2, size=6, save=f'_ro_source_class.png')
